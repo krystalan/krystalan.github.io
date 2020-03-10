@@ -130,8 +130,25 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>文章正文</p>
-
+                <h1 id="命名实体识别"><a href="#命名实体识别" class="headerlink" title="命名实体识别"></a>命名实体识别</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><p>命名实体识别（Named Entity Recognition，NER）是自然语言处理中的一个底层任务，也是众多复杂型任务的子任务。通用NER模型一般用来识别文本当中出现的人名、地名、组织名、时间、数量等类型的文字。例如有一句话：</p>
+<blockquote>
+<p>王佳安于2016年加入苏大计科院，开始其码农之旅。  </p>
+</blockquote>
+<p>我们希望能够训练出一个模型，输入这段文字，模型大致输出为：</p>
+<blockquote>
+<p>人名：王佳安<br>组织名：苏大计科院<br>时间：2016年</p>
+</blockquote>
+<p>除了通用NER以外，往往也有许多垂直领域的应用，比较常见的有BioNER：识别出一段文字中的病毒、细菌、DNA、RNA、药物等类型信息。我之前也有一个任务是要识别赛事新闻中的比赛场地、场馆、参赛队员等类型的信息。  </p>
+<p>NER是<strong>序列标注</strong>问题中的一种，除了NER还有<strong>分词</strong>、<strong>词性标注</strong>等问题。在统计学习的时代，往往使用<strong>HMM</strong>、<strong>CRF</strong>的方法来解决序列标注问题，比如自然语言处理常用的分词工具结巴中的jieba.cut函数就使用HMM来做分词。而后随着深度学习的大规模发展，又诞生了利用LSTM方法来做序列标注任务，但单纯使用LSTM的方法往往会预测出不符合常理的NER标签，因此又出现了<strong>LSTM+CRF</strong>的方法解决这一问题，后又改进为了<strong>CNN+LSTM+CRF</strong>模型 ，CNN用来对字符级序列建模。随着自然语言处理中的预训练语言模型的火爆发展，现在又出现了<strong>BERT+LSTM+CRF</strong>的baseline模型。</p>
+<h2 id="2-统计学习时代方法"><a href="#2-统计学习时代方法" class="headerlink" title="2.统计学习时代方法"></a>2.统计学习时代方法</h2><h3 id="2-1隐马尔科夫模型（Hidden-Markov-Model，HMM）"><a href="#2-1隐马尔科夫模型（Hidden-Markov-Model，HMM）" class="headerlink" title="2.1隐马尔科夫模型（Hidden Markov Model，HMM）"></a>2.1隐马尔科夫模型（Hidden Markov Model，HMM）</h3><p>HMM在马尔科夫过程上又加入了一个观测序列，每个观测值仅与当前状态相关。HMM有两个集合，分别为Q状态集合与V观测集合。除此之外它还有三大要素：A,B,π，其中A代表状态转移矩阵，B代表观测概率矩阵，π是初始状态向量。</p>
+<p>对于NER而言，我们所能看到的文字便是观测序列，而我们需要求解的实体类别则为状态序列。具体如下：</p>
+<blockquote>
+<p>王 —— B-PER<br>佳 —— I-PER<br>安 —— I-PER<br>于 —— O<br>2 —— B-TIME<br>0 —— I-TIME<br>1 —— I-TIME<br>6 —— I-TIME<br>年 —— I-TIME<br>加 —— O<br>入 —— O<br>苏 —— B-ORG<br>大 —— I-ORG<br>计 —— I-ORG<br>科 —— I-ORG<br>院 —— I-ORG<br>，<br>开 —— O<br>始 —— O<br>其 —— O<br>码 —— O<br>农 —— O<br>之 —— O<br>旅 —— O<br>。  </p>
+</blockquote>
+<p>其中第一列就是观测序列，是我们能够直接看到的，第二列是状态序列，是我们要计算得到的，这里采用了BIO编码，B代表某一类实体的开头，I代表实体的非开头，O代表非实体。（多说一句，除了BIO编码，还有BIOES，E代表实体最后一个字，S代表单个字符）,<strong>每步的观测仅和当前步的状态有关，每步状态仅和前一步的状态相关</strong>，正是因为这样的假设，才让HMM的速度很快于此同时精确度较低（低于CRF），所以NER问题在HMM中，被建模成为给定一个观测序列，求状态序列的问题。模型可以通过训练集的数据学习到上述的两大集合与三大要素，使用的时候要用到<strong>维特比（Viterbi）算法</strong>，这是一个基于动态规划思想的算法为了找到最优的状态序列。</p>
+<h3 id="2-2最大熵马尔科夫模型（Maximum-Entropy-Markov-Model，MEMM）"><a href="#2-2最大熵马尔科夫模型（Maximum-Entropy-Markov-Model，MEMM）" class="headerlink" title="2.2最大熵马尔科夫模型（Maximum Entropy Markov Model，MEMM）"></a>2.2最大熵马尔科夫模型（Maximum Entropy Markov Model，MEMM）</h3><p>[ TO DO ]</p>
+<h3 id="2-3条件随机场（Hidden-Markov-Model，HMM）"><a href="#2-3条件随机场（Hidden-Markov-Model，HMM）" class="headerlink" title="2.3条件随机场（Hidden Markov Model，HMM）"></a>2.3条件随机场（Hidden Markov Model，HMM）</h3><p>通过上述HMM粗体字部分的假设，可以看出HMM实际上在面对NER问题时，是有一定的缺陷的。<br>[ TO DO ]</p>
+<h2 id="3-深度学习时代方法"><a href="#3-深度学习时代方法" class="headerlink" title="3.深度学习时代方法"></a>3.深度学习时代方法</h2>
             </div>
 
             <!-- Post Comments -->
