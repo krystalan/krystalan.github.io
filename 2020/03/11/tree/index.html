@@ -139,12 +139,12 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/1.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >探索BERT在文本分类上的表现</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/5.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >树</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>[ TO DO ]</p>
+                <h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="1-重建二叉树"><a href="#1-重建二叉树" class="headerlink" title="1.重建二叉树"></a>1.重建二叉树</h2><p><img src="/images/Tree/1.jpg" alt="面试题07"><br>解题思路：前序序列中的第一个值为根节点的值，因此可以直接root = Treenode(preorder[0]) ，在从中序序列中查preorder[0]所处的位置，其下标记为a，则中序序列的0<del>a-1个数属于左子树的中序，a+1到最后属于右子树的中序，而左子树的前序实际上是前序的第1</del>a个数，右子树的前序是a+1到最后。故利用递归的思想即可解决本任务。<br>root = TreeNode(preorder[0])<br>a = inorder.index(root.val)<br>root.left = self.buildTree(preorder[1:a+1],inorder[0:a])<br>root.right = self.buildTree(preorder[a+1:],inorder[a+1:])<br>具体代码如下：<br><img src="/images/Tree/2.jpg" alt="面试题07">  </p>
 
             </div>
 
