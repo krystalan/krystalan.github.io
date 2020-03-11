@@ -63,24 +63,25 @@
 	
 </head>
     
-		
-<!-- Layouts -->
-
-
-
-<!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
-<link rel="stylesheet" href="/css/typo.css" />
-<!-- 文章页 -->
-<body class="is-loading">
+		<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in">
+    <div id="wrapper" class="fade-in overlay">
         <!-- Intro 头部显示 s -->
+                <div id="intro">
+            <h1>This is<br />
+                        北望你的安 </h1>
+            <p> Where can find two kinds of complete in the world<br/> not let down Buddha while don't fail to live up to you? 
+            </p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">Krystalan</a>
 </header>
+        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
             <ul class="menu links" >
@@ -137,23 +138,55 @@
                     
 			</ul>
 </nav>
+        <!-- Nav 导航条 end -->
+        <!-- Main 主要部分 start -->
+        
+        <!-- 文章列表   s -->
+        <div id="main" style="background-color: transparent; padding:0;">
+        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
+            <div class="link_row">
+                <!-- 文章sample  s-->
 
-        <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/2.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >查找</h2></a>
-            </div>
-            <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
-                <h1 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h1><h2 id="python代码"><a href="#python代码" class="headerlink" title="python代码"></a>python代码</h2><p><img src="/images/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/1.jpg" alt="二分查找Python代码"><br>如上图，这里采用了一种非递归式的实现。</p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>题目均来源<u><a href="https://leetcode-cn.com/problemset/lcof/" target="_blank" rel="noopener">Leetcode 《剑指offer（第二版）》</a></u></p>
-<h3 id="1-面试题4-二维数组中的查找"><a href="#1-面试题4-二维数组中的查找" class="headerlink" title="1.面试题4 二维数组中的查找"></a>1.面试题4 二维数组中的查找</h3><p><img src="/images/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/2.jpg" alt="题图"><br>这道题，是一个简单的二维数组查找问题，主体思路为：先修改一下上图中二分查找的返回值，如果查找到了则返回-1，如果没查找到则返回last值（即小于目标的最大的数的索引），设置一个常量f，初始化为列数m，然后循环遍历二维数组中的每一行（从0到f），如果返回值为-1代表找到了，如果返回值不为-1则将f值设置为返回值，然后继续循环，循环结束则返回false，循环里也可以加一个判断，如果该行第一个元素大于目标则直接返回False。<br>最后别忘了边界！例如输入是[]或[[]]，提交结果如下：<br><img src="/images/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/3.jpg" alt="提交图"><br>其实这道题我一开始抖了一下机灵，直接把二维数组用python转换成了字符串，然后用正则匹配去了233，结果并没有上述方法快。</p>
-
-            </div>
-
-            <!-- Post Comments -->
+                
+                <div class="6u 12u(narrower)">
+                    <section class="link_box special">
+                       <a href="/2020/03/11/research101/">
+                        <div class="page_title" style="background-image: url(/img/3.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
+                            <!--标题-->
+                            <h2 class="page_title_text"> research </h2>
+                            <!--段落-->
+                        </div>
+                        </a>
+                        <div class="home-post-info">
+                            <!-- Author Avatar -->
+                            <div class="home-post-info-author-avatar">
+                                <h6><span class="home-post-info-data">2020-03-11</span></h6>
+                                <div class="home-post-info-Category">
+                                    <!-- Category -->
+                                    <span>
+                            <h6>
+                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/" target="_blank" rel="noopener">
+                                <a class="post_category-link" href="/categories/Research/">Research</a></a>
+                            </h6>
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 文章sample  e-->
             
-
+            </div>
+        </section>
         </div>
+        <!-- 文章列表   end -->
+        <!-- Main 主要部分 end -->
+        <!-- footer  页码 start-->
+        <footer style="text-align: center; padding-top: 2em;">
+  
+</footer>
+
+        <!-- footer  页码 end-->
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -164,10 +197,11 @@
 				<span id="busuanzi_container_site_pv"> 2020 </span> 
 			
         </div>
+        <!-- Copyright 版权 end -->
     </div>
+    <!-- Wrapper 外包 e-->
+    <!-- Scripts -->
 </body>
-
-
 
  	
 </html>
