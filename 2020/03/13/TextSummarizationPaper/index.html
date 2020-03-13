@@ -139,12 +139,17 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/5.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >栈与队列</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/7.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >2019 ACL 文摘论文分享</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h1><h2 id="1-面试题09-用两个栈实现队列"><a href="#1-面试题09-用两个栈实现队列" class="headerlink" title="1. 面试题09.用两个栈实现队列"></a>1. 面试题09.用两个栈实现队列</h2><p><img src="/images/Stack/1.jpg" alt="面试题09">  </p>
+                <p>今天主要来做一个论文笔记，我下周有一个论文分享会。<br>之后会考虑把我此前所有的TALK发出来，基本上都是论文分享，由于本人才疏学浅，难免有一些分析错误或者不到位的地方，还请大家多多指正。<br><img src="/images/Papers/TextSum/1.jpg" alt="论文题目"><br>这是一篇最新的生成式摘要论文<br>论文地址：<a href="https://arxiv.org/pdf/1906.00077.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1906.00077.pdf</a><br>代码地址：<a href="https://github.com/ucfnlp/summarization-sing-pair-mix" target="_blank" rel="noopener">https://github.com/ucfnlp/summarization-sing-pair-mix</a>    </p>
+<p>动机：作者发现人们在自己写文本摘要的时候，往往会根据自己的直觉选择参考一到两句话并把它们所包含的信息总结成最终的摘要。但其实人们并不能够很好的解释如何去选取这一两句参考的句子。<strong>而本文的工作便是设计了一个模型去选择这么一到两句话，然后再融成一句话。</strong></p>
+<p><img src="/images/Papers/TextSum/2.jpg" alt="摘要调研"><br>这是作者调研的结果，分别在三个数据集（XSum、DUC-04、CNN/DM）上统计了压缩一个句子得到摘要、融合两句话产生摘要以及融合三句及以上产生摘要的比例。</p>
+<p>我们可以更加直观的来感受一下，压缩一个句子产生摘要以及融合两个句子产生摘要的过程，如下图：<br><img src="/images/Papers/TextSum/3.jpg" alt="摘要产生">   </p>
+<p>然后我们来看一下模型的整体框架<br><img src="/images/Papers/TextSum/4.jpg" alt="model">   </p>
+<p>这个模型分成了两部分，首先在第一部分中，我们先选择出这么一到两句话（用于之后压缩成摘要）。<br>假设一个文档中有N个句子，那么我们的选择可以有N+N(N-1)/2种，其中N代表选择一个句子的所有可能情况的数量，N(N-1)/2代表选择两个句子的所有可能情况的数量。那么如何在这么多选项当中进行选取呢？作者根据每个选项所传达的有价值的摘要内容的数量对其进行评分。这其实不是一个容易的任务，因为在常规任务当中，我们基本上都是对包含句子数量一致的数据进行打分，而在这种情况下，有的例子含有一个句子，而有的包括了两个句子。如果一个句子(Singleton)包含显著的内容，那么它的得分应该比一些包含信息少的句子对(Pair)的分值要高。所以说到底，<strong>难点就在于如何把Singleton和Pair这两种情况在一个统一的低维空间内进行表示，之后再打分。</strong><br>我们来看一下作者是怎么解决这个问题的，作者使用了BERT预训练语言模型，将其在一个文本分类的任务上进行了微调，这个文本分类任务就是去分类一个句子是否被人工标注摘要所参考。BERT在训练的时候有两个子任务，预测被掩盖的单词和判断句子对有无连续关系。作者认为第二个任务，肥肠适合我们的任务啊！因为在摘要中，我们所参考的句子的连续性也很重要啊，我们大概率会选择两句连续的话并将他们融成摘要！我们可以设想一下，如果让你去写摘要，你肯定不会前头拉一句，后头拉一句，再拼接成摘要吧。<br>我们来具体看看作者是怎么用BERT来完成这个神奇操作的<br><img src="/images/Papers/TextSum/5.jpg" alt="Token"><br>首先我们知道BERT是通过在Singleton或者Pair前加“[CLS]”token并用“[SEP]”token分隔Pair来构造输入序列的。“[CLS]”token的最终隐藏状态(即Transformer的输出)被用作分类任务的聚合序列表示。（非分类任务可以忽略此token）作者对于每个输入序列，用上图中的（1）式来表示，简而言之就是第一个句子前加一个“[CLS]”，两句话之间加一个“[SEP]”，最后再来一个“[SEP]”。（2）式详细给出了每个w的组成，其中ew是token embedding、esgmt是 segment embedding 用来鉴别w来自A句还是B句、ewpos是position embedding 用来表示w在整个输入序列中的位置、最后espos是 sentence position embedding 用来表示w所在的句子在整个文档当中的位置。</p>
 
             </div>
 
