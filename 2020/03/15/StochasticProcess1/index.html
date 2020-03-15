@@ -119,12 +119,24 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >categories</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/8.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >随机过程 第1章&amp;第2章</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                
+                <p>新开一个坑，主要来记录自己学习随机过程的笔记，之前有看过中科院2010年的随机过程课程，非常推荐大家去学习，老师讲的非常好，尽管XX画质，但不影响食用，视频评论区有相应的PDF，B站链接：<a href="https://www.bilibili.com/video/av19313110" target="_blank" rel="noopener">https://www.bilibili.com/video/av19313110</a>  </p>
+<p>当初学这个课程是觉得，自己遇到了瓶颈，因为在看LDA的时候发现自己概率欠的好多，本科阶段学习的概率论相对于这些来说简直大巫见小巫，除此之外自己之后还会学习概率图模型（希望flag不要倒）  </p>
+<p>本系列主要是针对于《应用随机过程概率模型导论》一书的学习做一个总结。<br><img src="/images/SP/1.jpg" alt="《应用随机过程概率模型导论》"><br>啰嗦一句，不论是一开始说的中科院随机过程课程还是这本书，都是不带测度的。引用本书的一段话：  </p>
+<blockquote>
+<p>学习概率论有两种方法，一种是直观而不严格的方法，其意图是培养学生对学科的直观感觉,以使其能“从概率论角度思考”。另一种方法试图用测度论工具严格地研究概率论。  </p>
+</blockquote>
+<h1 id="第一章-概率论引论"><a href="#第一章-概率论引论" class="headerlink" title="第一章 概率论引论"></a>第一章 概率论引论</h1><p>这一章内容比较简单，主要包括了一些概率论的基础概念，例如：样本空间与事件、概率、条件概率、独立事件以及贝叶斯公式。需要注意的有： </p>
+<h2 id="1-1-两两独立的事件不一定联合独立"><a href="#1-1-两两独立的事件不一定联合独立" class="headerlink" title="1.1 两两独立的事件不一定联合独立"></a>1.1 两两独立的事件不一定联合独立</h2><p>例如下面这个例子：<br><img src="/images/SP/2.jpg" alt="《应用随机过程概率模型导论》">    </p>
+<h2 id="1-2-贝叶斯公式"><a href="#1-2-贝叶斯公式" class="headerlink" title="1.2 贝叶斯公式"></a>1.2 贝叶斯公式</h2><p>贝叶斯公式中用到了全概率公式<br><img src="/images/SP/3.jpg" alt="《应用随机过程概率模型导论》">    </p>
+<h1 id="第二章-随机变量"><a href="#第二章-随机变量" class="headerlink" title="第二章 随机变量"></a>第二章 随机变量</h1><p>定义在样本空间上的实值函数，称为随机变量。如果所关心的随机变量，或者取有限可能的值，或者取可数个可能的值，这样的随机变量称为离散的，即<strong>离散型随机变量</strong>。（注意这里的可数概念，是离散数学当中的一个基本概念，指的是与自然数存在一一映射关系）而如果存在取连续多个可能值，则为<strong>连续型随机变量</strong>。举个例子，摇一枚筛子，面朝上的数字是一个离散型随机变量，而某一时刻某辆车的时速，则是一个联系型随机变量。  </p>
+<h2 id="2-1-离散型随机变量"><a href="#2-1-离散型随机变量" class="headerlink" title="2.1 离散型随机变量"></a>2.1 离散型随机变量</h2><p>离散型随机变量通常依据概率密度函数分类，我们现在研究一些这样的随机变量。  </p>
+<h3 id="2-1-1-伯努利分布-Bernoulli-distribution"><a href="#2-1-1-伯努利分布-Bernoulli-distribution" class="headerlink" title="2.1.1 伯努利分布(Bernoulli distribution)"></a>2.1.1 伯努利分布(Bernoulli distribution)</h3><p>$ P(X=x) = \phi^x(1-\phi)^(1-\phi)</p>
+
             </div>
 
             <!-- Post Comments -->
