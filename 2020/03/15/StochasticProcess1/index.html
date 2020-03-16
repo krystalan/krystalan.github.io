@@ -144,8 +144,17 @@
 <h3 id="2-1-7-负二项分布"><a href="#2-1-7-负二项分布" class="headerlink" title="2.1.7 负二项分布"></a>2.1.7 负二项分布</h3><p>这个分布是从陈希孺老师的《概统》中看到的，是抽次品问题的另一个角度所得到的一种分布，我们也来看一下：<br><img src="/images/SP/10.jpg" alt="《应用随机过程概率模型导论》"><br>其代表的是在前k+r-1次抽取中，恰有r-1个废品，且第k+r次抽取，抽出废品。<br>可以看出，其假设的是抽出分配的概率固定为p</p>
 <h2 id="2-2-连续性随机变量"><a href="#2-2-连续性随机变量" class="headerlink" title="2.2 连续性随机变量"></a>2.2 连续性随机变量</h2><h3 id="2-2-1-均匀分布"><a href="#2-2-1-均匀分布" class="headerlink" title="2.2.1 均匀分布"></a>2.2.1 均匀分布</h3><p>X~U(a,b)<br>p = (x-a)/(b-a) if a≤x≤b else 0</p>
 <h3 id="2-2-2-正态分布"><a href="#2-2-2-正态分布" class="headerlink" title="2.2.2 正态分布"></a>2.2.2 正态分布</h3><p><img src="/images/SP/11.jpg" alt="《应用随机过程概率模型导论》"><br>X~N（μ，σ^2）  </p>
-<h3 id="2-2-3-指数分布"><a href="#2-2-3-指数分布" class="headerlink" title="2.2.3 指数分布"></a>2.2.3 指数分布</h3><p><img src="/images/SP/12.jpg" alt="《应用随机过程概率模型导论》"><br><img src="/images/SP/12.jpg" alt="《应用随机过程概率模型导论》"><br>指数分布最常见的场合就是寿命分布，前提是无老化，若考虑老化则是威尔逊分布。  </p>
-<h3 id="2-2-4-威尔逊分布"><a href="#2-2-4-威尔逊分布" class="headerlink" title="2.2.4 威尔逊分布"></a>2.2.4 威尔逊分布</h3><h3 id="2-2-5-伽马分布"><a href="#2-2-5-伽马分布" class="headerlink" title="2.2.5 伽马分布"></a>2.2.5 伽马分布</h3>
+<h3 id="2-2-3-指数分布"><a href="#2-2-3-指数分布" class="headerlink" title="2.2.3 指数分布"></a>2.2.3 指数分布</h3><p><img src="/images/SP/12.jpg" alt="《应用随机过程概率模型导论》"><br><img src="/images/SP/13.jpg" alt="《应用随机过程概率模型导论》"><br>指数分布最常见的场合就是寿命分布，前提是无老化，若考虑老化则是威尔逊分布。  </p>
+<h3 id="2-2-4-威尔逊分布"><a href="#2-2-4-威尔逊分布" class="headerlink" title="2.2.4 威尔逊分布"></a>2.2.4 威尔逊分布</h3><h3 id="2-2-5-伽马分布"><a href="#2-2-5-伽马分布" class="headerlink" title="2.2.5 伽马分布"></a>2.2.5 伽马分布</h3><p><img src="/images/SP/14.jpg" alt="《应用随机过程概率模型导论》"><br>其中伽马函数的定义如下：<br><img src="/images/SP/15.jpg" alt="《应用随机过程概率模型导论》"><br>当x为整数时有：<br><img src="/images/SP/16.jpg" alt="《应用随机过程概率模型导论》"><br>因此伽马函数可以看成阶乘在实数域上的扩展。  </p>
+<h2 id="2-3-期望"><a href="#2-3-期望" class="headerlink" title="2.3 期望"></a>2.3 期望</h2><h2 id="2-4-方差"><a href="#2-4-方差" class="headerlink" title="2.4 方差"></a>2.4 方差</h2><p><img src="/images/SP/17.jpg" alt="《应用随机过程概率模型导论》">   </p>
+<h2 id="2-5-协方差"><a href="#2-5-协方差" class="headerlink" title="2.5 协方差"></a>2.5 协方差</h2><p><img src="/images/SP/18.jpg" alt="《应用随机过程概率模型导论》"><br>有<img src="/images/SP/19.jpg" alt="《应用随机过程概率模型导论》">  </p>
+<h2 id="2-6-矩母函数"><a href="#2-6-矩母函数" class="headerlink" title="2.6 矩母函数"></a>2.6 矩母函数</h2><p><a href="/images/SP/20.jpg">《应用随机过程概率模型导论》</a><br>对于随机变量X，能通过矩母函数得到其所有的矩。<br><a href="/images/SP/21.jpg">《应用随机过程概率模型导论》</a><br>最后来总结一下常见的几个分布的均值、方差以及矩母函数<br><a href="/images/SP/22.jpg">《应用随机过程概率模型导论》</a><br><a href="/images/SP/23.jpg">《应用随机过程概率模型导论》</a>   </p>
+<h2 id="2-7-发生事件数的分布"><a href="#2-7-发生事件数的分布" class="headerlink" title="2.7 发生事件数的分布"></a>2.7 发生事件数的分布</h2><p>考虑任意事件A1，A2，…，An，记X为这些事件中发生的个数。<br><a href="/images/SP/24.jpg">《应用随机过程概率模型导论》</a><br>我们定义sk为n个事件中任意k个不同事件的交的概率的和，容斥公式即为：<br><a href="/images/SP/25.jpg">《应用随机过程概率模型导论》</a><br>经过一系列复杂的证明，我们也能得到结论：<br><a href="/images/SP/26.jpg">《应用随机过程概率模型导论》</a><br><a href="/images/SP/27.jpg">《应用随机过程概率模型导论》</a> </p>
+<h2 id="2-8-极限定理"><a href="#2-8-极限定理" class="headerlink" title="2.8 极限定理"></a>2.8 极限定理</h2><h3 id="马儿可夫不等式"><a href="#马儿可夫不等式" class="headerlink" title="马儿可夫不等式"></a>马儿可夫不等式</h3><p><a href="/images/SP/28.jpg">《应用随机过程概率模型导论》</a>   </p>
+<h3 id="切比雪夫不等式"><a href="#切比雪夫不等式" class="headerlink" title="切比雪夫不等式"></a>切比雪夫不等式</h3><p><a href="/images/SP/29.jpg">《应用随机过程概率模型导论》</a> </p>
+<h3 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h3><p><a href="/images/SP/30.jpg">《应用随机过程概率模型导论》</a><br>其中每个Xi独立同分布，均值为μ，方差为σ^2。</p>
+<h2 id="2-9-随机过程"><a href="#2-9-随机过程" class="headerlink" title="2.9 随机过程"></a>2.9 随机过程</h2><p>这一节引入了全书的重点研究对象——随机过程。<br><a href="/images/SP/31.jpg">《应用随机过程概率模型导论》</a><br>原书上的定义通俗易懂，所以直接贴上来了。</p>
+
             </div>
 
             <!-- Post Comments -->
