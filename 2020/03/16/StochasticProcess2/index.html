@@ -138,9 +138,11 @@
 </blockquote>
 <h3 id="3-5-1-复合随机变量恒等式"><a href="#3-5-1-复合随机变量恒等式" class="headerlink" title="3.5.1 复合随机变量恒等式"></a>3.5.1 复合随机变量恒等式</h3><p><img src="/images/SP/40.jpg" alt="《应用随机过程概率模型导论》"><br><img src="/images/SP/41.jpg" alt="《应用随机过程概率模型导论》"><br>首先在一列独立同分布随机变量Xi上定义了SN为X1到XN的求和，需要注意的是N也是一个随机变量。随后基于随机变量N又定义了随机变量M。<br>之后书上便介绍了复合变量恒等式：<br><img src="/images/SP/42.jpg" alt="《应用随机过程概率模型导论》"><br>之后还有其推论：<br><img src="/images/SP/43.jpg" alt="《应用随机过程概率模型导论》"><br><img src="/images/SP/47.jpg" alt="《应用随机过程概率模型导论》"><br>当M-1的分布和N的分布有关时，上面的推论对计算SN的概率密度函数是有用的递推公式。</p>
 <h3 id="3-5-2-泊松复合分布"><a href="#3-5-2-泊松复合分布" class="headerlink" title="3.5.2 泊松复合分布"></a>3.5.2 泊松复合分布</h3><blockquote>
-<p>在概率论中，泊松复合分布是指一些独立同分布的随机变量的和的概率分布，而且这些随机变量服从泊松分布。  </p>
+<p>在概率论中，泊松复合分布是指一些独立同分布的随机变量的和的概率分布，而且这些随机变量的个数服从泊松分布。  </p>
 </blockquote>
 <p>如果N有均值λ的泊松分布，那么：<br><img src="/images/SP/44.jpg" alt="《应用随机过程概率模型导论》"><br>可见得，M-1也是均值为λ的泊松随机变量。记：<br><img src="/images/SP/45.jpg" alt="《应用随机过程概率模型导论》"><br>记代表X1+X2+…+XN和为n的概率<br>由上述推论给出的递推公式可以写成：<br><img src="/images/SP/46.jpg" alt="《应用随机过程概率模型导论》"><br>这样便可以递推求出所有的Pn</p>
+<h3 id="3-5-3-二项复合分布"><a href="#3-5-3-二项复合分布" class="headerlink" title="3.5.3 二项复合分布"></a>3.5.3 二项复合分布</h3><p>假设N是一个参数为r和p的二项随机变量，那么<br><img src="/images/SP/48.jpg" alt="《应用随机过程概率模型导论》"><br>可见M-1是参数为r-1,p的二项随机变量。<br>固定P，令N(r)是一个参数为r和p的二项随机变量，再令<br><img src="/images/SP/49.jpg" alt="《应用随机过程概率模型导论》"><br>由上述推论给出的递推公式可以写成：<br><img src="/images/SP/50.jpg" alt="《应用随机过程概率模型导论》"> </p>
+<h3 id="3-5-4-与负二项随机变量有关的一个复合分布"><a href="#3-5-4-与负二项随机变量有关的一个复合分布" class="headerlink" title="3.5.4 与负二项随机变量有关的一个复合分布"></a>3.5.4 与负二项随机变量有关的一个复合分布</h3><p>设N有如下的概率密度函数：<br><img src="/images/SP/51.jpg" alt="《应用随机过程概率模型导论》"><br>那么M-1是一个NB（r+1）随机变量：<br><img src="/images/SP/52.jpg" alt="《应用随机过程概率模型导论》"><br>令：<br><img src="/images/SP/53.jpg" alt="《应用随机过程概率模型导论》"><br>根据递推公式则有：<br><img src="/images/SP/54.jpg" alt="《应用随机过程概率模型导论》">   </p>
 
             </div>
 
