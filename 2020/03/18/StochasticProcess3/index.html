@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Papers/">Papers</a></li><li><a class="category-link" href="/categories/Research/">Research</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/8.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >随机过程 第4章</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="第四章-马尔可夫链"><a href="#第四章-马尔可夫链" class="headerlink" title="第四章 马尔可夫链"></a>第四章 马尔可夫链</h1><h2 id="4-1-马尔可夫链的定义"><a href="#4-1-马尔可夫链的定义" class="headerlink" title="4.1 马尔可夫链的定义"></a>4.1 马尔可夫链的定义</h2><p><img src="/images/SP/55.jpg" alt="《应用随机过程概率模型导论》">  </p>
+<h3 id="4-1-1-将一个过程转变为马尔可夫链的例子"><a href="#4-1-1-将一个过程转变为马尔可夫链的例子" class="headerlink" title="4.1.1 将一个过程转变为马尔可夫链的例子"></a>4.1.1 将一个过程转变为马尔可夫链的例子</h3><p>假设今天是否下雨依赖于前两天的天气条件。具体地，假设如果过去的两天都下雨，那么明天下雨的概率为0.7；假如今天下雨但昨天没下雨，那么明天下雨的概率为0.5；如果昨天下雨，但今天没有下雨，那么明天下雨的概率为0.4；如果过去两天都没有下雨，那么明天下雨的概率为0.2  </p>
+<p>显然，如果假设在时间n的状态只依赖于在时间n是否下雨，那么上面的模型就不为一个马尔可夫链。<br>但我们可以通过假定在任意时间的状态是由这天与前一天的天气共同决定，将上面的模型转变为一个马尔可夫链。<br>我们假定过程处在：<br>状态0：如果今天和昨天都下雨<br>状态1：如果今天下雨，但昨天没有<br>状态2：如果昨天下雨，但今天没有<br>状态3：如果今天和昨天都没有下雨<br>这样就可以改写成一个马氏链了。  </p>
+<h3 id="4-1-2-随机游动模型"><a href="#4-1-2-随机游动模型" class="headerlink" title="4.1.2 随机游动模型"></a>4.1.2 随机游动模型</h3><p>一个状态空间是由整数i=0,±1,±2,…。如果对于某个数0&lt;p&lt;1，从状态i到状态i+1的概率为p，从状态i到状态i-1的概率为1-p。那么这个给出的马尔可夫链称为随机游动  </p>
+<h3 id="4-1-3-赌博模型"><a href="#4-1-3-赌博模型" class="headerlink" title="4.1.3 赌博模型"></a>4.1.3 赌博模型</h3><p>考察一个赌徒，在每局中赢1美元的概率为p，输1美元的概率为1-p。如果我们假设他在破产时或者在财富达到N美元时离开；那么赌徒的财富是一个马氏链，且具有转移概率：<br><img src="/images/SP/56.jpg" alt="《应用随机过程概率模型导论》">    </p>
+<h2 id="4-2-C-K方程"><a href="#4-2-C-K方程" class="headerlink" title="4.2 C-K方程"></a>4.2 C-K方程</h2><p><img src="/images/SP/57.jpg" alt="《应用随机过程概率模型导论》">  </p>
+<h2 id="4-3-状态的分类"><a href="#4-3-状态的分类" class="headerlink" title="4.3 状态的分类"></a>4.3 状态的分类</h2><h3 id="4-3-1-状态可达与互通"><a href="#4-3-1-状态可达与互通" class="headerlink" title="4.3.1 状态可达与互通"></a>4.3.1 状态可达与互通</h3><p>如果对于某个n≥0有<br><img src="/images/SP/58.jpg" alt="《应用随机过程概率模型导论》"><br>那么状态j是从状态i可达的。<br>如果j不是从i可达的，那么有：<br><img src="/images/SP/59.jpg" alt="《应用随机过程概率模型导论》"><br>互相可达的两个状态i和j称为互通的，写为i&lt;-&gt;j   </p>
+<p>两个互通的状态，称为在同一类状态中，那么互通的概念将状态空间分为许多分离的类。若只有一个类（也就是说整个状态空间互通）则称该马氏链不可约。<br>例如，如下转移矩阵描述的随机过程不可约：<br><img src="/images/SP/60.jpg" alt="《应用随机过程概率模型导论》"><br>如下则可约：<br><img src="/images/SP/61.jpg" alt="《应用随机过程概率模型导论》"><br>此马氏链的类是{0，1}、{2}、{3}。</p>
+<h3 id="4-3-2-常返态与暂态（非常返态）"><a href="#4-3-2-常返态与暂态（非常返态）" class="headerlink" title="4.3.2 常返态与暂态（非常返态）"></a>4.3.2 常返态与暂态（非常返态）</h3><p>对于任意i，我们以fi记开始在状态i的过程迟早将再进入i的概率。如果fi=1，状态i称为常返态；如果fi&lt;1，状态i称为暂态（非常返态）  </p>
+<p>如果状态i是常返态，那么开始在状态i的过程将一再进入i（事实上是无穷多次）<br>如果状态i是暂态，每进入i将有概率1-fi不再进入这个状态。所以开始在状态i的过程将恰好在状态i停留n个时间周期的概率等于（1-fi）fi^(n-1)<br>由此可知，状态i是常返态当且仅当开始在状态i的过程处于状态i的时间周期的期望数是无穷的。<br>因此得到：状态i是<br><img src="/images/SP/62.jpg" alt="《应用随机过程概率模型导论》">   </p>
+<p>一个有限状态马尔可夫链中不可能所有的状态都是暂态。<br>如果状态i是常返态，而状态i与状态j互通，那么状态j也是常返态。（即常返态是一个类性质，同时也易知暂态是一个类性质）<br>所以又可知，有限不可约马氏链的所有状态都是常返态。  </p>
+<p>来看一个例子：<br><img src="/images/SP/63.jpg" alt="《应用随机过程概率模型导论》"><br>我们先判断这个随机过程当中有哪些类：<br><img src="/images/SP/64.jpg" alt="《应用随机过程概率模型导论》"><br>可以通过画图看出，所有状态都是互通的，那么所有的状态都是常返态。  </p>
+<p>再来看一个例子：<br><img src="/images/SP/65.jpg" alt="《应用随机过程概率模型导论》"><br>先判断类：（为了方便判断互通性，画图就不画某状态到自己的连线了）<br><img src="/images/SP/66.jpg" alt="《应用随机过程概率模型导论》"><br>可以看出有三个类：{0，1}、{2，3}、{4}。<br>之后根据公式易判断出{0，1}和{2，3}是常返态，{4}是暂态。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2020 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
