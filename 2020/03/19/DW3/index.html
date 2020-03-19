@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Papers/">Papers</a></li><li><a class="category-link" href="/categories/Research/">Research</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/4.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >DM&amp;DW Chapter 3 数据预处理</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="1-数据预处理概述"><a href="#1-数据预处理概述" class="headerlink" title="1.数据预处理概述"></a>1.数据预处理概述</h1><h2 id="1-1-为什么要进行数据预处理"><a href="#1-1-为什么要进行数据预处理" class="headerlink" title="1.1 为什么要进行数据预处理"></a>1.1 为什么要进行数据预处理</h2><p>因为原始数据的质量往往不够好，体现在以下几个方面：<br>准确度、完整性、数据一致性（数据之间有无相互矛盾）、时效性、可信度、可解释性。</p>
+<h2 id="1-2-数据预处理当中的一些主要任务"><a href="#1-2-数据预处理当中的一些主要任务" class="headerlink" title="1.2 数据预处理当中的一些主要任务"></a>1.2 数据预处理当中的一些主要任务</h2><p>（1）数据清洗<br>填充缺失值、平滑噪音数据、发现并清除离群点、消解不一致数据<br>（2）数据融合<br>融合多个数据源（数据库、数据cube或数据文件）中的数据。解决各个数据源之间的表达不一致（有可能是名称的表达不一致、有可能是值的表达不一致）<br>（3）数据简化<br>降维、数据量简化、数据压缩<br>（4）数据转换和离散化<br>归一化、概念层次结构生成</p>
+<h1 id="2-数据清洗"><a href="#2-数据清洗" class="headerlink" title="2.数据清洗"></a>2.数据清洗</h1><p>认为真实世界当中的数据有潜在的错误  </p>
+<h2 id="2-1-数据不完整"><a href="#2-1-数据不完整" class="headerlink" title="2.1 数据不完整"></a>2.1 数据不完整</h2><p>（1）如果该数据不重要，可以直接扔掉不要<br>（2）利用全局常量填充，例如“unknown”<br>（3）利用缺失属性的均值填充<br>（4）利用类内缺失属性的均值填充<br>（5）选择一个最有可能的值：贝叶斯最大后验概率、决策树  </p>
+<h2 id="2-2-噪声数据"><a href="#2-2-噪声数据" class="headerlink" title="2.2 噪声数据"></a>2.2 噪声数据</h2><p>（1）Bining装箱：将数据排序并分别装入不同的箱子中，接下来根据每个箱子的中位数/平均数等去做一个平滑<br>（2）回归：先判断当下的数据符合哪一个回归函数，再平滑。<br>（3）聚类：检测并去除离群点，例如DBSCAN<br>（4）人机耦合：先用机器发现疑似的噪声，再人工确定。</p>
+<h2 id="2-3-不一致性"><a href="#2-3-不一致性" class="headerlink" title="2.3 不一致性"></a>2.3 不一致性</h2><p>例如出生于2020年，但年龄40+；有的排名是1，2，3，有的则是A,B,C  </p>
+<h2 id="2-4-有意为之的错误"><a href="#2-4-有意为之的错误" class="headerlink" title="2.4 有意为之的错误"></a>2.4 有意为之的错误</h2><p>例如很多人的生日填成1月1日</p>
+<h1 id="3-数据融合"><a href="#3-数据融合" class="headerlink" title="3.数据融合"></a>3.数据融合</h1><p>多个数据源融合在一起  </p>
+<h2 id="3-1-主要问题"><a href="#3-1-主要问题" class="headerlink" title="3.1 主要问题"></a>3.1 主要问题</h2><p>（1）Schema融合：<br>不同数据源中的元数据不同，例如有的数据库叫cust-id，而另一个数据库叫cust-#<br>（2）实体识别问题：<br>同样一个人在不同数据库里可能叫法不一样<br>（3）检测并消解冲突的数据值：  </p>
+<h2 id="3-2-处理冗余数据"><a href="#3-2-处理冗余数据" class="headerlink" title="3.2 处理冗余数据"></a>3.2 处理冗余数据</h2><p>可能会产生冗余的场景：<br>（1）对象识别：相同的实体可能在不同的数据库里有不同的名字<br>（2）派生数据：该数据库上的某一个属性可能是通过其他表的其他属性所计算得到的  </p>
+<p>如何解决：通过相关分析和协方差分析去发现冗余数据<br>（1）相关分析<br>①卡方检验<br><img src="/images/DM/15.jpg" alt="卡方检验"><br>卡方检验用于检测两个值的相关程度，但相关程度并不代表因果关系。例如一个城市的医院数量与偷窃数量有一定的相关关系，但他俩其实没有任何因果关系（他俩都与人口数量有关）<br>来看一个简单的卡方检验例子：<br><img src="/images/DM/16.jpg" alt="卡方检验"><br>②三个相关性系数<br>皮尔森相关性系数（Person correlation coefficient）<br>斯皮尔曼相关性系数（Spearman correlation coefficient）<br>肯德尔相关性系数（Kendall correlation coefficient）<br>（三个相关性系数，反应的都是两个变量之间变化趋势的方向以及程度，范围都在-1到1之间，0表示两个变量不相关，正值表示正相关，负值表示负相关，值越大表示相关性越强。）<br>（2）协方差分析<br>就是概率论中的协方差,Cov(A,B)=E[AB]-E[A]E[B]  </p>
+<h1 id="4-数据简化"><a href="#4-数据简化" class="headerlink" title="4.数据简化"></a>4.数据简化</h1><h2 id="4-1-降维"><a href="#4-1-降维" class="headerlink" title="4.1 降维"></a>4.1 降维</h2><h3 id="4-1-1-小波变换"><a href="#4-1-1-小波变换" class="headerlink" title="4.1.1 小波变换"></a>4.1.1 小波变换</h3><p>常见于图像压缩<br>将信号分解成不同的子频带，数据被转换时要保持不同分辨率的对象之间的相对距离。</p>
+<h3 id="4-1-2-PCA主成分分析"><a href="#4-1-2-PCA主成分分析" class="headerlink" title="4.1.2 PCA主成分分析"></a>4.1.2 PCA主成分分析</h3><p>两个理论：最大化方差、最小化误差<br>在协方差矩阵上做本征分解即可<br>具体可以参考：<a href="https://blog.csdn.net/program_developer/article/details/80632779" target="_blank" rel="noopener">https://blog.csdn.net/program_developer/article/details/80632779</a></p>
+<h3 id="4-1-3-特征子集选择或创建"><a href="#4-1-3-特征子集选择或创建" class="headerlink" title="4.1.3 特征子集选择或创建"></a>4.1.3 特征子集选择或创建</h3><p>（1）遇到的问题可能有：<br>①冗余属性：复制了一个或多个其他属性中包含的大部分或全部信息。<br>②不相关属性：对当前工作并无帮助的属性。 </p>
+<p>（2）给定一个数据，有d个属性，如何进行子集选择：<br>有2的d次方种特征组合的方式<br>①对于每个属性通过显著性检验选择<br>②最佳逐级特征选择：先选择最好的单个特征，再找下一个最好的，依次类推。<br>③步进式属性消除：与②类似，不断找出最差的剔除掉  </p>
+<p>（3）属性创建（特征生成）<br>①属性提取：可以由专家帮忙取创建新的属性<br>②把数据映射到新的空间：例如小波变换、PCA等<br>③属性构造：特征结合、数据离散化</p>
+<h2 id="4-2-数据量简化"><a href="#4-2-数据量简化" class="headerlink" title="4.2 数据量简化"></a>4.2 数据量简化</h2><h3 id="4-2-1-回归和对数线性模型"><a href="#4-2-1-回归和对数线性模型" class="headerlink" title="4.2.1 回归和对数线性模型"></a>4.2.1 回归和对数线性模型</h3><p>属于参数化方法：假设数据符合某个模型，例如符合回归或对数线性模型，再将离群点去除掉。</p>
+<h3 id="4-2-2-直方图、集群抽样"><a href="#4-2-2-直方图、集群抽样" class="headerlink" title="4.2.2 直方图、集群抽样"></a>4.2.2 直方图、集群抽样</h3><p>非参数化方法：直接根据统计的一些特征，例如直方图、聚类等。再用相关方法去抽取代表性数据即可。</p>
+<h3 id="4-2-3-数据立方聚合"><a href="#4-2-3-数据立方聚合" class="headerlink" title="4.2.3 数据立方聚合"></a>4.2.3 数据立方聚合</h3><h2 id="4-3-数据压缩"><a href="#4-3-数据压缩" class="headerlink" title="4.3 数据压缩"></a>4.3 数据压缩</h2><p>数据压缩分为有损压缩和无损压缩<br>可能有以下压缩的部分：<br>（1）字符串压缩<br>（2）音频/视频压缩<br>（3）非音频的时间序列压缩  </p>
+<h1 id="5-数据的转换和离散化"><a href="#5-数据的转换和离散化" class="headerlink" title="5.数据的转换和离散化"></a>5.数据的转换和离散化</h1><h2 id="5-1-数据转换"><a href="#5-1-数据转换" class="headerlink" title="5.1 数据转换"></a>5.1 数据转换</h2><p>（1）平滑：去除数据中的噪音<br>（2）属性/特征构建<br>（3）聚合：汇总<br>（4）归一化<br><img src="/images/DM/16.jpg" alt="归一化">  </p>
+<h2 id="5-2-数据离散化"><a href="#5-2-数据离散化" class="headerlink" title="5.2 数据离散化"></a>5.2 数据离散化</h2><p>针对于三种不同类型的数据：定类型、有序型、数字型<br>将连续属性的范围划分为区间。<br>具体的方法：<br>（1）装箱<br>（2）柱状图分析<br>（3）聚类分析<br>（4）决策树分析<br>（5）相关性分析（例卡方检验</p>
+<h1 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h1>
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2020 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
