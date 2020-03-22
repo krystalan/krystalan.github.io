@@ -120,7 +120,7 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/9.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >关键词提取出霍格沃茨的故事[TODO]</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >关键词抽取出与你的故事[TODO]</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
@@ -128,7 +128,17 @@
 <h1 id="1-有监督算法"><a href="#1-有监督算法" class="headerlink" title="1.有监督算法"></a>1.有监督算法</h1><p>有监督的关键词抽取算法需要大量的标注数据来让模型习得什么样的词汇是关键词，往往可以看成一个词汇二分类的任务或是一个序列标注任务。（<strong>有监督算法不为本文重点因此只做简单介绍</strong>）  </p>
 <h2 id="1-1-词汇二分类任务"><a href="#1-1-词汇二分类任务" class="headerlink" title="1.1 词汇二分类任务"></a>1.1 词汇二分类任务</h2><p>针对于每一个词汇，都为其预测一个结果（是否为关键词），例如我们可以用双向LSTM获取每一个词汇的表示，再用一个激活函数算出预测结果。<br><img src="/images/KW/2.jpg" alt="词汇二分类"><br>例如在本例当中，我们先把“世间安得双全法，不负如来不负卿”分词，之后分别喂给BiLSTM，取得中间的词汇表示（前向LSTM的隐层状态与后向LSTM的隐层状态拼接）后，再利用激活函数计算出分类结果即可。最终我们预测出“双全法”是关键词。</p>
 <h2 id="1-2-序列标注任务"><a href="#1-2-序列标注任务" class="headerlink" title="1.2 序列标注任务"></a>1.2 序列标注任务</h2><p>而在序列标注任务解法中，我们可以把每一个词汇都标注成0或1来代表非关键词与关键词，再利用序列模型（例如HMM、CRF等等）求解即可。<br>详细的内容请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/09/NER/" target="_blank" rel="noopener">命名实体识别出你的点点滴滴</a></u>  </p>
-<h1 id="2-无监督算法"><a href="#2-无监督算法" class="headerlink" title="2.无监督算法"></a>2.无监督算法</h1>
+<h1 id="2-无监督算法"><a href="#2-无监督算法" class="headerlink" title="2.无监督算法"></a>2.无监督算法</h1><h2 id="2-1-TF-IDF"><a href="#2-1-TF-IDF" class="headerlink" title="2.1 TF-IDF"></a>2.1 TF-IDF</h2><p>该算法是一个很强的Baseline，能够解决大部分提取关键词的场景。<br>TF = 词语在文章中出现的次数/文章总词数<br>IDF = log[语料库文章总数/(包含该词的文章数+1)]<br>TF-IDF = TF*IDF<br>首先，TF是用来计算词频的，但是计算出来的词频很有可能是一些没有意义的词汇，例如“我们”、“的”、“地”、“得”等等。所以我们要通过IDF来消减这些词的权重。一个词越通用，它的IDF值越低。  </p>
+<p>在实战中，我们可以使用jieba.analyse来使用这一算法，具体代码如下：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">import jieba.analyse</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">data &#x3D; &#39;就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗？&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">keywords &#x3D; jieba.analyse.extract_tags(data,topK&#x3D;10)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">print(&#39; &#39;.join(keywords))</span></pre></td></tr></table></figure>
+<p>需要注意的是，在jieba实现的算法中，默认将使用jieba提供的IDF值，该IDF值是在大量的语料中统计得到的。<br>算法输出如下：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">仓英嘉措 达赖喇嘛 如来 不负 西藏 转世灵童 青灯古佛 第巴 桑结嘉 世达赖</span></pre></td></tr></table></figure>
+
+<h2 id="2-2-TextRank"><a href="#2-2-TextRank" class="headerlink" title="2.2 TextRank"></a>2.2 TextRank</h2><p>TextRank是一种基于图的排序算法，其是从PageRank中改进得到的，也可以用于文本摘要任务提取关键句。关键词是关键句的缩写，故依然可以使用。<br>TextRank在构建图模型的时候，节点代表词，节点之间的边代表词之间的共现关系（即取一个窗口，窗口内包含的词之前属于共现关系）<br>计算每个词权重的迭代公式如下：<br><img src="/images/KW/3.jpg" alt="TextRank"><br>其中，d一般取0.85为超参数，In(Vi)表示窗口内有词i的词的集合，Out(Vi)表示词i窗口内所出现的词的集合。<br>实战代码如下，同样还是使用jieba库来实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">import jieba.analyse</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">data &#x3D; &#39;就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗？&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">keywords &#x3D; jieba.analyse.textrank(data,topK&#x3D;10)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">print(&#39; &#39;.join(keywords))</span></pre></td></tr></table></figure>
+<p>输出如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">达赖喇嘛 西藏 不负 人们 两全 存在 世间 措诗 人生 摄政王</span></pre></td></tr></table></figure>
+
             </div>
 
             <!-- Post Comments -->
