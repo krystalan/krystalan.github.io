@@ -175,8 +175,18 @@
 <blockquote>
 <p>[(0, 0.4298588), (1, 0.5516107), (2, 0.018530471)]  </p>
 </blockquote>
-<p>表示主题0占比为43.0% 主题1占比为55%，主题2占比为2%。</p>
-<h2 id="2-4-rake"><a href="#2-4-rake" class="headerlink" title="2.4 rake"></a>2.4 rake</h2>
+<p>表示主题0占比为43.0%，主题1占比为55%，主题2占比为2%。</p>
+<h2 id="2-4-RAKE"><a href="#2-4-RAKE" class="headerlink" title="2.4 RAKE"></a>2.4 RAKE</h2><p>RAKE（Rapid Automatic Keyword Extraction），其特点是速度快的同时也能取得相对不错的效果。<br>之前介绍的算法提取出的词都是单一的关键词，而RAKE算法提取出的则是单词所组成的短语。<br>需要注意的是：在中文上使用RAKE算法的效果并不好，因为分词会出现边界模糊的情况。因此只推荐在英文文本上用RAKE算法。  </p>
+<p>我们用<u><a href="https://www.researchgate.net/publication/227988510_Automatic_Keyword_Extraction_from_Individual_Documents" target="_blank" rel="noopener">原论文</a></u>中的例子来解释其算法过程：<br><img src="/images/KW/4.jpg" alt="example"><br>这是原始文档以及人工标注的关键词<br>（1）得到候选关键词<br>第一步先从原始文档中抽取出候选的关键词，其过程以停用词和标点来分割源文档。分隔后的候选关键词如下：<br><img src="/images/KW/5.jpg" alt="候选关键词"><br>（2）计算单词共现矩阵<br>该过程与GLOVE中的类似，属于一劳永逸式的做法。<br>需要注意的是，该操作的单位是单词而不是上一步中的候选关键词。<br><img src="/images/KW/6.jpg" alt="单词共现矩阵"><br>（3）计算得分<br>首先计算每个单词的得分：<br><img src="/images/KW/7.jpg" alt="单词得分"><br>之后计算每个候选关键词的得分：<br><img src="/images/KW/8.jpg" alt="候选关键词得分"><br>每个候选关键词的得分就是把其包含的单词的得分（deg(w)/freq(w)）相加。<br>（4）最后输出得分高的候选关键词</p>
+<p>再来看一下实战过程：  </p>
+<p>RAKE源代码地址：<a href="https://github.com/aneesha/RAKE" target="_blank" rel="noopener">https://github.com/aneesha/RAKE</a>  </p>
+<p>RAKE新代码地址：<a href="https://github.com/laserwave/keywords_extraction_rake" target="_blank" rel="noopener">https://github.com/laserwave/keywords_extraction_rake</a>  </p>
+<p>其中源代码是RAKE论文提供的，而新代码是在源代码基础上改进得到的，并且支持python3.x语法。我们在此使用新代码进行演示。<br>首先下载新代码，在代码中有一个例子<br><img src="/images/KW/9.jpg" alt="RAKE"><br>我们直接命令行运行  </p>
+<blockquote>
+<p>python rake.py example/input.txt example/stopwords.txt -o example/output.txt </p>
+</blockquote>
+<p>即可运行示例中的数据<br>示例的输入是两篇英文文章，一篇一行，输出是提取关键词后的数据，格式如下：<br><img src="/images/KW/10.jpg" alt="RAKE"><br>第一行显示的是第一篇文章的提取结果，第二行显示的是第二篇的关键词。</p>
+
             </div>
 
             <!-- Post Comments -->
