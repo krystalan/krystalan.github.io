@@ -154,11 +154,11 @@
 <blockquote>
 <p>f = open(‘data.txt’,’r’,encoding=’utf-8’)<br>data = f.readlines()<br>f.close()<br>data = data[0:100]<br>for i,d in enumerate(data):<br>    x = eval(d)[‘article’].strip() # x为一篇文章的字符串形式<br>    data[i] = list(jieba.cut(x))  </p>
 </blockquote>
-<p>加载字典，并去除最高频的200个词汇，因为这些词汇太普遍所以并不能够做主题词。</p>
+<p>（3）加载字典，并去除最高频的200个词汇，因为这些词汇太普遍所以并不能够做主题词。</p>
 <blockquote>
 <p>dictionary = Dictionary(data)<br>dictionary.filter_n_most_frequent(200)<br>corpus = [dictionary.doc2bow(text) for text in data ]  </p>
 </blockquote>
-<p>训练LDA模型，并获取结果</p>
+<p>（4）训练LDA模型，并获取结果</p>
 <blockquote>
 <p>lda = LdaModel(corpus=corpus, id2word=dictionary, num_topics=3)#抽取三个主题<br>topic_list=lda.print_topics(3,5)#打印第一个主题排名前5的词汇<br>for i in topic_list:<br>    print(i)  </p>
 </blockquote>
