@@ -146,7 +146,28 @@
 <p>达赖喇嘛 西藏 不负 人们 两全 存在 世间 措诗 人生 摄政王</p>
 </blockquote>
 <h2 id="2-3-LDA"><a href="#2-3-LDA" class="headerlink" title="2.3 LDA"></a>2.3 LDA</h2><p>TFIDF是从词频的角度挖掘关键词<br>TextRank是从词共现关系角度挖掘关键词<br>而LDA做为主题模型的一哥，从文档主题的角度挖掘关键词。<br>理论部分请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/23/TopicModel" target="_blank" rel="noopener">一眼看穿你的心思</a></u>  </p>
-
+<p>实战代码如下：<br>（1）导入所需库</p>
+<blockquote>
+<p>from gensim.models import LdaModel<br>import pandas as pd<br>from gensim.corpora import Dictionary<br>import jieba  </p>
+</blockquote>
+<p>（2）获取数据源，这里用的是一个摘要数据集的文章部分，最后的data是一个二维数组，存放每篇文章分完词后结果。</p>
+<blockquote>
+<p>f = open(‘data.txt’,’r’,encoding=’utf-8’)<br>data = f.readlines()<br>f.close()<br>data = data[0:100]<br>for i,d in enumerate(data):<br>    x = eval(d)[‘article’].strip() # x为一篇文章的字符串形式<br>    data[i] = list(jieba.cut(x))  </p>
+</blockquote>
+<p>加载字典，并去除最高频的200个词汇，因为这些词汇太普遍所以并不能够做主题词。</p>
+<blockquote>
+<p>dictionary = Dictionary(data)<br>dictionary.filter_n_most_frequent(200)<br>corpus = [dictionary.doc2bow(text) for text in data ]  </p>
+</blockquote>
+<p>训练LDA模型，并获取结果</p>
+<blockquote>
+<p>lda = LdaModel(corpus=corpus, id2word=dictionary, num_topics=3)#抽取三个主题<br>topic_list=lda.print_topics(3,5)#打印第一个主题排名前5的词汇<br>for i in topic_list:<br>    print(i)  </p>
+</blockquote>
+<p>代码输出为：  </p>
+<blockquote>
+<p>(0, ‘0.003*”她” + 0.002*”某某” + 0.002*”公司” + 0.002*”,” + 0.002*”你”‘)<br>(1, ‘0.007*”,” + 0.005*”公司” + 0.002*”生物” + 0.002*”康泰” + 0.002*”原种场”‘)<br>(2, ‘0.003*”黄海波” + 0.002*”豆芽” + 0.002*”她” + 0.002*”·” + 0.002*”提”‘)  </p>
+</blockquote>
+<p>这里的0，1，2分别对应着模型提取出的三个主题，每个主题输出了排名前5的单词。<br>可见，我们虽然去除了词频最高的200个单词，但还存在着一些无意义的词汇，例如“她”、“你”等等，如提前过滤掉停用词效果会更好。</p>
+<h2 id="2-4-rake"><a href="#2-4-rake" class="headerlink" title="2.4 rake"></a>2.4 rake</h2>
             </div>
 
             <!-- Post Comments -->
