@@ -127,7 +127,7 @@
                 <p><img src="/images/KW/1.jpg" alt="算法总览">  </p>
 <h1 id="1-有监督算法"><a href="#1-有监督算法" class="headerlink" title="1.有监督算法"></a>1.有监督算法</h1><p>有监督的关键词抽取算法需要大量的标注数据来让模型习得什么样的词汇是关键词，往往可以看成一个词汇二分类的任务或是一个序列标注任务。（<strong>有监督算法不为本文重点因此只做简单介绍</strong>）  </p>
 <h2 id="1-1-词汇二分类任务"><a href="#1-1-词汇二分类任务" class="headerlink" title="1.1 词汇二分类任务"></a>1.1 词汇二分类任务</h2><p>针对于每一个词汇，都为其预测一个结果（是否为关键词），例如我们可以用双向LSTM获取每一个词汇的表示，再用一个激活函数算出预测结果。<br><img src="/images/KW/2.jpg" alt="词汇二分类"><br>例如在本例当中，我们先把“世间安得双全法，不负如来不负卿”分词，之后分别喂给BiLSTM，取得中间的词汇表示（前向LSTM的隐层状态与后向LSTM的隐层状态拼接）后，再利用激活函数计算出分类结果即可。最终我们预测出“双全法”是关键词。</p>
-<h2 id="1-2-序列标注任务"><a href="#1-2-序列标注任务" class="headerlink" title="1.2 序列标注任务"></a>1.2 序列标注任务</h2><p>而在序列标注任务解法中，我们可以把每一个词汇都标注成0或1来代表非关键词与关键词，再利用序列模型（例如HMM、CRF等等）求解即可。<br>详细的内容请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/09/NER/" target="_blank" rel="noopener">命名实体识别出你的点点滴滴</a></u>  </p>
+<h2 id="1-2-序列标注任务"><a href="#1-2-序列标注任务" class="headerlink" title="1.2 序列标注任务"></a>1.2 序列标注任务</h2><p>而在序列标注任务解法中，我们可以把每一个词汇都标注成0或1来代表非关键词与关键词，再利用序列模型（例如HMM、CRF等等）求解即可。<br>详细的内容请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/09/NER/" target="_blank" rel="noopener">《命名实体识别出你的点点滴滴》</a></u>  </p>
 <h1 id="2-无监督算法"><a href="#2-无监督算法" class="headerlink" title="2.无监督算法"></a>2.无监督算法</h1><h2 id="2-1-TF-IDF"><a href="#2-1-TF-IDF" class="headerlink" title="2.1 TF-IDF"></a>2.1 TF-IDF</h2><p>该算法是一个很强的Baseline，能够解决大部分提取关键词的场景。<br>TF = 词语在文章中出现的次数/文章总词数<br>IDF = log[语料库文章总数/(包含该词的文章数+1)]<br>TF-IDF = TF*IDF<br>首先，TF是用来计算词频的，但是计算出来的词频很有可能是一些没有意义的词汇，例如“我们”、“的”、“地”、“得”等等。所以我们要通过IDF来消减这些词的权重。一个词越通用，它的IDF值越低。  </p>
 <p>在实战中，我们可以使用jieba.analyse来使用这一算法，具体代码如下：  </p>
 <blockquote>
@@ -145,7 +145,7 @@
 <blockquote>
 <p>达赖喇嘛 西藏 不负 人们 两全 存在 世间 措诗 人生 摄政王</p>
 </blockquote>
-<h2 id="2-3-LDA"><a href="#2-3-LDA" class="headerlink" title="2.3 LDA"></a>2.3 LDA</h2><p>TFIDF是从词频的角度挖掘关键词<br>TextRank是从词共现关系角度挖掘关键词<br>而LDA做为主题模型的一哥，从文档主题的角度挖掘关键词。<br>理论部分请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/23/TopicModel" target="_blank" rel="noopener">一眼看穿你的心思</a></u>  </p>
+<h2 id="2-3-LDA"><a href="#2-3-LDA" class="headerlink" title="2.3 LDA"></a>2.3 LDA</h2><p>TFIDF是从词频的角度挖掘关键词<br>TextRank是从词共现关系角度挖掘关键词<br>而LDA做为主题模型的一哥，从文档主题的角度挖掘关键词。<br>理论部分请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/23/TopicModel" target="_blank" rel="noopener">《一眼看穿你的心思》</a></u>  </p>
 <p>实战代码如下：<br>（1）导入所需库</p>
 <blockquote>
 <p>from gensim.models import LdaModel<br>import pandas as pd<br>from gensim.corpora import Dictionary<br>import jieba  </p>
@@ -186,7 +186,7 @@
 <p>python rake.py example/input.txt example/stopwords.txt -o example/output.txt </p>
 </blockquote>
 <p>即可运行示例中的数据<br>示例的输入是两篇英文文章，一篇一行，输出是提取关键词后的数据，格式如下：<br><img src="/images/KW/10.jpg" alt="RAKE"><br>第一行显示的是第一篇文章的提取结果，第二行显示的是第二篇的关键词。</p>
-<h2 id="3-新词发现"><a href="#3-新词发现" class="headerlink" title="3.新词发现"></a>3.新词发现</h2><p>最后简单提一下另一个相关的任务<br>新词发现：由于互联网的普及，网络上时不时会出现一些新的词汇，利用新词发现技术可以快速识别出未在词表中的词汇。<br>其基本思路是利用互信息和左右熵  </p>
+<h1 id="3-新词发现"><a href="#3-新词发现" class="headerlink" title="3.新词发现"></a>3.新词发现</h1><p>最后简单提一下另一个相关的任务<br>新词发现：由于互联网的普及，网络上时不时会出现一些新的词汇，利用新词发现技术可以快速识别出未在词表中的词汇。<br>其基本思路是利用互信息和左右熵  </p>
 <p>更加详细的介绍请移步：<br><a href="https://www.jianshu.com/p/d24b6e197410" target="_blank" rel="noopener">https://www.jianshu.com/p/d24b6e197410</a><br><a href="https://github.com/zhanzecheng/Chinese_segment_augment" target="_blank" rel="noopener">https://github.com/zhanzecheng/Chinese_segment_augment</a>  </p>
 
             </div>
