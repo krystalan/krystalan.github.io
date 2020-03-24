@@ -127,7 +127,7 @@
                 <blockquote>
 <p>移花接木：指把一种花木的枝条或嫩芽嫁接在另一种花木上，比喻暗中用手段更换人或事物来欺骗别人。出自明·凌濛初《二刻拍案惊奇》。<br>花更盛：指花木迁移到另一种花木上生长的更加旺盛。  </p>
 </blockquote>
-<p>本篇将总结一下迁移学习与预训练语言模型PLM的知识点<br>第一、二节主要参考的是HuggingFace的Thomas Wolf的迁移学习入门介绍，传送门：<a href="https://www.youtube.com/watch?v=rEGB7-FlPRs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rEGB7-FlPRs</a><br>Slides：<a href="https://tiny.cc/NAACLTransfer" target="_blank" rel="noopener">https://tiny.cc/NAACLTransfer</a>  </p>
+<p>本篇将总结一下迁移学习与预训练语言模型PLM的知识点<br>第一、二节主要参考的是HuggingFace的Thomas Wolf的迁移学习入门介绍<br>传送门：<a href="https://www.youtube.com/watch?v=rEGB7-FlPRs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rEGB7-FlPRs</a><br>Slides：<a href="https://tiny.cc/NAACLTransfer" target="_blank" rel="noopener">https://tiny.cc/NAACLTransfer</a>  </p>
 <p>第三节开始参考的是复旦大学邱锡鹏老师的最新PLM综述：<a href="https://arxiv.org/abs/2003.08271" target="_blank" rel="noopener">https://arxiv.org/abs/2003.08271</a><br>也推荐THUNLP总结的PLM PaperList：<a href="https://github.com/thunlp/PLMpapers" target="_blank" rel="noopener">https://github.com/thunlp/PLMpapers</a></p>
 <h1 id="1-迁移学习是什么"><a href="#1-迁移学习是什么" class="headerlink" title="1.迁移学习是什么"></a>1.迁移学习是什么</h1><p><img src="/images/TransferLearning/1.jpg" alt="迁移学习"><br>迁移学习就是就是把已在大型数据集上训练好的模型参数迁移到新的模型中来帮助新模型训练。<br>考虑到大部分数据或任务是存在相关性的，所以通过迁移学习我们可以将已经学到的模型参数（也可理解为模型学到的知识）通过某种方式来分享给新模型从而加快并优化模型的学习效率不用像大多数网络那样从零学习，并且能够助力新模型达到更好的效果。  </p>
 <p>为什么我们要在NLP中使用迁移学习：<br>（1）许多NLP任务都共享语言的常识，例如：语言表示，语法，语义等。<br>（2）带标签的数据很少，把几个任务组合在一起从而获得更多的数据。<br>（3）互联网上有大量的无标注数据，可以利用迁移学习加以利用。<br>（4）经验发现，迁移学习方法在许多有监督的NLP任务上达到了SOTA，例如：文本分类、信息抽取、QA等等。  </p>
@@ -136,7 +136,7 @@
 <p>一些最近的趋势：<br>（1）在不同的训练目标上做实验：例如ALBERT中使用了句子排序任务<br>（2）加入正则化体系：LayerDrop、共享层之间的参数<br>（3）改结构：XLNet使用自回归双向建模等等</p>
 <p>如何让预训练模型适应新任务：<br>（1）移除预训练任务的头部如果没用的话：例如移除softmax。<br>（2）添加目标任务的元素：在与训练模型的头尾做一定的适应性更改工作。例如：在与训练模型的顶部加一个全连接层，或者把预训练的输入喂给一个独立的模型，利用与训练模型去初始化一个目标模型等等。</p>
 <p><img src="/images/TransferLearning/4.jpg" alt="迁移学习"><br>例如我们在文本分类任务下，使用Transformer去获得一段文本的表示，再用全连接层预测分类结果。  </p>
-<p>再如对话系统中，我们要对模型输入：①知识背景②对话历史③已生成的句子<br><img src="/images/TransferLearning/5.jpg" alt="迁移学习"><br>我们可以将这些输入通过预训练语言模型得到其表示再融合起来,再输入到当前任务的模型当中即可。  </p>
+<p>再如对话系统中，我们要对模型输入：①知识背景②对话历史③已生成的句子<br><img src="/images/TransferLearning/5.jpg" alt="迁移学习"><br>我们可以将这些输入通过预训练语言模型得到其表示再融合起来，再输入到当前任务的模型当中即可。  </p>
 <p>第二节的最后推荐大家另外一本书进行学习：<u><a href="https://tutorial.transferlearning.xyz/" target="_blank" rel="noopener">《迁移学习简明手册》</a></u></p>
 <h1 id="3-预训练语言模型（Pre-trained-Language-Model）"><a href="#3-预训练语言模型（Pre-trained-Language-Model）" class="headerlink" title="3.预训练语言模型（Pre-trained Language Model）"></a>3.预训练语言模型（Pre-trained Language Model）</h1><p>[TODO]</p>
 
