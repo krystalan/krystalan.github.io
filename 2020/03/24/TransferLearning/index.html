@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Papers/">Papers</a></li><li><a class="category-link" href="/categories/Research/">Research</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></li><li><a class="category-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/11.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >移花接木花更盛[TODO]</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <blockquote>
+<p>移花接木：指把一种花木的枝条或嫩芽嫁接在另一种花木上，比喻暗中用手段更换人或事物来欺骗别人。出自明·凌濛初《二刻拍案惊奇》。<br>花更盛：指花木迁移到另一种花木上生长的更加旺盛。  </p>
+</blockquote>
+<p>本篇将总结一下迁移学习与预训练语言模型PLM的知识点<br>第一、二节主要参考的是HuggingFace的Thomas Wolf的迁移学习入门介绍，传送门：<a href="https://www.youtube.com/watch?v=rEGB7-FlPRs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rEGB7-FlPRs</a><br>Slides：<a href="https://tiny.cc/NAACLTransfer" target="_blank" rel="noopener">https://tiny.cc/NAACLTransfer</a>  </p>
+<p>第三节开始参考的是复旦大学邱锡鹏老师的最新PLM综述：<a href="https://arxiv.org/abs/2003.08271" target="_blank" rel="noopener">https://arxiv.org/abs/2003.08271</a><br>也推荐THUNLP总结的PLM PaperList：<a href="https://github.com/thunlp/PLMpapers" target="_blank" rel="noopener">https://github.com/thunlp/PLMpapers</a></p>
+<h1 id="1-迁移学习是什么"><a href="#1-迁移学习是什么" class="headerlink" title="1.迁移学习是什么"></a>1.迁移学习是什么</h1><p><img src="/images/TransferLearning/1.jpg" alt="迁移学习"><br>迁移学习就是就是把已在大型数据集上训练好的模型参数迁移到新的模型中来帮助新模型训练。<br>考虑到大部分数据或任务是存在相关性的，所以通过迁移学习我们可以将已经学到的模型参数（也可理解为模型学到的知识）通过某种方式来分享给新模型从而加快并优化模型的学习效率不用像大多数网络那样从零学习，并且能够助力新模型达到更好的效果。  </p>
+<p>为什么我们要在NLP中使用迁移学习：<br>（1）许多NLP任务都共享语言的常识，例如：语言表示，语法，语义等。<br>（2）带标签的数据很少，把几个任务组合在一起从而获得更多的数据。<br>（3）互联网上有大量的无标注数据，可以利用迁移学习加以利用。<br>（4）经验发现，迁移学习方法在许多有监督的NLP任务上达到了SOTA，例如：文本分类、信息抽取、QA等等。  </p>
+<p><img src="/images/TransferLearning/2.jpg" alt="迁移学习"><br>我们可以看一个NER数据集的例子，基本上每种跳跃性的进展都来自某种形式的迁移学习。</p>
+<h1 id="2-序列迁移学习"><a href="#2-序列迁移学习" class="headerlink" title="2.序列迁移学习"></a>2.序列迁移学习</h1><p><img src="/images/TransferLearning/3.jpg" alt="迁移学习"><br>如上图，我们现在大量的无标签语料库上做计算得到某种形式的预训练语言模型或者词向量表示，之后在不同的下游任务中微调即可。  </p>
+<p>一些最近的趋势：<br>（1）在不同的训练目标上做实验：例如ALBERT中使用了句子排序任务<br>（2）加入正则化体系：LayerDrop、共享层之间的参数<br>（3）改结构：XLNet使用自回归双向建模等等</p>
+<p>如何让预训练模型适应新任务：<br>（1）移除预训练任务的头部如果没用的话：例如移除softmax。<br>（2）添加目标任务的元素：在与训练模型的头尾做一定的适应性更改工作。例如：在与训练模型的顶部加一个全连接层，或者把预训练的输入喂给一个独立的模型，利用与训练模型去初始化一个目标模型等等。</p>
+<p><img src="/images/TransferLearning/4.jpg" alt="迁移学习"><br>例如我们在文本分类任务下，使用Transformer去获得一段文本的表示，再用全连接层预测分类结果。  </p>
+<p>再如对话系统中，我们要对模型输入：①知识背景②对话历史③已生成的句子<br><img src="/images/TransferLearning/5.jpg" alt="迁移学习"><br>我们可以将这些输入通过预训练语言模型得到其表示再融合起来。  </p>
+<p>第二节的最后推荐大家另外一本书进行学习：<u><a href="https://tutorial.transferlearning.xyz/" target="_blank" rel="noopener">《迁移学习简明手册》</a></u></p>
+<h1 id="3-预训练语言模型（Pre-trained-Language-Model）"><a href="#3-预训练语言模型（Pre-trained-Language-Model）" class="headerlink" title="3.预训练语言模型（Pre-trained Language Model）"></a>3.预训练语言模型（Pre-trained Language Model）</h1><p>[TODO]</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2020 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
