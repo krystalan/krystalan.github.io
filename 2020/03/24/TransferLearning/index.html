@@ -127,8 +127,8 @@
                 <blockquote>
 <p>移花接木：指把一种花木的枝条或嫩芽嫁接在另一种花木上，比喻暗中用手段更换人或事物来欺骗别人。出自明·凌濛初《二刻拍案惊奇》。<br>花更盛：指花木迁移到另一种花木上生长的更加旺盛。  </p>
 </blockquote>
-<p>本篇将总结一下迁移学习与预训练语言模型PLM的知识点<br>第一、二节主要参考的是HuggingFace的Thomas Wolf的迁移学习入门介绍<br>传送门：<a href="https://www.youtube.com/watch?v=rEGB7-FlPRs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rEGB7-FlPRs</a><br>Slides：<a href="https://tiny.cc/NAACLTransfer" target="_blank" rel="noopener">https://tiny.cc/NAACLTransfer</a>  </p>
-<p>第三节开始参考的是复旦大学邱锡鹏老师的最新PLM综述：<a href="https://arxiv.org/abs/2003.08271" target="_blank" rel="noopener">https://arxiv.org/abs/2003.08271</a><br>也推荐THUNLP总结的PLM PaperList：<a href="https://github.com/thunlp/PLMpapers" target="_blank" rel="noopener">https://github.com/thunlp/PLMpapers</a></p>
+<p>本篇将总结一下迁移学习与预训练语言模型PLM的知识点<br>第一、二节主要参考的是HuggingFace的Thomas Wolf的迁移学习入门介绍<br>传送门：<u><a href="https://www.youtube.com/watch?v=rEGB7-FlPRs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rEGB7-FlPRs</a></u><br>Slides：<u><a href="https://tiny.cc/NAACLTransfer" target="_blank" rel="noopener">https://tiny.cc/NAACLTransfer</a></u>  </p>
+<p>第三节开始参考的是复旦大学邱锡鹏老师的最新PLM综述：<u><a href="https://arxiv.org/abs/2003.08271" target="_blank" rel="noopener">https://arxiv.org/abs/2003.08271</a></u><br>也推荐THUNLP总结的PLM PaperList：<u><a href="https://github.com/thunlp/PLMpapers" target="_blank" rel="noopener">https://github.com/thunlp/PLMpapers</a></u></p>
 <h1 id="1-迁移学习是什么"><a href="#1-迁移学习是什么" class="headerlink" title="1.迁移学习是什么"></a>1.迁移学习是什么</h1><p><img src="/images/TransferLearning/1.jpg" alt="迁移学习"><br>迁移学习就是就是把已在大型数据集上训练好的模型参数迁移到新的模型中来帮助新模型训练。<br>考虑到大部分数据或任务是存在相关性的，所以通过迁移学习我们可以将已经学到的模型参数（也可理解为模型学到的知识）通过某种方式来分享给新模型从而加快并优化模型的学习效率不用像大多数网络那样从零学习，并且能够助力新模型达到更好的效果。  </p>
 <p>为什么我们要在NLP中使用迁移学习：<br>（1）许多NLP任务都共享语言的常识，例如：语言表示，语法，语义等。<br>（2）带标签的数据很少，把几个任务组合在一起从而获得更多的数据。<br>（3）互联网上有大量的无标注数据，可以利用迁移学习加以利用。<br>（4）经验发现，迁移学习方法在许多有监督的NLP任务上达到了SOTA，例如：文本分类、信息抽取、QA等等。  </p>
 <p><img src="/images/TransferLearning/2.jpg" alt="迁移学习"><br>我们可以看一个NER数据集的例子，基本上每种跳跃性的进展都来自某种形式的迁移学习。</p>
