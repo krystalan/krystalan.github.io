@@ -186,7 +186,8 @@
 <p>python rake.py example/input.txt example/stopwords.txt -o example/output.txt </p>
 </blockquote>
 <p>即可运行示例中的数据<br>示例的输入是两篇英文文章，一篇一行，输出是提取关键词后的数据，格式如下：<br><img src="/images/KW/10.jpg" alt="RAKE"><br>第一行显示的是第一篇文章的提取结果，第二行显示的是第二篇的关键词。 </p>
-<h2 id="2-5-推荐"><a href="#2-5-推荐" class="headerlink" title="2.5 推荐"></a>2.5 推荐</h2><p>最后非常推荐刘知远老师的博士论文：<u><a href="http://xueshu.baidu.com/usercenter/paper/show?paperid=463f0161663fe810fa40d13b0e8eab11&site=xueshu_se" target="_blank" rel="noopener">《基于文档主题结构的关键词抽取方法研究》</a></u><br>虽然该文时间久远，但对文档关键词和文档标签有着非常全面的概括与理解。</p>
+<h2 id="2-5-diff-idf"><a href="#2-5-diff-idf" class="headerlink" title="2.5 diff-idf"></a>2.5 diff-idf</h2><p>探索不同领域的关键词<br><img src="/images/KW/11.jpg" alt="diff-idf"><br>这个是一篇2020AAAI中的方法，原论文题目是：《Keyword-Attentive Deep Semantic Matching》<br>论文和代码地址：<u><a href="https://github.com/DataTerminatorX/Keyword-BERT" target="_blank" rel="noopener">https://github.com/DataTerminatorX/Keyword-BERT</a></u><br>简述一下就是，先利用PMI发现新词与候选关键词，再计算diff-idf值，将值高的保留下来。需要注意的是，这里有一个领域的概念，一个单词的diff-idf值是在其余领域下的idf值减去当前领域下的idf值。<br>也就是对于不同的领域抽取关键词，最后抽取出的结果部分如下：<br><img src="/images/KW/12.jpg" alt="diff-idf">   </p>
+<h2 id="2-6-推荐"><a href="#2-6-推荐" class="headerlink" title="2.6 推荐"></a>2.6 推荐</h2><p>最后非常推荐刘知远老师的博士论文：<u><a href="http://xueshu.baidu.com/usercenter/paper/show?paperid=463f0161663fe810fa40d13b0e8eab11&site=xueshu_se" target="_blank" rel="noopener">《基于文档主题结构的关键词抽取方法研究》</a></u><br>虽然该文时间久远，但对文档关键词和文档标签有着非常全面的概括与理解。</p>
 <h1 id="3-新词发现"><a href="#3-新词发现" class="headerlink" title="3.新词发现"></a>3.新词发现</h1><p>最后简单提一下另一个相关的任务<br>新词发现：由于互联网的普及，网络上时不时会出现一些新的词汇，利用新词发现技术可以快速识别出未在词表中的词汇。<br>其基本思路是利用互信息和左右熵  </p>
 <p>更加详细的介绍请移步：<br><a href="https://www.jianshu.com/p/d24b6e197410" target="_blank" rel="noopener">https://www.jianshu.com/p/d24b6e197410</a><br><a href="https://github.com/zhanzecheng/Chinese_segment_augment" target="_blank" rel="noopener">https://github.com/zhanzecheng/Chinese_segment_augment</a>  </p>
 
