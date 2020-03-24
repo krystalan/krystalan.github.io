@@ -136,7 +136,7 @@
 <p>一些最近的趋势：<br>（1）在不同的训练目标上做实验：例如ALBERT中使用了句子排序任务<br>（2）加入正则化体系：LayerDrop、共享层之间的参数<br>（3）改结构：XLNet使用自回归双向建模等等</p>
 <p>如何让预训练模型适应新任务：<br>（1）移除预训练任务的头部如果没用的话：例如移除softmax。<br>（2）添加目标任务的元素：在与训练模型的头尾做一定的适应性更改工作。例如：在与训练模型的顶部加一个全连接层，或者把预训练的输入喂给一个独立的模型，利用与训练模型去初始化一个目标模型等等。</p>
 <p><img src="/images/TransferLearning/4.jpg" alt="迁移学习"><br>例如我们在文本分类任务下，使用Transformer去获得一段文本的表示，再用全连接层预测分类结果。  </p>
-<p>再如对话系统中，我们要对模型输入：①知识背景②对话历史③已生成的句子<br><img src="/images/TransferLearning/5.jpg" alt="迁移学习"><br>我们可以将这些输入通过预训练语言模型得到其表示再融合起来。  </p>
+<p>再如对话系统中，我们要对模型输入：①知识背景②对话历史③已生成的句子<br><img src="/images/TransferLearning/5.jpg" alt="迁移学习"><br>我们可以将这些输入通过预训练语言模型得到其表示再融合起来,在输入到当前任务的模型当中即可。  </p>
 <p>第二节的最后推荐大家另外一本书进行学习：<u><a href="https://tutorial.transferlearning.xyz/" target="_blank" rel="noopener">《迁移学习简明手册》</a></u></p>
 <h1 id="3-预训练语言模型（Pre-trained-Language-Model）"><a href="#3-预训练语言模型（Pre-trained-Language-Model）" class="headerlink" title="3.预训练语言模型（Pre-trained Language Model）"></a>3.预训练语言模型（Pre-trained Language Model）</h1><p>[TODO]</p>
 
