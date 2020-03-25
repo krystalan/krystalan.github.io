@@ -120,13 +120,23 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/13.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >强化学习纲要（一） 概括与RL基础</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >强化学习纲要（二） 马尔可夫决策过程</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <blockquote>
-<p>视频链接：<br><a href="http://www.bilibili.com/video/BV1g7411m7Ms" target="_blank" rel="noopener">www.bilibili.com/video/BV1g7411m7Ms</a><br><a href="http://www.bilibili.com/video/BV1u7411m7rh" target="_blank" rel="noopener">www.bilibili.com/video/BV1u7411m7rh</a>  </p>
+<p>视频链接：<br><a href="http://www.bilibili.com/video/BV1g7411m7Ms" target="_blank" rel="noopener">www.bilibili.com/video/BV1g7411m7Ms</a><br><a href="http://www.bilibili.com/video/BV1u7411m7rh" target="_blank" rel="noopener">www.bilibili.com/video/BV1u7411m7rh</a>   </p>
 </blockquote>
+<h1 id="1-马尔可夫过程"><a href="#1-马尔可夫过程" class="headerlink" title="1.马尔可夫过程"></a>1.马尔可夫过程</h1><p>详见我之前写的另一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/18/StochasticProcess3/" target="_blank" rel="noopener">《随机过程 第4章》</a></u>  </p>
+<h1 id="2-马尔可夫奖励过程MRP"><a href="#2-马尔可夫奖励过程MRP" class="headerlink" title="2.马尔可夫奖励过程MRP"></a>2.马尔可夫奖励过程MRP</h1><p>马尔可夫奖励过程 = 马尔可夫链 + 奖励<br>奖励函数是一个期望，当你到达某个状态的时候，可以获得多大的奖励。<br><img src="/images/RL/8.jpg" alt="MRP"><br>如上图所示（s1状态有5个奖励，s7状态有10个奖励），对于马尔可夫链的每一个状态去定义一个奖励。     </p>
+<p>其余概念：<br>（1）Horizon：每个episode里最大的时间步数，可以是无限的，当有限时，整个MRP称为有限马尔可夫（奖励）过程。<br>（2）Return：把每一步的奖励进行折扣，获得总体收益，越往后得到的奖励折扣的越多。<br><img src="/images/RL/9.jpg" alt="RETURN"><br>说明更期望得到现有的奖励，未来得到的奖励就要打折扣。<br>γ为discount factor折价因子。<br>（3）state value function：<br>对于马尔可夫奖励过程定义一个状态价值函数（关于return的期望）<br><img src="/images/RL/10.jpg" alt="状态价值函数"><br>代表从当前的状态开始，有可能获得的价值期望，可以反映出当前状态的好坏。<br>如本节一开始的例子，我们现在来计算s4状态的价值函数。<br>可以通过MC采样过程计算，也可以使用<strong>贝尔曼等式</strong>来计算：<br><img src="/images/RL/11.jpg" alt="贝尔曼等式"><br>基本思路与PageRank相似，通过迭代至参数收敛即可。<br>迭代方法：动态规划、蒙特卡罗、TD learning<br>①来看一下蒙特卡罗方法：<br><img src="/images/RL/13.jpg" alt="蒙特卡罗"><br>简述一下就是：从t时间下的s状态开始，产生N条轨迹，计算这N条轨迹的奖励的平均值，即为s状态下的价值。<br>蒙特卡罗的思想非常简单：就是通过大量采样近似求解，其一个非常经典的应用就是计算积分：在空间上计算积分区域内的采样点占比。<br>②直接迭代计算：当两次迭代中奖励变化小于某阈值时停止迭代，和EM算法类似。  </p>
+<p>如果MRP状态少的话，可以把该等式写成矩阵形式，但写成矩阵形式之后，我们无法保证矩阵满秩，所以并不能直接求解，再者矩阵求逆复杂度极高。（故该方法只适用于状态数少的MRP）<br><img src="/images/RL/12.jpg" alt="矩阵形式的MRP">  </p>
+<p>补充说明——折价因此γ的用处：<br>（1）避免在有限马尔可夫过程中产生无穷的奖励（有限马尔可夫过程成环）<br>（2）期望得到尽可能快的奖励，比如相比于一周之后得到100块钱，我更期望现在就得到这100块钱。<br>（3）人和动物的行为里面，大家都希望得到立刻奖励。<br>（4）如果γ为0，则只关注当前的奖励；如果γ为1，代表对未来并没有折扣（即未来获得的奖励和当前获得的奖励的价值是一样的）。<br>（5）是强化学习中的超参数。  </p>
+<h1 id="3-马尔可夫决策过程MDP"><a href="#3-马尔可夫决策过程MDP" class="headerlink" title="3.马尔可夫决策过程MDP"></a>3.马尔可夫决策过程MDP</h1><p>MDP = MRP + Decision = MP + Reward + Decision<br><img src="/images/RL/14.jpg" alt="MDP"><br>可以看出，在MDP中，状态转移和奖励函数需要考虑当前时间agent采取的行为（即decision）。<br>所以MDP是由状态集合、行为集合、状态转移、奖励函数、决策函数以及折价因子构成的。  </p>
+<p>其中决策函数（Policy）的定义如下：<br><img src="/images/RL/15.jpg" alt="Policy"><br>从当前状态产生行为分布/极大化概率单一行为，同时可以看出它是一个静态的，与时间t无关。  </p>
+<p>MDP与MP/MRP的对比：<br><img src="/images/RL/16.jpg" alt="对比"><br>就相当于多了一个行为。<br><img src="/images/RL/22.jpg" alt="贝尔曼"><br>MDP不会随波逐流！</p>
+<p>再来看看MDP中的价值函数：<br>首先定义了一个Q函数表示在状态s和行为a下所产生的价值的期望：<br><img src="/images/RL/17.jpg" alt="Q函数"><br>那么原先的价值函数可以改写成：<br><img src="/images/RL/18.jpg" alt="价值函数"><br>就相当于价值函数等于当前状态s的所有行为产生的价值期望。<br>于是我们可以把价值函数和Q函数分别分解成立即奖励与长远奖励（即贝尔曼期望等式）：<br><img src="/images/RL/19.jpg" alt="贝尔曼"><br>先看（7）式，就相当于在s状态下，进行了a行为，然后可以得到下一个状态的概率分布。R(t+1)就是下一个状态的奖励，而在下一个状态下再次利用行为和状态计算下下次奖励的时候需要用到折价因子。<br>再看（6）式，其实就和上述思路一致，只不过没有将行为拆分讨论。  </p>
+<p>接着我们有了（8）式与（9）式<br><img src="/images/RL/20.jpg" alt="进一步求解"><br>将（9）带入（8）中得（10）<br>将（8）带入（9）中得（11）<br>这样我们就可以利用（10）式来递归求解V函数，利用（11）式来递归求解q函数。<br>用一个图来理解一下递归求V函数的过程：<br><img src="/images/RL/21.jpg" alt="求V函数"><br>前半段表示当前状态下，当前行为下的价值，后半段是利用当前状态与当前行为推出下一步状态，并利用下一步状态的价值迭代求解。<strong>通过当前状态和决策函数policy来求解当前状态的价值的过程称为：Policy Evaluation</strong>   </p>
 
             </div>
 
