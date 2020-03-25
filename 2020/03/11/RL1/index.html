@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/13.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >强化学习纲要（一） 概括与RL基础</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <blockquote>
+<p>视频链接：<br><a href="http://www.bilibili.com/video/BV1LE411G7Xj" target="_blank" rel="noopener">www.bilibili.com/video/BV1LE411G7Xj</a><br><a href="http://www.bilibili.com/video/BV1g7411Z7SJ" target="_blank" rel="noopener">www.bilibili.com/video/BV1g7411Z7SJ</a></p>
+</blockquote>
+<h1 id="1-强化学习基本概念"><a href="#1-强化学习基本概念" class="headerlink" title="1.强化学习基本概念"></a>1.强化学习基本概念</h1><p><img src="/images/RL/1.jpg" alt="基本概念"><br>一个agent怎么在一个复杂和不确定的环境里面去最大化能够获得的奖励。</p>
+<h1 id="2-强化学习-amp-有监督学习"><a href="#2-强化学习-amp-有监督学习" class="headerlink" title="2.强化学习&amp;有监督学习"></a>2.强化学习&amp;有监督学习</h1><p>在有监督深度学习中，我们根据大量的带标注数据去训练模型，在训练过程中，计算每一步的loss并根据BP来做权重更新。 </p>
+<p>而在强化学习中，不能在每一步中立即获得反馈，因此输入的是一个序列。学习器不被告知那些行为是正确的，而是通过自己不停地尝试来发现最有利的行为。不能通过带标签的数据计算loss，而是通过奖励信号，而且给奖励信号有延迟并且不会告诉你什么是对的。</p>
+<p>所以我们可以得到强化学习的几个特点：<br>（1）不算尝试与试错<br>（2）延迟的奖励信号<br>（3）数据有时间关联<br>（4）Agent的行为会影响它此后得到的数据，所以强化学习的一个关键点就是如何让Agent的行为稳定提升  </p>
+<h1 id="3-时序决策过程"><a href="#3-时序决策过程" class="headerlink" title="3.时序决策过程"></a>3.时序决策过程</h1><p>强化学习所研究的问题其实是Agent跟环境交互<br><img src="/images/RL/2.jpg" alt="Agent和环境交互"><br>奖励是环境给的反馈信号，暗示agent在t步上做的怎么样，强化学习就是最大化奖励信号。  </p>
+<p>一个关键问题就是如何让Agent取得更多的长期奖励而不是短期奖励。  </p>
+<h1 id="4-Agent的组成成分"><a href="#4-Agent的组成成分" class="headerlink" title="4.Agent的组成成分"></a>4.Agent的组成成分</h1><p>（1）决策函数（policy function）:用于选取下一步的动作。<br><img src="/images/RL/3.jpg" alt="Policy"><br>有两种Policy，一种是概率policy用于产生各个行为的概率分布，一种是决策policy直接选择一个行为输出（极大化思想）。<br>（2）价值函数（value function）：用来对现在状态进行估价，价值函数越大代表状态越有利。<br>里面有一个折价因子（discount factor），尽可能在少的时间内得到多的奖励。<br>（3）模型（model）：表示模型对整个状态的理解，用于获取所有环境的表示。决定了下一个状态是什么样的。<br><img src="/images/RL/4.jpg" alt="model"><br>有两部分组成，第一部分是状态转移，用于基于当前状态和动作预测下一个状态。第二部分是基于当前状态和行为来预测能获得多少奖励。  </p>
+<h1 id="5-强化学习的分类"><a href="#5-强化学习的分类" class="headerlink" title="5.强化学习的分类"></a>5.强化学习的分类</h1><h2 id="5-1-基于Agent分类"><a href="#5-1-基于Agent分类" class="headerlink" title="5.1 基于Agent分类"></a>5.1 基于Agent分类</h2><p>（1）Value-based Agent（基于价值函数的Agent）<br>表面学习的是价值函数，隐含学习了策略（从价值函数中推算出来的）<br><img src="/images/RL/6.jpg" alt="基于价值函数的Agent"><br>（2）Policy-based Agent（基于策略导向的Agent）<br>直接去学习策略，没有价值函数。<br><img src="/images/RL/5.jpg" alt="基于策略导向的Agent"><br>（3）Actor-Critic Agent<br>是上述两者的结合，同时学习价值函数和策略，通过两者交互得到一个最佳的行为。   </p>
+<h2 id="5-2-基于Model分类"><a href="#5-2-基于Model分类" class="headerlink" title="5.2 基于Model分类"></a>5.2 基于Model分类</h2><p>（1）Model-based<br>直接学习模型，并通过学习状态的转移来采取措施，可能有也可能没有决策函数和价值函数。<br>（2）Model-free<br>直接学习价值函数或（与）决策函数，没有学习模型。  </p>
+<p>总体分类如下：<br><img src="/images/RL/7.jpg" alt="RL分类">   </p>
+<h1 id="6-Exploration与Exploitation"><a href="#6-Exploration与Exploitation" class="headerlink" title="6.Exploration与Exploitation"></a>6.Exploration与Exploitation</h1><p>Exploration：尝试新的行为尽可能让agent在未来做出更好的决策。<br>Exploitation：直接采取已知的可能得到很好奖励的行为。  </p>
+<p>所以存在着一个权衡：怎么通过牺牲一些短期的奖励来获得行为的理解。<br>举个例子，当我们选择餐厅的时候，Exploitation就是直接选择你最喜欢的餐厅，而Exploration是你去尝试一个新的餐厅。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2020 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
