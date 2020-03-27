@@ -120,7 +120,7 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/15.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >融入知识的摘要生成[TODO]</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >融入知识的摘要生成</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
@@ -137,8 +137,16 @@
 <p>（2）标题的表示也是通过BiLSTM获得的。<br>（3）解码<br><img src="/images/KGforSUM/10.jpg" alt="mode"><br>其中ht是当前解码器的隐层向量，cg是融入ht之后的KG表示，cs是融入ht之后的文章标题表示（计算方式与上图中cg相似，但未给出）。通过cg和cs可以得到当前步最终的上下文表示ct = cg||cs（concatenation）<br><img src="/images/KGforSUM/11.jpg" alt="mode"><br>最后使用ht与ct获得copy的概率，并计算最终的分布。  </p>
 <h2 id="2-4-实验结果"><a href="#2-4-实验结果" class="headerlink" title="2.4 实验结果"></a>2.4 实验结果</h2><p><img src="/images/KGforSUM/12.jpg" alt="result"><br>左边是自动评估，右边是人工评估。</p>
 <h1 id="3-使用概念指针网络的生成式摘要"><a href="#3-使用概念指针网络的生成式摘要" class="headerlink" title="3.使用概念指针网络的生成式摘要"></a>3.使用概念指针网络的生成式摘要</h1><h2 id="3-1-论文名称"><a href="#3-1-论文名称" class="headerlink" title="3.1 论文名称"></a>3.1 论文名称</h2><p>2019 EMNLP：<u><a href="https://arxiv.org/abs/1910.08486" target="_blank" rel="noopener">Concept Pointer Network for Abstractive Summarization</a></u>  </p>
-<h2 id="3-2-动机"><a href="#3-2-动机" class="headerlink" title="3.2 动机"></a>3.2 动机</h2><p>利用知识去生成更高语义的摘要  </p>
+<h2 id="3-2-动机"><a href="#3-2-动机" class="headerlink" title="3.2 动机"></a>3.2 动机</h2><p>利用知识去生成更高语义的摘要，值得一提的是，前面两篇论文中利用知识的方法都是从原文中构建了知识图谱，再利用图表示来获得知识嵌入，而本篇则是用到了外界的知识，即不为从本文中提取的知识。  </p>
 <h2 id="3-3-模型"><a href="#3-3-模型" class="headerlink" title="3.3 模型"></a>3.3 模型</h2><p><img src="/images/KGforSUM/16.jpg" alt="model">   </p>
+<h3 id="3-3-1-Encoder-Decoder"><a href="#3-3-1-Encoder-Decoder" class="headerlink" title="3.3.1 Encoder-Decoder"></a>3.3.1 Encoder-Decoder</h3><p>首先假设原文单词序列为{xi}（i from 1 to n），通过BiLSTM获得包含上下文特征的单词表示序列{hi}（i from 1 to n）。假设当前处于t步，且当前解码器隐层特征为st，那么可以得到当前步基于注意力机制的原文表示：<br><img src="/images/KGforSUM/17.jpg" alt="model"><br>由此进而可以计算出当前步直接解码出的单词概率（在整个词表上）：<br><img src="/images/KGforSUM/18.jpg" alt="model"><br>这属于产生新词的分布，该分布的概率计算如下：<br><img src="/images/KGforSUM/19.jpg" alt="model">   </p>
+<h3 id="3-3-2-Concept-Pointer-Generator"><a href="#3-3-2-Concept-Pointer-Generator" class="headerlink" title="3.3.2 Concept Pointer Generator"></a>3.3.2 Concept Pointer Generator</h3><p>这个步骤对应模型图的下部分，指针网络的作用就是复制原文中的词汇，但是本文还融入了知识，因此称为概念指针生成器。<br>首先介绍了<u><a href="https://concept.research.microsoft.com/Home/API" target="_blank" rel="noopener">Microsoft concept graph</a></u>，这个网页提供了API，我们可以输入一个实体，该服务会返回给我们这个实体对应的一些概念，例如下例，我们输入的是apple：  </p>
+<blockquote>
+<p><a href="https://concept.research.microsoft.com/api/Concept/ScoreByProb?instance=apple&amp;topK=10" target="_blank" rel="noopener">https://concept.research.microsoft.com/api/Concept/ScoreByProb?instance=apple&amp;topK=10</a>  </p>
+</blockquote>
+<p><img src="/images/KGforSUM/20.jpg" alt="model"><br>我们可以看到“apple”的概念中41.5%属于一个水果，28.6%属于一个公司，等等。<br>但我们要分别一个单词到底属于什么概念，不能仅仅只考该网页提供的服务来决定，我们在参考这个网页给的概率的同时也应该结合上下文自己评估一个可能性出来，于是便有了：<br><img src="/images/KGforSUM/21.jpg" alt="model"><br>这个β代表第i个词与它的第j个概念的权重，c代表第i个词的第j个概念，最后我们还应该结合网页服务所提供的概率P（c）：<br><img src="/images/KGforSUM/22.jpg" alt="model"><br>由此我们得到了文章第i个词，和它所有概念间的最终权重（结合了网页给的权重和自己经过上下文计算得到的权重）<br>那么对于第i个词来说，它的概念分布就是：<br><img src="/images/KGforSUM/23.jpg" alt="model"><br>有了每个词的概念分布和当前步不同单词的attention分布（α，详见Encoder-Decoder部分的讲解），我们就可以计算concept分布，该分布的计算需要用到attention分布。<br><img src="/images/KGforSUM/24.jpg" alt="model"><br>首先第一行就是我们在前一步中所讲的Encoder-Decoder中产生的词表分布，接着第二行的红框部分是attention权重，是α建立的，代表当前步骤上对原文中每个词的focu程度，而紫框部分则是concept分布，是在α的基础上乘以一个P。这个P的计算方法作者分别尝试了一下两种：<br>（1）最大化选取<br><img src="/images/KGforSUM/25.jpg" alt="model"><br>即在我们计算出的概念的综合权重中最大化选择一个值最大的，但需要注意的是，最大化的值并不是综合的权重，而是不考虑网页服务提供的概率仅考虑当前步计算出的概率的最大化的那个概念在综合权重中的值。说的很绕口，但其实看一下式子就明白了。<br>（2）随机选取<br><img src="/images/KGforSUM/26.jpg" alt="model"><br>顾名思义，随机选取，没什么好说的  </p>
+<p>所以我们可以看到该文工作在融合知识层面上，只是让概念知识影响了copy原文词表中的权重。  </p>
+<h2 id="3-4-实验结果"><a href="#3-4-实验结果" class="headerlink" title="3.4 实验结果"></a>3.4 实验结果</h2><p><img src="/images/KGforSUM/27.jpg" alt="result"><br>其中+RL的优化目标是：<br><img src="/images/KGforSUM/28.jpg" alt="model"><br>其求助了强化学习的思想，直接优化ROUGE，r函数是奖励函数。<br>+DS的意思是训练集可能和测试集的分布不太一样，所以用KL散度去衡量了训练集和测试集的差距，那么训练的目标就变成了：<br><img src="/images/KGforSUM/29.jpg" alt="model">  </p>
 
             </div>
 
