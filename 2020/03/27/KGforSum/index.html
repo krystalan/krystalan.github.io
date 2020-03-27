@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/15.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >利用知识的摘要生成[TODO]</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要总结一下融入知识的一些摘要生成工作。</p>
+<h1 id="1-用知识提高生成式摘要的事实正确性"><a href="#1-用知识提高生成式摘要的事实正确性" class="headerlink" title="1.用知识提高生成式摘要的事实正确性"></a>1.用知识提高生成式摘要的事实正确性</h1><h2 id="1-1论文名称"><a href="#1-1论文名称" class="headerlink" title="1.1论文名称"></a>1.1论文名称</h2><p><u><a href="https://arxiv.org/abs/2003.08612" target="_blank" rel="noopener">Boosting Factual Correctness of Abstractive Summarization with Knowledge Graph</a></u>    </p>
+<h2 id="1-2-动机"><a href="#1-2-动机" class="headerlink" title="1.2 动机"></a>1.2 动机</h2><p>直接使用不包含知识的生成式摘要模型，有可能生成的摘要与原文中的语义产生冲突。例如给定一篇文章“小王是一个喜欢给弟弟送礼物的好哥哥”，生成的摘要可能是“小王是个弟弟”。这样便出现了知识性错误。  </p>
+<h2 id="1-3-模型"><a href="#1-3-模型" class="headerlink" title="1.3 模型"></a>1.3 模型</h2><p><img src="/images/KGforSUM/1.jpg" alt="模型"><br>（1）首先模型的最左边是transformer encoder用于编码文章。<br>（2）模型的最右边是使用了Stanford OpenIE工具来提取文章的三元组，例如一句话“Born in a town, she took the midnight train”会提取出三元组（she，took，midnight train）<br>提取出的三元组中每个元素建模成一个节点，相邻元素之间用一条边连接，以此建立一个无向图模型。例如上例，she、took、midnight_train分别是三个节点，she-took，took-midnight_train是两条边。建立无向图之后用图注意力网络获取每个节点的embedding，每个节点的初试embedding是通过BiLSTM得到的。<br>最终每个节点的embedding可表示为：<br><img src="/images/KGforSUM/2.jpg" alt="节点embedding"><br>其中N代表通过图注意力网络迭代了几轮（论文实验中设置为2），|V|是节点个数。<br>（3）模型的中间部分是融合知识并解码的步骤<br>首先我们假设已经解码出的token的embedding是{yi}（i from 1 to t），文章的编码是{xi}（i from 1 to m）<br>那么我们将{yi}通过一层self-attention，把{xi}和{yi}通过一层inter-attention就可以得到利用注意力机制融合了文章编码的解码特征{si}（i from 1 to t）。<br>之后我们的目的是将si和ej进行融合，具体步骤如下：<br><img src="/images/KGforSUM/3.jpg" alt="融合"><br>ui即为融合之后的向量，表面上看ui的计算主题是ej，si只不过是在计算不同知识的权重的时候使用，但其可以通过residual net不断传播进而被使用。得到ui之后，将其通过Layer Normalization和FFN之后便可以得到最终的向量zi。<br>之后再使用zi向量去计算Pcopy值，代表原文分布占最终分布的权重，原文分布γcopy就是最后一层transformer decoder所解码出的分布。而生成分布γgen是直接用zt经过embedding矩阵得到的分布。最终分布的计算方式如下：<br><img src="/images/KGforSUM/4.jpg" alt="最终分布"><br>这样就在解码的每一步中融入了文章的知识以改进生成的摘要出现事实错误的情况。  </p>
+<h2 id="1-4-实验结果"><a href="#1-4-实验结果" class="headerlink" title="1.4 实验结果"></a>1.4 实验结果</h2><p><img src="/images/KGforSUM/5.jpg" alt="result"><br>实验结果是在CNN/DailyMail上用人工评估方式进行的，可以看出在事实性上面有所提高。<br><img src="/images/KGforSUM/6.jpg" alt="result"><br>自动评估指标的效果不是特别好。  </p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2020 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
