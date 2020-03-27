@@ -131,12 +131,12 @@
 <h2 id="1-4-实验结果"><a href="#1-4-实验结果" class="headerlink" title="1.4 实验结果"></a>1.4 实验结果</h2><p><img src="/images/KGforSUM/5.jpg" alt="result"><br>实验结果是在CNN/DailyMail上用人工评估方式进行的，可以看出在事实性上面有所提高。<br><img src="/images/KGforSUM/6.jpg" alt="result"><br>自动评估指标的效果不是特别好。  </p>
 <h1 id="2-基于图转换器从知识图谱中生成文本"><a href="#2-基于图转换器从知识图谱中生成文本" class="headerlink" title="2.基于图转换器从知识图谱中生成文本"></a>2.基于图转换器从知识图谱中生成文本</h1><h2 id="2-1-论文名称"><a href="#2-1-论文名称" class="headerlink" title="2.1 论文名称"></a>2.1 论文名称</h2><p><u><a href="https://arxiv.org/abs/1904.02342" target="_blank" rel="noopener">Text Generation from Knowledge Graphs with Graph Transformers</a></u><br>中文翻译版：<a href="https://blog.csdn.net/ARPOSPF/article/details/104241533" target="_blank" rel="noopener">https://blog.csdn.net/ARPOSPF/article/details/104241533</a><br>code&amp;data：<a href="https://github.com/rikdz/GraphWriter" target="_blank" rel="noopener">https://github.com/rikdz/GraphWriter</a>  </p>
 <h2 id="2-2-动机"><a href="#2-2-动机" class="headerlink" title="2.2 动机"></a>2.2 动机</h2><p>很多现有的工具，能直接把一段文字通过信息抽取搞成一个知识图谱（例如在第一节论文中使用了斯坦福的OpenIE工具为文章构建KG），那么能不能通过文章标题和KG直接产生一个摘要？<br>为此作者专门还去构建了一个数据集AGENDA，该数据集就是由科技论文的标题和摘要以及摘要提取出的KG组成的，意在通过标题和KG训练一个能产生摘要的model。我们可以来看一下数据集：<br><img src="/images/KGforSUM/7.jpg" alt="AGENDA">    </p>
-<h2 id="2-3-模型"><a href="#2-3-模型" class="headerlink" title="2.3 模型"></a>2.3 模型</h2><p><img src="/images/KGforSUM/8.jpg" alt="mode"><br>总体上还是一个encoder-decoder框架。<br>Title Encoder用于提取标题的特征，Graph Transformer用于提取KG的特征。<br>（1）首先写把断开连接的标记图转换为连接的标记图，以用于基于注意力的编码器。<br><img src="/images/KGforSUM/9.jpg" alt="mode"><br>如图所示，其中G是一个全局的上下文节点，然后使用作者提出的Graph Transformer对每个顶点习得一个表示Vi。其中Vi的初试值是通过BiLSTM得到的。  </p>
+<h2 id="2-3-模型"><a href="#2-3-模型" class="headerlink" title="2.3 模型"></a>2.3 模型</h2><p><img src="/images/KGforSUM/8.jpg" alt="mode"><br>总体上还是一个encoder-decoder框架。<br>Title Encoder用于提取标题的特征，Graph Transformer用于提取KG的特征。<br>（1）首先写把断开连接的标记图转换为连接的标记图，以用于基于注意力的编码器。<br><img src="/images/KGforSUM/9.jpg" alt="mode"><br>如图所示，其中G是一个全局的上下文节点，然后使用作者提出的Graph Transformer对每个顶点习得一个表示Vi。其中Vi的初始值是通过BiLSTM得到的。  </p>
 <p>来让我们细看一下Graph Transformer的整个过程：<br><img src="/images/KGforSUM/13.jpg" alt="mode">  </p>
 <p>首先经历了多头注意力机制和残差网络，公式如下，N就代表头数：<br><img src="/images/KGforSUM/14.jpg" alt="mode"><br><img src="/images/KGforSUM/15.jpg" alt="mode"><br>α就是通过KQV向量计算的self-attention权重。<br>之后再通过层归一化和FFN可计算得到迭代后的表示。</p>
 <p>（2）标题的表示也是通过BiLSTM获得的。<br>（3）解码<br><img src="/images/KGforSUM/10.jpg" alt="mode"><br>其中ht是当前解码器的隐层向量，cg是融入ht之后的KG表示，cs是融入ht之后的文章标题表示（计算方式与上图中cg相似，但未给出）。通过cg和cs可以得到当前步最终的上下文表示ct = cg||cs（concatenation）<br><img src="/images/KGforSUM/11.jpg" alt="mode"><br>最后使用ht与ct获得copy的概率，并计算最终的分布。  </p>
 <h2 id="2-4-实验结果"><a href="#2-4-实验结果" class="headerlink" title="2.4 实验结果"></a>2.4 实验结果</h2><p><img src="/images/KGforSUM/12.jpg" alt="result"><br>左边是自动评估，右边是人工评估。</p>
-
+<h1 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h1>
             </div>
 
             <!-- Post Comments -->
