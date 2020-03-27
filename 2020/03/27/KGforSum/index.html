@@ -136,7 +136,7 @@
 <p>首先经历了多头注意力机制和残差网络，公式如下，N就代表头数：<br><img src="/images/KGforSUM/14.jpg" alt="mode"><br><img src="/images/KGforSUM/15.jpg" alt="mode"><br>α就是通过KQV向量计算的self-attention权重。<br>之后再通过层归一化和FFN可计算得到迭代后的表示。</p>
 <p>（2）标题的表示也是通过BiLSTM获得的。<br>（3）解码<br><img src="/images/KGforSUM/10.jpg" alt="mode"><br>其中ht是当前解码器的隐层向量，cg是融入ht之后的KG表示，cs是融入ht之后的文章标题表示（计算方式与上图中cg相似，但未给出）。通过cg和cs可以得到当前步最终的上下文表示ct = cg||cs（concatenation）<br><img src="/images/KGforSUM/11.jpg" alt="mode"><br>最后使用ht与ct获得copy的概率，并计算最终的分布。  </p>
 <h2 id="2-4-实验结果"><a href="#2-4-实验结果" class="headerlink" title="2.4 实验结果"></a>2.4 实验结果</h2><p><img src="/images/KGforSUM/12.jpg" alt="result"><br>左边是自动评估，右边是人工评估。</p>
-<h1 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h1>
+
             </div>
 
             <!-- Post Comments -->
