@@ -120,7 +120,7 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/15.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >融入知识的摘要生成</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >融入知识的摘要生成[TODO]</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
@@ -147,6 +147,8 @@
 <p><img src="/images/KGforSUM/20.jpg" alt="model"><br>我们可以看到“apple”的概念中41.5%属于一个水果，28.6%属于一个公司，等等。<br>但我们要分别一个单词到底属于什么概念，不能仅仅只考该网页提供的服务来决定，我们在参考这个网页给的概率的同时也应该结合上下文自己评估一个可能性出来，于是便有了：<br><img src="/images/KGforSUM/21.jpg" alt="model"><br>这个β代表第i个词与它的第j个概念的权重，c代表第i个词的第j个概念，最后我们还应该结合网页服务所提供的概率P（c）：<br><img src="/images/KGforSUM/22.jpg" alt="model"><br>由此我们得到了文章第i个词，和它所有概念间的最终权重（结合了网页给的权重和自己经过上下文计算得到的权重）<br>那么对于第i个词来说，它的概念分布就是：<br><img src="/images/KGforSUM/23.jpg" alt="model"><br>有了每个词的概念分布和当前步不同单词的attention分布（α，详见Encoder-Decoder部分的讲解），我们就可以计算concept分布，该分布的计算需要用到attention分布。<br><img src="/images/KGforSUM/24.jpg" alt="model"><br>首先第一行就是我们在前一步中所讲的Encoder-Decoder中产生的词表分布，接着第二行的红框部分是attention权重，是α建立的，代表当前步骤上对原文中每个词的focu程度，而紫框部分则是concept分布，是在α的基础上乘以一个P。这个P的计算方法作者分别尝试了一下两种：<br>（1）最大化选取<br><img src="/images/KGforSUM/25.jpg" alt="model"><br>即在我们计算出的概念的综合权重中最大化选择一个值最大的，但需要注意的是，最大化的值并不是综合的权重，而是不考虑网页服务提供的概率仅考虑当前步计算出的概率的最大化的那个概念在综合权重中的值。说的很绕口，但其实看一下式子就明白了。<br>（2）随机选取<br><img src="/images/KGforSUM/26.jpg" alt="model"><br>顾名思义，随机选取，没什么好说的  </p>
 <p>所以我们可以看到该文工作在融合知识层面上，只是让概念知识影响了copy原文词表中的权重。  </p>
 <h2 id="3-4-实验结果"><a href="#3-4-实验结果" class="headerlink" title="3.4 实验结果"></a>3.4 实验结果</h2><p><img src="/images/KGforSUM/27.jpg" alt="result"><br>其中+RL的优化目标是：<br><img src="/images/KGforSUM/28.jpg" alt="model"><br>其求助了强化学习的思想，直接优化ROUGE，r函数是奖励函数。<br>+DS的意思是训练集可能和测试集的分布不太一样，所以用KL散度去衡量了训练集和测试集的差距，那么训练的目标就变成了：<br><img src="/images/KGforSUM/29.jpg" alt="model">  </p>
+<h1 id="4-基于实体常识表示的生成式摘要"><a href="#4-基于实体常识表示的生成式摘要" class="headerlink" title="4.基于实体常识表示的生成式摘要"></a>4.基于实体常识表示的生成式摘要</h1><h2 id="4-1-论文名称"><a href="#4-1-论文名称" class="headerlink" title="4.1 论文名称"></a>4.1 论文名称</h2><p><u><a href="https://arxiv.org/abs/1806.05504" target="_blank" rel="noopener">2018 NAACL：Entity Commonsense Representation for Neural Abstractive Summarization</a></u>  </p>
+<h2 id="4-2-动机"><a href="#4-2-动机" class="headerlink" title="4.2 动机"></a>4.2 动机</h2><p>一篇文章摘要大部分都会包含一些有价值的实体，通过这些实体可以描绘出文章的主题，如果将这些实体链接到知识当中便可以获得常识信息，通过这些外部的常识信息便可以更好地产生摘要。<br><img src="/images/KGforSUM/30.jpg" alt="动机"><br>例如这张图中，O1部分表示的是文章摘要中所包含的实体，O2部分则表示实体可以用于描绘主题，O3部分则代表从大量语料库中得到的实体的常识信息可以被利用。  </p>
 
             </div>
 
