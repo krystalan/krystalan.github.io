@@ -120,7 +120,7 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/13.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >强化学习纲要（二） MDP[TODO]</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >强化学习纲要（二） MDP</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
@@ -138,6 +138,23 @@
 <h2 id="3-2-MDP与MP-MRP的对比"><a href="#3-2-MDP与MP-MRP的对比" class="headerlink" title="3.2 MDP与MP/MRP的对比"></a>3.2 MDP与MP/MRP的对比</h2><p><img src="/images/RL/16.jpg" alt="对比"><br>（1）就相当于多了一个行为。<br><img src="/images/RL/22.jpg" alt="贝尔曼"><br>（2）MDP不会随波逐流！因为其拥有决策函数</p>
 <h2 id="3-3-MDP中的价值函数："><a href="#3-3-MDP中的价值函数：" class="headerlink" title="3.3 MDP中的价值函数："></a>3.3 MDP中的价值函数：</h2><p>首先定义了一个Q函数表示在状态s和行为a下所产生的价值的期望：<br><img src="/images/RL/17.jpg" alt="Q函数"><br>那么原先的价值函数可以改写成：<br><img src="/images/RL/18.jpg" alt="价值函数"><br>就相当于价值函数等于当前状态s的所有行为产生的价值期望。<br>于是我们可以把价值函数和Q函数分别分解成立即奖励与长远奖励（即贝尔曼期望等式）：<br><img src="/images/RL/19.jpg" alt="贝尔曼"><br>先看（7）式，就相当于在s状态下，进行了a行为，然后可以得到下一个状态的概率分布。R(t+1)就是下一个状态的奖励，而在下一个状态下再次利用行为和状态计算下下次奖励的时候需要用到折价因子。<br>再看（6）式，其实就和上述思路一致，只不过没有将行为拆分讨论。  </p>
 <p>接着我们有了（8）式与（9）式<br><img src="/images/RL/20.jpg" alt="进一步求解"><br>将（9）带入（8）中得（10）<br>将（8）带入（9）中得（11）<br>这样我们就可以利用（10）式来递归求解V函数，利用（11）式来递归求解q函数。<br>用一个图来理解一下递归求V函数的过程：<br><img src="/images/RL/21.jpg" alt="求V函数"><br>前半段表示当前状态下，当前行为下的价值，后半段是利用当前状态与当前行为推出下一步状态，并利用下一步状态的价值迭代求解。<strong>通过当前状态和决策函数policy来求解当前状态的价值的过程称为：Policy Evaluation</strong>   </p>
+<h1 id="4-MDP预测与控制"><a href="#4-MDP预测与控制" class="headerlink" title="4.MDP预测与控制"></a>4.MDP预测与控制</h1><blockquote>
+<p>预测（Prediction）和控制（Control）MDP的核心问题，预测问题是指给定一个MDP和Policy去计算价值函数；控制问题是寻找一个最佳的策略，输入是MDP，输出是最佳价值函数与最佳Policy。这两个问题都可以通过DP（动态规划）来求解。  </p>
+</blockquote>
+<h2 id="4-1-预测"><a href="#4-1-预测" class="headerlink" title="4.1 预测"></a>4.1 预测</h2><p><img src="/images/RL/23.jpg" alt="预测求解"><br>递归至收敛就完事了，由于已经给定了Policy，也可以当成一个MRP，改写成如下：<br><img src="/images/RL/24.jpg" alt="预测求解">   </p>
+<p>来看一个栗子：Small Gridworld<br><img src="/images/RL/25.jpg" alt="Small Gridworld"><br>（1）左上角和右下角为终止状态，其余状态分别对应1至14，目的是到达终止状态。<br>（2）每个状态都是随机游走，即使是在边缘，例如状态4依然存在左走可能，但不会改变状态，即状态4往左走还是状态4，状态7往右走还是状态7。<br>（3）不使用折价因子（γ）<br>（4）每走一步会得到-1奖励，所以agent应该尽快到达终止状态。<br>我们可以<u><a href="https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html" target="_blank" rel="noopener">在线</a></u>看下这个例子的一个动态的迭代计算价值的过程。  </p>
+<h2 id="4-2-控制"><a href="#4-2-控制" class="headerlink" title="4.2 控制"></a>4.2 控制</h2><p>最优状态价值（optimal state-value）函数定义如下：<br><img src="/images/RL/26.jpg" alt="最优状态价值函数"><br>其目的是在状态s下采取最优策略能够达到最大化的价值，而最优策略（optimal policy）定义如下：<br><img src="/images/RL/27.jpg" alt="最优策略"><br>即在状态s下能够达到最大化价值的策略。<br>当我们知道了一个MDP的最优状态价值函数的时候，我们称这个MDP解决了。<br>需要注意的是，只存在一个最优状态价值函数，但可能存在多个最优策略，因为有可能两种行为所得到的价值是相同的。  </p>
+<p>所以MDP控制的核心就在于如何寻找最佳的Policy？<br><img src="/images/RL/28.jpg" alt="最佳策略"><br>选择最大化q函数的那个action就好了，所以如果我们知道了q函数，那么我们就能够通过最大化q函数选择最优策略。  </p>
+<p>Policy Search<br>如果状态有限然后行为也是我们行为集合也是能知道的，我们可以直接穷举在所有状态下的策略。然后去计算一个最好的策略。但是效率很低，所以一般采取迭代法，具体分为两种：Policy Iteration和Value Iteration。  </p>
+<h3 id="4-2-1-Policy-Iteration"><a href="#4-2-1-Policy-Iteration" class="headerlink" title="4.2.1 Policy Iteration"></a>4.2.1 Policy Iteration</h3><p>分为两步：  </p>
+<ul>
+<li>evalution：评估一个policy π，在当前的π上计算价值函数v，进一步可以得到q函数  </li>
+<li>improvement：利用贪心的思想提升policy π的表现，极大化q函数 </li>
+</ul>
+<p><img src="/images/RL/29.jpg" alt="Policy Iteration"><br>例如现在有一个状态s，以及一个初始的Policy π，然后可以根据π得到一个a行为的分布，接着可以计算q函数，如下：<br><img src="/images/RL/30.jpg" alt="Policy Iteration"><br>再下一步，最大化这个q函数：<br><img src="/images/RL/31.jpg" alt="Policy Iteration"><br>直接让policy是选取最大化q函数的那个行为a，我们可以将这个过程看成一个Q-table，再Q-table的每一列去最大化q的值：<br><img src="/images/RL/32.jpg" alt="Policy Iteration">  </p>
+<p>迭代停止过后，我们便能够得到最优策略，由此可以得到最优状态价值：<br><img src="/images/RL/33.jpg" alt="Policy Iteration">  </p>
+<h3 id="4-2-2-Value-Iteration"><a href="#4-2-2-Value-Iteration" class="headerlink" title="4.2.2 Value Iteration"></a>4.2.2 Value Iteration</h3><p><img src="/images/RL/34.jpg" alt="Value Iteration"><br>直接迭代价值函数，不从Policy下手。<br>具体过程如下：<br><img src="/images/RL/35.jpg" alt="Value Iteration">   </p>
+<h3 id="4-2-3-对比"><a href="#4-2-3-对比" class="headerlink" title="4.2.3 对比"></a>4.2.3 对比</h3><p>Policy Iteration分两步进行：Policy evaluation + Policy improvement<br>Value Iteration：不涉及policy，直接优化value function，但迭代收敛算出value function时，可以直接求得policy，也就是说policy是在最后抽取出的。  </p>
 
             </div>
 
