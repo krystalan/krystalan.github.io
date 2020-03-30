@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">数据挖掘</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/13.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >强化学习纲要（三） 无模型[TODO]</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <blockquote>
+<p>视频链接（lecture3：Model-free Prediction and Control）：<br><a href="http://www.bilibili.com/video/BV1N7411Q7aJ" target="_blank" rel="noopener">www.bilibili.com/video/BV1N7411Q7aJ</a><br><a href="http://www.bilibili.com/video/BV1N7411Q7M6" target="_blank" rel="noopener">www.bilibili.com/video/BV1N7411Q7M6</a>   </p>
+</blockquote>
+<p>在第二课中，我们不论是采用Policy Iteration算法还是Value Iteration算法求解最佳价值函数的过程中，都假设了奖励函数R与Policy是已知的，如下图中的红色部分：<br><img src="/images/RL/36.jpg" alt="PolicyIteration"><br><img src="/images/RL/37.jpg" alt="ValueIteration"><br>所以这两种算法只能在已知MDP模型的基础上进行计算，但是在实际问题下，MDP模型要么是未知的，要么已知但过于复杂。例如：围棋、直升飞机、股票交易。所以我们引入了<strong>Model-free RL</strong>。  </p>
+<h1 id="1-无模型RL概念"><a href="#1-无模型RL概念" class="headerlink" title="1.无模型RL概念"></a>1.无模型RL概念</h1><p>不直接获取状态转移P和奖励函数R，让agent和环境进行一定的交互然后采集轨迹数据，轨迹数据可以表示为{S1，A1，R1，S2，A2，R2，……，ST，AT，RT}。agent需要从这样的轨迹里面去吸收信息从而改进策略。  </p>
+<h1 id="2-无模型预测"><a href="#2-无模型预测" class="headerlink" title="2.无模型预测"></a>2.无模型预测</h1><blockquote>
+<p>在没有模型的时候评估策略（policy），给定策略计算价值函数 </p>
+</blockquote>
+<h2 id="2-1-Monte-Carlo-policy-evaluation"><a href="#2-1-Monte-Carlo-policy-evaluation" class="headerlink" title="2.1 Monte Carlo policy evaluation"></a>2.1 Monte Carlo policy evaluation</h2><p>让agent和环境交互n条轨迹，每条轨迹都有一个收益，最后平均收益即可。<br>缺点是只能用在有终止的MDP中。<br><img src="/images/RL/38.jpg" alt="MC"><br>这里的计算方式中，每一刻的V代表当前次数下的平均value，N代表目前采样的条数，进一步我们可以把这个过程当成一个学习的过程，1/N可以当做学习率。  </p>
+<h2 id="2-2-Temporal-Difference（TD）-learning"><a href="#2-2-Temporal-Difference（TD）-learning" class="headerlink" title="2.2 Temporal Difference（TD） learning"></a>2.2 Temporal Difference（TD） learning</h2><p>TD是一个介于MC和DP之间的一个方法，对于不完整的episode也能work。<br>在MC方法中，每次采样都需要等游戏结束才能去计算整个轨迹的价值，而TD则往前走一步就能更新价值：<br><img src="/images/RL/39.jpg" alt="TD">   </p>
+<p>MC与TD对比：<br>（1）TD可以在游戏的过程中就更新价值，MC只能等游戏结束统一更新。<br>（2）TD可以在不完整的序列中进行更新，MC只能在完整的序列上学习。<br>（3）TD可以在没有终止的过程下学习，MC只能在有终止的MDP中学习。<br>（4）TD利用了马尔可夫假设（过去与未来独立）在马尔可夫环境下面有更高的学习效率；MC则没有这个假设，所以在非马尔可夫环境下效率更高。</p>
+<h2 id="2-3-TD推广"><a href="#2-3-TD推广" class="headerlink" title="2.3 TD推广"></a>2.3 TD推广</h2><p>之前是只往前走一步就更新一下，可以扩展到多步。<br><img src="/images/RL/40.jpg" alt="TD推广"><br>当n为无穷时，其实就是MC。</p>
+<h2 id="2-4-DP-amp-MC-amp-TD"><a href="#2-4-DP-amp-MC-amp-TD" class="headerlink" title="2.4 DP&amp;MC&amp;TD"></a>2.4 DP&amp;MC&amp;TD</h2><h3 id="2-4-1-DP"><a href="#2-4-1-DP" class="headerlink" title="2.4.1 DP"></a>2.4.1 DP</h3><p><img src="/images/RL/41.jpg" alt="DP"><br>没有往前走，就直接迭代计算。</p>
+<h3 id="2-4-2-MC"><a href="#2-4-2-MC" class="headerlink" title="2.4.2 MC"></a>2.4.2 MC</h3><p><img src="/images/RL/42.jpg" alt="MC"><br>一条路走到头。  </p>
+<h3 id="2-4-3-TD"><a href="#2-4-3-TD" class="headerlink" title="2.4.3 TD"></a>2.4.3 TD</h3><p><img src="/images/RL/43.jpg" alt="TD"><br>走X步就更新，不用走到头。</p>
+<h3 id="2-4-4-整体对比"><a href="#2-4-4-整体对比" class="headerlink" title="2.4.4 整体对比"></a>2.4.4 整体对比</h3><p><img src="/images/RL/44.jpg" alt="对比"><br>TD增加宽度就成了DP，增加深度就变成了MC，右下角是穷举。</p>
+<h1 id="3-无模型控制"><a href="#3-无模型控制" class="headerlink" title="3.无模型控制"></a>3.无模型控制</h1><p>[TODO]</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2020 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
