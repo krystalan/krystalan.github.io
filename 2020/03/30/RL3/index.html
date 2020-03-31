@@ -140,7 +140,16 @@
 <h3 id="2-4-2-MC"><a href="#2-4-2-MC" class="headerlink" title="2.4.2 MC"></a>2.4.2 MC</h3><p><img src="/images/RL/42.jpg" alt="MC"><br>一条路走到头。  </p>
 <h3 id="2-4-3-TD"><a href="#2-4-3-TD" class="headerlink" title="2.4.3 TD"></a>2.4.3 TD</h3><p><img src="/images/RL/43.jpg" alt="TD"><br>走X步就更新，不用走到头。</p>
 <h3 id="2-4-4-整体对比"><a href="#2-4-4-整体对比" class="headerlink" title="2.4.4 整体对比"></a>2.4.4 整体对比</h3><p><img src="/images/RL/44.jpg" alt="对比"><br>TD增加宽度就成了DP，增加深度就变成了MC，右下角是穷举。</p>
-<h1 id="3-无模型控制"><a href="#3-无模型控制" class="headerlink" title="3.无模型控制"></a>3.无模型控制</h1><p>[TODO]</p>
+<h1 id="3-无模型控制"><a href="#3-无模型控制" class="headerlink" title="3.无模型控制"></a>3.无模型控制</h1><blockquote>
+<p>如何在没有办法得到MDP模型的情况下，如何优化价值函数以及得到一个最佳的策略（Policy）</p>
+</blockquote>
+<p>将Policy Iteration推广并与MC或TD兼容。<br><img src="/images/RL/45.jpg" alt="Policy Iteration"><br>在有模型的Policy Iteration中，我们先求q函数，然后利用贪心的思想选择最优策略。  </p>
+<h2 id="3-1-MC"><a href="#3-1-MC" class="headerlink" title="3.1 MC"></a>3.1 MC</h2><p>在无模型时，我们可以通过MC方法来估计q函数，然后再贪心的选取最优策略：<br><img src="/images/RL/46.jpg" alt="Policy Iteration"><br>为了权衡exploration和exploitation，采取了如下算法：<br><img src="/images/RL/47.jpg" alt="策略"><br>有一个概率会采取最大化奖励的策略，而概率之外会采取探索，具体的迭代算法如下：<br><img src="/images/RL/48.jpg" alt="MC"><br>不断更新Qtable，每次迭代更新完Qtable之后再去更新策略，然后再更好的采集数据，再更新Qtable以此类推。  </p>
+<h2 id="3-2-TD（Sarsa）"><a href="#3-2-TD（Sarsa）" class="headerlink" title="3.2 TD（Sarsa）"></a>3.2 TD（Sarsa）</h2><p>也可以通过TD来估计，我们先来看一下MDP的TD：<br><img src="/images/RL/49.jpg" alt="TD"><br>但是在无模型时，我们没有R和V函数，故利用采样的方式进行：<br><img src="/images/RL/50.jpg" alt="TD"><br>该算法又称Sarsa，只存在一个Policy，我们即利用这个Policy采集数据，又要优化这个Policy。也是在不断更新Qtable的过程。具体算法流程如下：<br><img src="/images/RL/51.jpg" alt="Sarsa">  </p>
+<p>Sarsa也可以扩展到多步上：<br><img src="/images/RL/52.jpg" alt="多步Sarsa">  </p>
+<h2 id="3-3-On-policy-leanring-vs-Off-policy-learning"><a href="#3-3-On-policy-leanring-vs-Off-policy-learning" class="headerlink" title="3.3 On-policy leanring vs. Off-policy learning"></a>3.3 On-policy leanring vs. Off-policy learning</h2><p>（1）On-policy learning在采集还没有结束的时候就可以进行学习。行为一直不是最优的，因为要探索，最后再减少探索的成分。<br>（2）Off-policy learning采集完成后才能更新，使用两个policy，一个policy负责学习最优化策略，另一个policy负责不断地探索。π：target policy；μ：behavior policy。</p>
+<h2 id="3-4-Q-learning算法"><a href="#3-4-Q-learning算法" class="headerlink" title="3.4 Q-learning算法"></a>3.4 Q-learning算法</h2><p><img src="/images/RL/53.jpg" alt="Q-learning"><br>当采取当前行为过后，会观测到R和S’，然后并没有采样第二个行为，直接去看S’的Qtable然后取max，这样就可以不断优化Qtable了。然后我们来对比一下Q-learning与Sarsa：<br><img src="/images/RL/54.jpg" alt="对比"><br>（1）Sarsa是一个On-policy learning，而Q-learning是一个Off-policy learning。<br>（2）Sarsa中有两个action，都是采样得到的，然后再去更新，而Q-learning值采样了第一个action，第二个action直接就是最大化Q来选取的。<br><img src="/images/RL/55.jpg" alt="多步Sarsa"><br>相当于是Sarsa两步都是探索式的操作（来自同一个policy），而Q-learning第一步探索，第二步argmax（来自不同的policy）。  </p>
+<p>再看一个例子：<br><img src="/images/RL/56.jpg" alt="多步Sarsa"><br>S是起始状态，G是终止状态，The Cliff代表悬崖，如果进入这一状态则得到-100的奖励，每走一步得到-1的奖励。Sarsa比较保守，学出来的是Safer path，对应于蓝色的轨迹，而Q-learning则比较激进，学出来的是Optimal path，对应于红色的轨迹。</p>
 
             </div>
 
