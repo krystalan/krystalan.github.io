@@ -129,6 +129,9 @@
 <h2 id="3月30日随笔"><a href="#3月30日随笔" class="headerlink" title="3月30日随笔"></a>3月30日随笔</h2><p>分别在demo数据集（100条训练100条测试）上跑了一下BERT-base和RoBERTa_wwm_large_ext，效果如下：<br><img src="/images/RC/5.jpg" alt="BERT"><br><img src="/images/RC/6.jpg" alt="RoBERTa"><br>上图是BERT，下图是RoBERTa。<br>RoBERTa_wwm_large_ext，在GTX 1080ti上只能设置Batch_size为1，训练2epoch，而BERT-base是Batch_size设置为4，训练2epoch。<br>猜测可能是由于batch-size设置为1导致效果过差orz。  </p>
 <p>于是我又去官网上看了一下各个模型的参数和在CMRC2018阅读理解上的对比：<br><img src="/images/RC/7.jpg" alt="CMRC2018排行榜"><br><img src="/images/RC/8.jpg" alt="各个模型参数"><br>于是总结出了：<br>（1）效果方面<br>BERT_wwm_ext_base &lt; ALBERT_large &lt; ALBERT_xlarge<br>RoBERTa_wwm_ext &lt; ALBERT_xlarge &lt; RoBERTa_wwm_large_ext<br>BERT_wwm_ext_base &lt; RoBERTa_wwm_ext<br>（2）模型大小方面<br>ALBERT_large &lt; ALBERT_xlarge &lt; BERT_wwm_ext_base = RoBERTa_wwm_ext &lt; RoBERTa_wwm_large_ext   </p>
 <p>所以打算用RoBERTa_wwm_ext和ALBERT_xlarge来做初步的训练。预计今夜开战：<br><img src="/images/RC/9.jpg" alt="开放时间">   </p>
+<h2 id="3月31日随笔"><a href="#3月31日随笔" class="headerlink" title="3月31日随笔"></a>3月31日随笔</h2><p><img src="/images/RC/10.jpg" alt="GPU"><br>卡卡爆满，我占了两张，分别在训练BERT-base和RoBERTa-base，早上醒来再看结果。  </p>
+<p>BERT在验证集上结果如下：<br><img src="/images/RC/11.jpg" alt="BERT效果"><br>RoBERTa在验证集上结果如下：<br><img src="/images/RC/12.jpg" alt="RoBERTa效果">   </p>
+<p>于是我直接用RoBERTa过了一篇测试集就提交了，效果如下：<br><img src="/images/RC/13.jpg" alt="Leaderboard"><br>当时还小激动了一下，第一个交卷2333，然后我刷新了一下：<br><img src="/images/RC/14.jpg" alt="Leaderboard"><br>哎，太难了，Baseline还没有到，接下来的任务就是调参了，因为显存不够所以Batch_size设置的比较小，然后要降低点学习率再试试看。</p>
 
             </div>
 
