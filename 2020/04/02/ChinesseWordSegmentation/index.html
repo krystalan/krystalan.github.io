@@ -145,7 +145,7 @@
 <p>其中B（begin）代表词首、M（middle）代表词中、E（end）代表词尾、S（single）代表单字成词。<br>除了HMM、CRF、MEMM之外，也可以使用ME和SVM做序列标注任务。</p>
 <h2 id="2-2-N-gram"><a href="#2-2-N-gram" class="headerlink" title="2.2 N-gram"></a>2.2 N-gram</h2><p>N-gram作为早的语言模型，其可以用两个角度来理解，第一角度是计算当前序列（未完成的一句话）中最有可能出现的下一个word，第二个角度是计算当前已经完成的话的概率。<br>例如一元模型（uni-gram）计算一句话的概率：<br><img src="/images/WordSegmentation/2.jpg" alt="一元模型"><br>二元模型（bi-gram）：<br><img src="/images/WordSegmentation/3.jpg" alt="二元模型"><br>三元模型（tri-gram）：<br><img src="/images/WordSegmentation/4.jpg" alt="三元模型">   </p>
 <p>于是我们可以根据待切分句子的每一种分词序列去计算它的概率然后取概率最大的分词序列就好了。  </p>
-<h1 id="3-基于深度学习"><a href="#3-基于深度学习" class="headerlink" title="3.基于深度学习"></a>3.基于深度学习</h1><h2 id="3-1-序列标注"><a href="#3-1-序列标注" class="headerlink" title="3.1 序列标注"></a>3.1 序列标注</h2><p>没错，又是序列标注，因为序列标注也有深度学习的解法，比如用BiLSTM+CRF、CNN+BiLSTM+CRF甚至BERT+LSTM+CRF等。  </p>
+<h1 id="3-基于深度学习"><a href="#3-基于深度学习" class="headerlink" title="3.基于深度学习"></a>3.基于深度学习</h1><h2 id="3-1-序列标注"><a href="#3-1-序列标注" class="headerlink" title="3.1 序列标注"></a>3.1 序列标注</h2><p>没错，又是序列标注，因为序列标注也有深度学习的解法，比如用BiLSTM+CRF、CNN+BiLSTM+CRF甚至BERT+LSTM+CRF等。<br>在我之前写的文章<u><a href="http://wangjiaan.xyz/2020/03/09/NER/" target="_blank" rel="noopener">《命名实体识别出你的点点滴滴》</a></u>中也有介绍，就不重复赘述了。</p>
 <h2 id="3-2-基于预训练模型-知识蒸馏"><a href="#3-2-基于预训练模型-知识蒸馏" class="headerlink" title="3.2 基于预训练模型+知识蒸馏"></a>3.2 基于预训练模型+知识蒸馏</h2><p>直接搬运第二篇相关介绍中的内容了  </p>
 <blockquote>
 <p>最近的一年多的时间里，BERT、ERNIE、XLNet等大型预训练席卷了NLP的绝大部分领域，在分词问题上也有显著的优越性。然而，众所周知，预训练模型太大了，过于消耗计算资源，如果要对海量的文本进行分词，哪怕用上8卡的32G Tesla V100都会显得力不从心，因此一种解决方案就是，将预训练模型中的分词知识通过知识蒸馏（Knowledge Distillation）来迁移到小模型（比如LSTM、GRU）上。近期Jieba分词器中就上线了这么一个用这种方法得到的先进分词模型（其实是个通用的词法分析模型），感兴趣的小伙伴可以自行了解一下。预训练模型和知识蒸馏的资料很多了，这里就不赘述啦。</p>
