@@ -176,7 +176,7 @@
 <p>[(0, 0.4298588), (1, 0.5516107), (2, 0.018530471)]  </p>
 </blockquote>
 <p>表示主题0占比为43.0%，主题1占比为55%，主题2占比为2%。</p>
-<h2 id="2-4-RAKE"><a href="#2-4-RAKE" class="headerlink" title="2.4 RAKE"></a>2.4 RAKE</h2><p>RAKE（Rapid Automatic Keyword Extraction），其特点是速度快的同时也能取得相对不错的效果。<br>之前介绍的算法提取出的词都是单一的关键词，而RAKE算法提取出的则是单词所组成的短语。<br>需要注意的是：在中文上使用RAKE算法的效果并不好，因为分词会出现边界模糊的情况。因此只推荐在英文文本上用RAKE算法。  </p>
+<h2 id="2-4-RAKE"><a href="#2-4-RAKE" class="headerlink" title="2.4 RAKE"></a>2.4 RAKE</h2><p>RAKE（Rapid Automatic Keyword Extraction），其特点是速度快的同时也能取得相对不错的效果。<br>之前介绍的算法提取出的词都是单一的关键词，而RAKE算法提取出的则是单词所组成的短语。<br>需要注意的是：<strong>在中文上使用RAKE算法的效果并不好，因为分词会出现边界模糊的情况。因此只推荐在英文文本上用RAKE算法。</strong>  </p>
 <p>我们用<u><a href="https://www.researchgate.net/publication/227988510_Automatic_Keyword_Extraction_from_Individual_Documents" target="_blank" rel="noopener">原论文</a></u>中的例子来解释其算法过程：<br><img src="/images/KW/4.jpg" alt="example"><br>这是原始文档以及人工标注的关键词<br>（1）得到候选关键词<br>第一步先从原始文档中抽取出候选的关键词，其过程以停用词和标点来分割源文档。分隔后的候选关键词如下：<br><img src="/images/KW/5.jpg" alt="候选关键词"><br>（2）计算单词共现矩阵<br>该过程与GLOVE中的类似，属于一劳永逸式的做法。<br>需要注意的是，该操作的单位是单词而不是上一步中的候选关键词。<br><img src="/images/KW/6.jpg" alt="单词共现矩阵"><br>（3）计算得分<br>首先计算每个单词的得分：<br><img src="/images/KW/7.jpg" alt="单词得分"><br>之后计算每个候选关键词的得分：<br><img src="/images/KW/8.jpg" alt="候选关键词得分"><br>每个候选关键词的得分就是把其包含的单词的得分（deg(w)/freq(w)）相加。<br>（4）最后输出得分高的候选关键词</p>
 <p>再来看一下实战过程：  </p>
 <p>RAKE源代码地址：<a href="https://github.com/aneesha/RAKE" target="_blank" rel="noopener">https://github.com/aneesha/RAKE</a>  </p>
@@ -186,9 +186,14 @@
 <p>python rake.py example/input.txt example/stopwords.txt -o example/output.txt </p>
 </blockquote>
 <p>即可运行示例中的数据<br>示例的输入是两篇英文文章，一篇一行，输出是提取关键词后的数据，格式如下：<br><img src="/images/KW/10.jpg" alt="RAKE"><br>第一行显示的是第一篇文章的提取结果，第二行显示的是第二篇的关键词。 </p>
-<h2 id="2-5-diff-idf"><a href="#2-5-diff-idf" class="headerlink" title="2.5 diff-idf"></a>2.5 diff-idf</h2><p><img src="/images/KW/11.jpg" alt="diff-idf"><br>这个是一篇2020AAAI中的方法，原论文题目是：《Keyword-Attentive Deep Semantic Matching》<br>论文和代码地址：<u><a href="https://github.com/DataTerminatorX/Keyword-BERT" target="_blank" rel="noopener">https://github.com/DataTerminatorX/Keyword-BERT</a></u><br>简述一下就是，先利用PMI发现新词与候选关键词，再计算diff-idf值，将值高的保留下来。需要注意的是，这里有一个领域的概念，一个单词的diff-idf值是在其余领域下的idf值减去当前领域下的idf值。<br>也就是对于不同的领域抽取关键词，最后抽取出的结果部分如下：<br><img src="/images/KW/12.jpg" alt="diff-idf">   </p>
+<h2 id="2-5-CKPE"><a href="#2-5-CKPE" class="headerlink" title="2.5 CKPE"></a>2.5 CKPE</h2><p>4.2.2020更新一个我才看到的算法<br>在2.4中我们介绍了一个应用于英文的短语抽取算法，在本小节中将介绍一种<strong>应用于中文的短语抽取算法</strong>。<br>CKPE：Chinese KeyPhrase Extractor  </p>
+<blockquote>
+<p>Repo：<a href="https://github.com/krystalan/chinese_keyphrase_extractor" target="_blank" rel="noopener">https://github.com/krystalan/chinese_keyphrase_extractor</a>   </p>
+</blockquote>
+<p>在Repo中有相关的使用方法和算法原理，使用到了分词和词性标注的工具，进行了tfidf的计算，并且融合了相邻的关键词，在权重计算的过程中使用到了LDA，这里就不过多介绍了，感兴趣的童鞋可以自己去看看。</p>
+<h2 id="2-6-diff-idf"><a href="#2-6-diff-idf" class="headerlink" title="2.6 diff-idf"></a>2.6 diff-idf</h2><p><img src="/images/KW/11.jpg" alt="diff-idf"><br>这个是一篇2020AAAI中的方法，原论文题目是：《Keyword-Attentive Deep Semantic Matching》<br>论文和代码地址：<u><a href="https://github.com/DataTerminatorX/Keyword-BERT" target="_blank" rel="noopener">https://github.com/DataTerminatorX/Keyword-BERT</a></u><br>简述一下就是，先利用PMI发现新词与候选关键词，再计算diff-idf值，将值高的保留下来。需要注意的是，这里有一个领域的概念，一个单词的diff-idf值是在其余领域下的idf值减去当前领域下的idf值。<br>也就是对于不同的领域抽取关键词，最后抽取出的结果部分如下：<br><img src="/images/KW/12.jpg" alt="diff-idf">   </p>
 <p>最后想对比一下diff-idf与LDA<br>首先这两个算法都是为了获取能够代表某一领域的高质量关键词。<br>但diff-idf需要预先知道有哪些类别，也就是说得先分好类，而LDA不用，但LDA需要凭经验或者观察去设置主题数。</p>
-<h2 id="2-6-推荐"><a href="#2-6-推荐" class="headerlink" title="2.6 推荐"></a>2.6 推荐</h2><p>最后非常推荐刘知远老师的博士论文：<u><a href="http://xueshu.baidu.com/usercenter/paper/show?paperid=463f0161663fe810fa40d13b0e8eab11&site=xueshu_se" target="_blank" rel="noopener">《基于文档主题结构的关键词抽取方法研究》</a></u><br>虽然该文时间久远，但对文档关键词和文档标签有着非常全面的概括与理解。</p>
+<h2 id="2-7-推荐"><a href="#2-7-推荐" class="headerlink" title="2.7 推荐"></a>2.7 推荐</h2><p>最后非常推荐刘知远老师的博士论文：<u><a href="http://xueshu.baidu.com/usercenter/paper/show?paperid=463f0161663fe810fa40d13b0e8eab11&site=xueshu_se" target="_blank" rel="noopener">《基于文档主题结构的关键词抽取方法研究》</a></u><br>虽然该文时间久远，但对文档关键词和文档标签有着非常全面的概括与理解。</p>
 <h1 id="3-新词发现"><a href="#3-新词发现" class="headerlink" title="3.新词发现"></a>3.新词发现</h1><p>最后简单提一下另一个相关的任务<br>新词发现：由于互联网的普及，网络上时不时会出现一些新的词汇，利用新词发现技术可以快速识别出未在词表中的词汇。<br>其基本思路是利用互信息和左右熵  </p>
 <p>更加详细的介绍请移步：<br><a href="https://www.jianshu.com/p/d24b6e197410" target="_blank" rel="noopener">https://www.jianshu.com/p/d24b6e197410</a><br><a href="https://github.com/zhanzecheng/Chinese_segment_augment" target="_blank" rel="noopener">https://github.com/zhanzecheng/Chinese_segment_augment</a>  </p>
 
