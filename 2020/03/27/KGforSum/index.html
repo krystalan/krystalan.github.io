@@ -189,6 +189,17 @@
 <p>相关介绍：<u><a href="https://zhuanlan.zhihu.com/p/82765731" target="_blank" rel="noopener">《Step-by-Step》阅读笔记</a></u></p>
 </blockquote>
 <h2 id="7-1-论文名称"><a href="#7-1-论文名称" class="headerlink" title="7.1 论文名称"></a>7.1 论文名称</h2><p>2019 NAACL：<u><a href="https://arxiv.org/abs/1904.03396" target="_blank" rel="noopener">Step-by-Step: Separating Planning from Realization in Neural Data-to-Text Generation</a></u></p>
+<h2 id="7-2-动机"><a href="#7-2-动机" class="headerlink" title="7.2 动机"></a>7.2 动机</h2><p>背景任务是使用描述事实的RDF三元组去产生流畅的文本数据，以往的方法基本都是端到端的学习，直接从三元组去训练一个产生最终输出的网络，这样的算法在流畅度方面还可以，但在内容选择和对输入的置信度方面却不尽人意。作者认为，应该分成两部分。第一部分称为text planning，用来排序和构建信息；第二部分是plan realization，用来从已构建的信息中表达最终的文本。 </p>
+<h2 id="7-3-流程"><a href="#7-3-流程" class="headerlink" title="7.3 流程"></a>7.3 流程</h2><p><img src="/images/KGforSUM/57.jpg" alt="流程框架"><br>首先（a）是原始输入，是一些RDF三元组；（b）是第一部分（text planning）用于排序和构建信息，是一个非神经网络的结构；（c）是（b）的线性表示形式；（d）是第二部分（plan realization）用于产生最终的输出，其中使用到了NMT系统。  </p>
+<h3 id="7-3-1-Text-Planning"><a href="#7-3-1-Text-Planning" class="headerlink" title="7.3.1 Text Planning"></a>7.3.1 Text Planning</h3><blockquote>
+<p>这一部分的任务是将事实划分成句子，以及确定每个句子当中的表达顺序以及句子间的顺序。  </p>
+</blockquote>
+<p><img src="/images/KGforSUM/58.jpg" alt="例子"><br>上图是最终生成的结果，其中规定好了句子的顺序，句中实体出现的顺序。</p>
+<h3 id="7-3-2-Plan-Realization"><a href="#7-3-2-Plan-Realization" class="headerlink" title="7.3.2 Plan Realization"></a>7.3.2 Plan Realization</h3><blockquote>
+<p>这一部分将上一部分最终生成的结果进行翻译，使用了现有的NMT（neural machine translation）系统。  </p>
+</blockquote>
+<p><img src="/images/KGforSUM/60.jpg" alt="例子">  </p>
+<h2 id="7-4-实验结果"><a href="#7-4-实验结果" class="headerlink" title="7.4 实验结果"></a>7.4 实验结果</h2><p><img src="/images/KGforSUM/59.jpg" alt="实验结果"><br>本文模型称为BestPlan</p>
 
             </div>
 
