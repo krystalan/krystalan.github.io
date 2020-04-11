@@ -150,6 +150,7 @@
 <blockquote>
 <p>最近的一年多的时间里，BERT、ERNIE、XLNet等大型预训练席卷了NLP的绝大部分领域，在分词问题上也有显著的优越性。然而，众所周知，预训练模型太大了，过于消耗计算资源，如果要对海量的文本进行分词，哪怕用上8卡的32G Tesla V100都会显得力不从心，因此一种解决方案就是，将预训练模型中的分词知识通过知识蒸馏（Knowledge Distillation）来迁移到小模型（比如LSTM、GRU）上。近期Jieba分词器中就上线了这么一个用这种方法得到的先进分词模型（其实是个通用的词法分析模型），感兴趣的小伙伴可以自行了解一下。预训练模型和知识蒸馏的资料很多了，这里就不赘述啦。</p>
 </blockquote>
+<h2 id="3-3-多标准的中文分词"><a href="#3-3-多标准的中文分词" class="headerlink" title="3.3 多标准的中文分词"></a>3.3 多标准的中文分词</h2><p>马一篇paper，有空再看<br><u><a href="https://arxiv.org/abs/1906.12035" target="_blank" rel="noopener">Multi-Criteria Chinese Word Segmentation with Transformer</a></u><br><img src="/images/WordSegmentation/5.jpg" alt="多标准分词"><br>为了解决多标准分词的一项工作，来自复旦大学邱老师组，今天（4.11.2020）听报告听到的2333。</p>
 
             </div>
 
