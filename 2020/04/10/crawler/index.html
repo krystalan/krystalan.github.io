@@ -159,7 +159,7 @@
 <h1 id="4-其他坑"><a href="#4-其他坑" class="headerlink" title="4.其他坑"></a>4.其他坑</h1><p>其实上面已经说了一些策略了，例如每次爬的时候设置一个时间间隔、如果失败了就停两秒再爬、随机选一个User-agent来爬取。但即使是这样仍有可能会被ban，理由是：直接被封了ip。  </p>
 <h2 id="4-1-ip被封怎么办"><a href="#4-1-ip被封怎么办" class="headerlink" title="4.1 ip被封怎么办"></a>4.1 ip被封怎么办</h2><p>（1）网上有一些卖爬虫ip代理的，也有免费的，但免费的一般都非常慢，很有可能还是无效的。<br>（2）手机开热点给电脑，如果再被封，就重启手机（飞行模式也行），然后继续。（重启或开关飞行模式会换手机ip）</p>
 <h2 id="4-2-没登入爬不了怎么办"><a href="#4-2-没登入爬不了怎么办" class="headerlink" title="4.2 没登入爬不了怎么办"></a>4.2 没登入爬不了怎么办</h2><p><img src="/images/crawler/3.jpg" alt="企查查"><br>例如上图，没登入就不给你看，解决方法也很简单，自己登入一下，然后去把cookies保存一下，接着爬虫的时候添加cookies就行了。  </p>
-<h2 id="4-3-有没有更吊的爬虫框架"><a href="#4-3-有没有更吊的爬虫框架" class="headerlink" title="4.3 有没有更吊的爬虫框架"></a>4.3 有没有更吊的爬虫框架</h2><p>有，分布式爬虫scrapy你值得拥有</p>
+<h2 id="4-3-有没有更吊的爬虫框架"><a href="#4-3-有没有更吊的爬虫框架" class="headerlink" title="4.3 有没有更吊的爬虫框架"></a>4.3 有没有更吊的爬虫框架</h2><p>有，分布式爬虫scrapy你值得拥有<br>还有一个是我最近才看到的：Requests-HTML，请求解析二合一，支持解析js，内置自动翻页等强大功能。相关介绍问：<u><a href="https://zhuanlan.zhihu.com/p/129904022" target="_blank" rel="noopener">《python爬虫requests_html库快速入门，你确定还要使用requests库吗？》</a></u></p>
 <h1 id="5-代码"><a href="#5-代码" class="headerlink" title="5.代码"></a>5.代码</h1><blockquote>
 <p>爬虫模板：<a href="https://github.com/krystalan/Crawler" target="_blank" rel="noopener">https://github.com/krystalan/Crawler</a></p>
 </blockquote>
