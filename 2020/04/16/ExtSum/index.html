@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/18.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >抽取式文本摘要[TODO]</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要记录抽取式文摘的一些总结<br>PaperList：<u><a href="http://pfliu.com/pl-summarization/summ_paper_gen-ext.html" target="_blank" rel="noopener">《抽取式摘要10篇必读论文》</a></u>  </p>
+<h1 id="1-基于神经网络抽取句子与单词的摘要模型"><a href="#1-基于神经网络抽取句子与单词的摘要模型" class="headerlink" title="1. 基于神经网络抽取句子与单词的摘要模型"></a>1. 基于神经网络抽取句子与单词的摘要模型</h1><h2 id="1-1-论文名称"><a href="#1-1-论文名称" class="headerlink" title="1.1 论文名称"></a>1.1 论文名称</h2><p>2016 ACL <u><a href="https://arxiv.org/abs/1603.07252" target="_blank" rel="noopener">Neural Summarization by Extracting Sentences and Words</a></u></p>
+<h2 id="1-2-动机"><a href="#1-2-动机" class="headerlink" title="1.2 动机"></a>1.2 动机</h2><p>因为是2016年的论文，基本上是利用神经网络处理文本摘要问题的先河，解决了以往繁琐的特征工程。并且构建了DailyMail摘要数据集。  </p>
+<h2 id="1-3-模型"><a href="#1-3-模型" class="headerlink" title="1.3 模型"></a>1.3 模型</h2><p><img src="/images/ExtSum/1.jpg" alt="NN-SE"><br>论文一共提出来了两个模型，分别是NN-SE和NN-WE分别是Neural Networks - Sentences Extraction和Neural Networks - Word Extraction，这里主要介绍一下NN-SE。</p>
+<p>首先，将一个文档编码，下面的部分是句级编码，使用了CNN，对于原始文本中的每个词都是用了预训练好的词向量（skip-gram），在图中以5维为例，后使用不同Width的CNN，6个卷积核，来提取文本特征，其中蓝色所示的卷积操作width为2，红色则为3，之后对于每个卷积核提取的特征做max-pooling，之后把不同尺度得到的句级特征相加得到最终句子表示。<br>有了句子表示之后，利用LSTM获取文档表示，最后句子提取部分使用了另一个LSTM，每一步可能获取到一个句子为摘要句的概率，计算方式如下：<br>![句级提取]](/images/ExtSum/2.jpg)<br>其中pt-1是上一个句子为摘要句的概率，利用文档编码LSTM的隐层状态和句子抽取器LSTM的隐层状态去预测一个句子为摘要句的概率。由于在训练和测试时，这里存在着一个误差，训练的时候我们是知道哪个句子应该是摘要句，哪个句子不是。而在测试的时候，我们只能使用上一步预测的结果，因此这里在测试时做了一个调整，如果上一步句子不能够很精准度的预测出是否为摘要句，那就先把它当做摘要句，让句子提取器LSTM继续往下运行着，之后再把它改成此前预测的概率。主要是为了避免错误累加。</p>
+<h2 id="1-4-实验结果"><a href="#1-4-实验结果" class="headerlink" title="1.4 实验结果"></a>1.4 实验结果</h2><p><img src="/images/ExtSum/3.jpg" alt="实验结果">   </p>
+<h1 id="2-SummaRuNNer"><a href="#2-SummaRuNNer" class="headerlink" title="2.SummaRuNNer"></a>2.SummaRuNNer</h1><h2 id="2-1-论文名称"><a href="#2-1-论文名称" class="headerlink" title="2.1 论文名称"></a>2.1 论文名称</h2><p>2017 AAAI <u><a href="https://arxiv.org/abs/1611.04230" target="_blank" rel="noopener">SummaRuNNer：A Recurrent Neural Network based Sequence Model for Extractive Summarization of Documents</a></u></p>
+<h2 id="2-2-动机"><a href="#2-2-动机" class="headerlink" title="2.2 动机"></a>2.2 动机</h2><p>增强文本摘要的可解释性</p>
+<h2 id="2-3-模型"><a href="#2-3-模型" class="headerlink" title="2.3 模型"></a>2.3 模型</h2><p><img src="/images/ExtSum/4.jpg" alt="SummaRuNNer"><br>其中最下方的输入是每句话中的单词，然后用一个双向GRU获取单词的表示，之后通过单词表示得到句意表示。获得不同句子的句意表示后接下来要计算文档表示：<br><img src="/images/ExtSum/5.jpg" alt="SummaRuNNer"><br>hj是每个句子的表示，分为前向GRU得到的隐层向量与后向GRU得到的隐层向量的拼接，之后通过平均池化的思想将每个单词的表示结合形成文档表示d。<br>对于分类任务，我们对于每个句子计算其为摘要句的概率：<br><img src="/images/ExtSum/6.jpg" alt="SummaRuNNer"><br>首先，第一行是计算了句子本身所包含的信息量，第二行计算的是句子与整个文档的相关性，第三行减去冗余度，最后加入句子在文章中的绝对位置和相对位置信息。sj是摘要在第j句位置的动态表示，计算如下：<br><img src="/images/ExtSum/7.jpg" alt="SummaRuNNer"><br>也就是，前几个句子的表示分别乘以他们为摘要的概率，第三行以此来减少最终摘要的冗余度。</p>
+<h2 id="2-4-实验结果"><a href="#2-4-实验结果" class="headerlink" title="2.4 实验结果"></a>2.4 实验结果</h2><p><img src="/images/ExtSum/8.jpg" alt="实验结果"><br><img src="/images/ExtSum/9.jpg" alt="实验结果"><br><img src="/images/ExtSum/10.jpg" alt="实验结果"><br><img src="/images/ExtSum/11.jpg" alt="实验结果"><br>最后说明一下，该模型能够增强可解释性的原因：<br><img src="/images/ExtSum/12.jpg" alt="实验结果"><br>因为它可以在不同角度评估一条句子是否为摘要句，与2.3中最终训练的目标函数相关。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+				<span id="busuanzi_container_site_pv"> 2020 </span> 
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
