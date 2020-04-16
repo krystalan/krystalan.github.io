@@ -134,6 +134,10 @@
 <h2 id="2-2-动机"><a href="#2-2-动机" class="headerlink" title="2.2 动机"></a>2.2 动机</h2><p>增强文本摘要的可解释性</p>
 <h2 id="2-3-模型"><a href="#2-3-模型" class="headerlink" title="2.3 模型"></a>2.3 模型</h2><p><img src="/images/ExtSum/4.jpg" alt="SummaRuNNer"><br>其中最下方的输入是每句话中的单词，然后用一个双向GRU获取单词的表示，之后通过单词表示得到句意表示。获得不同句子的句意表示后接下来要计算文档表示：<br><img src="/images/ExtSum/5.jpg" alt="SummaRuNNer"><br>hj是每个句子的表示，分为前向GRU得到的隐层向量与后向GRU得到的隐层向量的拼接，之后通过平均池化的思想将每个单词的表示结合形成文档表示d。<br>对于分类任务，我们对于每个句子计算其为摘要句的概率：<br><img src="/images/ExtSum/6.jpg" alt="SummaRuNNer"><br>首先，第一行是计算了句子本身所包含的信息量，第二行计算的是句子与整个文档的相关性，第三行减去冗余度，最后加入句子在文章中的绝对位置和相对位置信息。sj是摘要在第j句位置的动态表示，计算如下：<br><img src="/images/ExtSum/7.jpg" alt="SummaRuNNer"><br>也就是，前几个句子的表示分别乘以他们为摘要的概率，第三行以此来减少最终摘要的冗余度。</p>
 <h2 id="2-4-实验结果"><a href="#2-4-实验结果" class="headerlink" title="2.4 实验结果"></a>2.4 实验结果</h2><p><img src="/images/ExtSum/8.jpg" alt="实验结果"><br><img src="/images/ExtSum/9.jpg" alt="实验结果"><br><img src="/images/ExtSum/10.jpg" alt="实验结果"><br><img src="/images/ExtSum/11.jpg" alt="实验结果"><br>最后说明一下，该模型能够增强可解释性的原因：<br><img src="/images/ExtSum/12.jpg" alt="实验结果"><br>因为它可以在不同角度评估一条句子是否为摘要句，与2.3中最终训练的目标函数相关。</p>
+<h1 id="3-NeuSum"><a href="#3-NeuSum" class="headerlink" title="3.NeuSum"></a>3.NeuSum</h1><h2 id="3-1-论文名称"><a href="#3-1-论文名称" class="headerlink" title="3.1 论文名称"></a>3.1 论文名称</h2><p>2018 ACL：<u><a href="http://arxiv.org/abs/1807.02305" target="_blank" rel="noopener">Neural Document Summarization by Jointly Learning to Score and Select Sentences</a></u></p>
+<h2 id="3-2-动机"><a href="#3-2-动机" class="headerlink" title="3.2 动机"></a>3.2 动机</h2><p>此前的抽取式摘要任务基本分为两个子任务：句子评分、句子选取。本文学习一个end2end框架联合学习句子评分与句子选取。在评分系统中融入了选择策略</p>
+<h2 id="3-3-模型"><a href="#3-3-模型" class="headerlink" title="3.3 模型"></a>3.3 模型</h2><p><img src="/images/ExtSum/15.jpg" alt="模型"><br>[TODO]</p>
+<h2 id="3-4-实验结果"><a href="#3-4-实验结果" class="headerlink" title="3.4 实验结果"></a>3.4 实验结果</h2><p><img src="/images/ExtSum/13.jpg" alt="实验结果"><br>结果比Pointer-generator、NN-SE（第一节讲述的模型）、SummaRuNNer（第二节讲述的模型）都要好。作者还进行了人工评估实验：<br><img src="/images/ExtSum/14.jpg" alt="实验结果">  </p>
 
             </div>
 
