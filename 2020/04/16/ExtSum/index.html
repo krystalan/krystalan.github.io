@@ -150,8 +150,9 @@
 <h1 id="6-HIBERT"><a href="#6-HIBERT" class="headerlink" title="6.HIBERT"></a>6.HIBERT</h1><h2 id="6-1-论文名称"><a href="#6-1-论文名称" class="headerlink" title="6.1 论文名称"></a>6.1 论文名称</h2><p>2019 ACL：<u><a href="https://arxiv.org/abs/1905.06566" target="_blank" rel="noopener">HIBERT : Document Level Pre-training of Hierarchical Bidirectional Transformers for Document Summarization</a></u></p>
 <h2 id="6-2-动机"><a href="#6-2-动机" class="headerlink" title="6.2 动机"></a>6.2 动机</h2><p>使用transformer做摘要的一个工作</p>
 <h2 id="6-3-模型"><a href="#6-3-模型" class="headerlink" title="6.3 模型"></a>6.3 模型</h2><p><img src="/images/ExtSum/24.jpg" alt="模型"><br>wi代表的一句话中的单词，EOS是一句话的结束token，在获得句子表示方面，使用了transformer，并将EOS token的最终表示当做句子表示，之后在句子表示上再使用transformer以获得上下文相关的句子表示。此前的大部分预训练语言模型都是学习句子的表示（例如GPT2、ELMO、BERT等），而HIBERT是为了学习文档表示。  </p>
-<p>所以搞了一个Document Masking来预测句子。在文档D中，随机选择15%的句子去mask，接着去预测mask的句子（80%的情况下是直接mask选中的句子，10%不变，10%随机用另外一个句子去替代它）。  </p>
-<h2 id="6-4-实验结果"><a href="#6-4-实验结果" class="headerlink" title="6.4 实验结果"></a>6.4 实验结果</h2><p><img src="/images/ExtSum/23.jpg" alt="实验结果"><br>CNN/DM</p>
+<p>所以搞了一个Document Masking来预测句子。在文档D中，随机选择15%的句子去mask，接着去预测mask的句子（80%的情况下是直接mask选中的句子，10%不变，10%随机用另外一个句子去替代它）。预测的过程是用transformer decoder完成的，BOS是代表句子开始的token。  </p>
+<p>在最终抽取摘要时，直接利用包含上下文的句级表示d来计算概率，并取概率高的句子为摘要句。<br><img src="/images/ExtSum/25.jpg" alt="模型">   </p>
+<h2 id="6-4-实验结果"><a href="#6-4-实验结果" class="headerlink" title="6.4 实验结果"></a>6.4 实验结果</h2><p><img src="/images/ExtSum/23.jpg" alt="实验结果"><br>数据集：CNN/DM<br>HIBERTs：Transformer6层，隐层向量512维，8头注意力<br>HIBERTm：Transformer6层，隐层向量768维，12头注意力<br>HIBERTs（in-domain）：意思就是只在CNN/DM数据集上做预训练，不加in-domain的是在CNN/DM与GIGA-CM两个数据集上训练。</p>
 
             </div>
 
