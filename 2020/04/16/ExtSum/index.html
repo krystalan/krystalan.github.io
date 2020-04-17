@@ -155,7 +155,8 @@
 <h2 id="6-4-实验结果"><a href="#6-4-实验结果" class="headerlink" title="6.4 实验结果"></a>6.4 实验结果</h2><p><img src="/images/ExtSum/23.jpg" alt="实验结果"><br>数据集：CNN/DM<br>HIBERTs：Transformer6层，隐层向量512维，8头注意力<br>HIBERTm：Transformer6层，隐层向量768维，12头注意力<br>HIBERTs（in-domain）：意思就是只在CNN/DM数据集上做预训练，不加in-domain的是在CNN/DM与GIGA-CM两个数据集上训练。   </p>
 <h1 id="7-BertSum"><a href="#7-BertSum" class="headerlink" title="7.BertSum"></a>7.BertSum</h1><h2 id="7-1-论文名称"><a href="#7-1-论文名称" class="headerlink" title="7.1 论文名称"></a>7.1 论文名称</h2><p>2019 EMNLP ： <u>Text Summarization with Pretrained Encoders</u><br>CODE：<a href="https://github.com/nlpyang/PreSumm" target="_blank" rel="noopener">https://github.com/nlpyang/PreSumm</a></p>
 <h2 id="7-2-动机"><a href="#7-2-动机" class="headerlink" title="7.2 动机"></a>7.2 动机</h2><p>其实这篇不仅有抽取式的，也有一些生成式的思考，但我们主要focu抽取式。直接用BERT，憋搞那些花里胡哨的了，这篇目前是CNN/DM的SOTA。  </p>
-<h2 id="7-3-模型"><a href="#7-3-模型" class="headerlink" title="7.3 模型"></a>7.3 模型</h2><p><img src="/images/ExtSum/27.jpg" alt="模型"><br>[TODO]</p>
+<h2 id="7-3-模型"><a href="#7-3-模型" class="headerlink" title="7.3 模型"></a>7.3 模型</h2><p><img src="/images/ExtSum/27.jpg" alt="模型"><br>为了能在抽取式文摘任务上使用BERT模型，这里做了一些改动：在每个句子前加了[CLS]token。这个token能逐渐get整句话的表示。使用[SEP]token，来区分一个文档当中的不同句子。又使用了segment embedding EA和EB来区分该句话是单数句还是偶数句。position embedding是随机初始化的，并且在微调过程中作为参数而更改。  </p>
+<p>抽取摘要过程：<br>假设一个文档d，其中包含句子sent1,sent2,…,sentm。在BertSum中ti代表第i句话的表示（由[CLS]token捕获）<br><img src="/images/ExtSum/28.jpg" alt="模型"><br>其中T就是BertSum产生的句子表示，PosEmb是指在句子表示上加入位置信息（用到了sinusoid postional embedding）。之后通过多头注意力机制、层归一化以及前馈神经网络得到最终的句子表示。<br><img src="/images/ExtSum/29.jpg" alt="模型"><br>hiL代表第i句话在L层transformer提取之后的表示。作者分别尝试了L为1，2，3的情况，结果发现L为2时效果最好。损失函数就是分类问题当中常用的交叉熵。</p>
 <h2 id="7-4-实验结果"><a href="#7-4-实验结果" class="headerlink" title="7.4 实验结果"></a>7.4 实验结果</h2><p><img src="/images/ExtSum/26.jpg" alt="实验结果"><br>数据集：CNN/DM</p>
 
             </div>
