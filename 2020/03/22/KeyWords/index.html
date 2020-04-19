@@ -125,6 +125,10 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <p><img src="/images/KW/1.jpg" alt="算法总览">  </p>
+<p>在介绍关键词抽取之前，先弄清领域短语挖掘、关键词抽取与新词发现的概念与区别：</p>
+<blockquote>
+<p>（1）关键词抽取是从语料库中提取最重要、最有代表性的短语，抽取的短语数量一般比较少。<br>（2）新词发现的主要目标是发现词汇库中不存在的新词汇。<br>（3）领域短语挖掘指的是从给定的领域语料中自动挖掘该领域的高质量短语的过程。</p>
+</blockquote>
 <h1 id="1-有监督算法"><a href="#1-有监督算法" class="headerlink" title="1.有监督算法"></a>1.有监督算法</h1><p>有监督的关键词抽取算法需要大量的标注数据来让模型习得什么样的词汇是关键词，往往可以看成一个词汇二分类的任务或是一个序列标注任务。（<strong>有监督算法不为本文重点因此只做简单介绍</strong>）  </p>
 <h2 id="1-1-词汇二分类任务"><a href="#1-1-词汇二分类任务" class="headerlink" title="1.1 词汇二分类任务"></a>1.1 词汇二分类任务</h2><p>针对于每一个词汇，都为其预测一个结果（是否为关键词），例如我们可以用双向LSTM获取每一个词汇的表示，再用一个激活函数算出预测结果。<br><img src="/images/KW/2.jpg" alt="词汇二分类"><br>例如在本例当中，我们先把“世间安得双全法，不负如来不负卿”分词，之后分别喂给BiLSTM，取得中间的词汇表示（前向LSTM的隐层状态与后向LSTM的隐层状态拼接）后，再利用激活函数计算出分类结果即可。最终我们预测出“双全法”是关键词。</p>
 <h2 id="1-2-序列标注任务"><a href="#1-2-序列标注任务" class="headerlink" title="1.2 序列标注任务"></a>1.2 序列标注任务</h2><p>而在序列标注任务解法中，我们可以把每一个词汇都标注成0或1来代表非关键词与关键词，再利用序列模型（例如HMM、CRF等等）求解即可。<br>详细的内容请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/09/NER/" target="_blank" rel="noopener">《命名实体识别出你的点点滴滴》</a></u>  </p>
@@ -176,6 +180,10 @@
 <p>[(0, 0.4298588), (1, 0.5516107), (2, 0.018530471)]  </p>
 </blockquote>
 <p>表示主题0占比为43.0%，主题1占比为55%，主题2占比为2%。</p>
+<p>最后补充一点：</p>
+<blockquote>
+<p>更好地使用LDA的方式是先利用短语挖掘识别出领域短语，再使用LDA，这实际上是Phrase-LDA，在实际应用中往往能够取得更好的效果。</p>
+</blockquote>
 <h2 id="2-4-RAKE"><a href="#2-4-RAKE" class="headerlink" title="2.4 RAKE"></a>2.4 RAKE</h2><p>RAKE（Rapid Automatic Keyword Extraction），其特点是速度快的同时也能取得相对不错的效果。<br>之前介绍的算法提取出的词都是单一的关键词，而RAKE算法提取出的则是单词所组成的短语。<br>需要注意的是：<strong>在中文上使用RAKE算法的效果并不好，因为分词会出现边界模糊的情况。因此只推荐在英文文本上用RAKE算法。</strong>  </p>
 <p>我们用<u><a href="https://www.researchgate.net/publication/227988510_Automatic_Keyword_Extraction_from_Individual_Documents" target="_blank" rel="noopener">原论文</a></u>中的例子来解释其算法过程：<br><img src="/images/KW/4.jpg" alt="example"><br>这是原始文档以及人工标注的关键词<br>（1）得到候选关键词<br>第一步先从原始文档中抽取出候选的关键词，其过程以停用词和标点来分割源文档。分隔后的候选关键词如下：<br><img src="/images/KW/5.jpg" alt="候选关键词"><br>（2）计算单词共现矩阵<br>该过程与GLOVE中的类似，属于一劳永逸式的做法。<br>需要注意的是，该操作的单位是单词而不是上一步中的候选关键词。<br><img src="/images/KW/6.jpg" alt="单词共现矩阵"><br>（3）计算得分<br>首先计算每个单词的得分：<br><img src="/images/KW/7.jpg" alt="单词得分"><br>之后计算每个候选关键词的得分：<br><img src="/images/KW/8.jpg" alt="候选关键词得分"><br>每个候选关键词的得分就是把其包含的单词的得分（deg(w)/freq(w)）相加。<br>（4）最后输出得分高的候选关键词</p>
 <p>再来看一下实战过程：  </p>
