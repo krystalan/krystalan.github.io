@@ -126,9 +126,23 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>参考资料：</p>
+                <blockquote>
+<p>完整的关系抽取系统包括NER（识别文本当中的实体）、实体链接器（将识别出的实体链接到已有的KG当中）以及关系分类器（决定给定文本当中实体间的关系）。即：<br>关系抽取系统 = 命名实体识别 + 实体链接 + 关系分类器<br>关系抽取系统 = 实体链指 + 关系分类器<br>其中<strong>识别关系是最重要也是最困难的</strong></p>
+</blockquote>
+<p>关系抽取例子：<br><img src="/images/RE/1.jpg" alt="example"><br>如图，给定了两个实体和一句提及实体的文本，利用RE模型去在给定的关系集合中做分类（如果不在关系集合则设定为N/A），最终选择概率最高的关系作为结果。</p>
+<p>参考资料：</p>
 <blockquote>
 <p>2020关系抽取综述：<a href="https://arxiv.org/abs/2004.03186" target="_blank" rel="noopener">https://arxiv.org/abs/2004.03186</a><br><u><a href="https://book.douban.com/subject/34930415/" target="_blank" rel="noopener">《知识图谱概念与技术》</a></u>第四章<br><u><a href="https://zhuanlan.zhihu.com/p/91762831" target="_blank" rel="noopener">《知识图谱从哪里来：实体关系抽取的现状与未来》</a></u></p>
+</blockquote>
+<h1 id="1-基于模式的关系抽取"><a href="#1-基于模式的关系抽取" class="headerlink" title="1.基于模式的关系抽取"></a>1.基于模式的关系抽取</h1><p>使用语法分析工具去识别文本当中的语义信息并从这些元素当中自动构建模式规则。为了能够有更好的覆盖率和准确率，后续工作包含了更大规模的数据集以及更多模式格式和更加高效的关系抽取方式。</p>
+<p>一个自动构建的模式可能有很多错误，大部分上述方法需要人类专家的检验，这便成为了基于模式的RE模型的局限性。</p>
+<h1 id="2-基于统计的关系抽取（SRE）"><a href="#2-基于统计的关系抽取（SRE）" class="headerlink" title="2.基于统计的关系抽取（SRE）"></a>2.基于统计的关系抽取（SRE）</h1><blockquote>
+<p>对比与上述基于模式的方法，基于统计的模型有着更好的覆盖率与更少的人工干预。  </p>
+</blockquote>
+<p>（1）一类非常经典的SRE是基于特征的模型，它为实体对和文本信息设计词法、句法和语义特征。之后将这些特征喂给关系分类器即可。因为SVM的广泛应用，先前的许多工作都探索了基于核的分类方法（为SVM设计核函数来测量关系表示和文本实例之间的相似度）。<br>（2）还有一些工作探索了如何抽取和推断文本当中潜在的信息，例如图形模型（Graphical methods）以有向无环图的形式对实体、文本和关系之间的依赖进行建模，然后利用推理模型识别正确的关系。<br>（3）随着embedding模型在NLP中不断发展，还有一些模型将文本通过embedding模型转化到低维语义空间，并通过实体embedding来抽取关系，更甚者，利用了KGE来做RE。</p>
+<p>即使SRE被广泛研究，但仍存在一些问题，（1）当中特征工程繁琐，（2）（3）依然在模型能力上受限。</p>
+<h1 id="3-基于神经网络的关系抽取（NRE）"><a href="#3-基于神经网络的关系抽取（NRE）" class="headerlink" title="3.基于神经网络的关系抽取（NRE）"></a>3.基于神经网络的关系抽取（NRE）</h1><blockquote>
+<p>NRE模型是利用深度学习去自动从文本当中抽取语义特征，对比与SRE，NRE可以更高效地捕获文本信息并推广到更广泛的数据范围。<br>paperlist：<a href="https://github.com/thunlp/NREPapers" target="_blank" rel="noopener">https://github.com/thunlp/NREPapers</a></p>
 </blockquote>
 
             </div>
