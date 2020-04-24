@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch笔记（二）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要讲述如何将文本数据处理成tensor，因为我们在利用深度学习训练神经网络的过程当中全都是在tensor上面进行的，计算机本身是不认识汉语或英文的，我们都需要将这些人类语言描述成计算机能看得懂的标记，也就是tensor。类似的，如果我们要完成的任务是图像处理或者语音处理，我们也需要将图像信息和音频信息转换为tensor。那回到一开始的话题，如何将文本数据转换称为Tensor，其实一共有两种办法。<br>（1）使用独热（one-hot）编码<br><img src="/images/pytorch/2.jpg" alt="one-hot"><br>one-hot编码就是用一个向量来表示不同的词汇，每一个词汇的one-hot编码向量当中，只有1位是“1”，剩下的都是“0”，向量长度也就是整个词表的长度，也就是说它用向量的每一位去代表一个单词。但是one-hot编码有很严重的弊端，就是当我们的语料库非常大时，那么向量的长度就会非常大，从而占用大量的内存空间；除此之外，倘若我们要在词表中新加入一个单词，就得新开一列，那么就得重新训练模型；而且one-hot向量中，没有任何语义信息，因为任何两个单词的点积都为0。<br>（2）word embedding<br>词向量的思想就是将每一个单词去映射到一个低维空间当中，例如我们使用固定的300维向量去代表每一个单词，这个低维向量中的元素都是浮点数，在这个低维空间当中，语义相近的单词应该更靠近，例如“苹果”和“香蕉”的距离小于“苹果”和“汽车”；同时这个空间还具有一定的推理性，例如“国王” - “男性” + “女性” ≈ “皇后”。由于word embedding的方法较为科学，在融入语义信息的同时也节省了内存。通常情况下词向量可随机初始化或直接导入已经预训练好的词向量（例如word2vec、glove、fasttext等等），所以这部分是本文的重点。  </p>
+<h1 id="1-torch-nn"><a href="#1-torch-nn" class="headerlink" title="1. torch.nn"></a>1. torch.nn</h1><blockquote>
+<p>nn是Neural Networks的简写，这一部分是pytorch当中关于神经网络的部分，也是非常核心的内容，我们在介绍nn.embedding之前先来看一下torch.nn整体的一个框架。官方文档：<a href="https://pytorch.org/docs/stable/nn.html" target="_blank" rel="noopener">https://pytorch.org/docs/stable/nn.html</a></p>
+</blockquote>
+<p>我自己画了一个图，来看看torch.nn都有哪些内容：<br><img src="/images/pytorch/3.jpg" alt="torch.nn"><br>需要注意的是17大类当中，每一大类下面其实是有1个或多个class的，例如今天我们着重介绍的稀疏层下面就有两个class：<br><img src="/images/pytorch/4.jpg" alt="稀疏层"><br>所以它其实算比较简单的一个大类了，其中以第一个torch.nn.Embedding为主。</p>
+<h1 id="2-torch-nn-Embedding"><a href="#2-torch-nn-Embedding" class="headerlink" title="2. torch.nn.Embedding"></a>2. torch.nn.Embedding</h1><p>我们可以先来看一下这个类是如何定义的：  </p>
+<blockquote>
+<p>CLASS torch.nn.Embedding（<br>num_embeddings,<br>embedding_dim,<br>padding_idx=None,<br>max_norm=None,<br>norm_type=2.0,<br>scale_grad_by_freq=False,<br>sparse=False,<br>_weight=None<br>）  </p>
+</blockquote>
+<p>其中比较重要的参数是前两个，其他参数为可选项：<br>num_embedding是词表大小，也就是你要embedding的单词的个数；<br>embedding_dim是词向量的纬度。<br>来看一个简单的例子：  </p>
+<blockquote>
+<p>import torch<br>import torch.nn as nn<br>word_embedding = nn.Embedding(4,10)<br>a = word_embedding(torch.tensor([3]))</p>
+</blockquote>
+<p>这段代码建立了一个4个10维的随机embedding，并在最后将最后一个10维的embedding赋值给了a。  </p>
+<p>如果直接使用nn.Embedding获得的是随机的embedding，我们也可以利用自己想要的权重初始化词向量，例如使用word2vec或者glove训练好的。  </p>
+<blockquote>
+<p>weight = torch.FloatTensor([[1, 2.3, 3], [4, 5.1, 6.3]])<br>embedding = nn.Embedding.from_pretrained(weight)</p>
+</blockquote>
+<h2 id="3-torch-nn-EmbeddingBag"><a href="#3-torch-nn-EmbeddingBag" class="headerlink" title="3. torch.nn.EmbeddingBag"></a>3. torch.nn.EmbeddingBag</h2><p>CLASStorch.nn.EmbeddingBag(<br>num_embeddings,<br>embedding_dim,<br>max_norm=None,<br>norm_type=2.0,<br>scale_grad_by_freq=False,<br>mode=’mean’,<br>sparse=False,<br>_weight=None,<br>include_last_offset=False<br>)</p>
+<p>计算embedding的“包”的sum或mean，而不实例化中间embedding。我们在计算sum、mean以及max的时候，也可以去使用torch.sum()、torch.mean()、torch.max()。他们是等价的，但是使用nn.EmbeddingBag的效率更高。<br>mode参数分为三种：sum、mean、max，对应三种操作：”sum”表示普通embedding后接torch.sum(dim=0)，”mean”相当于后接torch.mean(dim=0)，”max”相当于后接torch.max(dim=0)。<br>EmbeddingBag就是把look-up表整合成一个embedding，当不需要具体查表获得embedding，只需要一个整合结果时，它比上述两阶段操作更高效。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
