@@ -136,52 +136,56 @@
 <h2 id="1-1-词汇二分类任务"><a href="#1-1-词汇二分类任务" class="headerlink" title="1.1 词汇二分类任务"></a>1.1 词汇二分类任务</h2><p>针对于每一个词汇，都为其预测一个结果（是否为关键词），例如我们可以用双向LSTM获取每一个词汇的表示，再用一个激活函数算出预测结果。<br><img src="/images/KW/2.jpg" alt="词汇二分类"><br>例如在本例当中，我们先把“世间安得双全法，不负如来不负卿”分词，之后分别喂给BiLSTM，取得中间的词汇表示（前向LSTM的隐层状态与后向LSTM的隐层状态拼接）后，再利用激活函数计算出分类结果即可。最终我们预测出“双全法”是关键词。</p>
 <h2 id="1-2-序列标注任务"><a href="#1-2-序列标注任务" class="headerlink" title="1.2 序列标注任务"></a>1.2 序列标注任务</h2><p>而在序列标注任务解法中，我们可以把每一个词汇都标注成0或1来代表非关键词与关键词，再利用序列模型（例如HMM、CRF等等）求解即可。<br>详细的内容请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/09/NER/" target="_blank" rel="noopener">《命名实体识别出你的点点滴滴》</a></u>  </p>
 <h1 id="2-无监督算法"><a href="#2-无监督算法" class="headerlink" title="2.无监督算法"></a>2.无监督算法</h1><h2 id="2-1-TF-IDF"><a href="#2-1-TF-IDF" class="headerlink" title="2.1 TF-IDF"></a>2.1 TF-IDF</h2><p>该算法是一个很强的Baseline，能够解决大部分提取关键词的场景。<br>TF = 词语在文章中出现的次数/文章总词数<br>IDF = log[语料库文章总数/(包含该词的文章数+1)]<br>TF-IDF = TF*IDF<br>首先，TF是用来计算词频的，但是计算出来的词频很有可能是一些没有意义的词汇，例如“我们”、“的”、“地”、“得”等等。所以我们要通过IDF来消减这些词的权重。一个词越通用，它的IDF值越低。  </p>
-<p>在实战中，我们可以使用jieba.analyse来使用这一算法，具体代码如下：  </p>
-<blockquote>
-<p>import jieba.analyse<br>data = ‘就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗？’<br>keywords = jieba.analyse.extract_tags(data,topK=10)<br>print(‘ ‘.join(keywords))</p>
-</blockquote>
+<p>在实战中，我们可以使用jieba.analyse来使用这一算法，具体代码如下： </p>
+<pre><code class="python">import jieba.analyse  
+data = &#39;就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗？&#39;  
+keywords = jieba.analyse.extract_tags(data,topK=10)  
+print(&#39; &#39;.join(keywords))</code></pre>
 <p>需要注意的是，在jieba实现的算法中，默认将使用jieba提供的IDF值，该IDF值是在大量的语料中统计得到的。<br>算法输出如下：  </p>
-<blockquote>
-<p>仓英嘉措 达赖喇嘛 如来 不负 西藏 转世灵童 青灯古佛 第巴 桑结嘉 世达赖</p>
-</blockquote>
+<pre><code class="python">仓英嘉措 达赖喇嘛 如来 不负 西藏 转世灵童 青灯古佛 第巴 桑结嘉 世达赖</code></pre>
 <h2 id="2-2-TextRank"><a href="#2-2-TextRank" class="headerlink" title="2.2 TextRank"></a>2.2 TextRank</h2><p>TextRank是一种基于图的排序算法，其是从PageRank中改进得到的，也可以用于文本摘要任务提取关键句。关键词是关键句的缩写，故依然可以使用。<br>TextRank在构建图模型的时候，节点代表词，节点之间的边代表词之间的共现关系（即取一个窗口，窗口内包含的词之前属于共现关系）<br>计算每个词权重的迭代公式如下：<br><img src="/images/KW/3.jpg" alt="TextRank"><br>其中，d一般取0.85为超参数，In(Vi)表示窗口内有词i的词的集合，Out(Vi)表示词i窗口内所出现的词的集合。<br>实战代码如下，同样还是使用jieba库来实现。</p>
-<blockquote>
-<p>import jieba.analyse<br>data = ‘就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗？’<br>keywords = jieba.analyse.textrank(data,topK=10)<br>print(‘ ‘.join(keywords))</p>
-</blockquote>
+<pre><code class="python">import jieba.analyse  
+data = &#39;就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗？&#39;  
+keywords = jieba.analyse.textrank(data,topK=10)  
+print(&#39; &#39;.join(keywords))</code></pre>
 <p>输出如下：</p>
-<blockquote>
-<p>达赖喇嘛 西藏 不负 人们 两全 存在 世间 措诗 人生 摄政王</p>
-</blockquote>
+<pre><code class="python">达赖喇嘛 西藏 不负 人们 两全 存在 世间 措诗 人生 摄政王</code></pre>
 <h2 id="2-3-LDA"><a href="#2-3-LDA" class="headerlink" title="2.3 LDA"></a>2.3 LDA</h2><p>TFIDF是从词频的角度挖掘关键词<br>TextRank是从词共现关系角度挖掘关键词<br>而LDA做为主题模型的一哥，从文档主题的角度挖掘关键词。<br>理论部分请参考本博客另外一篇文章：<u><a href="https://wangjiaan.xyz/2020/03/23/TopicModel" target="_blank" rel="noopener">《一眼看穿你的心思》</a></u>  </p>
 <p>实战代码如下：<br>（1）导入所需库</p>
-<blockquote>
-<p>from gensim.models import LdaModel<br>import pandas as pd<br>from gensim.corpora import Dictionary<br>import jieba  </p>
-</blockquote>
+<pre><code class="python">from gensim.models import LdaModel  
+import pandas as pd  
+from gensim.corpora import Dictionary
+import jieba  </code></pre>
 <p>（2）获取数据源，这里用的是一个摘要数据集的文章部分，最后的data是一个二维数组，存放每篇文章分完词后结果。</p>
-<blockquote>
-<p>f = open(‘data.txt’,’r’,encoding=’utf-8’)<br>data = f.readlines()<br>f.close()<br>data = data[0:100]<br>for i,d in enumerate(data):<br>    x = eval(d)[‘article’].strip() # x为一篇文章的字符串形式<br>    data[i] = list(jieba.cut(x))  </p>
-</blockquote>
+<pre><code class="python">f = open(&#39;data.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;)  
+data = f.readlines()  
+f.close()  
+data = data[0:100]  
+for i,d in enumerate(data):  
+    x = eval(d)[&#39;article&#39;].strip() # x为一篇文章的字符串形式  
+    data[i] = list(jieba.cut(x))  </code></pre>
 <p>（3）加载字典，并去除最高频的200个词汇，因为这些词汇太普遍所以并不能够做主题词。</p>
-<blockquote>
-<p>dictionary = Dictionary(data)<br>dictionary.filter_n_most_frequent(200)<br>corpus = [dictionary.doc2bow(text) for text in data ]  </p>
-</blockquote>
+<pre><code class="python">dictionary = Dictionary(data)  
+dictionary.filter_n_most_frequent(200)  
+corpus = [dictionary.doc2bow(text) for text in data ]  </code></pre>
 <p>（4）训练LDA模型，并获取结果</p>
-<blockquote>
-<p>lda = LdaModel(corpus=corpus, id2word=dictionary, num_topics=3)#抽取三个主题<br>topic_list=lda.print_topics(3,5)#打印第一个主题排名前5的词汇<br>for i in topic_list:<br>    print(i)  </p>
-</blockquote>
-<p>代码输出为：  </p>
-<blockquote>
-<p>(0, ‘0.003*”她” + 0.002*”某某” + 0.002*”公司” + 0.002*”,” + 0.002*”你”‘)<br>(1, ‘0.007*”,” + 0.005*”公司” + 0.002*”生物” + 0.002*”康泰” + 0.002*”原种场”‘)<br>(2, ‘0.003*”黄海波” + 0.002*”豆芽” + 0.002*”她” + 0.002*”·” + 0.002*”提”‘)  </p>
-</blockquote>
+<pre><code class="python">lda = LdaModel(corpus=corpus, id2word=dictionary, num_topics=3)#抽取三个主题  
+topic_list=lda.print_topics(3,5)#打印第一个主题排名前5的词汇  
+for i in topic_list:  
+    print(i)  </code></pre>
+<p>代码输出为： </p>
+<pre><code class="python">(0, &#39;0.003*&quot;她&quot; + 0.002*&quot;某某&quot; + 0.002*&quot;公司&quot; + 0.002*&quot;,&quot; + 0.002*&quot;你&quot;&#39;)  
+(1, &#39;0.007*&quot;,&quot; + 0.005*&quot;公司&quot; + 0.002*&quot;生物&quot; + 0.002*&quot;康泰&quot; + 0.002*&quot;原种场&quot;&#39;)  
+(2, &#39;0.003*&quot;黄海波&quot; + 0.002*&quot;豆芽&quot; + 0.002*&quot;她&quot; + 0.002*&quot;·&quot; + 0.002*&quot;提&quot;&#39;)  </code></pre>
 <p>这里的0，1，2分别对应着模型提取出的三个主题，每个主题输出了排名前5的单词。<br>可见，我们虽然去除了词频最高的200个单词，但还存在着一些无意义的词汇，例如“她”、“你”等等，如提前过滤掉停用词效果会更好。</p>
 <p>多啰嗦一句，如果再给定一篇新的文章，利用已经训练好的LDA模型可以得到新文章的主题分布，代码如下：  </p>
-<blockquote>
-<p>article = ‘就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗’<br>article = list(jieba.cut(article))<br>article = dictionary.doc2bow  (article)      #文档转换成bow<br>doc_lda = lda[article]<br>print(doc_lda)  </p>
-</blockquote>
+<pre><code class="python">article = &#39;就如六世达赖喇嘛仓英嘉措诗中说的一样：“世间安得两全法，不负如来不负卿！”是啊，世界上哪有两全其美的事呢！达赖喇嘛仓英嘉措的人生也是这样，十四岁被西藏摄政王第巴·桑结嘉措认定为五世达赖的转世灵童，从此只能青灯古佛，心向如来了。虽然说达赖喇嘛是西藏人们敬仰的存在，可是仓英嘉措自己想要做吗&#39;  
+article = list(jieba.cut(article))  
+article = dictionary.doc2bow  (article)      #文档转换成bow  
+doc_lda = lda[article]  
+print(doc_lda)  </code></pre>
 <p>输出为：  </p>
-<blockquote>
-<p>[(0, 0.4298588), (1, 0.5516107), (2, 0.018530471)]  </p>
-</blockquote>
+<pre><code class="python">[(0, 0.4298588), (1, 0.5516107), (2, 0.018530471)]  </code></pre>
 <p>表示主题0占比为43.0%，主题1占比为55%，主题2占比为2%。</p>
 <p>最后补充一点：</p>
 <blockquote>
@@ -193,9 +197,7 @@
 <p>RAKE源代码地址：<a href="https://github.com/aneesha/RAKE" target="_blank" rel="noopener">https://github.com/aneesha/RAKE</a>  </p>
 <p>RAKE新代码地址：<a href="https://github.com/laserwave/keywords_extraction_rake" target="_blank" rel="noopener">https://github.com/laserwave/keywords_extraction_rake</a>  </p>
 <p>其中源代码是RAKE论文提供的，而新代码是在源代码基础上改进得到的，并且支持python3.x语法。我们在此使用新代码进行演示。<br>首先下载新代码，在代码中有一个例子<br><img src="/images/KW/9.jpg" alt="RAKE"><br>我们直接命令行运行  </p>
-<blockquote>
-<p>python rake.py example/input.txt example/stopwords.txt -o example/output.txt </p>
-</blockquote>
+<pre><code class="python">python rake.py example/input.txt example/stopwords.txt -o example/output.txt </code></pre>
 <p>即可运行示例中的数据<br>示例的输入是两篇英文文章，一篇一行，输出是提取关键词后的数据，格式如下：<br><img src="/images/KW/10.jpg" alt="RAKE"><br>第一行显示的是第一篇文章的提取结果，第二行显示的是第二篇的关键词。 </p>
 <hr>
 <p>这个算法也有一个接口，详见：<u><a href="https://www.ctolib.com/rake-nltk.html" target="_blank" rel="noopener">《rake-nltk：Python实现使用NLTK的快速自动关键字提取算法》</a></u></p>
