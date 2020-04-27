@@ -253,7 +253,7 @@ torch.optim.Rprop(params, lr=0.01, etas=(0.5, 1.2), step_sizes=(1e-06, 50))</cod
 <h1 id="3-损失函数"><a href="#3-损失函数" class="headerlink" title="3. 损失函数"></a>3. 损失函数</h1><p>在第一节中，我们自己定义了一个损失函数，如下：  </p>
 <pre><code class="python">def loss_fn(x,y):
     return torch.mean((x-y)*(x-y))</code></pre>
-<p>但其实在torch中，是有定义好的损失函数可以直接拿来用的，损失函数存在与torch.nn当中：<br><img src="/images/pytorch/3.jpg" alt="torch.nn">   </p>
+<p>但其实在torch中，是有定义好的损失函数可以直接拿来用的，损失函数存在于torch.nn当中：<br><img src="/images/pytorch/3.jpg" alt="torch.nn">   </p>
 <h2 id="3-1-L1loss"><a href="#3-1-L1loss" class="headerlink" title="3.1 L1loss"></a>3.1 L1loss</h2><p>绝对值损失，返回output与target绝对值之差的均值：  </p>
 <pre><code class="python">target = torch.tensor([1.5,2.0,3.0,4.0])
 output = torch.tensor([0.0,1.0,2.0,3.0])
@@ -278,7 +278,7 @@ loss = loss_function(output,target)
 print(loss)</code></pre>
 <p>输出为：</p>
 <pre><code class="python">tensor(0.)</code></pre>
-<p>我们也可以一次性输入多条数据与其真实结果，该损失函数会返回所有数据的平均熵：  </p>
+<p>我们也可以一次性输入多条数据与其对应真实结果，该损失函数会返回所有数据的平均熵：  </p>
 <pre><code class="python">loss_function = nn.CrossEntropyLoss()
 output = torch.tensor([[-999.0,-100.0,1.0],[1.0,1.0,1.0]])
 target = torch.tensor([2,1])
