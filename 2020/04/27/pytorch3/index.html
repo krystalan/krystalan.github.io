@@ -127,7 +127,8 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <p>本文主要讲述的是pytorch当中的训练框架，并从中引出优化器以及损失函数的介绍。<br>这次举得例子比较简单，只是一个简单的线性模型，主要来初步尝试一下如何利用pytorch进行参数的学习。  </p>
-<h1 id="1-线性回归"><a href="#1-线性回归" class="headerlink" title="1. 线性回归"></a>1. 线性回归</h1><h2 id="1-1-问题定义"><a href="#1-1-问题定义" class="headerlink" title="1.1 问题定义"></a>1.1 问题定义</h2><p>给定一组x与y，利用线性回归去学习y与x之间的关系，假定服从：y = kx + b 。  </p>
+<h1 id="1-线性回归"><a href="#1-线性回归" class="headerlink" title="1. 线性回归"></a>1. 线性回归</h1><p>在本节当中，以线性回归为例来介绍PyTorch训练参数的过程。</p>
+<h2 id="1-1-问题定义"><a href="#1-1-问题定义" class="headerlink" title="1.1 问题定义"></a>1.1 问题定义</h2><p>给定一组x与y，利用线性回归去学习y与x之间的关系，假定服从：y = kx + b 。  </p>
 <h2 id="1-2-数据"><a href="#1-2-数据" class="headerlink" title="1.2 数据"></a>1.2 数据</h2><pre><code class="python">import torch
 import torch.optim as optim
 x = [35.7,55.9,58.2,81.9,56.3,48.9,33.9,21.8,48.4,60.4,68.4]
@@ -151,8 +152,8 @@ while True:
     train_y = model(x,params)#获取当前预测值
     loss = loss_fn(train_y,y)#根据当前预测值计算loss
 
-    optimizer.zero_grad()#清楚梯度，否则将累积梯度
-    loss.backward()#bp
+    optimizer.zero_grad()#在反向传播前清除梯度，否则将累积梯度
+    loss.backward()#反向传播
     optimizer.step()#利用优化器更新参数，也就是更新params
     print(loss)
     if k - loss &lt; 0.0000001: #当loss在一步中降低的值低于某阈值就停止学习
@@ -210,7 +211,42 @@ while True:
 
 print(params)</code></pre>
 <p>这里在训练中，如果验证集连续五次的loss都上升则停止训练。<br>需要注意的是，这里为了高效性使用了<strong>with torch.no_grad()</strong>，在该代码内的计算过程将不会追踪梯度。</p>
+<h1 id="2-优化器"><a href="#2-优化器" class="headerlink" title="2. 优化器"></a>2. 优化器</h1><p>在第一节的介绍当中，我们使用了两个优化器，分别是SGD与Adam：  </p>
+<pre><code class="python">import torch.optim as optim
+learning_rate = 1e-5
+optimizer1 = optim.SGD([params],lr=learning_rate)
+optimizer2 = optim.Adam([params],lr=learning_rate)</code></pre>
+<p>这节主要探讨一下torch.optim</p>
+<blockquote>
+<p>官方文档的解读：torch.optim is a package implementing various optimization algorithms. Most commonly used methods are already supported, and the interface is general enough, so that more sophisticated ones can be also easily integrated in the future.</p>
+</blockquote>
+<h2 id="2-1-如何构建优化器"><a href="#2-1-如何构建优化器" class="headerlink" title="2.1 如何构建优化器"></a>2.1 如何构建优化器</h2><p>在使用构建优化器的时候，你需要告诉优化器你想要优化的参数有哪些，通常就是模型的参数，并且为优化器设置一些超参数，例如learning rate等，不同优化器的超参数不同。<br>例如：  </p>
+<pre><code class="python">optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)</code></pre>
+<p>这里使用到了带动量的SGD，构建优化器的第一个输入就是所训练的模型的全部参数。 </p>
+<p>需要注意的是：如果你在GPU上炼丹，那你要在构建优化器之前，就把模型先移动到GPU上。  </p>
+<h2 id="2-2-如何使用优化器"><a href="#2-2-如何使用优化器" class="headerlink" title="2.2 如何使用优化器"></a>2.2 如何使用优化器</h2><p>非常常用的有两个方法，分别是<strong>zero_grad()</strong>和<strong>step()</strong>，我们截取第一节中的例子来看一下：  </p>
+<pre><code class="python">while True:
+    train_y = model(x,params)#获取当前预测值
+    loss = loss_fn(train_y,y)#根据当前预测值计算loss
 
+    optimizer.zero_grad()#在反向传播前清除梯度，否则将累积梯度
+    loss.backward()#反向传播
+    optimizer.step()#利用优化器更新参数，也就是更新params</code></pre>
+<p>zero_grad()用于清除当前累积的梯度，pytorch在训练的过程当中，并不会因为调用step()函数更新参数之后就清除掉当前步的梯度，因为这样不够灵活，累积梯度在某些情况下是有用的。所以我们在每次方向传播之前，经常会调用zero_grad()方法来清除之前累积的梯度。  </p>
+<p>step()函数用于更新构建优化器时传入的模型参数。</p>
+<h2 id="2-3-有哪些优化器"><a href="#2-3-有哪些优化器" class="headerlink" title="2.3 有哪些优化器"></a>2.3 有哪些优化器</h2><pre><code class="python">torch.optim.Adadelta(params, lr=1.0, rho=0.9, eps=1e-06, weight_decay=0)
+torch.optim.Adagrad(params, lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0, eps=1e-10)
+torch.optim.Adam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)
+torch.optim.AdamW(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.01, amsgrad=False)
+torch.optim.SparseAdam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08)
+torch.optim.Adamax(params, lr=0.002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0)
+torch.optim.ASGD(params, lr=0.01, lambd=0.0001, alpha=0.75, t0=1000000.0, weight_decay=0)
+torch.optim.LBFGS(params, lr=1, max_iter=20, max_eval=None, tolerance_grad=1e-07, tolerance_change=1e-09, history_size=100, line_search_fn=None)
+torch.optim.RMSprop(params, lr=0.01, alpha=0.99, eps=1e-08, weight_decay=0, momentum=0, centered=False)
+torch.optim.Rprop(params, lr=0.01, etas=(0.5, 1.2), step_sizes=(1e-06, 50))
+torch.optim.SGD(params, lr=&lt;required parameter&gt;, momentum=0, dampening=0, weight_decay=0, nesterov=False)
+</code></pre>
+<h1 id="3-损失函数"><a href="#3-损失函数" class="headerlink" title="3. 损失函数"></a>3. 损失函数</h1>
             </div>
 
             <!-- Post Comments -->
