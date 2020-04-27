@@ -209,7 +209,7 @@ while True:
             break
 
 print(params)</code></pre>
-<p>这里在训练中，如果验证集连续五次的loss都上升则停止训练。  </p>
+<p>这里在训练中，如果验证集连续五次的loss都上升则停止训练。<br>需要注意的是，这里为了高效性使用了<strong>with torch.no_grad()</strong>，在该代码内的计算过程将不会追踪梯度。</p>
 
             </div>
 
