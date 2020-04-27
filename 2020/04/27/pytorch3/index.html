@@ -232,20 +232,24 @@ optimizer2 = optim.Adam([params],lr=learning_rate)</code></pre>
     optimizer.zero_grad()#在反向传播前清除梯度，否则将累积梯度
     loss.backward()#反向传播
     optimizer.step()#利用优化器更新参数，也就是更新params</code></pre>
-<p>zero_grad()用于清除当前累积的梯度，pytorch在训练的过程当中，并不会因为调用step()函数更新参数之后就清除掉当前步的梯度，因为这样不够灵活，累积梯度在某些情况下是有用的。所以我们在每次方向传播之前，经常会调用zero_grad()方法来清除之前累积的梯度。  </p>
+<p>zero_grad()用于清除当前累积的梯度，pytorch在训练的过程当中，并不会因为调用step()函数更新参数之后就清除掉当前步的梯度，因为这样不够灵活，累积梯度在某些情况下是有用的。所以我们在每次反向传播之前，经常会调用zero_grad()方法来清除之前累积的梯度。  </p>
 <p>step()函数用于更新构建优化器时传入的模型参数。</p>
-<h2 id="2-3-有哪些优化器"><a href="#2-3-有哪些优化器" class="headerlink" title="2.3 有哪些优化器"></a>2.3 有哪些优化器</h2><pre><code class="python">torch.optim.Adadelta(params, lr=1.0, rho=0.9, eps=1e-06, weight_decay=0)
+<h2 id="2-3-有哪些优化器"><a href="#2-3-有哪些优化器" class="headerlink" title="2.3 有哪些优化器"></a>2.3 有哪些优化器</h2><h3 id="2-3-1-SGD"><a href="#2-3-1-SGD" class="headerlink" title="2.3.1 SGD"></a>2.3.1 SGD</h3><pre><code class="python">torch.optim.SGD(params, lr=&lt;required parameter&gt;, momentum=0, dampening=0, weight_decay=0, nesterov=False)</code></pre>
+<p>PyTorch中的SGD带有momentum与nesterov，momentum会考虑之前的动量来对本次梯度做出大小方面的调整指导SGD在该跑的时候跑，在该慢的时候慢，如果开启nesterov则不仅考虑之前的动量大小，还考虑动量方向。dampening是动量的衰减，weight_decay是衰减（L2正则）系数。  </p>
+<h3 id="2-3-2-Adam"><a href="#2-3-2-Adam" class="headerlink" title="2.3.2 Adam"></a>2.3.2 Adam</h3><p>（1）Adam</p>
+<pre><code class="python">torch.optim.Adam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)</code></pre>
+<p>eps是增加分母以提高数值稳定性的项，amsgrad是选择是否启用Adam的另一个变体版本AMSGrad。<br>（2）Adamw<br>Adamw：<a href="https://arxiv.org/abs/1711.05101" target="_blank" rel="noopener">https://arxiv.org/abs/1711.05101</a></p>
+<pre><code class="python">torch.optim.AdamW(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.01, amsgrad=False)</code></pre>
+<p>（3）Adamax<br>基于无穷范数的Adam的一个变种</p>
+<pre><code class="python">torch.optim.Adamax(params, lr=0.002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0)</code></pre>
+<p>（4）SparseAdam<br>适用于稀疏张量的Adam算法的懒惰版本。在这个变体中，只有在渐变中出现的时刻才会更新，只有渐变的那些部分才会应用于参数。</p>
+<pre><code class="python">torch.optim.SparseAdam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08)</code></pre>
+<h3 id="2-3-3-其余"><a href="#2-3-3-其余" class="headerlink" title="2.3.3 其余"></a>2.3.3 其余</h3><pre><code class="python">torch.optim.Adadelta(params, lr=1.0, rho=0.9, eps=1e-06, weight_decay=0)
 torch.optim.Adagrad(params, lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0, eps=1e-10)
-torch.optim.Adam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)
-torch.optim.AdamW(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.01, amsgrad=False)
-torch.optim.SparseAdam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08)
-torch.optim.Adamax(params, lr=0.002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0)
-torch.optim.ASGD(params, lr=0.01, lambd=0.0001, alpha=0.75, t0=1000000.0, weight_decay=0)
+torch.optim.ASGD(params, lr=0.01, lambd=0.0001, alpha=0.75, t0=1000000.0, weight_decay=0)## Averaged Stochastic Gradient Descent
 torch.optim.LBFGS(params, lr=1, max_iter=20, max_eval=None, tolerance_grad=1e-07, tolerance_change=1e-09, history_size=100, line_search_fn=None)
 torch.optim.RMSprop(params, lr=0.01, alpha=0.99, eps=1e-08, weight_decay=0, momentum=0, centered=False)
-torch.optim.Rprop(params, lr=0.01, etas=(0.5, 1.2), step_sizes=(1e-06, 50))
-torch.optim.SGD(params, lr=&lt;required parameter&gt;, momentum=0, dampening=0, weight_decay=0, nesterov=False)
-</code></pre>
+torch.optim.Rprop(params, lr=0.01, etas=(0.5, 1.2), step_sizes=(1e-06, 50))</code></pre>
 <h1 id="3-损失函数"><a href="#3-损失函数" class="headerlink" title="3. 损失函数"></a>3. 损失函数</h1>
             </div>
 
