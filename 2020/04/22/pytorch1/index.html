@@ -132,62 +132,54 @@
 </blockquote>
 <h1 id="1-为什么要使用Tensor"><a href="#1-为什么要使用Tensor" class="headerlink" title="1. 为什么要使用Tensor"></a>1. 为什么要使用Tensor</h1><p>基本上所有的教程，不论你去看文档还是中文教程、英文教程或者说视频，一开始肯定会讲解Tensor，因为Tensor是一个非常重要的概念，是PyTorch当中非常底层的一个东西，也是PyTorch之所以高效的原因所在。首先我们需要知道为什么我们不去用python中自带的list而是用torch.tensor，这个问题其实也比较简单，因为在list当中，每个list的元素其实在内存空间当中并不是连续分布的，而torch.tensor中的每一个元素在内存中则是连续分布的。<br><img src="/images/pytorch/1.jpg" alt="list&amp;tensor"><br>正是这样的主要区别，所以造成了tensor的一个高效性，那怎么理解这层高效性呢？假如我们去对一个二维矩阵进行转置操作，如果我们利用list去存这个二维矩阵，因为空间不连续，我们要么去改动地址中存储的内容，要么改动每个元素的映射地址。而如果我们使用tensor去存储这个二维矩阵，我们根本不用改动地址和存储的内容，只需要更改一下步长就可以了，例如原先是一个2×4的数组A=[[1,2,3,4],[5,6,7,8]]，我们将这个数组中的元素按顺序存储在一个连续的地址内1，2，3，4，5，6，7，8。当第一维度+1的时候，我们让步长+4，例如当前索引A[0,1]，现在索引A[1,1]，原先的目标是“2”，现在的目标是“6”，我们只需要在连续存储的那部分空间加上这个步长4，就可以找到改动后的目标，同理当第二维度+1时步长+1。所以当我们对二维数组进行转置的时候只需要改动维度对应的步长即可，根本不需要改动存储的结构，这就是Tensor的一个高效性体现。  </p>
 <p>除此之外，tensor可以和numpy.ndarray进行转换，通过这种方式来让tensor可以使用到大量的numpy中的高效运算：  </p>
-<blockquote>
-<p>b = a.numpy()  #从tensor到ndarray<br>a = torch.from_numpy(a)  #从ndarray到tensor</p>
-</blockquote>
+<pre><code class="python">b = a.numpy()  #从tensor到ndarray  
+a = torch.from_numpy(a)  #从ndarray到tensor</code></pre>
 <p>需要注意的是，<strong>转换之后两者共享内存</strong>，这句话的意思就是加入你把tensor a转换成了ndarray b，你改动b里面的元素，a中对应的元素也会改变。  </p>
-<h1 id="2-Tensor数据类型"><a href="#2-Tensor数据类型" class="headerlink" title="2. Tensor数据类型"></a>2. Tensor数据类型</h1><p>在讲解tensor操作之前，我觉得有必要先说一下一共有哪些数据类型，这些类型可以在创建tensor的时候，通过dtype来指定。<br>（1）torch.float32或torch.float：32位浮点数<br>（2）torch.float64或torch.double：64位浮点数<br>（3）torch.float16或torch.half：16位浮点数<br>（4）torch.int8：有符号的8位整数<br>（5）torch.uint8：无符号的8位整数<br>（6）torch.int16或torch.short：有符号的16位整数<br>（7）torch.int32或torch.int：有符号的32位整数<br>（8）torch.int64或torch.long：有符号的64位整数<br>我们可以在创建tensor的时候指定数据类型：  </p>
-<blockquote>
-<p>a = torch.ones(2,3,dtype=torch.double)</p>
-</blockquote>
+<h1 id="2-Tensor数据类型"><a href="#2-Tensor数据类型" class="headerlink" title="2. Tensor数据类型"></a>2. Tensor数据类型</h1><p>在讲解tensor操作之前，我觉得有必要先说一下一共有哪些数据类型，这些类型可以在创建tensor的时候，通过dtype来指定。<br>（1）torch.float32或torch.float：32位浮点数<br>（2）torch.float64或torch.double：64位浮点数<br>（3）torch.float16或torch.half：16位浮点数<br>（4）torch.int8：有符号的8位整数<br>（5）torch.uint8：无符号的8位整数<br>（6）torch.int16或torch.short：有符号的16位整数<br>（7）torch.int32或torch.int：有符号的32位整数<br>（8）torch.int64或torch.long：有符号的64位整数<br>我们可以在创建tensor的时候指定数据类型： </p>
+<pre><code class="python">a = torch.ones(2,3,dtype=torch.double)</code></pre>
 <p>也可以查询tensor的数据类型：  </p>
-<blockquote>
-<p>a.dtype  </p>
-</blockquote>
+<pre><code class="python">a.dtype </code></pre>
 <p>设置数据类型：  </p>
-<blockquote>
-<p>a = torch.randn(10,2)<br>a = a.type(torch.short)</p>
-</blockquote>
-<p>转换类型（创建时不设置类型默认为torch.float）：  </p>
-<blockquote>
-<p>a = torch.zeros(10,2).to(torch.double) </p>
-</blockquote>
+<pre><code class="python">a = torch.randn(10,2)  
+a = a.type(torch.short)</code></pre>
+<p>转换类型（创建时不设置类型默认为torch.float）： </p>
+<pre><code class="python">a = torch.zeros(10,2).to(torch.double) </code></pre>
 <h1 id="3-Tensor的一些常用操作"><a href="#3-Tensor的一些常用操作" class="headerlink" title="3. Tensor的一些常用操作"></a>3. Tensor的一些常用操作</h1><blockquote>
 <p>更加详细的操作可以去查阅PyTorch的文档：<a href="https://pytorch.org/docs/stable/torch.html" target="_blank" rel="noopener">https://pytorch.org/docs/stable/torch.html</a> ，这里只介绍一些比较常见的用法。</p>
 </blockquote>
 <p>随机创建一个tensor：  </p>
-<blockquote>
-<p>a = torch.rand(1,2)<br>a = torch.randn(1,2)  </p>
-</blockquote>
+<pre><code class="python">a = torch.rand(1,2)  
+a = torch.randn(1,2)  </code></pre>
 <p>这两个语法都可以创建一个1*2大小的tensor但是是有区别的，torch.rand是从均匀分布中取值，torch.randn是从标准正态分布中取值。  </p>
 <p>其余创建方法：  </p>
-<blockquote>
-<p>a = torch.empty(1,2)<br>a = torch.ones(1,2)<br>a = torch.ones_like(b)#创建一个与b维度相同的tensor a，内容随机<br>a = torch.zeros(1,2)<br>a = torch.tensor([5.5,3])<br>a = torch.randn_like(b)  </p>
-</blockquote>
+<pre><code class="python">a = torch.empty(1,2)  
+a = torch.ones(1,2)  
+a = torch.ones_like(b)#创建一个与b维度相同的tensor a，内容随机  
+a = torch.zeros(1,2)  
+a = torch.tensor([5.5,3])  
+a = torch.randn_like(b)  </code></pre>
 <p>查看维度：</p>
-<blockquote>
-<p>a.size()  #返回一个torch.size对象  </p>
-</blockquote>
+<pre><code class="python">a.size()  #返回一个torch.size对象  </code></pre>
 <p>只有一个元素的tensor获取内容：  </p>
-<blockquote>
-<p>x = torch.rand(1)<br>y = x.item()  </p>
-</blockquote>
+<pre><code class="python">x = torch.rand(1)  
+y = x.item()  </code></pre>
 <p>转置：  </p>
-<blockquote>
-<p>a = torch.randn(3,5)<br>b = a.t() #tensor a的转置<br>a = torch.ones(3,4,5)<br>b = a.transpose(0,2)  #转置指定维度</p>
-</blockquote>
+<pre><code class="python">a = torch.randn(3,5)  
+b = a.t() #tensor a的转置  
+a = torch.ones(3,4,5)  
+b = a.transpose(0,2)  #转置指定维度</code></pre>
 <p>改变形状：  </p>
-<blockquote>
-<p>x = torch.rand(4,4)<br>y = x.view(16)   #转换成16维tensor<br>z = x.view(-1,8)   #转换为2×8的tensor  </p>
-</blockquote>
+<pre><code class="python">x = torch.rand(4,4)  
+y = x.view(16)   #转换成16维tensor  
+z = x.view(-1,8)   #转换为2×8的tensor  </code></pre>
 <p>求范数：</p>
-<blockquote>
-<p>y = torch.norm(a,p=2)</p>
-</blockquote>
+<pre><code class="python">y = torch.norm(a,p=2)</code></pre>
 <p>数学操作：</p>
-<blockquote>
-<p>z = x + y #加法<br>z = x + 2 #tensor x中每个元素加2<br>z = x*x #tensor x中每个元素平方<br>z = torch.sqrt(x) # tensor x中每个元素开平方<br>z = x.mean() # tensor x的平均值，z也是一个tensor  </p>
-</blockquote>
+<pre><code class="python">z = x + y #加法
+z = x + 2 #tensor x中每个元素加2  
+z = x*x #tensor x中每个元素平方  
+z = torch.sqrt(x) # tensor x中每个元素开平方  
+z = x.mean() # tensor x的平均值，z也是一个tensor  </code></pre>
 <h1 id="4-保存和加载Tensor的内容"><a href="#4-保存和加载Tensor的内容" class="headerlink" title="4. 保存和加载Tensor的内容"></a>4. 保存和加载Tensor的内容</h1><p>利用torch直接保存与加载：  </p>
 <pre><code class="python">with open(&#39;test.t&#39;,&#39;wb&#39;) as f:  
     torch.save(a,f)   
@@ -204,17 +196,14 @@ f = h5py.File(&#39;test.hdf5&#39;,&#39;r&#39;)
 read_data = f[&#39;coords&#39;][:] # 类型为numpy.ndarray  
 read_data = torch.from_numpy(read_data)</code></pre>
 <h1 id="5-将Tensor放入GPU当中"><a href="#5-将Tensor放入GPU当中" class="headerlink" title="5. 将Tensor放入GPU当中"></a>5. 将Tensor放入GPU当中</h1><p>创建时确定存放位置：</p>
-<blockquote>
-<p>a = torch.tensor([1.0,4.0],device=’cuda’)  </p>
-</blockquote>
+<pre><code class="python">a = torch.tensor([1.0,4.0],device=&#39;cuda&#39;)  </code></pre>
 <p>转移：  </p>
-<blockquote>
-<p>b = a.to(device=’cuda:0’)<br>a = b.to(device=’cpu’)  </p>
-</blockquote>
+<pre><code class="python">b = a.to(device=&#39;cuda:0&#39;)  
+a = b.to(device=&#39;cpu&#39;)  </code></pre>
 <p>或：</p>
-<blockquote>
-<p>b = a.cuda()<br>b = a.cuda(0)<br>a = b.cpu()</p>
-</blockquote>
+<pre><code class="python">b = a.cuda()  
+b = a.cuda(0)  
+a = b.cpu()</code></pre>
 
             </div>
 

@@ -132,19 +132,36 @@
 </blockquote>
 <p>我自己画了一个图，来看看torch.nn都有哪些内容：<br><img src="/images/pytorch/3.jpg" alt="torch.nn"><br>需要注意的是17大类当中，每一大类下面其实是有1个或多个class的，例如今天我们着重介绍的稀疏层下面就有两个class：<br><img src="/images/pytorch/4.jpg" alt="稀疏层"><br>所以它其实算比较简单的一个大类了，其中以第一个torch.nn.Embedding为主。</p>
 <h1 id="2-torch-nn-Embedding"><a href="#2-torch-nn-Embedding" class="headerlink" title="2. torch.nn.Embedding"></a>2. torch.nn.Embedding</h1><p>我们可以先来看一下这个类是如何定义的：  </p>
-<blockquote>
-<p>CLASS torch.nn.Embedding（<br>num_embeddings,<br>embedding_dim,<br>padding_idx=None,<br>max_norm=None,<br>norm_type=2.0,<br>scale_grad_by_freq=False,<br>sparse=False,<br>_weight=None<br>）  </p>
-</blockquote>
+<pre><code class="python">CLASS torch.nn.Embedding(
+num_embeddings,    
+embedding_dim,  
+padding_idx=None,   
+max_norm=None,  
+norm_type=2.0,  
+scale_grad_by_freq=False,  
+sparse=False,  
+_weight=None  
+)</code></pre>
 <p>其中比较重要的参数是前两个，其他参数为可选项：<br>num_embedding是词表大小，也就是你要embedding的单词的个数；<br>embedding_dim是词向量的纬度。<br>来看一个简单的例子：  </p>
-<blockquote>
-<p>import torch<br>import torch.nn as nn<br>word_embedding = nn.Embedding(4,10)<br>a = word_embedding(torch.tensor([3]))</p>
-</blockquote>
+<pre><code class="python">import torch  
+import torch.nn as nn  
+word_embedding = nn.Embedding(4,10)  
+a = word_embedding(torch.tensor([3]))</code></pre>
 <p>这段代码建立了一个4个10维的随机embedding，并在最后将最后一个10维的embedding赋值给了a。  </p>
 <p>如果直接使用nn.Embedding获得的是随机的embedding，我们也可以利用自己想要的权重初始化词向量，例如使用word2vec或者glove训练好的。  </p>
-<blockquote>
-<p>weight = torch.FloatTensor([[1, 2.3, 3], [4, 5.1, 6.3]])<br>embedding = nn.Embedding.from_pretrained(weight)</p>
-</blockquote>
-<h2 id="3-torch-nn-EmbeddingBag"><a href="#3-torch-nn-EmbeddingBag" class="headerlink" title="3. torch.nn.EmbeddingBag"></a>3. torch.nn.EmbeddingBag</h2><p>CLASStorch.nn.EmbeddingBag(<br>num_embeddings,<br>embedding_dim,<br>max_norm=None,<br>norm_type=2.0,<br>scale_grad_by_freq=False,<br>mode=’mean’,<br>sparse=False,<br>_weight=None,<br>include_last_offset=False<br>)</p>
+<pre><code class="python">weight = torch.FloatTensor([[1, 2.3, 3], [4, 5.1, 6.3]])  
+embedding = nn.Embedding.from_pretrained(weight)</code></pre>
+<h2 id="3-torch-nn-EmbeddingBag"><a href="#3-torch-nn-EmbeddingBag" class="headerlink" title="3. torch.nn.EmbeddingBag"></a>3. torch.nn.EmbeddingBag</h2><pre><code class="python">CLASStorch.nn.EmbeddingBag(  
+num_embeddings,  
+embedding_dim,  
+max_norm=None,  
+norm_type=2.0,  
+scale_grad_by_freq=False,  
+mode=&#39;mean&#39;,  
+sparse=False,  
+_weight=None,  
+include_last_offset=False  
+)</code></pre>
 <p>计算embedding的“包”的sum或mean，而不实例化中间embedding。我们在计算sum、mean以及max的时候，也可以去使用torch.sum()、torch.mean()、torch.max()。他们是等价的，但是使用nn.EmbeddingBag的效率更高。<br>mode参数分为三种：sum、mean、max，对应三种操作：”sum”表示普通embedding后接torch.sum(dim=0)，”mean”相当于后接torch.mean(dim=0)，”max”相当于后接torch.max(dim=0)。<br>EmbeddingBag就是把look-up表整合成一个embedding，当不需要具体查表获得embedding，只需要一个整合结果时，它比上述两阶段操作更高效。</p>
 
             </div>
