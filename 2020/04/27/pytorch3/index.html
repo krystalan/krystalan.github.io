@@ -250,7 +250,44 @@ torch.optim.ASGD(params, lr=0.01, lambd=0.0001, alpha=0.75, t0=1000000.0, weight
 torch.optim.LBFGS(params, lr=1, max_iter=20, max_eval=None, tolerance_grad=1e-07, tolerance_change=1e-09, history_size=100, line_search_fn=None)
 torch.optim.RMSprop(params, lr=0.01, alpha=0.99, eps=1e-08, weight_decay=0, momentum=0, centered=False)
 torch.optim.Rprop(params, lr=0.01, etas=(0.5, 1.2), step_sizes=(1e-06, 50))</code></pre>
-<h1 id="3-损失函数"><a href="#3-损失函数" class="headerlink" title="3. 损失函数"></a>3. 损失函数</h1>
+<h1 id="3-损失函数"><a href="#3-损失函数" class="headerlink" title="3. 损失函数"></a>3. 损失函数</h1><p>在第一节中，我们自己定义了一个损失函数，如下：  </p>
+<pre><code class="python">def loss_fn(x,y):
+    return torch.mean((x-y)*(x-y))</code></pre>
+<p>但其实在torch中，是有定义好的损失函数可以直接拿来用的，损失函数存在与torch.nn当中：<br><img src="/images/pytorch/3.jpg" alt="torch.nn">   </p>
+<h2 id="3-1-L1loss"><a href="#3-1-L1loss" class="headerlink" title="3.1 L1loss"></a>3.1 L1loss</h2><p>绝对值损失，返回output与target绝对值之差的均值：  </p>
+<pre><code class="python">target = torch.tensor([1.5,2.0,3.0,4.0])
+output = torch.tensor([0.0,1.0,2.0,3.0])
+loss_function = nn.L1Loss()
+loss = loss_function(target,output)
+print(loss)</code></pre>
+<p>输出为：</p>
+<pre><code class="python">tensor(1.1250)</code></pre>
+<h2 id="3-2-MSELoss"><a href="#3-2-MSELoss" class="headerlink" title="3.2 MSELoss"></a>3.2 MSELoss</h2><p>平方损失，返回output与target的之差的平方的均值：    </p>
+<pre><code class="python">target = torch.tensor([1.5,2.0,3.0,4.0])
+output = torch.tensor([0.0,1.0,2.0,3.0])
+loss_function = nn.MSELoss()
+loss = loss(target,output)
+print(loss)</code></pre>
+<p>输出为：</p>
+<pre><code class="python">tensor(1.3125)</code></pre>
+<h2 id="3-3-CrossEntropyLoss"><a href="#3-3-CrossEntropyLoss" class="headerlink" title="3.3 CrossEntropyLoss"></a>3.3 CrossEntropyLoss</h2><p>交叉熵损失函数：先将预测结果进行softmax之后在进行熵的计算。<br>假设一个三分类的任务，我们预测的结果为分别为：-999，-100与1，这三个值经过softmax之后的结果就分别对应类别0,1,2的预测概率，其真实结果为2，于是我们通过下式计算其交叉熵：  </p>
+<pre><code class="python">loss_function = nn.CrossEntropyLoss()
+output = torch.tensor([[-999.0,-100.0,1.0]])
+target = torch.tensor([2])
+loss = loss_function(output,target)
+print(loss)</code></pre>
+<p>输出为：</p>
+<pre><code class="python">tensor(0.)</code></pre>
+<p>我们也可以一次性输入多条数据与其真实结果，该损失函数会返回所有数据的平均熵：  </p>
+<pre><code class="python">loss_function = nn.CrossEntropyLoss()
+output = torch.tensor([[-999.0,-100.0,1.0],[1.0,1.0,1.0]])
+target = torch.tensor([2,1])
+loss = loss_function(output,target)
+print(loss)</code></pre>
+<p>输出为：</p>
+<pre><code class="python">tensor(0.5493)</code></pre>
+<h2 id="3-4-其余"><a href="#3-4-其余" class="headerlink" title="3.4 其余"></a>3.4 其余</h2><p>其余损失函数可以参考以下两个链接这里就不多赘述了。<br>相关介绍：<a href="https://zhuanlan.zhihu.com/p/61379965" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/61379965</a><br>官方文档：<a href="https://pytorch.org/docs/stable/nn.html#loss-functions" target="_blank" rel="noopener">https://pytorch.org/docs/stable/nn.html#loss-functions</a>  </p>
+
             </div>
 
             <!-- Post Comments -->
