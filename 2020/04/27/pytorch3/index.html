@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch笔记（三）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要讲述的是pytorch当中的训练框架，并从中引出优化器以及损失函数的介绍。<br>这次举得例子比较简单，只是一个简单的线性模型，主要来初步尝试一下如何利用pytorch进行参数的学习。  </p>
+<h1 id="1-线性回归"><a href="#1-线性回归" class="headerlink" title="1. 线性回归"></a>1. 线性回归</h1><h2 id="1-1-问题定义"><a href="#1-1-问题定义" class="headerlink" title="1.1 问题定义"></a>1.1 问题定义</h2><p>给定一组x与y，利用线性回归去学习y与x之间的关系，假定服从：y = kx + b 。  </p>
+<h2 id="1-2-数据"><a href="#1-2-数据" class="headerlink" title="1.2 数据"></a>1.2 数据</h2><pre><code class="python">import torch
+import torch.optim as optim
+x = [35.7,55.9,58.2,81.9,56.3,48.9,33.9,21.8,48.4,60.4,68.4]
+y = [0.5,14.0,15.0,28.0,11.0,8.0,3.0,-4.0,6.0,13.0,21.0]
+x = torch.tensor(x)
+y = torch.tensor(y)</code></pre>
+<h2 id="1-3-模型、参数与损失函数"><a href="#1-3-模型、参数与损失函数" class="headerlink" title="1.3 模型、参数与损失函数"></a>1.3 模型、参数与损失函数</h2><pre><code class="python">def model(x,w):
+    return x*w[0]+w[1]
+
+def loss_fn(x,y):
+    return torch.mean((x-y)*(x-y))
+
+params = torch.tensor([1.0,0.0],requires_grad=True)#线性模型参数</code></pre>
+<h2 id="1-4-优化器"><a href="#1-4-优化器" class="headerlink" title="1.4 优化器"></a>1.4 优化器</h2><pre><code class="python">learning_rate = 1e-4
+optimizer = optim.SGD([params],lr=learning_rate)</code></pre>
+<p>这里直接选择了SGD</p>
+<h2 id="1-5-训练过程"><a href="#1-5-训练过程" class="headerlink" title="1.5 训练过程"></a>1.5 训练过程</h2><h3 id="1-5-1-未加验证集"><a href="#1-5-1-未加验证集" class="headerlink" title="1.5.1 未加验证集"></a>1.5.1 未加验证集</h3><pre><code class="python">train_y = model(x,params)
+k = loss_fn(train_y,y)+1 #利用k来保存上一步的loss
+
+while True:
+    train_y = model(x,params)#获取当前预测值
+    loss = loss_fn(train_y,y)#根据当前预测值计算loss
+
+    optimizer.zero_grad()#清楚梯度，否则将累积梯度
+    loss.backward()#bp
+    optimizer.step()#利用优化器更新参数，也就是更新params
+    print(loss)
+    if k - loss &lt; 0.0000001: #当loss在一步中降低的值低于某阈值就停止学习
+        break
+    else:
+        k = loss
+print(params)</code></pre>
+<h3 id="1-5-2-加入验证集"><a href="#1-5-2-加入验证集" class="headerlink" title="1.5.2 加入验证集"></a>1.5.2 加入验证集</h3><p>（1）数据处理：将数据集中20%作为验证集，80%作为训练集。</p>
+<pre><code class="python">x = [35.7,55.9,58.2,81.9,56.3,48.9,33.9,21.8,48.4,60.4,68.4]
+y = [0.5,14.0,15.0,28.0,11.0,8.0,3.0,-4.0,6.0,13.0,21.0]
+x = torch.tensor(x)
+y = torch.tensor(y)
+
+n_samples = x.shape[0]
+n_val = int(0.2*n_samples)
+
+shuffled_indices = torch.randperm(n_samples)
+
+train_indices = shuffled_indices[:-n_val]
+val_indices = shuffled_indices[-n_val::]
+
+train_x = x[train_indices]
+train_y = y[train_indices]
+
+val_x = x[val_indices]
+val_y = y[val_indices]</code></pre>
+<p>（2）设置优化器（这里选了Adam优化器）：</p>
+<pre><code class="python">params = torch.tensor([1.0,0.0],requires_grad=True)
+learning_rate = 1e-2
+optimizer = optim.Adam([params],lr=learning_rate)</code></pre>
+<p>（3）训练过程：</p>
+<pre><code class="python">val_y2 = model(val_x,params)
+k = loss_fn(val_y2,val_y)+1
+t = 0
+while True:
+    train_y2 = model(train_x,params)
+    train_loss = loss_fn(train_y2,train_y)
+
+    with torch.no_grad():#在如下计算当中不记参数梯度，如果不加这部分直接计算的会，系统会继续计算梯度，虽然不会对结果产生影响，但会浪费内存和计算效率。
+        val_y2 = model(val_x,params)
+        val_loss = loss_fn(val_y2,val_y)
+
+    optimizer.zero_grad()
+    train_loss.backward()
+    optimizer.step()
+    print(&#39;train_loss:&#39;+str(train_loss)+&#39;\t&#39;+&#39;val_loss:&#39;+str(val_loss))
+    if k - val_loss &gt;0:
+        t = max(0,t-1)
+        k = val_loss
+    else:
+        t+=1
+        k = val_loss
+        if t == 5:
+            break
+
+print(params)</code></pre>
+<p>这里在训练中，如果验证集连续五次的loss都上升则停止训练。  </p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
