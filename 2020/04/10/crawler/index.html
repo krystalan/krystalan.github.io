@@ -127,40 +127,105 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <p>一个星期基本都没怎么写东西了，github也断签了，刚好这周有一个爬虫的小任务，就大概记录一下自己在爬虫上面遇到的坑，以及反反爬策略，并且分享一下爬虫的模板。  </p>
-<h1 id="1-利用urllib自动获取html"><a href="#1-利用urllib自动获取html" class="headerlink" title="1.利用urllib自动获取html"></a>1.利用urllib自动获取html</h1><h2 id="1-1-导入所需库"><a href="#1-1-导入所需库" class="headerlink" title="1.1 导入所需库"></a>1.1 导入所需库</h2><blockquote>
-<p>from urllib import request<br>from urllib import error<br>from urllib import parse<br>from urllib import robotparser<br>import string<br>import time<br>import datetime<br>import re<br>import lxml.html<br>from bs4 import BeautifulSoup<br>import pandas as pd<br>from selenium import webdriver<br>import random  </p>
-</blockquote>
+<h1 id="1-利用urllib自动获取html"><a href="#1-利用urllib自动获取html" class="headerlink" title="1.利用urllib自动获取html"></a>1.利用urllib自动获取html</h1><h2 id="1-1-导入所需库"><a href="#1-1-导入所需库" class="headerlink" title="1.1 导入所需库"></a>1.1 导入所需库</h2><pre><code class="python">from urllib import request  
+from urllib import error  
+from urllib import parse  
+from urllib import robotparser  
+import string  
+import time  
+import datetime  
+import re  
+import lxml.html  
+from bs4 import BeautifulSoup  
+import pandas as pd  
+from selenium import webdriver  
+import random  </code></pre>
 <p>其实有一些是没必要的，例如datatime、pandas和re。但后续我一般都会用到，所以就一劲写上去了。</p>
-<h2 id="1-2-自定定义一个User-agent列表"><a href="#1-2-自定定义一个User-agent列表" class="headerlink" title="1.2 自定定义一个User_agent列表"></a>1.2 自定定义一个User_agent列表</h2><blockquote>
-<p>f = open(‘user_agent.txt’,’r’,encoding=’utf-8’)<br>UA = fu.readlines()<br>f.close()  </p>
-</blockquote>
-<p>然后你需要建立一个user_agent.txt文件，里面放一些user_agent。<br>分享一下我自己用的：  </p>
-<blockquote>
-<p>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36<br>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11<br>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0) Gecko/20100101 Firefox/6.0<br>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1<br>Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50<br>Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50<br>Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; en) Presto/2.8.131 Version/11.11<br>Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Maxthon 2.0)<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SE 2.X MetaSr 1.0; SE 2.X MetaSr 1.0; .NET CLR 2.0.50727; SE 2.X MetaSr 1.0)<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; TencentTraveler 4.0)<br>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1<br>Mozilla/5.0 (Windows; U; Windows NT 6.1; ) AppleWebKit/534.12 (KHTML, like Gecko) Maxthon/3.0 Safari/534.12<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E; SE 2.X MetaSr 1.0)<br>Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.33 Safari/534.3 SE 2.X MetaSr 1.0<br>Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; The World)<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)<br>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Avant Browser)  </p>
-</blockquote>
+<h2 id="1-2-自定定义一个User-agent列表"><a href="#1-2-自定定义一个User-agent列表" class="headerlink" title="1.2 自定定义一个User_agent列表"></a>1.2 自定定义一个User_agent列表</h2><pre><code class="python">f = open(&#39;user_agent.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;)  
+UA = fu.readlines()  
+f.close()  </code></pre>
+<p>然后你需要建立一个user_agent.txt文件，里面放一些user_agent。<br>分享一下我自己用的：</p>
+<pre><code class="python">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36  
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11   
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0) Gecko/20100101 Firefox/6.0  
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1  
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50  
+Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50  
+Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; en) Presto/2.8.131 Version/11.11  
+Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Maxthon 2.0)  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SE 2.X MetaSr 1.0; SE 2.X MetaSr 1.0; .NET CLR 2.0.50727; SE 2.X MetaSr 1.0)  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; TencentTraveler 4.0)  
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1  
+Mozilla/5.0 (Windows; U; Windows NT 6.1; ) AppleWebKit/534.12 (KHTML, like Gecko) Maxthon/3.0 Safari/534.12  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E; SE 2.X MetaSr 1.0)  
+Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.33 Safari/534.3 SE 2.X MetaSr 1.0  
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; The World)  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)  
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Avant Browser)  </code></pre>
 <p>解释一下为啥要搞这么多user-agent，因为想更好地伪装自己2333，每个user-agent就代表了你现在用哪个浏览器，相当于你是谁，但其实除了user-agent代表你是谁之外，还有ip，这个我们稍后再说。</p>
-<h2 id="1-3-自动爬取html"><a href="#1-3-自动爬取html" class="headerlink" title="1.3 自动爬取html"></a>1.3 自动爬取html</h2><p>接下来就是获取html了<br><img src="/images/crawler/1.jpg" alt="download函数"><br>因为我这个博客的主题用代码框的话很难看，会发生错乱，所以没有办法完美的表示缩进，于是这里就干脆用图做展示了，具体代码的话，我上传到了github上，详见文末。  </p>
+<h2 id="1-3-自动爬取html"><a href="#1-3-自动爬取html" class="headerlink" title="1.3 自动爬取html"></a>1.3 自动爬取html</h2><p>接下来就是获取html了  </p>
+<pre><code class="python">def download(url,try_times=10,user_agent=UA,proxies=None):
+    global UA
+    UA_len = len(UA)
+    # print(&#39;Downloading:&#39;,url)
+    head={&#39;User-Agent&#39;:UA[random.randint(0,UA_len-1)]}#写入UA信息
+    req=request.Request(url,headers=head)#创建Request对象
+    opener=request.build_opener()#挂载opener
+    try:
+        html=request.urlopen(req).read()#使用自定义UA去下载
+    except error.HTTPError as e:
+        print(&#39;Download error:&#39;,e.reason)
+        if &#39;Forbidden&#39; in e.reason:
+            UA.remove(head[&#39;User-Agent&#39;])
+            print(&#39;被ban了一个UA了，当前还有&#39;+str(len(UA))+&#39;个UA&#39;)
+        if try_times&gt;0:
+            time.sleep(2)
+            return download(url,try_times-1)
+    return html</code></pre>
+<p>因为我这个博客的主题用代码框的话很难看，会发生错乱，所以没有办法完美的表示缩进，于是这里就干脆用图做展示了，具体代码的话，我上传到了github上，详见文末。  </p>
 <p>稍微解释一下这个代码里面的功能，url是待爬网址，try_time是尝试次数，有时候我们访问一个网站会出现5xx的错误，多试几次就好，在代码中我们也设置了，如果重新尝试的话，会有2秒的间隔，这个可以按需调整。如果某一个user-agent被ban了的话，我们也会及时将这个user-agent移除UA（user-agent的列表）<br>这个代码返回url对应的html，<strong>类型是二进制串</strong>。</p>
 <h1 id="2-利用webdriver获取html"><a href="#2-利用webdriver获取html" class="headerlink" title="2.利用webdriver获取html"></a>2.利用webdriver获取html</h1><p>有些网站的html是用js渲染得到的，如果直接用上述方法获取html则得不到js渲染之后的html，有可能会损失掉重要信息。所以我们要模拟浏览器访问该url并获取渲染之后的html，方法如下：  </p>
-<h2 id="2-1-使用Chrome"><a href="#2-1-使用Chrome" class="headerlink" title="2.1 使用Chrome"></a>2.1 使用Chrome</h2><blockquote>
-<p>from selenium import webdriver<br>a = webdriver.Chrome()<br>a.get(‘<a href="http://www.python.org&#39;" target="_blank" rel="noopener">http://www.python.org&#39;</a>)<br>b = a.page_source </p>
-</blockquote>
+<h2 id="2-1-使用Chrome"><a href="#2-1-使用Chrome" class="headerlink" title="2.1 使用Chrome"></a>2.1 使用Chrome</h2><pre><code class="python">from selenium import webdriver  
+a = webdriver.Chrome()  
+a.get(&#39;http://www.python.org&#39;)  
+b = a.page_source </code></pre>
 <p>b则为html，类型为str字符串<br>运行代码后，会自动弹出Chrome，然后访问你所要爬取的网站，然后获取html。优点就是可以get到js渲染后的html，但缺点也很明显，那就是每次都会弹出一个Chrome，影响CPU和内存，我们可以利用无人机解决这一缺陷。<br>（如果报错的话，去查一下怎么让Chrome内核和webdriver关联）</p>
-<h2 id="2-2-使用无人机"><a href="#2-2-使用无人机" class="headerlink" title="2.2 使用无人机"></a>2.2 使用无人机</h2><blockquote>
-<p>from selenium import webdriver<br>a = webdriver.PhantomJS()<br>a.get(‘<a href="http://www.python.org&#39;" target="_blank" rel="noopener">http://www.python.org&#39;</a>)<br>b = a.page_source </p>
-</blockquote>
+<h2 id="2-2-使用无人机"><a href="#2-2-使用无人机" class="headerlink" title="2.2 使用无人机"></a>2.2 使用无人机</h2><pre><code class="python">from selenium import webdriver  
+a = webdriver.PhantomJS()  
+a.get(&#39;http://www.python.org&#39;)  
+b = a.page_source </code></pre>
 <p>基本语法与2.1类似，但无人机不会弹出任何浏览器，方便了很多。</p>
 <h1 id="3-解析"><a href="#3-解析" class="headerlink" title="3.解析"></a>3.解析</h1><p>第一节和第二节讲了如何获取html，如果所爬取的html没有Js渲染的话用第一种，如果有的话就用第二种，在获取完html后，我们就要对html进行解析了，这里用到的是BeautifulSoup库。</p>
 <h2 id="3-1-相关库安装"><a href="#3-1-相关库安装" class="headerlink" title="3.1 相关库安装"></a>3.1 相关库安装</h2><blockquote>
 <p>pip install beautifulsoup4</p>
 </blockquote>
-<h2 id="3-1-解析"><a href="#3-1-解析" class="headerlink" title="3.1 解析"></a>3.1 解析</h2><p>其实在用这个库之前我还用过cssselect，但对比之下，我觉得beautifulsoup4更加方便233，于是就用这个了。<br>看一下解析的语法吧（代码在文末）：<br><img src="/images/crawler/2.jpg" alt="解析函数"><br>首选寻找了所有满足attrs属性的div标签，我们可以根据需求进行添加，再找到的每个div标签中，又去搜索P标签，i.string获取P标签当中的内容。  </p>
+<h2 id="3-1-解析"><a href="#3-1-解析" class="headerlink" title="3.1 解析"></a>3.1 解析</h2><p>其实在用这个库之前我还用过cssselect，但对比之下，我觉得beautifulsoup4更加方便233，于是就用这个了。<br>看一下解析的语法吧：  </p>
+<pre><code class="python">def crawl_page(url):
+    html=download(url)
+    soup = BeautifulSoup(html,&#39;lxml&#39;)
+
+    for k in soup.find_all(&#39;div&#39;,attrs={&#39;class&#39;:&#39;&#39;,&#39;id&#39;:&#39;&#39;}):
+        for i in k.find_all(&#39;p&#39;):
+            if i.string!=None:
+                print(i.string)
+            else:
+                comp = re.compile(&#39;&gt;(.*?)&lt;&#39;)
+                rrr = comp.findall(str(i))
+                print(rrr)
+        for i in k.find_all(&#39;a&#39;):
+            print(i.string)
+            print(i[&#39;href&#39;])</code></pre>
+<p>首选寻找了所有满足attrs属性的div标签，我们可以根据需求进行添加，再找到的每个div标签中，又去搜索P标签，i.string获取P标签当中的内容。  </p>
 <p>例如“&lt;p&gt;淡黄的长裙，蓬松的头发&lt;/p&gt;”<br>i.string就是”淡黄的长裙，蓬松的头发”   </p>
 <p>但有一种情况下这种方式就失效了。如下：<br>“&lt;p&gt;淡黄的&lt;strong&gt;长裙&lt;/strong&gt;，蓬松的&lt;strong&gt;头发&lt;/strong&gt;&lt;/p&gt;”<br>那这个使用直接用i.string就会得到None，所以我再判断如果是None以后就改用正则表达式去匹配P标签当中的内容，如果用正则还没匹配到那就是真的没东西了。  </p>
 <p>再往下就是查找a标签，对应的i.string代表a标签中的文字，i[‘href’]是a标签中的超链接。  </p>
 <h1 id="4-其他坑"><a href="#4-其他坑" class="headerlink" title="4.其他坑"></a>4.其他坑</h1><p>其实上面已经说了一些策略了，例如每次爬的时候设置一个时间间隔、如果失败了就停两秒再爬、随机选一个User-agent来爬取。但即使是这样仍有可能会被ban，理由是：直接被封了ip。  </p>
 <h2 id="4-1-ip被封怎么办"><a href="#4-1-ip被封怎么办" class="headerlink" title="4.1 ip被封怎么办"></a>4.1 ip被封怎么办</h2><p>（1）网上有一些卖爬虫ip代理的，也有免费的，但免费的一般都非常慢，很有可能还是无效的。<br>（2）手机开热点给电脑，如果再被封，就重启手机（飞行模式也行），然后继续。（重启或开关飞行模式会换手机ip）</p>
-<h2 id="4-2-没登入爬不了怎么办"><a href="#4-2-没登入爬不了怎么办" class="headerlink" title="4.2 没登入爬不了怎么办"></a>4.2 没登入爬不了怎么办</h2><p><img src="/images/crawler/3.jpg" alt="企查查"><br>例如上图，没登入就不给你看，解决方法也很简单，自己登入一下，然后去把cookies保存一下，接着爬虫的时候添加cookies就行了。  </p>
+<h2 id="4-2-没登入爬不了怎么办"><a href="#4-2-没登入爬不了怎么办" class="headerlink" title="4.2 没登入爬不了怎么办"></a>4.2 没登入爬不了怎么办</h2><p><img src="/images/crawler/1.jpg" alt="企查查"><br>例如上图，没登入就不给你看，解决方法也很简单，自己登入一下，然后去把cookies保存一下，接着爬虫的时候添加cookies就行了。  </p>
 <h2 id="4-3-有没有更吊的爬虫框架"><a href="#4-3-有没有更吊的爬虫框架" class="headerlink" title="4.3 有没有更吊的爬虫框架"></a>4.3 有没有更吊的爬虫框架</h2><p>有，分布式爬虫scrapy你值得拥有<br>还有一个是我最近才看到的：Requests-HTML，请求解析二合一，支持解析js，内置自动翻页等强大功能。相关介绍文：<u><a href="https://zhuanlan.zhihu.com/p/129904022" target="_blank" rel="noopener">《python爬虫requests_html库快速入门，你确定还要使用requests库吗？》</a></u></p>
 <h1 id="5-代码"><a href="#5-代码" class="headerlink" title="5.代码"></a>5.代码</h1><blockquote>
 <p>爬虫模板：<a href="https://github.com/krystalan/Crawler" target="_blank" rel="noopener">https://github.com/krystalan/Crawler</a></p>
