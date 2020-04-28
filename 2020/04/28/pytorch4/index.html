@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch笔记（四）[TODO]</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要讲述的是利用神经网络来拟合数据。<br>我们在<u><a href="http://wangjiaan.xyz/2020/04/27/pytorch3/" target="_blank" rel="noopener">PyTorch笔记（三）</a></u>中介绍了如何利用线性模型来对数据进行拟合，当时我们使用了自己定义的线性模型：  </p>
+<pre><code class="python">def model(x,w):
+    return x*w[0]+w[1]</code></pre>
+<p>但其实，PyTorch当中的torch.nn中有大量的神经网络相关的结构供我们直接使用，例如线性模型我们可以直接搞一个torch.nn.Linear(x,y)，其中x是输入的通道数，y是输出的通道数，默认是开启偏移的。  </p>
+<h1 id="1-线性回归"><a href="#1-线性回归" class="headerlink" title="1.线性回归"></a>1.线性回归</h1><blockquote>
+<p>使用nn.Linear()来拟合数据</p>
+</blockquote>
+<h1 id="1-1-导入所需库和数据"><a href="#1-1-导入所需库和数据" class="headerlink" title="1.1 导入所需库和数据"></a>1.1 导入所需库和数据</h1><pre><code class="python">import torch
+import torch.optim as optim
+import torch.nn as nn
+
+x = [35.7,55.9,58.2,81.9,56.3,48.9,33.9,21.8,48.4,60.4,68.4]
+y = [0.5,14.0,15.0,28.0,11.0,8.0,3.0,-4.0,6.0,13.0,21.0]
+x = torch.tensor(x).unsqueeze(1)
+y = torch.tensor(y).unsqueeze(1)</code></pre>
+<p>这里解释一下为什么要用unsqueeze()方法，我们如果不使用这个方法得到的x和x.size()为：</p>
+<pre><code class="python">tensor([35.7000, 55.9000, 58.2000, 81.9000, 56.3000, 48.9000, 33.9000, 21.8000,48.4000, 60.4000, 68.4000])  
+torch.Size([11])</code></pre>
+<p>使用了unsqueeze(1)，x和x.size()就变成了：</p>
+<pre><code class="python">tensor([[35.7000],[55.9000],[58.2000],[81.9000],[56.3000],[48.9000],[33.9000],[21.8000],[48.4000],[60.4000],[68.4000]])
+torch.Size([11, 1])</code></pre>
+<p>所以这样相当于加了一层维度，那为什么要加这层维度呢？因为如果不加的话，线性模型会直接把这11维当做一条数据来处理，加入我们建立的线性模型是nn.Linear(1,2)，将没有经过unsqueeze的数据直接喂入nn.Linear(1,2)中就会报错，因为该线性模型希望得到的是一个一维的输入，而你输入了一个11维的数据，但如果我们把输入unsqueeze了，这时候再输入给nn.Linear(1,2)，它就会认为我们输入的是11条1维的数据，进而为我们返回11条2维的计算结果。</p>
+<h2 id="1-2-建立模型"><a href="#1-2-建立模型" class="headerlink" title="1.2 建立模型"></a>1.2 建立模型</h2><pre><code class="python">linear_model = nn.Linear(1,1)</code></pre>
+<p>这里还是跟笔记（三）中的思路一样，建立一个最简单的一维输入一维输出模型。</p>
+<h2 id="1-3-设置优化器和损失函数"><a href="#1-3-设置优化器和损失函数" class="headerlink" title="1.3 设置优化器和损失函数"></a>1.3 设置优化器和损失函数</h2><pre><code class="python">learning_rate = 1e-4
+optimizer = optim.Adam(linear_model.parameters(),lr=learning_rate)
+
+loss_function = nn.MSELoss()</code></pre>
+<h2 id="1-4-训练"><a href="#1-4-训练" class="headerlink" title="1.4 训练"></a>1.4 训练</h2><pre><code class="python">y1 = linear_model(x)
+k = loss_function(y1,y)+1
+while True:
+    train_y = linear_model(x)
+    loss = loss_function(train_y,y)
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    print(loss)
+    if (k - loss &lt; 0.0000001) and f&gt;1000:
+        print(&#39;停止学习&#39;)
+        break
+    else:
+        k = loss
+print(list(linear_model.parameters()))#输出模型的所有参数</code></pre>
+<p>与笔记（三）中的一致，除了最后一句。</p>
+<h1 id="2-更复杂的序列模型"><a href="#2-更复杂的序列模型" class="headerlink" title="2. 更复杂的序列模型"></a>2. 更复杂的序列模型</h1><p>有了之前的经验，那我们既然用到了torch.nn当中的一些函数，我们为什么不能把模型设计的更加强大一点呢，例如我们在线性模型结束之后，加一层激活函数，再搞另一层线性回归。于是我们有了序列模型，我们可以在序列模型当中自定义我们的计算顺序，从模型的输入直到输出。</p>
+<h2 id="2-1-定义一个序列模型"><a href="#2-1-定义一个序列模型" class="headerlink" title="2.1 定义一个序列模型"></a>2.1 定义一个序列模型</h2><pre><code class="python">seq_model = nn.Sequential(
+    nn.Linear(1,13),#第一层线性模型
+    nn.Tanh(),#激活函数
+    nn.Linear(13,1)#第二层线性模型
+)</code></pre>
+<p>我们给这个序列模型喂入多个一维的数据，便可以得到其计算结果：  </p>
+<pre><code class="python">x = torch.tensor([[1.0],[2.0]])
+y = seq_model(x)
+print(y)</code></pre>
+<p>输出为（这个是个随机的，因为定义的模型中的参数是随机初始化的）：</p>
+<pre><code class="python">tensor([[-0.1801],[ 0.1310]], grad_fn=&lt;AddmmBackward&gt;)</code></pre>
+<p>于是我们可以在后续的训练过程用seq_model来计算，而不是上一节当中的linear_model（代码直接用上一节的就行，把后面训练代码当中的linear_model改成seq_model就ok了）。  </p>
+<h2 id="2-2-查看序列模型的参数"><a href="#2-2-查看序列模型的参数" class="headerlink" title="2.2 查看序列模型的参数"></a>2.2 查看序列模型的参数</h2><p>这里介绍一个方法可以查看我们自定义的序列模型当中的所有层的参数：  </p>
+<pre><code class="python">seq_model = nn.Sequential(
+    nn.Linear(1,13),#第一层线性模型
+    nn.Tanh(),#激活函数
+    nn.Linear(13,1)#第二层线性模型
+)
+for name,param in seq_model.named_parameters():
+    print(name,param.shape)</code></pre>
+<p>输出为：  </p>
+<pre><code class="python">0.weight torch.Size([13, 1])
+0.bias torch.Size([13])
+2.weight torch.Size([1, 13])
+2.bias torch.Size([1])</code></pre>
+<p>当然你把上一步代码最后一行的param.shape改成param就可以直接去看参数了。<br>输出中的每一个序号代表着层数，其实我们还可以给每一层定义它的专属名称：  </p>
+<pre><code class="python">from collections import OrderedDict
+seq_model = nn.Sequential(OrderedDict([
+    (&#39;hidden_linear&#39;,nn.Linear(1,13)),
+    (&#39;hidden_activation&#39;,nn.Tanh()),
+    (&#39;output_linear&#39;,nn.Linear(13,1))
+]))
+
+# 输出某层的参数
+print(seq_model.hidden_linear.bias)
+
+# 查看每一层的参数
+for name,param in seq_model.named_parameters():
+    print(name,param.shape)</code></pre>
+<p>输出为：  </p>
+<pre><code class="python">torch.Size([13]) # hidden_linear的bias参数
+hidden_linear.weight torch.Size([13, 1])
+hidden_linear.bias torch.Size([13])
+output_linear.weight torch.Size([1, 13])
+output_linear.bias torch.Size([1])</code></pre>
+<p>这样我们可以更加直观的查看神经网络每一层的参数。</p>
+<h1 id="3-利用nn-Module来定义神经网络"><a href="#3-利用nn-Module来定义神经网络" class="headerlink" title="3. 利用nn.Module来定义神经网络"></a>3. 利用nn.Module来定义神经网络</h1><p>在上面的介绍当中，我们使用了nn.Sequential来定义序列模型，但当我们所需要的模型非常复杂的时候，我们需要定义一个nn.Module的子类来完成神经网络的创建。<br>[TODO]</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
