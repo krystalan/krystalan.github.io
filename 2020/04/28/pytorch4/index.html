@@ -147,7 +147,7 @@ torch.Size([11])</code></pre>
 <p>使用了unsqueeze(1)，x和x.size()就变成了：</p>
 <pre><code class="python">tensor([[35.7000],[55.9000],[58.2000],[81.9000],[56.3000],[48.9000],[33.9000],[21.8000],[48.4000],[60.4000],[68.4000]])
 torch.Size([11, 1])</code></pre>
-<p>所以这样相当于加了一层维度，那为什么要加这层维度呢？因为如果不加的话，线性模型会直接把这11维当做一条数据来处理，加入我们建立的线性模型是nn.Linear(1,2)，将没有经过unsqueeze的数据直接喂入nn.Linear(1,2)中就会报错，因为该线性模型希望得到的是一个一维的输入，而你输入了一个11维的数据，但如果我们把输入unsqueeze了，这时候再输入给nn.Linear(1,2)，它就会认为我们输入的是11条1维的数据，进而为我们返回11条2维的计算结果。</p>
+<p>所以这样相当于加了一层维度，那为什么要加这层维度呢？因为如果不加的话，线性模型会直接把这11维当做一条数据来处理，假如我们建立的线性模型是nn.Linear(1,2)，将没有经过unsqueeze的数据直接喂入nn.Linear(1,2)中就会报错，因为该线性模型希望得到的是一个一维的输入，而你输入了一个11维的数据，但如果我们把输入unsqueeze了，这时候再输入给nn.Linear(1,2)，它就会认为我们输入的是11条1维的数据，进而为我们返回11条2维的计算结果。</p>
 <h2 id="1-2-建立模型"><a href="#1-2-建立模型" class="headerlink" title="1.2 建立模型"></a>1.2 建立模型</h2><pre><code class="python">linear_model = nn.Linear(1,1)</code></pre>
 <p>这里还是跟笔记（三）中的思路一样，建立一个最简单的一维输入一维输出模型。</p>
 <h2 id="1-3-设置优化器和损失函数"><a href="#1-3-设置优化器和损失函数" class="headerlink" title="1.3 设置优化器和损失函数"></a>1.3 设置优化器和损失函数</h2><pre><code class="python">learning_rate = 1e-4
@@ -217,7 +217,26 @@ hidden_linear.bias torch.Size([13])
 output_linear.weight torch.Size([1, 13])
 output_linear.bias torch.Size([1])</code></pre>
 <p>这样我们可以更加直观的查看神经网络每一层的参数。</p>
-<h1 id="3-利用nn-Module来定义神经网络"><a href="#3-利用nn-Module来定义神经网络" class="headerlink" title="3. 利用nn.Module来定义神经网络"></a>3. 利用nn.Module来定义神经网络</h1><p>在上面的介绍当中，我们使用了nn.Sequential来定义序列模型，但当我们所需要的模型非常复杂的时候，我们需要定义一个nn.Module的子类来完成神经网络的创建。<br>[TODO]</p>
+<h1 id="3-利用nn-Module来定义神经网络"><a href="#3-利用nn-Module来定义神经网络" class="headerlink" title="3. 利用nn.Module来定义神经网络"></a>3. 利用nn.Module来定义神经网络</h1><p>在上面的介绍当中，我们使用了nn.Sequential来定义序列模型，但当我们所需要的模型非常复杂的时候，我们需要更灵活的方式去定义神经网络，这就需要用到nn.Module来完成。  </p>
+<pre><code class="python">class Model(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.hidden_linear = nn.Linear(1,11)
+        self.output_linear = nn.Linear(11,1)
+
+    def forward(self,input):
+        hidden_t = self.hidden_linear(input)
+        activated_t = F.relu(hidden_t)
+        output_t = self.output_linear(activated_t)
+        return output_t</code></pre>
+<p>我们在这里定义了nn.Module的一个子类Model,初始化中规定了它需要的成员变量，并在forward函数中规定了模型的计算流程，使用模型的时候需要先构造一个实例，然后传入参数即可：  </p>
+<pre><code class="python">Model = Model()
+x = torch.tensor([1.0,2.0]).unsqueeze(1)
+y = Model(x)</code></pre>
+<p>我们也可以获取模型的各层名称与参数：  </p>
+<pre><code class="python">for name,param in Model.named_parameters():
+    print(name,param.size())</code></pre>
+<p>通常我们在自己搭建神经网络时，优先使用这个方法来创建。</p>
 
             </div>
 
