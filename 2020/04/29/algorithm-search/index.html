@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/22.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >二分查找</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要讲述二分查找及相关题解，其余查找算法请移步：<u><a href="https://www.cnblogs.com/maybe2030/p/4715035.html" target="_blank" rel="noopener">《七大查找算法》</a></u>  </p>
+<h1 id="1-二分查找模板"><a href="#1-二分查找模板" class="headerlink" title="1.二分查找模板"></a>1.二分查找模板</h1><h2 id="1-1-迭代式"><a href="#1-1-迭代式" class="headerlink" title="1.1 迭代式"></a>1.1 迭代式</h2><pre><code class="python">def BinarySearch(input_list,target):
+    left = 0
+    right = len(input_list)-1
+
+    while left&lt;=right:
+        mid = (left+right)//2
+        if input_list[mid]&gt;target:
+            right = mid-1
+        elif input_list[mid]&lt;target:
+            left = mid+1
+        else:
+            return mid
+    return -1</code></pre>
+<h2 id="1-2-递归式"><a href="#1-2-递归式" class="headerlink" title="1.2 递归式"></a>1.2 递归式</h2><pre><code class="python">def BinarySearch(input_list,target,low,high):
+    if low &gt; high:
+        return -1
+    mid = low+(high-low)//2
+    if input_list[mid] &gt; target:
+        return BinarySearch(input_list,target,low,mid-1)
+    elif input_list[mid] &lt; target:
+        return BinarySearch(input_list,target,mid+1,high)
+    else:
+        return mid</code></pre>
+<h1 id="2-题解"><a href="#2-题解" class="headerlink" title="2.题解"></a>2.题解</h1><h2 id="2-1-LeetCode-33-搜索旋转排序数组"><a href="#2-1-LeetCode-33-搜索旋转排序数组" class="headerlink" title="2.1 LeetCode 33 搜索旋转排序数组"></a>2.1 LeetCode 33 搜索旋转排序数组</h2><p>假设按照升序排序的数组在预先未知的某个点上进行了旋转。( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回-1。你可以假设数组中不存在重复的元素。你的算法时间复杂度必须是 O(log n) 级别。<br>示例1：  </p>
+<pre><code class="python">输入: nums = [4,5,6,7,0,1,2], target = 0
+输出: 4</code></pre>
+<p>示例2：</p>
+<pre><code class="python">输入: nums = [4,5,6,7,0,1,2], target = 3
+输出: -1</code></pre>
+<p>这道题，虽然把一个升序的数组旋转了一下，但我们依旧可以使用二分查找，只不过在使用的过程当中，要额外加几句判断来确定下一次搜索的范围，代码如下：  </p>
+<pre><code class="python">class Solution:
+    def search(self, nums: List[int], target: int) -&gt; int:
+        lens = len(nums)
+        if lens == 0:
+            return -1
+
+        left = 0
+        right = lens - 1
+        while (left &lt; right):
+            mid = left+(right-left+1)//2  #使用上取整的中间数，必须在上面的 mid 表达式的括号里 + 1
+            if (nums[mid] &lt; nums[right]):
+                if (nums[mid] &lt;= target and target &lt;= nums[right]): 
+                    left = mid
+                else:
+                    right = mid - 1
+            else:
+                if (nums[left] &lt;= target and target &lt;= nums[mid - 1]):
+                    right = mid - 1
+                else:
+                    left = mid
+
+        if (nums[left] == target):
+            return left
+
+        return -1</code></pre>
+<h2 id="2-2-LeetCode-1095-山脉数组中查找目标值"><a href="#2-2-LeetCode-1095-山脉数组中查找目标值" class="headerlink" title="2.2 LeetCode 1095 山脉数组中查找目标值"></a>2.2 LeetCode 1095 山脉数组中查找目标值</h2><p>给你一个山脉数组mountainArr，请你返回能够使得 mountainArr.get(index)等于target最小的下标index值。如果不存在这样的下标index，就请返回-1。<br>何为山脉数组？如果数组A是一个山脉数组的话，那它满足如下条件：<br>首先，A.length &gt;= 3<br>其次，在 0 &lt; i &lt; A.length - 1 条件下，存在 i 使得：<br>A[0] &lt; A[1] &lt; … A[i-1] &lt; A[i]<br>A[i] &gt; A[i+1] &gt; … &gt; A[A.length - 1]  </p>
+<p>你将不能直接访问该山脉数组，必须通过MountainArray接口来获取数据：<br>MountainArray.get(k) - 会返回数组中索引为k 的元素（下标从 0 开始）<br>MountainArray.length() - 会返回该数组的长度</p>
+<p>示例1：  </p>
+<pre><code class="python">输入：array = [1,2,3,4,5,3,1], target = 3
+输出：2
+解释：3 在数组中出现了两次，下标分别为 2 和 5，我们返回最小的下标 2。</code></pre>
+<p>示例2：</p>
+<pre><code class="python">输入：array = [0,1,2,4,2,1], target = 3
+输出：-1
+解释：3 在数组中没有出现，返回 -1。</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
