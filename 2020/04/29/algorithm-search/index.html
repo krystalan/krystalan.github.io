@@ -192,6 +192,61 @@
 <pre><code class="python">输入：array = [0,1,2,4,2,1], target = 3
 输出：-1
 解释：3 在数组中没有出现，返回 -1。</code></pre>
+<p>对于这道题，我的基本思路是：先利用二分查找找到山顶这个点的索引，例如山脉数组[1,2,3,4,5,3,1]，它的顶点就是5，对应的索引为4。找到顶点索引k之后，我们就可以把原有的数组分成两部分，再在两部分上使用二分查找搜索是否包含target，如果都不包含的话返回-1。具体代码如下：  </p>
+<pre><code class="python">class Solution:
+    def findInMountainArray(self, target: int, mountain_arr: &#39;MountainArray&#39;) -&gt; int:
+        left = 0
+        lens = mountain_arr.length()
+        right = lens-1
+        k = 0
+        while left &lt;= right:
+            mid = left + (right-left+1)//2
+            q = mountain_arr.get(mid)
+            p = mountain_arr.get(mid-1)
+            if q &gt; p:
+                if p == target: #如果在上升区间遇到了等于target的数就直接返回索引
+                    return mid-1
+                if q == target: #如果在上升区间遇到了等于target的数就直接返回索引
+                    return mid
+                left = mid
+            else:
+                right = mid
+            if right - 1 == left:
+                if q &gt; p:
+                    k = mid
+                    if q == target:#如果山顶元素等于target就直接返回山顶索引
+                        return mid
+                    break
+                else:
+                    k = mid-1
+                    if p == target:#如果山顶元素等于target就直接返回山顶索引
+                        return mid-1
+                    break
+
+        # 上山区间使用二分查找
+        left = 0
+        right = k-1
+        while left&lt;=right:
+            mid = (left+right)//2
+            if mountain_arr.get(mid)&gt;target:
+                right = mid-1
+            elif mountain_arr.get(mid)&lt;target:
+                left = mid+1
+            else:
+                return mid
+
+        # 下山区间使用二分查找
+        left = k+1
+        right = lens-1
+        while left&lt;=right:
+            mid = (left+right)//2
+            if mountain_arr.get(mid)&gt;target:
+                left = mid+1
+            elif mountain_arr.get(mid)&lt;target:
+                right = mid-1
+            else:
+                return mid
+        return -1</code></pre>
 
             </div>
 
