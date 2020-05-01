@@ -142,7 +142,7 @@ from selenium import webdriver
 import random  </code></pre>
 <p>其实有一些是没必要的，例如datatime、pandas和re。但后续我一般都会用到，所以就一劲写上去了。</p>
 <h2 id="1-2-自定定义一个User-agent列表"><a href="#1-2-自定定义一个User-agent列表" class="headerlink" title="1.2 自定定义一个User_agent列表"></a>1.2 自定定义一个User_agent列表</h2><pre><code class="python">f = open(&#39;user_agent.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;)  
-UA = fu.readlines()  
+UA = f.readlines()  
 f.close()  </code></pre>
 <p>然后你需要建立一个user_agent.txt文件，里面放一些user_agent。<br>分享一下我自己用的：</p>
 <pre><code class="python">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36  

@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/24.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >浅谈记忆网络</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>推荐一个Z乎专栏，专门分享记忆网络相关内容的：<u><a href="https://zhuanlan.zhihu.com/c_129532277" target="_blank" rel="noopener">《记忆网络-Memory Network》</a></u></p>
+<h1 id="1-最基础的记忆网络"><a href="#1-最基础的记忆网络" class="headerlink" title="1.最基础的记忆网络"></a>1.最基础的记忆网络</h1><h2 id="1-1-论文名称"><a href="#1-1-论文名称" class="headerlink" title="1.1 论文名称"></a>1.1 论文名称</h2><p>2015 ICLR：<u><a href="https://arxiv.org/abs/1410.3916" target="_blank" rel="noopener">Memory Networks</a></u></p>
+<h2 id="1-2-动机"><a href="#1-2-动机" class="headerlink" title="1.2 动机"></a>1.2 动机</h2><p>传统的RNN在长距离捕获上表现不佳，LSTM与GRU利用隐藏状态存储长距离信息，但这种存储能力比较弱，存储空间小，不足以精准存储文段当中的之前提及的事实，所以效果依旧不太好。记忆网络通过引入外部的存储来保存信息。  </p>
+<h2 id="1-3-模型"><a href="#1-3-模型" class="headerlink" title="1.3 模型"></a>1.3 模型</h2><p><img src="/images/MemoryNetwork/1.jpg" alt="记忆网络"><br>一个记忆网络由记忆单元（可以看成一个数组）和四个组件（I，G，O和R）构成。<br>I：输入特征映射，将输入转换为内部特征表示。<br>G：概括单元，根据新输入更新旧内存。我们称之为概括，因为在这个阶段，神经网络有机会压缩和概括其内存，以供将来使用。<br>O：输出特征映射，给定新输入和当前内存状态，生成新输出（在特征表示空间中）。<br>R：响应，将输出转换为所需的响应格式。例如，文本响应或操作。  </p>
+<blockquote>
+<p>简单来说，就是输入的文本经过Input模块编码成向量，然后将其作为Generalization模块的输入，该模块根据输入的向量对memory进行读写操作，即对记忆进行更新。然后Output模块会根据Question（也会进过Input模块进行编码）对memory的内容进行权重处理，将记忆按照与Question的相关程度进行组合得到输出向量，最终Response模块根据输出向量编码生成一个自然语言的答案出来</p>
+</blockquote>
+<h1 id="2-端到端的记忆网络"><a href="#2-端到端的记忆网络" class="headerlink" title="2.端到端的记忆网络"></a>2.端到端的记忆网络</h1><h2 id="2-1-论文名称"><a href="#2-1-论文名称" class="headerlink" title="2.1 论文名称"></a>2.1 论文名称</h2><p>2015 NIPS：<u><a href="https://arxiv.org/abs/1503.08895" target="_blank" rel="noopener">End-To-End Memory Networks</a></u></p>
+<h2 id="2-2-动机"><a href="#2-2-动机" class="headerlink" title="2.2 动机"></a>2.2 动机</h2><p>这是在Memory Networks之后提出来的更加完善的模型，在Memory Networks当中，O与R都需要监督进行训练，不太容易使用BP进行训练，因此本文提出了端到端的联合训练模型。 </p>
+<h2 id="2-3-模型"><a href="#2-3-模型" class="headerlink" title="2.3 模型"></a>2.3 模型</h2><p><img src="/images/MemoryNetwork/2.jpg" alt="端到端的记忆网络"><br>左边是单层的记忆网络，右边是多层叠加起来的。  </p>
+<h2 id="2-3-1-单层"><a href="#2-3-1-单层" class="headerlink" title="2.3.1 单层"></a>2.3.1 单层</h2><p>输入为x1，x2，…，xn。这些输入元素将被存储在memory中。查询语句为q，输出的答案为a。<br>对于输入xi，利用embedding矩阵A，获得其向量表示mi；对于查询语句利用embedding矩阵B，获得其向量表示u。之后就可以计算mi与u的匹配度了，为每个xi生成在当前查询q下的权重：<br><img src="/images/MemoryNetwork/3.jpg" alt="端到端的记忆网络"><br>我们再将输入xi，通过另一个embedding矩阵C，得到其向量表示ci，利用上一步计算得到的p进一步计算输出向量o：<br><img src="/images/MemoryNetwork/4.jpg" alt="端到端的记忆网络"><br>最后利用输出向量o与查询向量u来进行预测：<br><img src="/images/MemoryNetwork/5.jpg" alt="端到端的记忆网络"><br>其中矩阵W大小为V*d，d维向量表示维度，V为词表大小。  </p>
+<h2 id="2-3-2-多层"><a href="#2-3-2-多层" class="headerlink" title="2.3.2 多层"></a>2.3.2 多层</h2><p>将k层的u与o相加得到k+1层的u向量：<br><img src="/images/MemoryNetwork/6.jpg" alt="端到端的记忆网络"><br>每一层都有他们的embedding矩阵Ak和Ck，用于获得xi的向量表示。但这样做参数太多了，所以又做了一些简化：<br>（1）前一层的C矩阵与下一层的A矩阵共享权重，即A(k+1) = Ck<br>（2）每一层的A矩阵之间共享权重，每一层的C矩阵之间同样共享权重：<br>A1 = A2 = … = Ak；C1 = C2 = … = Ck。</p>
+<p>最终论文的实验部分用了第一种方法。</p>
+<h2 id="2-4-应用"><a href="#2-4-应用" class="headerlink" title="2.4 应用"></a>2.4 应用</h2><p>在QA方面的应用当中，xi代表一个句子，而在语言建模任务上，xi代表单词。但需要注意的是，在语言建模的任务上，并没有查询语句q，所以在实际训练当中，查询语句被表示成一个固定的常量向量。</p>
+<h1 id="3-动态记忆网络"><a href="#3-动态记忆网络" class="headerlink" title="3.动态记忆网络"></a>3.动态记忆网络</h1><h2 id="3-1-论文名称"><a href="#3-1-论文名称" class="headerlink" title="3.1 论文名称"></a>3.1 论文名称</h2><p><u><a href="https://arxiv.org/abs/1506.07285" target="_blank" rel="noopener">Ask Me Anything: Dynamic Memory Networks for Natural Language Processing</a></u></p>
+<h2 id="3-2-动机"><a href="#3-2-动机" class="headerlink" title="3.2 动机"></a>3.2 动机</h2><p>本文的模型以QA为基础进行训练，但是可以扩展到很多别的任务中，包括序列标注、分类、seq-to-seq等。  </p>
+<h2 id="3-3-模型"><a href="#3-3-模型" class="headerlink" title="3.3 模型"></a>3.3 模型</h2><p><img src="/images/MemoryNetwork/7.jpg" alt="DMN"><br>该模型也是由四个模块所构成：输入模块、问题模块、memory模块，回答模块。模型细节如下图所示：<br><img src="/images/MemoryNetwork/8.jpg" alt="DMN"><br>首先，假设模型的输入就是上图中的8句话，问题为右下方的“where is the football？”，模型先对这8句话和问题使用GRU进行编码，接下来计算问题向量与每句话之间的attention。很明显，第七句话再第一轮迭代当中最与问题相关，我们通过第七句话可以得到“john放下了足球”。根据问题和第一次的attention分布，可以进而计算得到第二次attention分布，可以考到第二次的attention分布当中，第六句话成了关键，第二句话是噪声信息，权重较小。</p>
+<h1 id="4-Multi-level-Memory-Networks"><a href="#4-Multi-level-Memory-Networks" class="headerlink" title="4.Multi-level Memory Networks"></a>4.Multi-level Memory Networks</h1><h2 id="4-1-论文名称"><a href="#4-1-论文名称" class="headerlink" title="4.1 论文名称"></a>4.1 论文名称</h2><p>2019 NAACL：<u><a href="https://arxiv.org/abs/1811.00783" target="_blank" rel="noopener">Abstractive Summarization of Reddit Posts with Multi-level Memory Networks</a></u></p>
+<h2 id="4-2-动机"><a href="#4-2-动机" class="headerlink" title="4.2 动机"></a>4.2 动机</h2><p>很多摘要数据集都是正式的文本，从媒体或官方的发文当中收集，这些文本当中很有可能存在能用于摘要的句子或词，所以该文作者在Reddit论坛中收集了很多普通用户发表的非正式文本，构建了Reddit TIFU数据集，并且他们构建了多级的记忆网络来训练生成式摘要模型，使用多层次的记忆网络存储来自不同层次的文本信息。</p>
+<h2 id="4-3-模型"><a href="#4-3-模型" class="headerlink" title="4.3 模型"></a>4.3 模型</h2><p><img src="/images/MemoryNetwork/9.jpg" alt="MMN"><br>输入源文本是xi，输出摘要为yi。因为网上人们发的文本有可能存在拼写错误或不规范拼写等，所以在编码文本的时候采用的是300维的fasttext向量得到d0到dN。之后生成了S个记忆张量作为输出。这么设计是因为，当人们理解一篇文档的时候，并不会将整个文档都记住，而是结合不同层次的信息（例如词级、句级、段落级和文档级），所以产生了S个记忆张量，每一个都对应了不同的层次。为此建立了多层CNN，这里使用的是空洞CNN。  </p>
+<p><img src="/images/MemoryNetwork/10.jpg" alt="MMN"><br>每一层的记忆张量计算方式如上，m(s)表示第s层memory所用到的卷积层的索引。例如设置S=3，m={3,6,9}，我们使用第3层、第6层和第9层的卷积层来构建三层的memory。Mc这里加上了d0可以看做是skip connection。有了这S个记忆张量（一个记忆张量由Ma与Mc组成），接下来就是产生摘要的解码步骤了。  </p>
+<p>基于y1:t和记忆张量来产生第t+1个单词，首先对于源文本，在最高层空洞卷积的输出上使用最大池化层来得到一个文档的全局表示d（whole）：<br><img src="/images/MemoryNetwork/11.jpg" alt="MMN"><br>之后基于d（whole）和y1:t去计算出ot的最高层表示，再利用ot经过全连接进而得到S个查询向量，利用查询向量与Ma就可以得到每个输入的权重，以此产生S个attention vector，最后基于这s个注意力向量与ot最高层向量拼接再经过softmax得到解码出的单词。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

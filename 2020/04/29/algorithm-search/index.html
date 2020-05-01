@@ -247,6 +247,43 @@
             else:
                 return mid
         return -1</code></pre>
+<h2 id="2-3-LeetCode-34-在排序数组中查找元素的第一个和最后一个位置"><a href="#2-3-LeetCode-34-在排序数组中查找元素的第一个和最后一个位置" class="headerlink" title="2.3 LeetCode 34 在排序数组中查找元素的第一个和最后一个位置"></a>2.3 LeetCode 34 在排序数组中查找元素的第一个和最后一个位置</h2><p>给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。你的算法时间复杂度必须是 O(log n) 级别。如果数组中不存在目标值，返回 [-1, -1]。<br>示例1：  </p>
+<pre><code class="python">输入: nums = [5,7,7,8,8,10], target = 8
+输出: [3,4]</code></pre>
+<p>示例2：  </p>
+<pre><code class="python">输入: nums = [5,7,7,8,8,10], target = 6
+输出: [-1,-1]</code></pre>
+<p>这道题直接应用标准的二分查找就好，找到下标之后再向两边扩散，进而求得最终解。具体代码如下：  </p>
+<pre><code class="python">class Solution:
+    def BinarySearch(self,input_list,target):
+        left = 0
+        right = len(input_list)-1
+
+        while left&lt;=right:
+            mid = (left+right)//2
+            if input_list[mid]&gt;target:
+                right = mid-1
+            elif input_list[mid]&lt;target:
+                left = mid+1
+            else:
+                return mid
+        return -1
+    def searchRange(self, nums: List[int], target: int) -&gt; List[int]:
+        a = self.BinarySearch(nums,target)
+        if a == -1:
+            return [-1,-1]
+        else:
+            left = a
+            right = a
+            while nums[left] == target:
+                left -= 1
+                if left &lt; 0:
+                    break
+            while nums[right] == target:
+                right += 1
+                if right &gt;= len(nums):
+                    break
+            return [left+1,right-1]</code></pre>
 
             </div>
 
