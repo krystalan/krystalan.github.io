@@ -121,18 +121,58 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/23.jpeg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >BART</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch5</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>论文名称：<br>2019 ICCV <u><a href="https://arxiv.org/abs/1910.13461" target="_blank" rel="noopener">BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension</a></u><br>参考文章：<br>（1）<u><a href="https://mp.weixin.qq.com/s/a1KOxb_2ac5GR6uK2zlIeg" target="_blank" rel="noopener">《BART原理简介与代码实战》</a></u><br>（2）<u><a href="http://finance.sina.com.cn/stock/relnews/us/2019-11-04/doc-iicezzrr7106842.shtml" target="_blank" rel="noopener">多项NLP任务新SOTA，Facebook提出预训练模型BART</a></u><br>代码：<br><a href="https://github.com/renatoviolin/Bart_T5-summarization" target="_blank" rel="noopener">https://github.com/renatoviolin/Bart_T5-summarization</a>  </p>
-<h1 id="1-动机"><a href="#1-动机" class="headerlink" title="1.动机"></a>1.动机</h1><p>BART是一个预训练语言模型结合了双向的和自回归的transformer，先使用噪声函数破坏文本，再让模型通过seq2seq框架习得如何还原文本。该预训练模型在文本生成和阅读理解任务上表现较好，在摘要、问答、对话生成上均达到了SOTA。</p>
-<h1 id="2-预训练任务"><a href="#2-预训练任务" class="headerlink" title="2.预训练任务"></a>2.预训练任务</h1><p><img src="/images/BART/1.jpg" alt="预训练任务"><br>（1）Token Masking：与BERT类似，随机采样token，并用[Mask]代替。<br>（2）Token Deletion：从输入文本当中随机删除token。<br>（3）Text Infilling：随机采样text span，span长度服从泊松分布（λ=3），一个text span被替换成一个[MASK]字符，即使span为0的时候也要进行替换，此时的替换就相当于插入一个[Mask]，灵感来源于SpanBERT。<br>（4）Sentence Permutation（句子排列）：打乱句子顺序<br>（5）Document Rotation：随机均匀地选择一个token，并旋转文档，使其以该标记开头。此任务训练模型以识别文档的开头。  </p>
-<p>其中（3）和（4）效果最好。</p>
-<h1 id="3-微调BART"><a href="#3-微调BART" class="headerlink" title="3.微调BART"></a>3.微调BART</h1><h2 id="3-1-文本分类"><a href="#3-1-文本分类" class="headerlink" title="3.1 文本分类"></a>3.1 文本分类</h2><p>利用BART获得句意表示，之后外接分类器就可以句子分类了。  </p>
-<h2 id="3-2-文本生成"><a href="#3-2-文本生成" class="headerlink" title="3.2 文本生成"></a>3.2 文本生成</h2><p>因为BART有自回归的decoder，所以直接可以在文本生成任务上微调。</p>
-<h1 id="4-实验结果"><a href="#4-实验结果" class="headerlink" title="4.实验结果"></a>4.实验结果</h1><p>只贴一下摘要任务的实验结果：<br><img src="/images/BART/2.jpg" alt="预训练任务">   </p>
+                <p>本文主要讲述的是torch.utils.data库，该库主要的作用是处理数据与构建数据集，包含以下类与函数：<br><img src="/images/pytorch/5.jpg" alt="torch.utils.data"><br>其中，数据加载的核心是<code>torch.utils.data.DataLoader</code>。</p>
+<h1 id="1-torch-utils-data-DataLoader"><a href="#1-torch-utils-data-DataLoader" class="headerlink" title="1 torch.utils.data.DataLoader"></a>1 torch.utils.data.DataLoader</h1><blockquote>
+<p>结合了数据集和采样器，并在给定数据集上提供iterable。</p>
+</blockquote>
+<pre><code class="python">torch.utils.data.DataLoader(
+    dataset,    #所需要加载的数据集
+    batch_size=1,  
+    shuffle=False,  #在每个epoch中，shuffle数据
+    sampler=None,   #定义从数据集中提取样本的策略，如果指定了策略，shuffle必须为False。
+    batch_sampler=None, #与sampler类似，但每次只返回一批索引，
+    num_workers=0,  #要用于数据加载的子进程数，默认为0，代表仅使用主进程。
+    collate_fn=None,    #合并样本列表以形成一小批张量。从map样式数据集中使用批量加载时使用
+    pin_memory=False,   #若为True，则数据加载器将在返回张量之前将其复制到CUDA固定内存中
+    drop_last=False,    #若为True，当全部数据不能被batch-size整除时，丢失最后不完整的batch。
+    timeout=0,  #只能为非负值，若为正，则从进程中收集批的超时值
+    worker_init_fn=None,    #如果不为None，则在设定种子之后和数据加载之前，这将在每个以worker id作为输入的worker子进程上调用。
+    multiprocessing_context=None
+)</code></pre>
+<p>DataLoader支持map样式和iterable样式的数据集，具有单进程或多进程加载、自定义加载顺序、可选的自动批处理（排序）和内存固定。</p>
+<h1 id="2-torch-utils-data-Dataset"><a href="#2-torch-utils-data-Dataset" class="headerlink" title="2 torch.utils.data.Dataset"></a>2 torch.utils.data.Dataset</h1><blockquote>
+<p>参考文章：<a href="https://zhuanlan.zhihu.com/p/102567252" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/102567252</a>  </p>
+</blockquote>
+<p>Dataset是表示数据集的<strong>抽象类</strong>（<strong>只能被继承，不能被实例化</strong>），将数据转化成Dataset类可以实现更好的读取和处理。自定义的Dataset需要继承它并且实现两个成员方法：<br>（1）<strong>getitem</strong>() 该方法定义用索引(0 到 len(self))获取一条数据或一个样本<br>（2）<strong>len</strong>() 该方法返回数据集的总长度</p>
+<h1 id="3-使用Dataset与DataLoader类来读入数据集"><a href="#3-使用Dataset与DataLoader类来读入数据集" class="headerlink" title="3 使用Dataset与DataLoader类来读入数据集"></a>3 使用Dataset与DataLoader类来读入数据集</h1><p>我们来看一个例子，先使用Dataset创建一个我们自己的数据集类MyDataset：  </p>
+<pre><code class="python">import torch
+from torch.utils.data import Dataset,DataLoader
+import pandas as pd
+
+class MyDataset(Dataset):
+    &quot;&quot;&quot; 数据集演示 &quot;&quot;&quot;
+    def __init__(self, csv_file):
+        self.df=pd.read_csv(csv_file,encoding=&#39;gbk&#39;)
+
+    def __len__(self):  #返回数据总长度
+        return len(self.df)
+
+    def __getitem__(self, idx):  #返回idx索引下的数据
+        return self.df.iloc[idx].text</code></pre>
+<p>有了我们自己创建的MyDataset类，我们就可以对其进行实例化了：  </p>
+<pre><code class="python">data = MyDataset(&#39;training_set.csv&#39;)
+print(len(data))    #输出数据集长度
+print(data[0])  #输出0索引对应的数据</code></pre>
+<p>接下来我们使用DataLoader来加载数据集：  </p>
+<pre><code class="python">a = DataLoader(data, batch_size=10)
+idata=iter(a)   #创建迭代器
+print(next(idata))</code></pre>
+<p>如此，我们便为数据集创建了一个迭代器，每次调用next就可以读取到下一个batch的数据。数据从原始的CSV到Dataset对象再到DataLoader类对象。</p>
 
             </div>
 
