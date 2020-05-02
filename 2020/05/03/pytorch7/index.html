@@ -122,59 +122,12 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch笔记（六）</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch笔记（七）[TODO]</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>本文主要讲述的是神经网络的初始化，pytorch在torch.nn.init中提供了常用的初始化方法函数。  </p>
-<h1 id="1-理论篇"><a href="#1-理论篇" class="headerlink" title="1.理论篇"></a>1.理论篇</h1><h2 id="1-1-将所有权重均初始化为0"><a href="#1-1-将所有权重均初始化为0" class="headerlink" title="1.1 将所有权重均初始化为0"></a>1.1 将所有权重均初始化为0</h2><p>先说结论，这个方法是不能采取的，当神经网络中的每个权重都被初始化为相同值时，那么会导致每个神经元的计算结果相同，因此在使用BP算法更新权重时，所有权重又会得到相同的更新，所以失去了学习不同特征的意义，因此我们不能将所有神经元的权重初始化为0，我们要让初始化权重接近0但不为0。  </p>
-<h2 id="1-2-Xavier"><a href="#1-2-Xavier" class="headerlink" title="1.2 Xavier"></a>1.2 Xavier</h2><p>参考资料：<u><a href="https://zhuanlan.zhihu.com/p/27919794" target="_blank" rel="noopener">《深度前馈网络与Xavier初始化原理》</a></u>  </p>
-<h2 id="1-3-Kaiming"><a href="#1-3-Kaiming" class="headerlink" title="1.3 Kaiming"></a>1.3 Kaiming</h2><blockquote>
-<p>Xavier初始化的问题在于，它只适用于线性激活函数，但实际上，对于深层神经网络来说，线性激活函数是没有价值，神经网络需要非线性激活函数来构建复杂的非线性系统。今天的神经网络普遍使用relu激活函数。Kaiming初始化的表现要优于Xavier初始化，实际上，Kaiming初始化已经被Pytorch用作默认的参数初始化函数。</p>
-</blockquote>
-<p>参考资料：<u><a href="https://www.jianshu.com/p/f2d800388d1c" target="_blank" rel="noopener">《一文搞懂深度网络初始化》</a></u></p>
-<h1 id="2-应用篇"><a href="#2-应用篇" class="headerlink" title="2.应用篇"></a>2.应用篇</h1><p>还是先来看一下torch.nn.init的构成吧：<br><img src="/images/pytorch/6.jpg" alt="torch.nn.init">   </p>
-<p>以xavier_uniform_为例来介绍一下如何使用：  </p>
-<pre><code class="python">w = torch.empty(3, 5)
-nn.init.xavier_uniform_(w, gain=nn.init.calculate_gain(&#39;relu&#39;))</code></pre>
-<p>这里有一个参数是gain，增益的大小是依据激活函数类型来设定的。</p>
-<p>上述例子只是初始化一个tensor，对一个模型的参数进行初始化的具体过程如下，以LeNet-5为例： </p>
-<pre><code class="python">class Net(nn.Module):
-    def __init__(self):
-        super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(3, 6, 5)
-        self.pool1 = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.pool2 = nn.MaxPool2d(2, 2)
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 10)
-
-    def forward(self, x):
-        x = self.pool1(F.relu(self.conv1(x)))
-        x = self.pool2(F.relu(self.conv2(x)))
-        x = x.view(-1, 16 * 5 * 5)
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
-
-    # 定义权值初始化
-    def initialize_weights(self):
-        for m in self.modules():
-            if isinstance(m, nn.Conv2d):#每一层初始化方法不一样
-                torch.nn.init.xavier_normal_(m.weight.data)
-                if m.bias is not None:
-                    m.bias.data.zero_()
-            elif isinstance(m, nn.BatchNorm2d):
-                m.weight.data.fill_(1)
-                m.bias.data.zero_()
-            elif isinstance(m, nn.Linear):
-                torch.nn.init.normal_(m.weight.data, 0, 0.01)
-                m.bias.data.zero_()</code></pre>
-<p>先从self.modules()中遍历每一层，然后判断各层属于什么类型，例如，是否是 nn.Conv2d、nn.BatchNorm2d、nn.Linear等，然后根据不同类型的层，设定不同的权值初始化方法，例如，Xavier，kaiming，normal_，uniform_等。其中self.modules()功能是依次返回模型中的各层。</p>
-<p>更多详细介绍请移步官方文档：<a href="https://pytorch.org/docs/stable/nn.init.html" target="_blank" rel="noopener">https://pytorch.org/docs/stable/nn.init.html</a></p>
-
+                <p>本文主要进阶探讨PyTorch当中学习率的问题。</p>
+<h1 id="1-如何给每一层设置不同的学习率"><a href="#1-如何给每一层设置不同的学习率" class="headerlink" title="1.如何给每一层设置不同的学习率"></a>1.如何给每一层设置不同的学习率</h1><h1 id="2-PyTorch当中的学习率调整大法"><a href="#2-PyTorch当中的学习率调整大法" class="headerlink" title="2.PyTorch当中的学习率调整大法"></a>2.PyTorch当中的学习率调整大法</h1>
             </div>
 
             <!-- Post Comments -->
