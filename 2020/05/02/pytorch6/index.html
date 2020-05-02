@@ -137,6 +137,41 @@
 <p>以xavier_uniform_为例来介绍一下如何使用：  </p>
 <pre><code class="python">w = torch.empty(3, 5)
 nn.init.xavier_uniform_(w, gain=nn.init.calculate_gain(&#39;relu&#39;))</code></pre>
+<p>上述例子只是初始化一个tensor，对一个模型的参数进行初始化的具体过程如下，以LeNet-5为例： </p>
+<pre><code class="python">class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool1 = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.pool2 = nn.MaxPool2d(2, 2)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, 10)
+
+    def forward(self, x):
+        x = self.pool1(F.relu(self.conv1(x)))
+        x = self.pool2(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+
+    # 定义权值初始化
+    def initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):#每一层初始化方法不一样
+                torch.nn.init.xavier_normal_(m.weight.data)
+                if m.bias is not None:
+                    m.bias.data.zero_()
+            elif isinstance(m, nn.BatchNorm2d):
+                m.weight.data.fill_(1)
+                m.bias.data.zero_()
+            elif isinstance(m, nn.Linear):
+                torch.nn.init.normal_(m.weight.data, 0, 0.01)
+                m.bias.data.zero_()</code></pre>
+<p>先从self.modules()中遍历每一层，然后判断各层属于什么类型，例如，是否是 nn.Conv2d、nn.BatchNorm2d、nn.Linear等，然后根据不同类型的层，设定不同的权值初始化方法，例如，Xavier，kaiming，normal_，uniform_等。其中self.modules()功能是依次返回模型中的各层。</p>
 <p>更多详细介绍请移步官方文档：<a href="https://pytorch.org/docs/stable/nn.init.html" target="_blank" rel="noopener">https://pytorch.org/docs/stable/nn.init.html</a></p>
 
             </div>
