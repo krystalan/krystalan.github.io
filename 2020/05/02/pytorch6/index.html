@@ -48,18 +48,12 @@
 		
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    
-<link rel="stylesheet" href="/css/item.css" />
-<style >
-    .row a{
-        border-bottom: none;
-    }
-    .special{
-        padding: 0;
-        padding: 2rem;
-    }
-</style>
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
     <div id="wrapper" class="fade-in">
@@ -125,30 +119,32 @@
                     
 			</ul>
 </nav>
-                <div id="main">
-            <!-- Main first s-->
-            <article id="me" class="panel">
-                <header style="color: #000000">
-                    <h1>北望你的安</h1>
-                    <p>苏州大学 | 计算机科学 | 自然语言处理</p>
-                </header>
-                <a href="" class="jumplink pic">
-                    <!-- <span class="arrow icon fa-chevron-right"><span></span></span> -->
-                    <img src="/images/me.jpg" alt="" />
-                </a>
-            </article>
-            <!-- Main first e-->
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch笔记（六）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要讲述的是神经网络的初始化，pytorch在torch.nn.init中提供了常用的初始化方法函数。  </p>
+<h1 id="1-理论篇"><a href="#1-理论篇" class="headerlink" title="1.理论篇"></a>1.理论篇</h1><h2 id="1-1-将所有权重均初始化为0"><a href="#1-1-将所有权重均初始化为0" class="headerlink" title="1.1 将所有权重均初始化为0"></a>1.1 将所有权重均初始化为0</h2><p>先说结论，这个方法是不能采取的，当神经网络中的每个权重都被初始化为相同值时，那么会导致每个神经元的计算结果相同，因此在使用BP算法更新权重时，所有权重又会得到相同的更新，所以失去了学习不同特征的意义，因此我们不能将所有神经元的权重初始化为0，我们要让初始化权重接近0但不为0。  </p>
+<h2 id="1-2-Xavier"><a href="#1-2-Xavier" class="headerlink" title="1.2 Xavier"></a>1.2 Xavier</h2><p>参考资料：<u><a href="https://zhuanlan.zhihu.com/p/27919794" target="_blank" rel="noopener">《深度前馈网络与Xavier初始化原理》</a></u>  </p>
+<h2 id="1-3-Kaiming"><a href="#1-3-Kaiming" class="headerlink" title="1.3 Kaiming"></a>1.3 Kaiming</h2><blockquote>
+<p>Xavier初始化的问题在于，它只适用于线性激活函数，但实际上，对于深层神经网络来说，线性激活函数是没有价值，神经网络需要非线性激活函数来构建复杂的非线性系统。今天的神经网络普遍使用relu激活函数。Kaiming初始化的表现要优于Xavier初始化，实际上，Kaiming初始化已经被Pytorch用作默认的参数初始化函数。</p>
+</blockquote>
+<p>参考资料：<u><a href="https://www.jianshu.com/p/f2d800388d1c" target="_blank" rel="noopener">《一文搞懂深度网络初始化》</a></u></p>
+<h1 id="2-应用篇"><a href="#2-应用篇" class="headerlink" title="2.应用篇"></a>2.应用篇</h1><p>还是先来看一下torch.nn.init的构成吧：<br><img src="/images/pytorch/6.jpg" alt="torch.nn.init">   </p>
+<p>以xavier_uniform_为例来介绍一下如何使用：  </p>
+<pre><code class="python">w = torch.empty(3, 5)
+nn.init.xavier_uniform_(w, gain=nn.init.calculate_gain(&#39;relu&#39;))</code></pre>
+<p>更多详细介绍请移步官方文档：<a href="https://pytorch.org/docs/stable/nn.init.html" target="_blank" rel="noopener">https://pytorch.org/docs/stable/nn.init.html</a></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
         </div>
-
-        <section class="special">
-                            <div class="row" style="border-bottom: none;">
-
-        <a href="/tags/CRF/" style="font-size: 16px;">CRF</a> <a href="/tags/HMM/" style="font-size: 16px;">HMM</a> <a href="/tags/KG/" style="font-size: 16.5px;">KG</a> <a href="/tags/NER/" style="font-size: 16px;">NER</a> <a href="/tags/NLP/" style="font-size: 16.25px;">NLP</a> <a href="/tags/PyTorch/" style="font-size: 17px;">PyTorch</a> <a href="/tags/%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%9E%8B/" style="font-size: 16px;">主题模型</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 16px;">二分查找</a> <a href="/tags/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8A%BD%E5%8F%96/" style="font-size: 16px;">关键词抽取</a> <a href="/tags/%E5%88%86%E8%AF%8D/" style="font-size: 16px;">分词</a> <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" style="font-size: 16.75px;">强化学习</a> <a href="/tags/%E6%96%87%E6%9C%AC%E6%91%98%E8%A6%81/" style="font-size: 17px;">文本摘要</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 16px;">爬虫</a> <a href="/tags/%E7%A7%91%E7%A0%94%E5%B0%8F%E7%99%BD%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" style="font-size: 16px;">科研小白入门指南</a> <a href="/tags/%E8%AE%B0%E5%BF%86%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">记忆网络</a> <a href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" style="font-size: 16px;">迁移学习</a> <a href="/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/" style="font-size: 16px;">阅读理解</a> <a href="/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" style="font-size: 16.75px;">随机过程</a>
-
-                            </div>
-                    
-        </section>
-
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -161,6 +157,7 @@
         </div>
     </div>
 </body>
+
 
 
  	
