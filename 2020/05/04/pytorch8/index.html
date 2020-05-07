@@ -48,18 +48,12 @@
 		
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    
-<link rel="stylesheet" href="/css/item.css" />
-<style >
-    .row a{
-        border-bottom: none;
-    }
-    .special{
-        padding: 0;
-        padding: 2rem;
-    }
-</style>
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
     <div id="wrapper" class="fade-in">
@@ -125,30 +119,61 @@
                     
 			</ul>
 </nav>
-                <div id="main">
-            <!-- Main first s-->
-            <article id="me" class="panel">
-                <header style="color: #000000">
-                    <h1>北望你的安</h1>
-                    <p>苏州大学 | 计算机科学 | 自然语言处理</p>
-                </header>
-                <a href="" class="jumplink pic">
-                    <!-- <span class="arrow icon fa-chevron-right"><span></span></span> -->
-                    <img src="/images/me.jpg" alt="" />
-                </a>
-            </article>
-            <!-- Main first e-->
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch笔记（八）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要讲述的是PyTorch当中的广播机制。</p>
+<h1 id="1-广播机制"><a href="#1-广播机制" class="headerlink" title="1.广播机制"></a>1.广播机制</h1><p>广播指的是不同形状的数组之间所进行的运算方式，当两个数组的形状并不相同的时候，我们可以通过扩展数组的方法来实现相加、相减、相乘等操作，这种机制叫做广播（broadcasting）。</p>
+<h1 id="2-应用"><a href="#2-应用" class="headerlink" title="2.应用"></a>2.应用</h1><h2 id="2-1-相乘"><a href="#2-1-相乘" class="headerlink" title="2.1 相乘"></a>2.1 相乘</h2><pre><code class="python">x = torch.arange(10)
+print(torch.tensor(4)*x)</code></pre>
+<p>输出为：  </p>
+<pre><code class="python">tensor([ 0,  4,  8, 12, 16, 20, 24, 28, 32, 36])</code></pre>
+<p>这里是一个1维的tensor与一个10维的tensor相乘，这两个tensor的维度不同，但可以实现相乘操作。  </p>
+<h2 id="2-2-相加"><a href="#2-2-相加" class="headerlink" title="2.2 相加"></a>2.2 相加</h2><pre><code class="python">a = torch.tensor([[1., 2.], [3., 4.]])
+b = torch.tensor([[0.1], [0.2]])
+c = a + b
+print(c)</code></pre>
+<p>输出为：  </p>
+<pre><code class="python">tensor([[1.1000, 2.1000],
+        [3.2000, 4.2000]])</code></pre>
+<p>当两个相加的矩阵存在某一维度上的不同时，广播机制可以实现隐式的维度复制操作。这个机制非常适合用于结合多个维度不同的特征的时候。</p>
+<h2 id="2-3-融合特征"><a href="#2-3-融合特征" class="headerlink" title="2.3 融合特征"></a>2.3 融合特征</h2><pre><code class="python">class Merge(torch.nn.Module):
+    def __init__(self, in_features1, in_features2, out_features, activation=None):
+        super().__init__()
+        self.linear1 = torch.nn.Linear(in_features1, out_features)
+        self.linear2 = torch.nn.Linear(in_features2, out_features)
+        self.activation = activation
+
+    def forward(self, a, b):
+        pa = self.linear1(a)
+        pb = self.linear2(b)
+        c = pa + pb
+        if self.activation is not None:
+            c = self.activation(c)
+        return c</code></pre>
+<p>可以设想一下，当我们有tensor a与b，然后利用两个全连接层先把第三个维度统一，之后利用广播机制将其相加。  </p>
+<pre><code class="python">a = torch.rand([5, 3, 5])
+b = torch.rand([5, 1, 6])
+
+linear1 = torch.nn.Linear(5, 10)
+linear2 = torch.nn.Linear(6, 10)
+
+pa = linear1(a) # pa shape: [5, 3, 10]
+pb = linear2(b) # pb shape: [5, 1, 10]
+d = torch.nn.functional.relu(pa + pb)
+
+print(d.shape)  # torch.Size([5, 3, 10])</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
         </div>
-
-        <section class="special">
-                            <div class="row" style="border-bottom: none;">
-
-        <a href="/tags/CRF/" style="font-size: 16px;">CRF</a> <a href="/tags/HMM/" style="font-size: 16px;">HMM</a> <a href="/tags/KG/" style="font-size: 16.4px;">KG</a> <a href="/tags/NER/" style="font-size: 16px;">NER</a> <a href="/tags/NLP/" style="font-size: 16.2px;">NLP</a> <a href="/tags/PyTorch/" style="font-size: 17px;">PyTorch</a> <a href="/tags/%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%9E%8B/" style="font-size: 16px;">主题模型</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 16px;">二分查找</a> <a href="/tags/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8A%BD%E5%8F%96/" style="font-size: 16px;">关键词抽取</a> <a href="/tags/%E5%88%86%E8%AF%8D/" style="font-size: 16px;">分词</a> <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" style="font-size: 16.6px;">强化学习</a> <a href="/tags/%E6%96%87%E6%9C%AC%E6%91%98%E8%A6%81/" style="font-size: 16.8px;">文本摘要</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 16px;">爬虫</a> <a href="/tags/%E7%A7%91%E7%A0%94%E5%B0%8F%E7%99%BD%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" style="font-size: 16px;">科研小白入门指南</a> <a href="/tags/%E8%AE%B0%E5%BF%86%E7%BD%91%E7%BB%9C/" style="font-size: 16px;">记忆网络</a> <a href="/tags/%E8%AF%8D%E5%90%91%E9%87%8F/" style="font-size: 16px;">词向量</a> <a href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" style="font-size: 16px;">迁移学习</a> <a href="/tags/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/" style="font-size: 16px;">阅读理解</a> <a href="/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" style="font-size: 16.6px;">随机过程</a>
-
-                            </div>
-                    
-        </section>
-
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -161,6 +186,7 @@
         </div>
     </div>
 </body>
+
 
 
  	

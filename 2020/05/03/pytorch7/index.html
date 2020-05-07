@@ -128,6 +128,25 @@
             <div class="typo" style="padding: 3rem;">
                 <p>本文主要进阶探讨PyTorch当中学习率的问题。</p>
 <h1 id="1-如何给每一层设置不同的学习率"><a href="#1-如何给每一层设置不同的学习率" class="headerlink" title="1.如何给每一层设置不同的学习率"></a>1.如何给每一层设置不同的学习率</h1><h1 id="2-PyTorch当中的学习率调整大法"><a href="#2-PyTorch当中的学习率调整大法" class="headerlink" title="2.PyTorch当中的学习率调整大法"></a>2.PyTorch当中的学习率调整大法</h1><p>参考资料：<a href="https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate" target="_blank" rel="noopener">https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate</a></p>
+<pre><code class="python">torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda, last_epoch=-1)  
+
+torch.optim.lr_scheduler.MultiplicativeLR(optimizer, lr_lambda, last_epoch=-1)   
+
+torch.optim.lr_scheduler.StepLR(optimizer, step_size, gamma=0.1, last_epoch=-1)  
+
+torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones, gamma=0.1, last_epoch=-1)  
+
+torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma, last_epoch=-1)  
+
+torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max, eta_min=0, last_epoch=-1)  
+
+torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode=&#39;min&#39;, factor=0.1, patience=10, verbose=False, threshold=0.0001, threshold_mode=&#39;rel&#39;, cooldown=0, min_lr=0, eps=1e-08)  
+
+torch.optim.lr_scheduler.CyclicLR(optimizer, base_lr, max_lr, step_size_up=2000, step_size_down=None, mode=&#39;triangular&#39;, gamma=1.0, scale_fn=None, scale_mode=&#39;cycle&#39;, cycle_momentum=True, base_momentum=0.8, max_momentum=0.9, last_epoch=-1)  
+
+torch.optim.lr_scheduler.OneCycleLR(optimizer, max_lr, total_steps=None, epochs=None, steps_per_epoch=None, pct_start=0.3, anneal_strategy=&#39;cos&#39;, cycle_momentum=True, base_momentum=0.85, max_momentum=0.95, div_factor=25.0, final_div_factor=10000.0, last_epoch=-1)  
+
+torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult=1, eta_min=0, last_epoch=-1)  </code></pre>
 
             </div>
 

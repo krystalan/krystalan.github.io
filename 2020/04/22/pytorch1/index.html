@@ -157,7 +157,8 @@ a = torch.ones(1,2)
 a = torch.ones_like(b)#创建一个与b维度相同的tensor a，内容随机  
 a = torch.zeros(1,2)  
 a = torch.tensor([5.5,3])  
-a = torch.randn_like(b)  </code></pre>
+a = torch.randn_like(b)  
+x = torch.arange(10)#从0到9的10维tensor</code></pre>
 <p>查看维度：</p>
 <pre><code class="python">a.size()  #返回一个torch.size对象  </code></pre>
 <p>只有一个元素的tensor获取内容：  </p>
@@ -179,7 +180,11 @@ z = x.view(-1,8)   #转换为2×8的tensor  </code></pre>
 z = x + 2 #tensor x中每个元素加2  
 z = x*x #tensor x中每个元素平方  
 z = torch.sqrt(x) # tensor x中每个元素开平方  
-z = x.mean() # tensor x的平均值，z也是一个tensor  </code></pre>
+z = x.mean() # tensor x的平均值，z也是一个tensor  
+
+x = torch.randn([3, 5]) #矩阵相乘
+y = torch.randn([5, 4])
+z = x @ y</code></pre>
 <h1 id="4-保存和加载Tensor的内容"><a href="#4-保存和加载Tensor的内容" class="headerlink" title="4. 保存和加载Tensor的内容"></a>4. 保存和加载Tensor的内容</h1><p>利用torch直接保存与加载：  </p>
 <pre><code class="python">with open(&#39;test.t&#39;,&#39;wb&#39;) as f:  
     torch.save(a,f)   

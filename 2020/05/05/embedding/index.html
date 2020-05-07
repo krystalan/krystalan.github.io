@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/05/">五月 2020</a></li><li><a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/25.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >词向量与PTM总结</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本篇文章的中心包括三部分：语言模型、词向量以及预训练语言模型，会与之前写过的一篇文章有交集：<u><a href="http://wangjiaan.xyz/2020/03/24/TransferLearning/" target="_blank" rel="noopener">《移花接木花更盛》</a></u></p>
+<h1 id="1-语言模型"><a href="#1-语言模型" class="headerlink" title="1.语言模型"></a>1.语言模型</h1><p>先来介绍一下语言模型的一个基本任务，有两个角度：<br>（1）给定词x1,x2,x3,…,xt-1，预测下一个单词<br>（2）给定一句话计算其概率<br>这两个表示其实是等价的，因为：<br><img src="/images/embedding/1.jpg" alt="语言模型公式"><br>这个公式左边就是一句话的概率，其中xi代表一个词，右边连乘的每一个小项就是给定已有的词去计算下一个词出现的概率。为了方便叙述，我们以下以任务（1）来进行分析。  </p>
+<h2 id="1-1-N-gram"><a href="#1-1-N-gram" class="headerlink" title="1.1 N-gram"></a>1.1 N-gram</h2><p>n-gram没什么好解释的，可以进行语言建模，可以分词等等，也考虑到了词之间的前后关系，只不过考虑的比较少，例如2-gram就只考虑到了两个词的前后关系。利用N-gram做语言模型的方法如下：<br><img src="/images/embedding/21.jpg" alt="N-gram"><br>最后一行的count，是在大量的文本上预先进行统计，实际应用当中需要加平滑项。  </p>
+<p>缺点：当n越大时稀疏问题越严重（有些n-gram就没见过）、存储问题。  </p>
+<h2 id="1-2-RNN"><a href="#1-2-RNN" class="headerlink" title="1.2 RNN"></a>1.2 RNN</h2><h2 id="1-3-LSTM-amp-GRU"><a href="#1-3-LSTM-amp-GRU" class="headerlink" title="1.3 LSTM &amp; GRU"></a>1.3 LSTM &amp; GRU</h2><h2 id="1-4-Transformer"><a href="#1-4-Transformer" class="headerlink" title="1.4 Transformer"></a>1.4 Transformer</h2><p>相关介绍：<u><a href="https://zhuanlan.zhihu.com/p/48508221" target="_blank" rel="noopener">《详解Transformer （Attention Is All You Need）》</a></u><br><img src="/images/embedding/18.jpg" alt="transformer"><br>主要强调几个点：<br>（1）self-attention<br>通过KVQ矩阵得到key、Value、Query向量，Query向量与Key向量乘积（还要经历一个softmax）得到权重，然后不同权重的value相加得到最终表示：<br><img src="/images/embedding/19.jpg" alt="self-attention"><br>dk为隐层维度<br>（2）multi-head attention<br>多头注意力机制，多个KVQ矩阵获得不同的关注特性，综合计算更加合理，得到的表示最后再通过全连接降维：<br><img src="/images/embedding/20.jpg" alt="多头注意力机制"><br>（3）Masked Multi-head attention<br>transformer decoder中的self-atention，mask掉序列右边的信息。<br>（4）transformer decoder中的 multi-head attention<br>让解码步骤能够关注到编码器不同层的输出。  </p>
+<h1 id="2-句子的非精准表示"><a href="#2-句子的非精准表示" class="headerlink" title="2.句子的非精准表示"></a>2.句子的非精准表示</h1><p>其实关于句子表示，第三节词向量与第四节的预训练语言模型都能够用来表示句子，例如词向量，我们既然都得到了每个词对应的词向量，那么自然可以通过词向量来表示一个句子；在预训练语言模型当中，我们甚至可以直接用训练好的模型获取输入句子的句子向量。所以本节主要想介绍两个NLP当中的基础概念，这两个基础算法都能够用来表示一个句子，但不够精准。  </p>
+<h2 id="2-1-词袋模型（BOW，Bag-of-Word）"><a href="#2-1-词袋模型（BOW，Bag-of-Word）" class="headerlink" title="2.1 词袋模型（BOW，Bag of Word）"></a>2.1 词袋模型（BOW，Bag of Word）</h2><p>其实关于词袋模型有一个非常经典的应用，那就是朴素贝叶斯，如果不了解NB的可以戳这里：<u><a href="https://zhuanlan.zhihu.com/p/26262151" target="_blank" rel="noopener">《带你理解朴素贝叶斯分类算法》</a></u><br>我们在利用朴素贝叶斯做文本分类预测时，并不会去考虑文本当中词与词之间的序列关系，而是直接把一句话表示成一个集合，集合内的元素是组成这句话的所有单词，正是因为这样的假设，所以我们才称之为朴素（朴素的另一个原因是条件独立）。所以在词袋模型中“我爱你”与“你爱我”其实是一回事。  </p>
+<h2 id="2-2-TFIDF"><a href="#2-2-TFIDF" class="headerlink" title="2.2 TFIDF"></a>2.2 TFIDF</h2><p>实际上，TFIDF在我另一篇关键词的介绍文章当中也着重介绍过：<u><a href="http://wangjiaan.xyz/2020/03/22/KeyWords/" target="_blank" rel="noopener">《关键词抽取你的故事》</a></u><br>它的计算方式如下：<br>TF = 词语在文章中出现的次数/文章总词数<br>IDF = log[语料库文章总数/(包含该词的文章数+1)]<br>TF-IDF = TF*IDF<br>那为什么说它可以表示一个句子呢？<br>这是因为我们可以对一句话当中的所有单词去计算它们的TFIDF值，然后用TFIDF值去代替这个句子形成向量，例如：<br>“王佳安 是 一个 菜鸡”<br>“王佳安 来自 苏州大学”<br>假设第一句话的四个单词的TFIDF分别为x1,x2,x3,x4。那么这句话就可以用向量（x1,x2,x3,x4）来表示。同理第二句话表示为（x5,x6,x7）。<br>但这样其实是有问题的，因为第一句话的向量和第二句话的向量都不是一个维度，而且他们不同维度之间都不是一个词的TFIDF值，所以我们应该先定义好一个词表顺序，例如“王佳安”、“是”、“一个”、“菜鸡”、“来自”、“苏州大学”。那么第一句话的向量可以改成（x1,x2,x3,x4,0,0）、第二句话为（x5,0,0,0,x6,x7）。注意x1和x5在本例子中是相等的，但不代表他们必然相等，因为TF计算的是当前文档该词出现的词频，每个文档当中同一个词汇的词频并不一定相同。</p>
+<h1 id="3-词向量"><a href="#3-词向量" class="headerlink" title="3.词向量"></a>3.词向量</h1><h2 id="3-1-one-hot（独热编码）"><a href="#3-1-one-hot（独热编码）" class="headerlink" title="3.1 one-hot（独热编码）"></a>3.1 one-hot（独热编码）</h2><p>为了能够让计算机能够读懂我们的文本，最简单的方法就是：我们为每一个词汇都制定一个独一无二的向量，这样我们就能把一句话搞成若干个向量来表示。那么最简单的独一无二的向量，就是正交向量，举个例子：  </p>
+<pre><code>王佳安 是 一个 弱鸡</code></pre><p>我们用向量（1,0,0,0）代表单词“王佳安”、用向量（0,1,0,0）代表单词“是”，依次类推。<br>这样我们就能够把每个单词精准得告诉机器，实现向量化，但与此同时也存在这一个问题：当我们的语料库足够大时，词表也会非常大，那么表示一个单词的向量的维度也会上升，从而增加了存储空间（甚至维度灾难）以及后续的计算量；而且一旦我们要新加一个单词，则维度+1，就要重新训练模型，造成很大的麻烦；除此之外，采用one-hot编码的单词之间的内积均为0，他们并没有任何的语义信息。所以我们在自然语言中基本上是不会用one-hot编码的。  </p>
+<h2 id="3-2-word2vec"><a href="#3-2-word2vec" class="headerlink" title="3.2 word2vec"></a>3.2 word2vec</h2><p>这一块，我建议大家去看一下斯坦福CS224N-2019的讲义：<a href="http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes01-wordvecs1.pdf" target="_blank" rel="noopener">http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes01-wordvecs1.pdf</a>  </p>
+<p>word2vec是词向量界的先河之作，它可以将不同的词映射到同一维度的低维空间当中，并且语义想近的词在低维语义空间当中的距离也相近。它使用了大量的语料训练模型完成预测词汇任务，它的输入和输出其实都是one-hot，学习到的中间产物是词向量，所以我们要的并不是模型的输出，而是这个中间产物，这样的操作被称为是Fake Task。  </p>
+<h3 id="3-2-1-CBOW"><a href="#3-2-1-CBOW" class="headerlink" title="3.2.1 CBOW"></a>3.2.1 CBOW</h3><p><img src="/images/embedding/2.jpg" alt="CBOW"><br>CBOW的基本思想是用周围的词去预测中间的词：它将周围单词（k个）的one-hot编码先经过一个线性模型得到k个隐层向量，再对k个向量每一维求平均得到单一的隐层向量，之后这个单一的隐层向量经历另一个线性模型得到output向量，output向量维度与one-hot维度一致，每个维度代表对应单词的概率，根据被预测单词的真实情况与预测情况的交叉熵进行BP更新两个线性模型的权重，最后完成整个网络的训练。<br>训练完后，对于某一单词，用该单词的one-hot编码乘以W矩阵便可以得到其对应的词向量。  </p>
+<h3 id="3-2-2-Skip-gram"><a href="#3-2-2-Skip-gram" class="headerlink" title="3.2.2 Skip-gram"></a>3.2.2 Skip-gram</h3><p><img src="/images/embedding/3.jpg" alt="Skip-gram"><br>Skip-gram则恰恰与CBOW相反，Skip-gram是利用中心词去预测周围的词。<br>例如一句话“my name is hello kitty”，假设我们选取中心词is，窗口为2，那么我们就可以得到四条训练数据，分别是：（input：”is”，output：”my”）、（input：”is”，output：”name”）、（input：”is”，output：”hello”）和（input：”is”，output：”kitty”），训练过程与CBOW类似。  </p>
+<h3 id="3-2-3-如何高效训练"><a href="#3-2-3-如何高效训练" class="headerlink" title="3.2.3 如何高效训练"></a>3.2.3 如何高效训练</h3><p>假设我们的词表大小为10000，中间隐层向量维度为300，那么其中的两个线性模型的权重就会高达10000<em>300，这么大的参数训练起来是非常慢的，因此word2vec做了一些改进。<br>（1）高频词问题<br>有一些词的出现频率过高，例如英文当中的“the”，而有些词的出现频率低，为了缓解这个问题，在训练原始文本中遇到的每一个单词，它们都有一定概率被我们从文本中删掉，而这个被删除的概率与单词的频率有关。<br>（2）负采样<br>负采样每次让一个训练样本仅仅更新一小部分的权重，这样就会降低梯度下降过程中的计算量。<br>当我们用训练样本（input：”is”，output：”name”） 来训练我们的神经网络时，“is”和“name”都是经过one-hot编码的。假设词表大小10000，在输出层，我们期望对应“name”单词的那个神经元结点输出1，其余9999个都应该输出0。在这里，这9999个我们期望输出为0的神经元结点所对应的单词我们称为“negative” word。当使用负采样时，我们将随机选择一小部分的negative words（比如选5个negative words）来更新对应的权重。我们也会对我们的“positive” word进行权重更新。在论文中，作者指出指出对于小规模数据集，选择5-20个negative words会比较好，对于大规模数据集可以仅选择2-5个negative words。回忆一下我们的隐层-输出层拥有300 x 10000的权重矩阵。如果使用了负采样的方法我们仅仅去更新我们的positive word-“name”的和我们选择的其他5个negative words的结点对应的权重，共计6个输出神经元，相当于每次只更新300</em>6个权重，大大减少了所要更新的参数量。<br>（3）层次softmax<br>为了解决从隐藏层到输出层softmax步骤计算量庞大的弊端：构建哈夫曼树。<br>参考资料：<a href="https://zhuanlan.zhihu.com/p/56139075" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/56139075</a>  </p>
+<h3 id="3-2-4-CBOW-amp-Skip-gram"><a href="#3-2-4-CBOW-amp-Skip-gram" class="headerlink" title="3.2.4 CBOW &amp; Skip-gram"></a>3.2.4 CBOW &amp; Skip-gram</h3><p>在Skip-gram当中，每个词都要收到周围的词的影响，每个词在作为中心词的时候，都要进行K次的预测、调整。因此， 当数据量较少，或者词为生僻词出现次数较少时， 这种多次的调整会使得词向量相对的更加准确。而CBOW是将context word加起来，在遇到生僻词是，预测效果将会大大降低。skip-gram则会预测生僻字的使用环境。  </p>
+<p>Skip-gram在相同epoch的前提下，训练次数是CBOW的k倍，k取决于窗口大小。</p>
+<h2 id="3-3-fasttext"><a href="#3-3-fasttext" class="headerlink" title="3.3 fasttext"></a>3.3 fasttext</h2><p>连续词表示，训练在大型无标记语料库是有用的许多自然语言处理任务。许多流行的学习这种表示的模型忽略了单词的形态学，为每个单词分配一个不同的向量。这是一个限制，特别是对于词汇量大的形态丰富的语言。在fasttext中提出了一种基于CBOW的新方法，其中每个单词都表示为一个由n个字符组成的袋子。向量表示与每个字符n-gram相关联，单词表示为这些表示的和。</p>
+<h3 id="3-3-1-字符级别的n-gram"><a href="#3-3-1-字符级别的n-gram" class="headerlink" title="3.3.1 字符级别的n-gram"></a>3.3.1 字符级别的n-gram</h3><p>对于单词“apple”，假设n的取值为3，则它的trigram有：<br>“&lt;ap”, “app”, “ppl”, “ple”, “le&gt;”<br>其中，&lt;表示前缀，&gt;表示后缀。于是，我们可以用这些trigram来表示“apple”这个单词，进一步，我们可以用这5个trigram的向量叠加来表示“apple”的词向量。  </p>
+<p>优点：<br>（1）对于低频词生成的词向量效果会更好。因为它们的n-gram可以和其它词共享。<br>（2）对于训练词库之外的单词，仍然可以构建它们的词向量，我们可以叠加它们的字符级n-gram向量，也就是解决OOV问题。  </p>
+<h3 id="3-3-2-模型结构"><a href="#3-3-2-模型结构" class="headerlink" title="3.3.2 模型结构"></a>3.3.2 模型结构</h3><p><img src="/images/embedding/4.jpg" alt="Fasttext"><br>其中X1，X2，…，XN都是一句话当中所有所有的字符级n-gram，fasttext的核心思想就是用这些n-gram特征做叠加平均从而得到整句话的向量，之后再利用整句话的向量做softmax多分类。<br>需要注意的是在CBOW中，输入是每个单词的one-hot，而在fasttext中输入的n-gram特征已经被embedding化了。而且CBOW的输出是被预测单词的分布，而fasttext的输出则是文档类别，所以fasttext被广泛引用于文本分类任务当中，以实现快速训练预测、节省内存的目的。</p>
+<h2 id="3-4-glove"><a href="#3-4-glove" class="headerlink" title="3.4 glove"></a>3.4 glove</h2><p>那这一部分同样也推荐大家去看CS224N-2019的对应讲义：<a href="http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes02-wordvecs2.pdf" target="_blank" rel="noopener">http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes02-wordvecs2.pdf</a></p>
+<p>在讲Glove之前，我们先来看看当时的背景是什么：<br>（1）在Glove诞生之前，word2vec已经出世，word2vec在训练时只用到了局部的信息，不管是CBOW还是Skip-gram，都是用到了一个窗口的思想，利用中心单词窗口内的词汇去预测中心单词（CBOW）或利用中心单词去预测其窗口内的其余词汇（Skip-gram），这些都属于局部信息。<br>（2）当时还存在着一款主题模型：LSA，潜在语义分析。它利用了SVD在全局信息上做分解并进行降维抽取关键信息。  </p>
+<p>所以Glove的设计目标是结合这两者，在训练词向量的过程当中结合局部信息与全局信息。<br>相关解读：<a href="https://zhuanlan.zhihu.com/p/42073620" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/42073620</a>  </p>
+<h1 id="4-预训练语言模型（BERT之前）"><a href="#4-预训练语言模型（BERT之前）" class="headerlink" title="4.预训练语言模型（BERT之前）"></a>4.预训练语言模型（BERT之前）</h1><h2 id="4-1-ELMo"><a href="#4-1-ELMo" class="headerlink" title="4.1 ELMo"></a>4.1 ELMo</h2><p>在第三节我们介绍的word2vec、Glove以及fasttext当中，一个词只能得到一个词向量，这显示是非常不合理的，因为很多情况下有一词多义现象，例如英文单词“bank”，它既可以表示银行，也可以表示河岸。<br>ELMo便解决了一词多义问题，它的结构如下：<br><img src="/images/embedding/5.jpg" alt="ELMo"><br>使用ELMo分为两个阶段：<br>（1）预训练阶段<br>实际上就是在训练一个双向语言模型。假设给定一个序列，该序列含有N个token（t1,t2,…,tN），那么：前向语言模型通过在给定上文(Context-before)的情况下对token的概率建模来计算序列出现的概率，后向语言模型与前向类似，但是它是“从后往前建模的”。由于ELMo结合了前后向语言模型，故其目标是同时最大化前后向语言模型的对数似然：<br><img src="/images/embedding/6.jpg" alt="ELMo目标函数">   </p>
+<p>需要注意的是：ELMO使用两个单向LSTM代替一个双向LSTM，这是因为如果使用双向LSTM就会作弊剽窃答案。<br>（2）使用阶段<br>在做下游任务时，从预训练网络中提取对应单词的网络各层的Word Embedding作为新特征补充到下游任务中。如果训练好这个网络后，输入一个新句子，句子中每个单词都能得到对应的三个Embedding：最底层是单词的word embedding、第一层双向LSTM中对应单词位置的Embedding和第二层LSTM中对应单词位置的Embedding。之后给予这三个Embedding中的每一个Embedding一个权重a，这个权重可以学习得来，根据各自权重累加求和，将三个Embedding整合成一个。然后将整合后的这个Embedding作为X句在自己任务的那个网络结构中对应单词的输入，以此作为补充的新特征给下游任务使用。<br><img src="/images/embedding/13.jpg" alt="ELMo在下游任务当中的使用">   </p>
+<h2 id="4-2-GPT"><a href="#4-2-GPT" class="headerlink" title="4.2 GPT"></a>4.2 GPT</h2><p>相关介绍：<a href="https://zhuanlan.zhihu.com/p/79714797" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/79714797</a><br>图片均来自于：Jay Alammar的博客（<a href="http://jalammar.github.io/）" target="_blank" rel="noopener">http://jalammar.github.io/）</a><br>GPT-2是使用transformer decoder构建的，而BERT则是通过transformer encoder构建的。GPT-2只使用到了单向信息，属于语言建模，之前有很多推文都描述了GPT-2在生成文本上的强大。GPT-2就像传统的语言模型一样，一次只输出一个单词。我们来看一下transformer decoder：<br><img src="/images/embedding/7.jpg" alt="Transformer-Decoder"><br>解码器的第一层self-attention与编码器的self-attention有一个明显的区别，它将后面的单词掩盖掉了，所以称为masked self-attention。在自注意力计算的时候屏蔽了来自当前计算位置右边所有单词的信息。如下图：<br><img src="/images/embedding/8.jpg" alt="Masked Self Attention"><br>正因为masked self attention的存在，GPT2所获取的信息全是单向信息，而在上文介绍的ELMo和下文介绍的BERT都利用了双向信息。<br>GPT2的传播过程如下：<br><img src="/images/embedding/9.jpg" alt="GPT2"><br><img src="/images/embedding/10.jpg" alt="GPT2"><br><img src="/images/embedding/11.jpg" alt="GPT2"><br>可以看到原本的transformer decoder当中的“encoder-decoder attention”层没有了，因为我们只使用到了decoder，并没有用encoder，而“encoder-decoder attention”层的目的是在解码的过程当中也能让decoder去看encoder每一层的信息，如下图所示：<br><img src="/images/embedding/12.jpg" alt="Transformer">    </p>
+<p>GPT-2如何应用到下游任务：<br><img src="/images/embedding/14.jpg" alt="GPT-2在下游任务当中使用">    </p>
+<h1 id="5-预训练语言模型（BERT时代）"><a href="#5-预训练语言模型（BERT时代）" class="headerlink" title="5.预训练语言模型（BERT时代）"></a>5.预训练语言模型（BERT时代）</h1><h2 id="5-1-BERT"><a href="#5-1-BERT" class="headerlink" title="5.1 BERT"></a>5.1 BERT</h2><p>BERT预训练语言模型将自然语言处理推到了一个崭新的高度，打破了以往NLP的玩法，可以说现在你做NLP，你的baseline没有BERT就跟开玩笑一样。<br>首先我们应该知道预训练语言模型的概念，什么样的模型可以算预训练语言模型，预训练语言模型是指我们先利用海量的文本（或图像，例如GoogleNet、VGG也算，但我这里只想介绍NLP当中的预训练语言模型）语料库去设定某些任务来训练一个模型，使得这个模型能够get到不同词汇、句子之间的表示。<br>那我们回顾一下之前讲述的几个模型：<br>（1）Word2vec、Glove：<br>这两个模型，对每一个词汇在大量语料中学习到了其固定的表示，然后我们可以在下游任务中使用这个词汇的表示以达到更好的效果，但下游任务通常不会使用到其训练的模型，也就是说我们只用到了产物没有用到它训练的模型本身。<br>（2）ELMo、GPT、BERT：<br>这些模型，在下游任务当中还是会用到其模型本身，例如ELMo，我们给定一个新的句子，不还是得使用其结构去获得不同层的embedding再动态结合形成当前词汇在该段文本下的表示么；GPT，你做文本生成不还是得用训练好的那一坨Transformer decoder么；BERT等下会讲。  </p>
+<h3 id="5-1-1-BERT的预训练任务"><a href="#5-1-1-BERT的预训练任务" class="headerlink" title="5.1.1 BERT的预训练任务"></a>5.1.1 BERT的预训练任务</h3><p>我们需要注意到，这些模型都有其不同的训练任务：例如Word2vec用中心词预测周围词或用周围词预测中心词；Glove搞了一个函数，输入是词向量，设计了一个函数，希望这个函数输出是它统计得到的共现关系，以此来学习词向量的合理表达；ELMo使用两个单向LSTM代替一个双向LSTM（避免看到答案）来进行双向语言建模；GPT则是单向语言建模（使用masked self attention屏蔽后面的句子自然看不到答案）。那BERT呢？<br>（1）Masked LM<br>随机mask 15%的token，如果一直用标记[MASK]代替（在实际预测时是碰不到这个标记的）会影响模型，所以随机mask的时候10%的单词会被替代成其他单词，10%的单词不替换，剩下80%才被替换为[MASK]。这样被mask掉，正向反向都看不到答案。<br>（2）NSP<br>因为涉及到QA和NLI之类的任务，增加了第二个预训练任务，目的是让模型理解两个句子之间的联系。训练的输入是句子A和B，B有一半的几率是A的下一句，输入这两个句子，模型预测B是不是A的下一句。预训练的时候可以达到97-98%的准确度。  </p>
+<h3 id="5-1-2-BERT对输入的处理"><a href="#5-1-2-BERT对输入的处理" class="headerlink" title="5.1.2 BERT对输入的处理"></a>5.1.2 BERT对输入的处理</h3><p>BERT对输入的处理：<br><img src="/images/embedding/16.jpg" alt="embedding"><br>每个token有三个embedding，token embedding代表token本身，segment embedding是用来识别不同话的，因为整个输入分为AB句，position embeding用于告诉模型位置信息（self attention本身没有额外的位置概念，所以要引入position embedding）。<br>值得一提的是transformer当中position embedding有两种主流的方法：<br>（1）Learned Positional Embedding<br>直接对不同的位置随机初始化一个postion embedding，加到word embedding上输入模型，作为参数进行训练。BERT当中所采用的便是这种。<br>（2）Sinusoidal Position Encoding<br>使用正余弦函数表示绝对位置，通过两者乘积得到相对位置：<br><img src="/images/embedding/17.jpg" alt="position embedding"><br>三角公式不受序列长度的限制，也就是可以对比所遇到序列的更长的序列进行表示，transformer（attention is all you need那篇中）采用的是这种。<br>有关position embedding的相关解读：<u><a href="https://zhuanlan.zhihu.com/p/121126531" target="_blank" rel="noopener">《如何优雅地编码文本中的位置信息？三种positional encoding方法简述》</a></u>  </p>
+<h3 id="5-1-3-BERT应用于下游任务"><a href="#5-1-3-BERT应用于下游任务" class="headerlink" title="5.1.3 BERT应用于下游任务"></a>5.1.3 BERT应用于下游任务</h3><p>在下游任务当中使用BERT：<br><img src="/images/embedding/15.jpg" alt="BERT在下游任务当中使用">    </p>
+<h3 id="5-1-4-一些坑"><a href="#5-1-4-一些坑" class="headerlink" title="5.1.4 一些坑"></a>5.1.4 一些坑</h3><p>（1）BERT有长度的限制512，如何解决：<br>①head-only：保存前510个token（留两个位置给[CLS]和[SEP]）<br>②tail-only：保存最后510个token<br>③head+tail：选择前128个token和最后382个token<br>④让正文的句子和标题做字符相似度，只选取字符相似度最大的TOP-K句子来代表这个篇章   </p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
