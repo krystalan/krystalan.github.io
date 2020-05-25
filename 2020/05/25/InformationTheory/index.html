@@ -140,7 +140,14 @@
 <p>注意：<br>（1）交叉熵&amp;KL散度<br>在机器学习任务当中，如果目标分布是不变的，则可用交叉熵为分类损失函数。而如果目标分布是有变化的，那么就要不能是用交叉熵，例如蒸馏模型的损失函数。</p>
 <p>（2）交叉熵&amp;似然<br>区别：交叉熵函数描述的是模型预测分布和真实分布的差距大小，越大代表越不接近；似然函数的本质就是衡量在某个参数下，整体的估计和真实的情况一样的概率，越大代表越接近。<br>联系：最小化交叉熵函数的本质就是最大化对数似然函数。</p>
 <h1 id="4-互信息"><a href="#4-互信息" class="headerlink" title="4. 互信息"></a>4. 互信息</h1><p><img src="/images/InformationTheory/8.jpg" alt="交叉熵"><br><img src="/images/InformationTheory/9.jpg" alt="交叉熵"><br>其中H（X）表示为原随机变量X的信息量，H（X|Y）为知道事实Y之后X的信息量。互信息I（X；Y）表示在知道事实Y之后，原来的信息量减少了多少。如果随机变量X与Y独立，那么互信息应为0。  </p>
-<h1 id="5-联合熵-amp-条件熵"><a href="#5-联合熵-amp-条件熵" class="headerlink" title="5. 联合熵&amp;条件熵"></a>5. 联合熵&amp;条件熵</h1><p>联合熵就是度量一个联合分布的随机系统的不确定度：<br><img src="/images/InformationTheory/11.jpg" alt="联合熵"><br>可作如下推导：<br><img src="/images/InformationTheory/12.jpg" alt="联合熵"><br>其中H（Y|X）是条件熵，则有H（X，Y）=H（X）+H（Y|X），该式所表达的含义是：对一个含有两个随机变量的随机系统，我们可以先观察一个随机变量获取信息量，观察完后，我们可以在拥有这个信息量的基础上观察第二个随机变量的信息量。</p>
+<p>互信息&amp;信息增益<br>参考了两篇知乎的回答（<a href="https://www.zhihu.com/question/39436574）：" target="_blank" rel="noopener">https://www.zhihu.com/question/39436574）：</a>  </p>
+<blockquote>
+<p>说“互信息”的时候，两个随机变量的地位是相同的；说“信息增益”的时候，是把一个变量看成减小另一个变量不确定度的手段。但其实二者的数值是相等的。<br>“互信息”或者“信息增益”经常作为决策树中选择特征的标准，两种称呼都很常见。  </p>
+</blockquote>
+<blockquote>
+<p>一般情况下熵H(Y)与条件熵H(Y | X)之差称为互信息。<br>在决策树学习中的信息增益等价于训练数据集中类与特征的互信息。<br>两者只是具体的使用环境不同，称呼不同罢了。</p>
+</blockquote>
+<h1 id="5-联合熵-amp-条件熵"><a href="#5-联合熵-amp-条件熵" class="headerlink" title="5. 联合熵&amp;条件熵"></a>5. 联合熵&amp;条件熵</h1><p>联合熵就是度量一个联合分布的随机系统的不确定度：<br><img src="/images/InformationTheory/11.jpg" alt="联合熵"><br>可作如下推导：<br><img src="/images/InformationTheory/12.jpg" alt="联合熵"><br>其中H（Y|X）是条件熵，则有H（X，Y）=H（X）+H（Y|X），该式所表达的含义是：对一个含有两个随机变量的随机系统，我们可以先观察一个随机变量获取信息量，观察完后，我们可以在拥有这个信息量的基础上观察第二个随机变量的信息量。  </p>
 
             </div>
 
