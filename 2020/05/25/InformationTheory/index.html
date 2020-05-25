@@ -140,7 +140,7 @@
 <p>注意：<br>（1）交叉熵&amp;KL散度<br>在机器学习任务当中，如果目标分布是不变的，则可用交叉熵为分类损失函数。而如果目标分布是有变化的，那么就要不能是用交叉熵，例如蒸馏模型的损失函数。</p>
 <p>（2）交叉熵&amp;似然<br>区别：交叉熵函数描述的是模型预测分布和真实分布的差距大小，越大代表越不接近；似然函数的本质就是衡量在某个参数下，整体的估计和真实的情况一样的概率，越大代表越接近。<br>联系：最小化交叉熵函数的本质就是最大化对数似然函数。</p>
 <h1 id="4-互信息"><a href="#4-互信息" class="headerlink" title="4. 互信息"></a>4. 互信息</h1><p><img src="/images/InformationTheory/8.jpg" alt="交叉熵"><br><img src="/images/InformationTheory/9.jpg" alt="交叉熵"><br>其中H（X）表示为原随机变量X的信息量，H（X|Y）为知道事实Y之后X的信息量。互信息I（X；Y）表示在知道事实Y之后，原来的信息量减少了多少。如果随机变量X与Y独立，那么互信息应为0。  </p>
-<p>互信息&amp;信息增益<br>参考了两篇知乎的回答（<a href="https://www.zhihu.com/question/39436574）：" target="_blank" rel="noopener">https://www.zhihu.com/question/39436574）：</a>  </p>
+<p>互信息&amp;信息增益<br>参考了两篇知乎的回答（<a href="https://www.zhihu.com/question/39436574" target="_blank" rel="noopener">https://www.zhihu.com/question/39436574</a> ）：  </p>
 <blockquote>
 <p>说“互信息”的时候，两个随机变量的地位是相同的；说“信息增益”的时候，是把一个变量看成减小另一个变量不确定度的手段。但其实二者的数值是相等的。<br>“互信息”或者“信息增益”经常作为决策树中选择特征的标准，两种称呼都很常见。  </p>
 </blockquote>
