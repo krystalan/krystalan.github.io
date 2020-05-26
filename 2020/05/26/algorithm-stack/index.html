@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/05/">五月 2020</a></li><li><a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/27.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >单调栈</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本文主要总结一下LeetCode当中关于单调栈的题目。<br>首先明确一下单调栈的进本框架：  </p>
+<pre><code class="python">List = [1,9,6,2,3,4]
+stack = []
+for i in List:
+    while len(stack)&gt;0 and stack[-1]&gt;i:
+        stack.pop()
+    stack.append(i)</code></pre>
+<p>这样的栈称为单调栈，也就是说在栈中的元素是单调的（此例中栈中元素递增）<br>接着来看一下单调栈有哪些好玩的例子吧：  </p>
+<h1 id="1-LeetCode-739-每日温度"><a href="#1-LeetCode-739-每日温度" class="headerlink" title="1.LeetCode 739 每日温度"></a>1.LeetCode 739 每日温度</h1><p>根据每日气温列表，请重新生成一个列表，对应位置的输出是需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用0来代替。<br>例如，给定一个列表<code>temperatures = [73, 74, 75, 71, 69, 72, 76, 73]</code>，你的输出应该是<code>[1, 1, 4, 2, 1, 1, 0, 0]</code>。  </p>
+<p>简单分析一下，这道题首先有一个明显的解决办法就是二次循环直接暴力遍历出来，时间复杂度O（n^2），但我们可以利用单调栈将复杂度缩减到O（n），我们使用递减栈，依次入栈温度列表中各个元素的下标，如果当前入栈的元素下标对应的元素值大于了栈中最后一个元素下标所对应的元素值，则依次将最后一个元素出栈，并可以通过下标计算出距离，具体代码如下：  </p>
+<pre><code class="python">class Solution:
+    def dailyTemperatures(self, T: List[int]) -&gt; List[int]:
+        lens = len(T)
+        res = [0 for i in range(lens)]
+        stack = []
+
+        for idx,data in enumerate(T):
+            while len(stack)&gt;0 and T[stack[-1]]&lt;data:
+                res[stack[-1]] = idx - stack[-1] #利用下标计算出距离并将得到的结果保存在res数组中。
+                stack.pop()
+            stack.append(idx)
+        return res</code></pre>
+<h1 id="2-LeetCode-84-柱状图中最大的矩阵"><a href="#2-LeetCode-84-柱状图中最大的矩阵" class="headerlink" title="2.LeetCode 84 柱状图中最大的矩阵"></a>2.LeetCode 84 柱状图中最大的矩阵</h1><p>给定n个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为1。求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
+<p>这道题也有一个明显的做法，就是直接遍历每两个下标能够组成的最大矩阵面积，但这样时间复杂度是O（n^3），双循环O（n^2），检查两个下标间最低高度O（n），即使优化两个下标间最低高度，也只能将这个暴力算法优化到O（n^2）。但我们可以使用单调栈搞到O（n）。这也是个递增栈。</p>
+<pre><code class="python">class Solution:
+    def largestRectangleArea(self, heights: List[int]) -&gt; int:
+        maxs = 0
+        stack = [-1]
+
+        for idx,data in enumerate(heights):
+            while len(stack)&gt;1 and heights[stack[-1]]&gt;=data:
+                last_idx = stack.pop()
+                a = heights[last_idx] # 高
+                b = idx - stack[-1] - 1 # 宽，pop出最后一个元素后，剩下的最后一个元素的右边一格到当前格的距离
+                maxs = max(maxs,a*b)
+            stack.append(idx)
+
+        for i in range(len(stack)-1):
+            last_idx = stack.pop()
+            a = heights[last_idx] # 高
+            b = len(heights) - stack[-1] - 1 #宽
+            maxs = max(maxs,a*b)
+
+        return maxs</code></pre>
+<h1 id="3-LeetCode-85-最大矩形"><a href="#3-LeetCode-85-最大矩形" class="headerlink" title="3.LeetCode 85 最大矩形"></a>3.LeetCode 85 最大矩形</h1><p>给定一个仅包含0和1的二维二进制矩阵，找出只包含1的最大矩形，并返回其面积。  </p>
+<pre><code>输入:
+[
+  [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],
+  [&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],
+  [&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;]
+]
+输出: 6</code></pre><p>可以转换为上题求解，对于每层去求一个柱状图即可：  </p>
+<pre><code class="python">class Solution:
+    def largestRectangleArea(self,heights):#柱状图求解代码
+        maxs = 0
+        stack = [-1]
+        for idx,data in enumerate(heights):
+            while len(stack)&gt;1 and heights[stack[-1]]&gt;=data:
+                last_idx = stack.pop()
+                a = heights[last_idx] # 高
+                b = idx - stack[-1] - 1 # 宽，pop出最后一个元素后，剩下的最后一个元素的右边一格到当前格的距离
+                maxs = max(maxs,a*b)
+            stack.append(idx)
+        for i in range(len(stack)-1):
+            last_idx = stack.pop()
+            a = heights[last_idx] # 高
+            b = len(heights) - stack[-1] - 1 #宽
+            maxs = max(maxs,a*b)
+        return maxs
+
+    def getheights(self,a):#计算每一层的heights
+        high = len(a)
+        lens = len(a[0])
+        res = [0 for i in range(lens)]
+
+        for i in range(lens):
+            if a[high-1][i] == &quot;0&quot;:
+                continue
+            else:
+                p = 0
+                k = high-1
+                while a[k][i] == &quot;1&quot;:
+                    p+=1
+                    k-=1
+                    if k&lt;0:
+                        break
+                res[i] = p
+        return res
+
+    def maximalRectangle(self, matrix: List[List[str]]) -&gt; int:#本题主代码
+        layernum = len(matrix)
+        maxs = 0
+        for i in range(layernum):
+            maxs = max(self.largestRectangleArea(self.getheights(matrix[0:i+1][:])),maxs)
+        return maxs</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
