@@ -134,7 +134,8 @@ for i in List:
         stack.pop()
     stack.append(i)</code></pre>
 <p>这样的栈称为单调栈，也就是说在栈中的元素是单调的（此例中栈中元素递增）<br>接着来看一下单调栈有哪些好玩的例子吧：  </p>
-<h1 id="1-LeetCode-739-每日温度"><a href="#1-LeetCode-739-每日温度" class="headerlink" title="1.LeetCode 739 每日温度"></a>1.LeetCode 739 每日温度</h1><p>根据每日气温列表，请重新生成一个列表，对应位置的输出是需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用0来代替。<br>例如，给定一个列表<code>temperatures = [73, 74, 75, 71, 69, 72, 76, 73]</code>，你的输出应该是<code>[1, 1, 4, 2, 1, 1, 0, 0]</code>。  </p>
+<h1 id="1-下一个更大-小元素系列"><a href="#1-下一个更大-小元素系列" class="headerlink" title="1.下一个更大/小元素系列"></a>1.下一个更大/小元素系列</h1><p>单调栈的一个用途就是找到左起第一个比当前数字小/大的元素，并且是在线性时间复杂度内完成，下面举几个应用。  </p>
+<h2 id="1-1-LeetCode-739-每日温度"><a href="#1-1-LeetCode-739-每日温度" class="headerlink" title="1.1 LeetCode 739 每日温度"></a>1.1 LeetCode 739 每日温度</h2><p>根据每日气温列表，请重新生成一个列表，对应位置的输出是需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用0来代替。<br>例如，给定一个列表<code>temperatures = [73, 74, 75, 71, 69, 72, 76, 73]</code>，你的输出应该是<code>[1, 1, 4, 2, 1, 1, 0, 0]</code>。  </p>
 <p>简单分析一下，这道题首先有一个明显的解决办法就是二次循环直接暴力遍历出来，时间复杂度O（n^2），但我们可以利用单调栈将复杂度缩减到O（n），我们使用递减栈，依次入栈温度列表中各个元素的下标，如果当前入栈的元素下标对应的元素值大于了栈中最后一个元素下标所对应的元素值，则依次将最后一个元素出栈，并可以通过下标计算出距离，具体代码如下：  </p>
 <pre><code class="python">class Solution:
     def dailyTemperatures(self, T: List[int]) -&gt; List[int]:
@@ -148,7 +149,73 @@ for i in List:
                 stack.pop()
             stack.append(idx)
         return res</code></pre>
-<h1 id="2-LeetCode-84-柱状图中最大的矩阵"><a href="#2-LeetCode-84-柱状图中最大的矩阵" class="headerlink" title="2.LeetCode 84 柱状图中最大的矩阵"></a>2.LeetCode 84 柱状图中最大的矩阵</h1><p>给定n个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为1。求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
+<p>本题是一个典型的利用单调栈查找下一个更大/小的元素的题。</p>
+<h2 id="1-2-LeetCode-496-下一个更大元素Ⅰ"><a href="#1-2-LeetCode-496-下一个更大元素Ⅰ" class="headerlink" title="1.2 LeetCode 496 下一个更大元素Ⅰ"></a>1.2 LeetCode 496 下一个更大元素Ⅰ</h2><p>给定两个没有重复元素的数组nums1和nums2，其中nums1是nums2的子集。找到nums1中每个元素在nums2中的下一个比其大的值。<br>nums1中数字x的下一个更大元素是指x在nums2中对应位置的右边的第一个比x大的元素。如果不存在，对应位置输出-1 。<br>示例1：  </p>
+<pre><code>输入: nums1 = [4,1,2], nums2 = [1,3,4,2].
+输出: [-1,3,-1]
+解释:
+    对于num1中的数字4，你无法在第二个数组中找到下一个更大的数字，因此输出 -1。
+    对于num1中的数字1，第二个数组中数字1右边的下一个较大数字是 3。
+    对于num1中的数字2，第二个数组中没有下一个更大的数字，因此输出 -1。</code></pre><p>示例2：  </p>
+<pre><code>输入: nums1 = [2,4], nums2 = [1,2,3,4].
+输出: [3,-1]
+解释:
+    对于 num1 中的数字 2 ，第二个数组中的下一个较大数字是 3 。
+    对于 num1 中的数字 4 ，第二个数组中没有下一个更大的数字，因此输出 -1 。</code></pre><p>我们直接在nums2的基础上使用单调栈查找下一个大的元素值并保存，最后遍历一遍nums1中元素在nums2的位置即可：  </p>
+<pre><code class="python">class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
+        lens = len(nums2)
+        res = [-1 for i in range(lens)]
+
+        stack = []
+        for idx,data in enumerate(nums2):
+            while len(stack)&gt;0 and nums2[stack[-1]]&lt;data:
+                res[stack[-1]] = data #保存下一个大数
+                stack.pop()
+            stack.append(idx)
+
+        ant = []
+        for i in nums1:
+            idx = nums2.index(i)
+            ant.append(res[idx])
+        return ant</code></pre>
+<h2 id="1-3-LeetCode-503-下一个更大元素ⅠⅠ"><a href="#1-3-LeetCode-503-下一个更大元素ⅠⅠ" class="headerlink" title="1.3 LeetCode 503 下一个更大元素ⅠⅠ"></a>1.3 LeetCode 503 下一个更大元素ⅠⅠ</h2><p>给定一个循环数组（最后一个元素的下一个元素是数组的第一个元素），输出每个元素的下一个更大元素。数字x的下一个更大的元素是按数组遍历顺序，这个数字之后的第一个比它更大的数，这意味着你应该循环地搜索它的下一个更大的数。如果不存在，则输出-1。<br>示例1:  </p>
+<pre><code>输入: [1,2,1]
+输出: [2,-1,2]
+解释: 第一个 1 的下一个更大的数是 2；
+数字 2 找不到下一个更大的数； 
+第二个 1 的下一个最大的数需要循环搜索，结果也是 2。</code></pre><p>因为是循环数组，实际上我们不难发现，其实只需要遍历两遍数组就可以完成下一个更大数的计算，因此我们可以一开始将数组扩充到原来的两倍，再使用单调栈：  </p>
+<pre><code class="python">class Solution:
+    def nextGreaterElements(self, nums: List[int]) -&gt; List[int]:
+        lens = len(nums)
+        res = [-1 for i in range(lens*2)]  #保留下一个最大数的结果
+        nums.extend(nums) #扩充到原来的两倍
+
+        stack = []
+        for idx,data in enumerate(nums):
+            while len(stack)&gt;0 and nums[stack[-1]]&lt;data:
+                res[stack[-1]] = data # 保留下一个最大数的数值
+                stack.pop()
+            stack.append(idx)
+
+        return res[0:lens] #返回原先长度的答案</code></pre>
+<h2 id="1-4-LeetCode-1019-链表中的下一个更大节点"><a href="#1-4-LeetCode-1019-链表中的下一个更大节点" class="headerlink" title="1.4 LeetCode 1019 链表中的下一个更大节点"></a>1.4 LeetCode 1019 链表中的下一个更大节点</h2><p>与上述解法类似，需要将链表先转换为列表：  </p>
+<pre><code class="python">class Solution:
+    def nextLargerNodes(self, head: ListNode) -&gt; List[int]:
+        nums = [] 
+        while head: #将链表转换为列表
+            nums.append(head.val)
+            head = head.next
+        lens = len(nums)
+        res = [0 for _ in range(lens)]
+        stack = []
+        for idx,data in enumerate(nums):
+            while len(stack)&gt;0 and nums[stack[-1]]&lt;data:
+                res[stack[-1]] = data #保存下一个最大的数值
+                stack.pop()
+            stack.append(idx)
+        return res</code></pre>
+<h1 id="2-更加复杂的例子"><a href="#2-更加复杂的例子" class="headerlink" title="2.更加复杂的例子"></a>2.更加复杂的例子</h1><h2 id="2-1-LeetCode-84-柱状图中最大的矩阵"><a href="#2-1-LeetCode-84-柱状图中最大的矩阵" class="headerlink" title="2.1 LeetCode 84 柱状图中最大的矩阵"></a>2.1 LeetCode 84 柱状图中最大的矩阵</h2><p>给定n个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为1。求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
 <p>这道题也有一个明显的做法，就是直接遍历每两个下标能够组成的最大矩阵面积，但这样时间复杂度是O（n^3），双循环O（n^2），检查两个下标间最低高度O（n），即使优化两个下标间最低高度，也只能将这个暴力算法优化到O（n^2）。但我们可以使用单调栈搞到O（n）。这也是个递增栈。</p>
 <pre><code class="python">class Solution:
     def largestRectangleArea(self, heights: List[int]) -&gt; int:
@@ -170,7 +237,7 @@ for i in List:
             maxs = max(maxs,a*b)
 
         return maxs</code></pre>
-<h1 id="3-LeetCode-85-最大矩形"><a href="#3-LeetCode-85-最大矩形" class="headerlink" title="3.LeetCode 85 最大矩形"></a>3.LeetCode 85 最大矩形</h1><p>给定一个仅包含0和1的二维二进制矩阵，找出只包含1的最大矩形，并返回其面积。  </p>
+<h2 id="2-2-LeetCode-85-最大矩形"><a href="#2-2-LeetCode-85-最大矩形" class="headerlink" title="2.2 LeetCode 85 最大矩形"></a>2.2 LeetCode 85 最大矩形</h2><p>给定一个仅包含0和1的二维二进制矩阵，找出只包含1的最大矩形，并返回其面积。  </p>
 <pre><code>输入:
 [
   [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],
