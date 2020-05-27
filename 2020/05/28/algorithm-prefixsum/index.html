@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/05/">五月 2020</a></li><li><a class="archive-link" href="/archives/2020/04/">四月 2020</a></li><li><a class="archive-link" href="/archives/2020/03/">三月 2020</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/28.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >前缀和</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>前缀和的典型应用场景是：列表中满足某一条件的连续子列表。<br>我们直接通过一个题来引入前缀和的概念。    </p>
+<h1 id="1-LeetCode-303-区域和检索-数组不可变"><a href="#1-LeetCode-303-区域和检索-数组不可变" class="headerlink" title="1. LeetCode 303 区域和检索-数组不可变"></a>1. LeetCode 303 区域和检索-数组不可变</h1><p>给定一个整数数组nums，求出数组从索引i 到j (i ≤ j)范围内元素的总和，包含i, j两点。<br>示例：  </p>
+<pre><code>给定 nums = [-2, 0, 3, -5, 2, -1]，求和函数为 sumRange()
+
+sumRange(0, 2) -&gt; 1
+sumRange(2, 5) -&gt; -1
+sumRange(0, 5) -&gt; -3</code></pre><p>首先，我们有一个基本的思路，那就是给定i和j我们直接遍历求和得出最终解，但这样是低效的，因为每次当我们对同一个数组进行sumRange()时，都需要进行一次遍历，那我们有什么方法能够高效的解决这个问题呢？答案就是前缀和。<br>我们建立一个数组去存储nums的每个前缀和，得到其前缀和数组[0,-2,-2,1,-4,-2,-3]，其中第一个元素0是额外添加的，第一个-2代表nums的第一个元素-2，第二个-2代表nums的前两个元素的加和，之后是1代表nums前三个元素之和，依次类推。有了前缀和数组之后，我们在求sumRange()的过程当中，就可以直接利用前缀和当中的元素作差求解即可，具体代码如下：  </p>
+<pre><code class="python">class NumArray:
+
+    def __init__(self, nums: List[int]):
+        self.a = [0] #前缀和数组
+        acc = 0 #累加存储元素和
+        for i in nums:
+            acc += i
+            self.a.append(acc)
+
+    def sumRange(self, i: int, j: int) -&gt; int:
+        return self.a[j+1]-self.a[i]</code></pre>
+<p>有了以上前缀和的基本概念，我们就可以在线性时间内做一些高端操作了。  </p>
+<h1 id="2-LeetCode-560-和为K的子数组"><a href="#2-LeetCode-560-和为K的子数组" class="headerlink" title="2.LeetCode 560 和为K的子数组"></a>2.LeetCode 560 和为K的子数组</h1><p>给定一个整数数组和一个整数k，你需要找到该数组中和为k的连续的子数组的个数。<br>示例：  </p>
+<pre><code>输入:nums = [1,1,1], k = 2
+输出: 2 , [1,1] 与 [1,1] 为两种不同的情况。</code></pre><p>如果没有前缀和的概念，我们可以双循环枚举出所有的子数组区间，然后将区间内的元素相加得到的结果判断是否为K，这样的时间复杂度是O（n^3），其中双循环O（n^2），求和O（n）。那有了前缀和之后，我们可以预先计算前缀和数组，然后在求和的过程当中用O（1）复杂度得出结果，这样就优化到了O（n^2）。但其实这道题最优是有O（n）解的，这就要用到单次统计技巧了，我们可以在计算每一步的前缀和中存储当前前缀和出现的次数，假设当前前缀和为acc，我们先判断acc是否等于K，如果等于则说明这个子数组满足条件，接着我们计算acc-K作为前缀和出现的次数，因为如果之前有某一前缀和是acc-K，那么该元素到当前元素的区间满足要求（acc-(acc-K)=K），然后我们将结果加上acc-K作为前缀和出现的次数即可，可以使用一个字典去存储每一个前缀和出现的次数，具体代码如下：  </p>
+<pre><code class="python">class Solution:
+    def subarraySum(self, nums: List[int], k: int) -&gt; int:
+        d = {}
+        res = 0
+        acc = 0
+
+        for i in nums:
+            acc += i
+            if acc == k:
+                res += 1
+            if acc - k in d:
+                res += d[acc-k]
+            if acc in d:
+                d[acc] += 1
+            else:
+                d[acc] = 1
+
+        return res</code></pre>
+<h1 id="3-LeetCode-974-和可被K整除的子数组"><a href="#3-LeetCode-974-和可被K整除的子数组" class="headerlink" title="3.LeetCode 974 和可被K整除的子数组"></a>3.LeetCode 974 和可被K整除的子数组</h1><p>给定一个整数数组A，返回其中元素之和可被K整除的（连续、非空）子数组的数目。<br>示例：  </p>
+<pre><code>输入：A = [4,5,0,-2,-3,1], K = 5
+输出：7
+解释：
+有 7 个子数组满足其元素之和可被 K = 5 整除：
+[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]</code></pre><p>这道题和刚才讲的其实有着异曲同工之妙，只需稍加修改即可AC，我们在这道题中就不用存储前缀和了，而是前缀和除以K的余数，然后在单次统计的过程中，比较相同前缀和余数出现的次数即可，因为如果两个元素的前缀和的余数相同，那么这两个元素区间之和被K整除。具体代码如下：  </p>
+<pre><code class="python">class Solution:
+    def subarraysDivByK(self, A: List[int], K: int) -&gt; int:
+        d = {}
+        res = 0
+        acc = 0
+
+        for i in A:
+            acc = (acc+i)%K
+            if acc == 0:
+                res += 1
+            if acc in d:
+                res += d[acc]
+            if acc in d:
+                d[acc] += 1
+            else:
+                d[acc] = 1
+
+        return res</code></pre>
+<h1 id="4-LeetCode-1248-统计「优美子数组」"><a href="#4-LeetCode-1248-统计「优美子数组」" class="headerlink" title="4.LeetCode 1248 统计「优美子数组」"></a>4.LeetCode 1248 统计「优美子数组」</h1><p>给你一个整数数组 nums 和一个整数 k。<br>如果某个 连续 子数组中恰好有 k 个奇数数字，我们就认为这个子数组是「优美子数组」。<br>请返回这个数组中「优美子数组」的数目。<br>示例1：  </p>
+<pre><code>输入：nums = [1,1,2,1,1], k = 3
+输出：2
+解释：包含 3 个奇数的子数组是 [1,1,2,1] 和 [1,2,1,1] 。</code></pre><p>示例2：  </p>
+<pre><code>输入：nums = [2,4,6], k = 1
+输出：0
+解释：数列中不包含任何奇数，所以不存在优美子数组。</code></pre><p>这个题我们只需要保存每个元素的前缀中出现的奇数个数即可，然后在单次统计的过程当中，去查找当前元素前缀中奇数个数-K是否出现在之前元素的前缀奇数个数中即可，具体代码如下：  </p>
+<pre><code class="python">class Solution:
+    def numberOfSubarrays(self, nums: List[int], k: int) -&gt; int:
+        d = {}
+        res = 0
+        acc = 0
+        for i in nums:
+            if i%2 == 1:
+                acc += 1
+            if acc == k:
+                res += 1
+            if acc -k in d:
+                res += d[acc-k]
+            if acc in d:
+                d[acc] += 1
+            else:
+                d[acc] = 1
+        return res</code></pre>
+<h1 id="5-LeetCode-1371-每个元音包含偶数次的最长子字符串"><a href="#5-LeetCode-1371-每个元音包含偶数次的最长子字符串" class="headerlink" title="5.LeetCode 1371 每个元音包含偶数次的最长子字符串"></a>5.LeetCode 1371 每个元音包含偶数次的最长子字符串</h1><p>给你一个字符串s，请你返回满足以下条件的最长子字符串的长度：每个元音字母，即’a’，’e’，’i’，’o’，’u’ ，在子字符串中都恰好出现了偶数次。<br>示例1：  </p>
+<pre><code>输入：s = &quot;eleetminicoworoep&quot;
+输出：13
+解释：最长子字符串是 &quot;leetminicowor&quot; ，它包含 e，i，o 各 2 个，以及 0 个 a，u 。</code></pre><p>示例2：  </p>
+<pre><code>输入：s = &quot;leetcodeisgreat&quot;
+输出：5
+解释：最长子字符串是 &quot;leetc&quot; ，其中包含 2 个 e 。</code></pre><p>与上述题目想法类似，但这里需要用一个list和str保存前缀的状态：  </p>
+<pre><code class="python">class Solution:
+    def findTheLongestSubstring(self, s: str) -&gt; int:
+        dic = {
+            &quot;a&quot;: 0,
+            &quot;e&quot;: 1,
+            &quot;i&quot;: 2,
+            &quot;o&quot;: 3,
+            &quot;u&quot;: 4
+        }
+
+        maxs = 0
+        state = [&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;]
+        p =&#39;00000&#39;
+
+        d = {}
+        for idx,i in enumerate(s):
+            if i in dic:
+                state[dic[i]] = str((int(state[dic[i]]) + 1)%2)
+                p = &#39;&#39;.join(state)
+            if p== &#39;00000&#39;:
+                maxs = max(maxs,idx+1)
+            if p in d:
+                maxs = max(maxs,idx-d[p])
+            else:
+                d[p] = idx
+        return maxs</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
