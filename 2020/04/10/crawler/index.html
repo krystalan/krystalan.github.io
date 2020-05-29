@@ -186,7 +186,7 @@ Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Avant Browser)  </code></pre>
             time.sleep(2)
             return download(url,try_times-1)
     return html</code></pre>
-<p>因为我这个博客的主题用代码框的话很难看，会发生错乱，所以没有办法完美的表示缩进，于是这里就干脆用图做展示了，具体代码的话，我上传到了github上，详见文末。  </p>
+<p>完整版代码详见文末github连接。  </p>
 <p>稍微解释一下这个代码里面的功能，url是待爬网址，try_time是尝试次数，有时候我们访问一个网站会出现5xx的错误，多试几次就好，在代码中我们也设置了，如果重新尝试的话，会有2秒的间隔，这个可以按需调整。如果某一个user-agent被ban了的话，我们也会及时将这个user-agent移除UA（user-agent的列表）<br>这个代码返回url对应的html，<strong>类型是二进制串</strong>。</p>
 <h1 id="2-利用webdriver获取html"><a href="#2-利用webdriver获取html" class="headerlink" title="2.利用webdriver获取html"></a>2.利用webdriver获取html</h1><p>有些网站的html是用js渲染得到的，如果直接用上述方法获取html则得不到js渲染之后的html，有可能会损失掉重要信息。所以我们要模拟浏览器访问该url并获取渲染之后的html，方法如下：  </p>
 <h2 id="2-1-使用Chrome"><a href="#2-1-使用Chrome" class="headerlink" title="2.1 使用Chrome"></a>2.1 使用Chrome</h2><pre><code class="python">from selenium import webdriver  
