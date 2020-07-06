@@ -145,7 +145,7 @@
 <blockquote>
 <p>2019 arXiv：<u><a href="https://arxiv.org/abs/1911.03821" target="_blank" rel="noopener">Dynamic Fusion for Multimodal Data</a></u>  </p>
 </blockquote>
-<p>该文中指出现有的多模融合方式其实都是用户定义好的，神经网络自身并不能自由地自己决定以什么样的方式结合模态见的特征，于是该文提出了Transfusion网络让模型自己提取模态间的特征。<br><img src="/images/MM/7.jpg" alt="Transfusion"><br>简单来说，就是将多个模态特征向量先进行拼接（concatenate）得到Zmk向量，再通过一个变换层，得到Zmt向量。之后作者使用Zmk和Zmt之间的MSE Loss来训练网络，需要注意的是Zmt向量的维度应当低于Zmk，所以需要用零进行填充，具体Loss表达式如下：<br><img src="/images/MM/8.jpg" alt="Transfusion">   </p>
+<p>该文中指出：现有的多模融合方式其实都是人为定义好的，神经网络自身并不能自由地决定以什么样的方式结合模态间的特征，于是该文提出了Transfusion网络让模型自己提取模态间的特征。<br><img src="/images/MM/7.jpg" alt="Transfusion"><br>简单来说，就是将多个模态特征向量先进行拼接（concatenate）得到Zmk向量，再通过一个变换层，得到Zmt向量。之后作者使用Zmk和Zmt之间的MSE Loss来训练网络，需要注意的是Zmt向量的维度应当低于Zmk，所以需要用零进行填充，具体Loss表达式如下：<br><img src="/images/MM/8.jpg" alt="Transfusion">   </p>
 <p>该篇工作作者表示：这样可以激励网络去压缩不同模态所提供的全部信息并尽可能的保留大部分语义。</p>
 
             </div>
