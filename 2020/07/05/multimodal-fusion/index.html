@@ -135,6 +135,12 @@
 <h2 id="2-1-联合架构"><a href="#2-1-联合架构" class="headerlink" title="2.1 联合架构"></a>2.1 联合架构</h2><p><img src="/images/MM/5.jpg" alt="联合架构"><br>每个单一模态通过单独编码之后被映射到共享子空间当中。联合架构对每个单模态的语义完整性有较高的要求，数据不完整或者错误都将会在后期融合中被放大。<br>优点：融合方式简单，且共享子空间通常具有语义不变性，有助于在机器学习模型中将知识从一种模态转换到另一种模态。<br>缺点：各单模态语义完整性不易在早期发现和处理。</p>
 <p>联合架构又可分为：早期融合（EMF：Early Multimodal Fusion）、中期适度融合（IMF：Intermediate Multimodal Fusion）以及混合融合（DMF：Dense Multimodal Fusion）。<br><img src="/images/MM/2.jpg" alt="直接融合方法的三种分类"><br>（1）早期融合<br>直接将两种模态的特征向量进行拼接（Concatenate），之后利用一些非线性变换层得到高层特征信息。由于拼接不同模态的特征方法过于简单，且过早地融合多种模态的特征，因此不能够很好地捕获不同模态之间的复杂关系。<br>（2）中期适度融合<br>在提取每个单一模态高层特征之后加上一个联合隐层。虽然这种方法在许多任务中已经表现的挺好的了，但它只在一个层次上进行了融合。<br>（3）混合融合<br>融合不同层次的单一模态的特征从而形成最后的表示，使得最终得到的特征向量更加健壮。  </p>
 <h2 id="2-2-协同架构"><a href="#2-2-协同架构" class="headerlink" title="2.2 协同架构"></a>2.2 协同架构</h2><p><img src="/images/MM/6.jpg" alt="协同架构"><br>将多模态中的每个模态分别映射到各自的表示空间，但映射后的向量之间满足一定的相关性约束。</p>
+<h1 id="3-多模态融合当中的一些问题"><a href="#3-多模态融合当中的一些问题" class="headerlink" title="3.多模态融合当中的一些问题"></a>3.多模态融合当中的一些问题</h1><p>（1）学习程度不统一<br>实际上，多个模态进行融合，训练网络的时候，不同模态之间训练的程度可能不一样，例如模态1可能经过10个epoch就已经达到了最优的结果，而模态2则要在20epoch达到最好效果，这样一个模态学习好了，另一个模态却是欠拟合；而当另一个模态学习好的时候，之前的模态变成了过拟合。因此这里面存在着学习程度不统一问题。<br>（2）过拟合<br>因为融合多个模态的特征之后，网络的参数就会上升，从而导致模型更容易过拟合。  </p>
+<p>解决方法：  </p>
+<blockquote>
+<p>2020 CVPR：<u><a href="https://arxiv.org/abs/1905.12681" target="_blank" rel="noopener">What Makes Training Multi-Modal Classification Networks Hard?</a></u><br>相关解读：<u><a href="https://zhuanlan.zhihu.com/p/137104163" target="_blank" rel="noopener">Training Multi-modal Classification Networks</a></u>  </p>
+</blockquote>
+<p>对每一种模态在训练过程当中loss乘以一个权重即可调整更新的快慢，这个权重是根据training loss以及val loss进行计算的，用于评估模型训练所处的程度，也能侧面反映出训练的质量。</p>
 
             </div>
 
