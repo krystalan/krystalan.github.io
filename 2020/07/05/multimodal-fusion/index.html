@@ -124,7 +124,7 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>因为最近有相关工作需要用到多个模态特征的融合信息，所以简单调研一下多模表示学习。<br>参考资料：</p>
+                <p>因为最近有相关工作需要用到多个模态特征的融合信息，所以简单调研一下多模融合的一些方法。<br>参考资料：</p>
 <blockquote>
 <p>1、<u><a href="https://kns.cnki.net/kcms/detail/detail.aspx?doi=10.19678/j.issn.1000-3428.0057370" target="_blank" rel="noopener">《面向深度学习的多模态融合技术研究综述》</a></u><br>2、2019 IEEE ICASSP : <u><a href="https://arxiv.org/abs/1810.03414" target="_blank" rel="noopener">Dense Multimodal Fusion for Hierarchically Joint Representation</a></u><br>3、<u><a href="https://zhuanlan.zhihu.com/p/93125122" target="_blank" rel="noopener">《【NLP笔记】多模态中NLP与CV融合的一些方式》</a></u><br>4、<u><a href="https://zhuanlan.zhihu.com/p/53511144" target="_blank" rel="noopener">《这可能是「多模态机器学习」最通俗易懂的介绍》</a></u><br>5、Multimodal Paper List（from CMU）：<a href="https://github.com/pliang279/awesome-multimodal-ml" target="_blank" rel="noopener">https://github.com/pliang279/awesome-multimodal-ml</a></p>
 </blockquote>
@@ -141,6 +141,12 @@
 <p>2020 CVPR：<u><a href="https://arxiv.org/abs/1905.12681" target="_blank" rel="noopener">What Makes Training Multi-Modal Classification Networks Hard?</a></u><br>相关解读：<u><a href="https://zhuanlan.zhihu.com/p/137104163" target="_blank" rel="noopener">Training Multi-modal Classification Networks</a></u>  </p>
 </blockquote>
 <p>对每一种模态在训练过程当中loss乘以一个权重即可调整更新的快慢，这个权重是根据training loss以及val loss进行计算的，用于评估模型训练所处的程度，也能侧面反映出训练的质量。</p>
+<p>（3）静态融合  </p>
+<blockquote>
+<p>2019 arXiv：<u><a href="https://arxiv.org/abs/1911.03821" target="_blank" rel="noopener">Dynamic Fusion for Multimodal Data</a></u>  </p>
+</blockquote>
+<p>该文中指出现有的多模融合方式其实都是用户定义好的，神经网络自身并不能自由地自己决定以什么样的方式结合模态见的特征，于是该文提出了Transfusion网络让模型自己提取模态间的特征。<br><img src="/images/MM/7.jpg" alt="Transfusion"><br>简单来说，就是将多个模态特征向量先进行拼接（concatenate）得到Zmk向量，再通过一个变换层，得到Zmt向量。之后作者使用Zmk和Zmt之间的MSE Loss来训练网络，需要注意的是Zmt向量的维度应当低于Zmk，所以需要用零进行填充，具体Loss表达式如下：<br><img src="/images/MM/8.jpg" alt="Transfusion">   </p>
+<p>该篇工作作者表示：这样可以激励网络去压缩不同模态所提供的全部信息并尽可能的保留大部分语义。</p>
 
             </div>
 
