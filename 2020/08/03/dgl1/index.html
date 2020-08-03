@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="相册">
+		                相册
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/35.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >DGL（一）简介</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本篇会陆续记载一些图神经网络的知识与代码相关，因为DGL库可以在PyTorch的基础上搭建GCN模型所以也归为PyTorch系列的笔记，感兴趣的朋友可以直接阅读文档。  </p>
+<blockquote>
+<p>文档：<a href="https://docs.dgl.ai/" target="_blank" rel="noopener">https://docs.dgl.ai/</a></p>
+</blockquote>
+<p>先简单介绍一下DGL库：这是一个python的工具包，能够直接在一些深度学习框架上（PyTorch、MXNet）搭建GCN，本篇以PyTorch为例介绍一个简单的GCN例子——结点分类问题，并记录自己的思考。  </p>
+<blockquote>
+<p>Tutorial：<a href="https://docs.dgl.ai/tutorials/basics/1_first.html" target="_blank" rel="noopener">https://docs.dgl.ai/tutorials/basics/1_first.html</a>  </p>
+</blockquote>
+<p>这个Tutorial需要解决的问题是节点分类：<br><img src="/images/pytorch/7.jpg" alt="问题定义"><br>0号节点和33号节点代表着不同的两种类别，其余节点均围绕着这两个节点展开，我们要判定其余节点的类别。一个简单的思想就是利用GCN学习到每个节点的表示，之后根据表示去进行分类。</p>
+<h1 id="导入所需库"><a href="#导入所需库" class="headerlink" title="导入所需库"></a>导入所需库</h1><pre><code class="python">import dgl
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F</code></pre>
+<h1 id="构建图"><a href="#构建图" class="headerlink" title="构建图"></a>构建图</h1><pre><code class="python">def build_karate_club_graph():
+    # All 78 edges are stored in two numpy arrays. One for source endpoints
+    # while the other for destination endpoints.
+    src = np.array([1, 2, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 9, 10, 10,
+        10, 11, 12, 12, 13, 13, 13, 13, 16, 16, 17, 17, 19, 19, 21, 21,
+        25, 25, 27, 27, 27, 28, 29, 29, 30, 30, 31, 31, 31, 31, 32, 32,
+        32, 32, 32, 32, 32, 32, 32, 32, 32, 33, 33, 33, 33, 33, 33, 33,
+        33, 33, 33, 33, 33, 33, 33, 33, 33, 33])
+    dst = np.array([0, 0, 1, 0, 1, 2, 0, 0, 0, 4, 5, 0, 1, 2, 3, 0, 2, 2, 0, 4,
+        5, 0, 0, 3, 0, 1, 2, 3, 5, 6, 0, 1, 0, 1, 0, 1, 23, 24, 2, 23,
+        24, 2, 23, 26, 1, 8, 0, 24, 25, 28, 2, 8, 14, 15, 18, 20, 22, 23,
+        29, 30, 31, 8, 9, 13, 14, 15, 18, 19, 20, 22, 23, 26, 27, 28, 29, 30,
+        31, 32])
+    # Edges are directional in DGL; Make them bi-directional.
+    u = np.concatenate([src, dst])
+    v = np.concatenate([dst, src])
+    # Construct a DGLGraph
+    return dgl.DGLGraph((u, v))
+
+G = build_karate_club_graph()
+print(&#39;We have %d nodes.&#39; % G.number_of_nodes())
+print(&#39;We have %d edges.&#39; % G.number_of_edges())</code></pre>
+<p>dgl中的图是有向图，所以需要对每对边连接两次。<br>输出结果：  </p>
+<pre><code class="python">We have 34 nodes.
+We have 156 edges.</code></pre>
+<h1 id="初始化embedding"><a href="#初始化embedding" class="headerlink" title="初始化embedding"></a>初始化embedding</h1><pre><code class="python">embed = nn.Embedding(34, 5)  # 34 nodes with embedding dim equal to 5
+G.ndata[&#39;feat&#39;] = embed.weight
+
+# print out node 2&#39;s input feature
+print(G.ndata[&#39;feat&#39;][2])
+
+# print out node 10 and 11&#39;s input features
+print(G.ndata[&#39;feat&#39;][[10, 11]])</code></pre>
+<p>输出结果：</p>
+<pre><code class="python">tensor([-2.4510, -0.6563, -0.7395,  1.6401,  2.2282], grad_fn=&lt;SelectBackward&gt;)
+tensor([[-1.6371,  0.1195, -0.5801,  0.6771, -1.2104],
+        [-0.0391, -0.2906, -0.7418, -0.0126, -0.3276]],
+       grad_fn=&lt;IndexBackward&gt;)</code></pre>
+<h1 id="构建图卷积模型"><a href="#构建图卷积模型" class="headerlink" title="构建图卷积模型"></a>构建图卷积模型</h1><pre><code class="python">from dgl.nn.pytorch import GraphConv
+
+
+class GCN(nn.Module):
+    def __init__(self, in_feats, hidden_size, num_classes):
+        super(GCN, self).__init__()
+        self.conv1 = GraphConv(in_feats, hidden_size) #定义的时候，第一个参数代表输入时node embedding的维度，第二个参数代表输出的时候的node embedding的维度
+        self.conv2 = GraphConv(hidden_size, num_classes)
+
+    def forward(self, g, inputs):# g是整个图，inputs是embed.weight
+        h = self.conv1(g, inputs)#使用时，第一个参数是整个图，第二个参数是当前node embedding，输出的是GCN之后的node embedding
+        h = torch.relu(h)
+        h = self.conv2(g, h)
+        return h
+
+# The first layer transforms input features of size of 5 to a hidden size of 5.
+# The second layer transforms the hidden layer and produces output features of size 2, corresponding to the two groups of the karate club.
+net = GCN(5, 5, 2)</code></pre>
+<h1 id="训练网络"><a href="#训练网络" class="headerlink" title="训练网络"></a>训练网络</h1><pre><code class="python">inputs = embed.weight
+labeled_nodes = torch.tensor([0, 33])  # only the instructor and the president nodes are labeled
+labels = torch.tensor([0, 1])  # their labels are different
+
+
+import itertools
+
+optimizer = torch.optim.Adam(itertools.chain(net.parameters(), embed.parameters()), lr=0.01)
+all_logits = []
+for epoch in range(50):
+    logits = net(G, inputs)
+    # we save the logits for visualization later
+    all_logits.append(logits.detach())
+    logp = F.log_softmax(logits, 1)
+    # we only compute loss for labeled nodes
+    loss = F.nll_loss(logp[labeled_nodes], labels)
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+
+    print(&#39;Epoch %d | Loss: %.4f&#39; % (epoch, loss.item()))</code></pre>
+<p>输出结果：</p>
+<pre><code class="python">Epoch 0 | Loss: 0.5709
+Epoch 1 | Loss: 0.5381
+Epoch 2 | Loss: 0.5062
+Epoch 3 | Loss: 0.4742
+Epoch 4 | Loss: 0.4429
+Epoch 5 | Loss: 0.4122
+Epoch 6 | Loss: 0.3817
+Epoch 7 | Loss: 0.3518
+Epoch 8 | Loss: 0.3218
+Epoch 9 | Loss: 0.2928
+Epoch 10 | Loss: 0.2650
+Epoch 11 | Loss: 0.2386
+Epoch 12 | Loss: 0.2138
+Epoch 13 | Loss: 0.1909
+Epoch 14 | Loss: 0.1696
+Epoch 15 | Loss: 0.1502
+Epoch 16 | Loss: 0.1324
+Epoch 17 | Loss: 0.1163
+Epoch 18 | Loss: 0.1019
+Epoch 19 | Loss: 0.0892
+Epoch 20 | Loss: 0.0780
+Epoch 21 | Loss: 0.0681
+Epoch 22 | Loss: 0.0595
+Epoch 23 | Loss: 0.0520
+Epoch 24 | Loss: 0.0455
+Epoch 25 | Loss: 0.0399
+Epoch 26 | Loss: 0.0350
+Epoch 27 | Loss: 0.0308
+Epoch 28 | Loss: 0.0272
+Epoch 29 | Loss: 0.0241
+Epoch 30 | Loss: 0.0214
+Epoch 31 | Loss: 0.0190
+Epoch 32 | Loss: 0.0170
+Epoch 33 | Loss: 0.0153
+Epoch 34 | Loss: 0.0137
+Epoch 35 | Loss: 0.0124
+Epoch 36 | Loss: 0.0112
+Epoch 37 | Loss: 0.0102
+Epoch 38 | Loss: 0.0094
+Epoch 39 | Loss: 0.0086
+Epoch 40 | Loss: 0.0079
+Epoch 41 | Loss: 0.0073
+Epoch 42 | Loss: 0.0068
+Epoch 43 | Loss: 0.0063
+Epoch 44 | Loss: 0.0059
+Epoch 45 | Loss: 0.0055
+Epoch 46 | Loss: 0.0052
+Epoch 47 | Loss: 0.0049
+Epoch 48 | Loss: 0.0046
+Epoch 49 | Loss: 0.0044</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+			<br>
+			<span>友情链接：<a href='http://www.demilab.cn' target='_blank'>DEMI实验室</a>&nbsp;&nbsp;&nbsp;<a href='http://zd11024.cn/' target='_blank'>ZD</a></span>
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
