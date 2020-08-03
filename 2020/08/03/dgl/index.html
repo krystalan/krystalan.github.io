@@ -119,41 +119,20 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/21.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >PyTorch（十）可复现性</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/35.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >DGL（一）简介[TODO]</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>本篇主要讲述的是PyTorch如何保证可复现性。<br>官方文档对应说明：<a href="https://pytorch.org/docs/stable/notes/randomness.html" target="_blank" rel="noopener">https://pytorch.org/docs/stable/notes/randomness.html</a>  </p>
-<h1 id="1-固定随机种子"><a href="#1-固定随机种子" class="headerlink" title="1.固定随机种子"></a>1.固定随机种子</h1><p>固定随机种子能够让初始化权重固定。  </p>
-<pre><code class="python">import torch
-import numpy as np
-import random
+                <p>本篇会陆续记载一些图神经网络的知识与代码相关，因为DGL库可以在PyTorch的基础上搭建GCN模型所以也归为PyTorch系列的笔记，感兴趣的朋友可以直接阅读文档。  </p>
+<blockquote>
+<p>文档：<a href="https://docs.dgl.ai/" target="_blank" rel="noopener">https://docs.dgl.ai/</a></p>
+</blockquote>
+<p>先简单介绍一下DGL库：这是一个python的工具包，能够直接在一些深度学习框架上（PyTorch、MXNet）搭建GCN，本篇以PyTorch为例介绍一个简单的GCN例子——结点分类问题，并记录自己的思考。  </p>
+<blockquote>
+<p>Tutorial：<a href="https://docs.dgl.ai/tutorials/basics/1_first.html" target="_blank" rel="noopener">https://docs.dgl.ai/tutorials/basics/1_first.html</a>  </p>
+</blockquote>
 
-seed=0
-
-random.seed(seed)
-np.random.seed(seed)
-if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(seed)
-
-torch.manual_seed(seed)
-torch.cuda.manual_seed(seed)
-torch.cuda.manual_seed_all(seed)
-
-torch.backends.cudnn.deterministic = True #可能会对单次运行性能产生负面影响
-torch.backends.cudnn.benchmark = False  #如果设置成True将会让程序在开始时花费一点额外时间，为整个网络的每个卷积层搜索最适合它的卷积实现算法，进而实现网络的加速，benchmark模式会提升计算速度，但是由于计算中有随机性，每次网络前馈结果略有差异。</code></pre>
-<h1 id="2-DataLoader"><a href="#2-DataLoader" class="headerlink" title="2.DataLoader"></a>2.DataLoader</h1><p>当data_loader的num_workers&gt;1时，也需要进行随机种子的设置:  </p>
-<pre><code class="python">def _init_fn():
-    np.random.seed(0)
-train_loader = DataLoader(data_sets, batch_size=8, shuffle=True, num_workers=8, worker_init_fn=_init_fn)</code></pre>
-<h1 id="3-其余不确定性"><a href="#3-其余不确定性" class="headerlink" title="3.其余不确定性"></a>3.其余不确定性</h1><h2 id="3-1-dropout"><a href="#3-1-dropout" class="headerlink" title="3.1 dropout"></a>3.1 dropout</h2><h2 id="3-2-atomicAdd"><a href="#3-2-atomicAdd" class="headerlink" title="3.2 atomicAdd"></a>3.2 atomicAdd</h2><p>PyTorch使用的CUDA实现中，有一部分是原子操作，尤其是<code>atomicAdd</code>，使用这个操作就代表数据不能够并行处理，需要串行处理，使用到<code>atomicAdd</code>之后就会按照不确定的并行加法顺序执行，从而引入了不确定因素。PyTorch中使用到的<code>atomicAdd</code>的方法：<br>（1）前向传播时：  </p>
-<pre><code>torch.Tensor.index_add_()
-torch.Tensor.scatter_add_()
-torch.bincount()</code></pre><p>（2）后向传播时：  </p>
-<pre><code>torch.nn.functional.embedding_bag()
-torch.nn.functional.ctc_loss()
-其他pooling，padding, sampling操作</code></pre>
             </div>
 
             <!-- Post Comments -->
