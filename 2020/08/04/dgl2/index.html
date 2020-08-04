@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo.jpg"/>
+	<link rel="shortcut icon" href="/img/logo.jpg">
+	
+			    <title>
+    北望你的安
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="北望你的安" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Krystalan</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">强化学习</a></li><li><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></li><li><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li><a class="category-link" href="/categories/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/">自然语言处理</a></li><li><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tags/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="相册">
+		                相册
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/krystalan" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://www.zhihu.com/people/krystalzhu-an" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/35.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >DGL（二）基础概念</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>本篇主要讲述如何创建一个图并给图中的节点与边赋予特征。</p>
+<h1 id="1-如何创建一个图"><a href="#1-如何创建一个图" class="headerlink" title="1.如何创建一个图"></a>1.如何创建一个图</h1><h2 id="1-1-通过（u-v）存储每个边"><a href="#1-1-通过（u-v）存储每个边" class="headerlink" title="1.1 通过（u,v）存储每个边"></a>1.1 通过（u,v）存储每个边</h2><pre><code class="python">src = np.array([1, 2, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 9, 10, 10,
+        10, 11, 12, 12, 13, 13, 13, 13, 16, 16, 17, 17, 19, 19, 21, 21,
+        25, 25, 27, 27, 27, 28, 29, 29, 30, 30, 31, 31, 31, 31, 32, 32,
+        32, 32, 32, 32, 32, 32, 32, 32, 32, 33, 33, 33, 33, 33, 33, 33,
+        33, 33, 33, 33, 33, 33, 33, 33, 33, 33])
+dst = np.array([0, 0, 1, 0, 1, 2, 0, 0, 0, 4, 5, 0, 1, 2, 3, 0, 2, 2, 0, 4,
+        5, 0, 0, 3, 0, 1, 2, 3, 5, 6, 0, 1, 0, 1, 0, 1, 23, 24, 2, 23,
+        24, 2, 23, 26, 1, 8, 0, 24, 25, 28, 2, 8, 14, 15, 18, 20, 22, 23,
+        29, 30, 31, 8, 9, 13, 14, 15, 18, 19, 20, 22, 23, 26, 27, 28, 29, 30,
+        31, 32])
+# Edges are directional in DGL; Make them bi-directional.
+u = np.concatenate([src, dst])
+v = np.concatenate([dst, src])
+    # Construct a DGLGraph
+G = dgl.DGLGraph((u, v))</code></pre>
+<h2 id="1-2-通过networkx创建"><a href="#1-2-通过networkx创建" class="headerlink" title="1.2 通过networkx创建"></a>1.2 通过networkx创建</h2><pre><code class="python">import networkx as nx
+import dgl
+
+g_nx = nx.petersen_graph()
+g_dgl = dgl.DGLGraph(g_nx) #通过nx创建
+
+import matplotlib.pyplot as plt
+plt.subplot(121)
+nx.draw(g_nx, with_labels=True)
+plt.subplot(122)
+nx.draw(g_dgl.to_networkx(), with_labels=True)
+
+plt.show()</code></pre>
+<h2 id="1-3-通过scipy"><a href="#1-3-通过scipy" class="headerlink" title="1.3 通过scipy"></a>1.3 通过scipy</h2><p>稀疏矩阵，表示要构造的图的邻接矩阵。  </p>
+<pre><code class="python">import torch
+import scipy.sparse as spp
+
+u = torch.tensor([0, 0, 0, 0, 0])
+v = torch.tensor([1, 2, 3, 4, 5])
+
+adj = spp.coo_matrix((np.ones(len(u)), (u.numpy(), v.numpy())))
+star3 = dgl.DGLGraph(adj)</code></pre>
+<h2 id="1-4-逐步添加-边列表"><a href="#1-4-逐步添加-边列表" class="headerlink" title="1.4 逐步添加-边列表"></a>1.4 逐步添加-边列表</h2><pre><code class="python">g = dgl.DGLGraph() #创建一个新的图
+g.add_nodes(10) #添加了10个节点
+# A couple edges one-by-one
+for i in range(1, 4):
+    g.add_edge(i, 0)
+# A few more with a paired list
+src = list(range(5, 8))
+dst = [0]*3
+g.add_edges(src, dst)
+# finish with a pair of tensors
+src = torch.tensor([8, 9])
+dst = torch.tensor([0, 0])
+g.add_edges(src, dst)
+
+# Edge broadcasting will do star graph in one go!
+g.clear()
+g.add_nodes(10)
+src = torch.tensor(list(range(1, 10)))
+g.add_edges(src, 0)
+
+# Visualize the graph.
+nx.draw(g.to_networkx(), with_labels=True)
+plt.show()</code></pre>
+<p>输出结果：<br><img src="/images/pytorch/8.jpg" alt="result">   </p>
+<h1 id="2-分配特征"><a href="#2-分配特征" class="headerlink" title="2.分配特征"></a>2.分配特征</h1><p>给DGLGraph的节点和边分配特征，这些特征称为field。  </p>
+<h2 id="2-1-给节点赋予特征"><a href="#2-1-给节点赋予特征" class="headerlink" title="2.1 给节点赋予特征"></a>2.1 给节点赋予特征</h2><pre><code class="python">import dgl
+import torch
+
+x = torch.randn(10, 3)
+g.ndata[&#39;x&#39;] = x
+
+g.ndata[&#39;x&#39;][0] = torch.zeros(1, 3)
+g.ndata[&#39;x&#39;][[0, 1, 2]] = torch.zeros(3, 3)
+g.ndata[&#39;x&#39;][torch.tensor([0, 1, 2])] = torch.randn((3, 3))</code></pre>
+<h2 id="2-2-给边赋予特征"><a href="#2-2-给边赋予特征" class="headerlink" title="2.2 给边赋予特征"></a>2.2 给边赋予特征</h2><pre><code class="python">g.edata[&#39;w&#39;] = torch.randn(9, 2)#9个边有特征，特征向量维度为2
+
+# Access edge set with IDs in integer, list, or integer tensor
+g.edata[&#39;w&#39;][1] = torch.randn(1, 2)
+g.edata[&#39;w&#39;][[0, 1, 2]] = torch.zeros(3, 2)
+g.edata[&#39;w&#39;][torch.tensor([0, 1, 2])] = torch.zeros(3, 2)
+
+# You can get the edge ids by giving endpoints, which are useful for accessing the features.
+g.edata[&#39;w&#39;][g.edge_id(1, 0)] = torch.ones(1, 2)                   # edge 1 -&gt; 0
+g.edata[&#39;w&#39;][g.edge_ids([1, 2, 3], [0, 0, 0])] = torch.ones(3, 2)  # edges [1, 2, 3] -&gt; 0
+# Use edge broadcasting whenever applicable.
+g.edata[&#39;w&#39;][g.edge_ids([1, 2, 3], 0)] = torch.ones(3, 2)          # edges [1, 2, 3] -&gt; 0</code></pre>
+<h2 id="2-3-删除边或节点的特征"><a href="#2-3-删除边或节点的特征" class="headerlink" title="2.3 删除边或节点的特征"></a>2.3 删除边或节点的特征</h2><pre><code class="python">g.ndata.pop(&#39;x&#39;)
+g.edata.pop(&#39;w&#39;)</code></pre>
+<p>在推理期间节省内存时能用到。</p>
+<h1 id="3-处理多图"><a href="#3-处理多图" class="headerlink" title="3.处理多图"></a>3.处理多图</h1><p>两个节点间存在多条边  </p>
+<pre><code class="python">g_multi = dgl.DGLGraph()
+g_multi.add_nodes(10)
+g_multi.ndata[&#39;x&#39;] = torch.randn(10, 2)
+
+g_multi.add_edges(list(range(1, 10)), 0)
+g_multi.add_edge(1, 0) #此时便有两条从1到0的边。
+
+g_multi.edata[&#39;w&#39;] = torch.randn(10, 2)
+g_multi.edges[1].data[&#39;w&#39;] = torch.zeros(1, 2)#多图中每条边不能通过使用节点对来唯一标识，应该使用边ID表示
+print(g_multi.edges())</code></pre>
+<p>多图中每条边不能通过使用节点对来唯一标识，应该使用边ID表示。如不知道ID信息，可使用下述代码查询：   </p>
+<pre><code class="python">eid_10 = g_multi.edge_id(1, 0, return_array=True)
+g_multi.edges[eid_10].data[&#39;w&#39;] = torch.ones(len(eid_10), 2)
+print(g_multi.edata[&#39;w&#39;])</code></pre>
+<p>输出：  </p>
+<pre><code class="python">tensor([[ 1.0000,  1.0000],
+        [ 0.0000,  0.0000],
+        [-0.3486, -0.7761],
+        [ 1.1867, -0.2986],
+        [ 1.3186,  0.4512],
+        [-0.6735,  1.1000],
+        [-0.7579, -0.5126],
+        [ 0.6677,  1.6272],
+        [-1.3767, -0.3174],
+        [ 1.0000,  1.0000]])</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;2020 北望你的安. 版权所有</li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次，</span>
+				<span id="busuanzi_container_site_uv"> 访客数 <span id="busuanzi_value_site_uv"></span> 人. </span>
+			
+			<br>
+			<span>友情链接：<a href='http://www.demilab.cn' target='_blank'>DEMI实验室</a>&nbsp;&nbsp;&nbsp;<a href='http://zd11024.cn/' target='_blank'>ZD</a></span>
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
