@@ -119,43 +119,26 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/33.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >매일 보고 싶어요</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/img/1.jpeg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >MMNLP组会记录</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>题目是“每天都很想你”，其实题文无关了。<br>自己最近在搞一个小项目，然后脱敏地记录一下探索的过程，以及之后的一些想法，不了解的可以直接忽略这篇了。  </p>
-<!-- ![❥](/img/34.jpg)    -->
-<blockquote>
-<p>你的微笑让我如此的着迷，你的双眼让我放弃抵抗力。</p>
-</blockquote>
-<h1 id="1-与你靠近点"><a href="#1-与你靠近点" class="headerlink" title="1.与你靠近点"></a>1.与你靠近点</h1><p>目前最优设定：y = 500*（我和你的距离-0.6）<br>距离产生美，因此放大了彼此的距离。<br>具体实验：<br>sample(1043)：<br>50  0.02066 0.01804<br>100 0.02142 0.01746<br>200 0.02256 0.01660<br>500 0.02375 0.01569<br>1000    0.02272 0.01647<br>2000    0.02157 0.01735<br>5000    0.02035 0.01828<br>all(44226)：<br>500 0.02631 0.01914 </p>
-<h1 id="2-我多想能把你照亮"><a href="#2-我多想能把你照亮" class="headerlink" title="2.我多想能把你照亮"></a>2.我多想能把你照亮</h1><ul>
-<li><del>融入距离感</del>（没什么吊用）</li>
-<li><del>世间安得双全法，两全一定其美？</del>（消融实验）    </li>
-<li>音乐燥起来（everybody put your hands up）  </li>
-<li>小步靠近你，大步奔向你  </li>
-<li><del>学习率调参</del>  </li>
-<li>不同的事物有着不同的内在平衡，不要强加两个事物以统一的思想（水平不够做不出来）</li>
-<li><del>你在哪（768 or 2048）</del></li>
-<li><del>究极地爆天星，峰回路转，巅峰修正</del>（根本就不work）</li>
-<li><del>dropout</del></li>
+                <h1 id="2020-08-13"><a href="#2020-08-13" class="headerlink" title="2020.08.13"></a>2020.08.13</h1><h2 id="ZD"><a href="#ZD" class="headerlink" title="ZD"></a>ZD</h2><ul>
+<li>nn.Transformer API介绍</li>
+<li>对话系统代码介绍，一个好的工程代码是如何写的：utils放通用，dataloader(PyTorch)使用方法，solver封装train、val代码，config记录超参、.sh脚本简化训练命令</li>
+<li>交叉熵计算中的平滑：<code>utils/loss.py</code></li>
+<li>Pickle(python package)介绍：直接还原出原始数据类型，中间文件(.pkl)不可读</li>
+<li>Tqdm介绍：写进度条</li>
+<li>pathlib.Path(python package)介绍：文件路径库，能自动解析地址</li>
 </ul>
-<h1 id="3-leaderboard"><a href="#3-leaderboard" class="headerlink" title="3.leaderboard"></a>3.leaderboard</h1><ul>
-<li>85.74 （08.10）： XEmbedding_ext、6e-4、ReLU、Pos(768)、新全连接、batch-size:128、5epoch</li>
-<li>85.21 （08.09）： baseline_ext、6e-4、ReLU、Pos(768)、新全连接、batch-size:128、5epoch</li>
-<li>81.24 （08.07）： baseline、6e-4、ReLU、Pos(768)、新全连接、batch-size:128、8epoch</li>
-<li>80.4 （08.06）： baseline、3e-4、ReLU、Pos(768)、新全连接、6epoch</li>
-<li>78.7 （08.05）： baseline、3e-4、ReLU、Pos(768)、Adam调参、5epoch</li>
-<li>76.7 （08.05）： baseline、3e-4、ReLU、Pos(768)、5epoch</li>
-<li>74.8 （08.05）： baseline、3e-4(*64)、4epoch</li>
-<li>73.9 （08.05）： baseline、3e-4、ReLU、5epoch</li>
-<li>72.6 （08.04）： baseline、1e-4(*64)、ReLU、5epoch</li>
-<li>69.9 （08.04）： baseline、1e-4(*64)、ReLU+Dropout、5epoch</li>
-<li>65.3 （08.01）： baseline_f、1e-4(*64)、4epoch</li>
-<li>64.8 （08.01）： baseline、1e-4(*64)、4epoch</li>
+<h2 id="Jiaan"><a href="#Jiaan" class="headerlink" title="Jiaan"></a>Jiaan</h2><ul>
+<li>transformer BERT API介绍</li>
+<li>如何使用预训练好的模型：一些模型可以不用提前下载，例如<code>bert-base-chinese</code>，代码会在第一次运行的时候帮你自动下载预训练好的模型，保存至python的第三方库中。另一类模型，需要自己提前下好，并保存在代码的同级目录当中，例如<code>chinese_wwm_ext_pytorch</code>。</li>
+<li>对于中文任务，推荐使用哈工大讯飞联合实验室的Chinese-BERT-wwm系列（github repo: <a href="https://github.com/ymcui/Chinese-BERT-wwm）" target="_blank" rel="noopener">https://github.com/ymcui/Chinese-BERT-wwm）</a> ，在我自己的任务上，把<code>bert-base-chinese</code>换成<code>chinese_wwm_ext_pytorch</code>确实有指标提升。</li>
+<li>如何通过transformer加载预训练好的模型并获得句子表示：<a href="https://pastebin.ubuntu.com/p/Ns88rgS3Z7/" target="_blank" rel="noopener">https://pastebin.ubuntu.com/p/Ns88rgS3Z7/</a></li>
+<li>讨论音乐分类做法：音乐文件(.wav)→MFCC(X×13)→CNN(Kernel size:13×1 降维成X×1)→Max Pooling→LSTM(最后一步隐向量)→分类器</li>
 </ul>
-<h1 id="4-plan"><a href="#4-plan" class="headerlink" title="4.plan"></a>4.plan</h1><p><del>8.9（含）之前：acc达到80%</del><br>8.15（含）之前：acc达到90%</p>
 
             </div>
 
