@@ -133,19 +133,26 @@
 <li>pathlib.Path(python package)介绍：文件路径库，能自动解析地址</li>
 </ul>
 <h2 id="Jiaan"><a href="#Jiaan" class="headerlink" title="Jiaan"></a>Jiaan</h2><ul>
-<li>transformer BERT API介绍</li>
+<li>transformer BERT API简略介绍</li>
 <li>如何使用预训练好的模型：一些模型可以不用提前下载，例如<code>bert-base-chinese</code>，代码会在第一次运行的时候帮你自动下载预训练好的模型，保存至python的第三方库中。另一类模型，需要自己提前下好，并保存在代码的同级目录当中，例如<code>chinese_wwm_ext_pytorch</code>。</li>
 <li>对于中文任务，推荐使用哈工大讯飞联合实验室的Chinese-BERT-wwm系列（github repo: <a href="https://github.com/ymcui/Chinese-BERT-wwm）" target="_blank" rel="noopener">https://github.com/ymcui/Chinese-BERT-wwm）</a> ，在我自己的任务上，把<code>bert-base-chinese</code>换成<code>chinese_wwm_ext_pytorch</code>确实有指标提升。</li>
 <li>如何通过transformer加载预训练好的模型并获得句子表示：<a href="https://pastebin.ubuntu.com/p/Ns88rgS3Z7/" target="_blank" rel="noopener">https://pastebin.ubuntu.com/p/Ns88rgS3Z7/</a></li>
 <li>讨论音乐分类做法：音乐文件(.wav)→MFCC(X×13)→CNN(Kernel size:13×1 降维成X×1)→Max Pooling→LSTM(最后一步隐向量)→分类器</li>
 </ul>
 <hr>
-<h1 id="Next-Station-Plan"><a href="#Next-Station-Plan" class="headerlink" title="Next Station Plan"></a>Next Station Plan</h1><p>we plan to talk about the following point in the next group meeting.</p>
+<h1 id="Next-Station-Plan"><a href="#Next-Station-Plan" class="headerlink" title="Next Station Plan"></a>Next Station Plan</h1><p>we plan to talk about the following point in the next group meeting or future.</p>
 <ul>
 <li>PyTorch DataLoader</li>
 <li>Transformer BERT Api</li>
+<li>VL-Bert and LXMert</li>
 <li>Conda</li>
 <li>Librosa</li>
+</ul>
+<p>preview tutorial  </p>
+<ul>
+<li>BERT doc：<br><a href="https://huggingface.co/transformers/model_doc/bert.html" target="_blank" rel="noopener">https://huggingface.co/transformers/model_doc/bert.html</a><br><a href="https://huggingface.co/transformers/glossary.html#input-ids" target="_blank" rel="noopener">https://huggingface.co/transformers/glossary.html#input-ids</a><br><a href="https://huggingface.co/transformers/quicktour.html" target="_blank" rel="noopener">https://huggingface.co/transformers/quicktour.html</a></li>
+<li>anaconda创建虚拟环境：<a href="https://www.jianshu.com/p/fc5455385c8c" target="_blank" rel="noopener">https://www.jianshu.com/p/fc5455385c8c</a> </li>
+<li>Librosa：<br><a href="https://www.cnblogs.com/LXP-Never/p/11561355.html" target="_blank" rel="noopener">https://www.cnblogs.com/LXP-Never/p/11561355.html</a><br><a href="https://zhuanlan.zhihu.com/p/54561504" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/54561504</a></li>
 </ul>
 
             </div>
