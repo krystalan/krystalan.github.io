@@ -11,7 +11,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 Hello! I'm Jiaan Wang (王佳安).    
-I am a second-year NLP master student at the Soochow University (2020-2023). I am fortunate to be advised by [Prof. Zhixu Li](https://scholar.google.com/citations?user=P1N6z0oAAAAJ). Currently, I am working closely and advised by [Dr. Fandong Meng](http://fandongmeng.github.io/) from WeChat AI, Tencent. I have previously interned at [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) (2019-2020 and Spring 2021, Research Intern). I also received B.S from Soochow University (2016-2020).
+I am a second-year NLP master student at the Soochow University (2020-2023). I am fortunate to be advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/). Currently, I am working closely and advised by [Dr. Fandong Meng](http://fandongmeng.github.io/) from WeChat AI, Tencent. I have previously interned at [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) (2019-2020 and Spring 2021, Research Intern). I also received B.S from Soochow University (2016-2020).
 <!-- <img src='./images/microsoft_logo.svg' style="width: 4em;"> -->
 
 My primary research interests lie in Natural Language Processing and Machine Learning. I am particularly interested in Natural Language Generation (such as text summarization and story generation).
@@ -34,14 +34,14 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 - Research on dialogue summarization and machine translation.
 
 **KW Lab, Fudan University**. *As NLP Research Intern (part time). 2021.09 - Present*
-- Advised by [Zhixu Li](https://scholar.google.com/citations?user=P1N6z0oAAAAJ).
+- Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 
 **Fuxi AI Lab, NetEase Inc**. *As NLP Engineering Intern. 2021.06 - 2021.09*
 - Mentor: Cong Zhang.
 - Research on dialogue systems and NLP4Game.
 
 **iFLYTEK AI Research**. *As NLP Research Intern. 2019.10 - 2020.08, 2021.3 - 2021.6*
-- Advised by [Zhixu Li](https://scholar.google.com/citations?user=P1N6z0oAAAAJ).
+- Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on machine reading comprehension and text summarization.
 
 # 📝 Publications 
