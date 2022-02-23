@@ -40,7 +40,7 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 - Mentor: Cong Zhang.
 - Research on dialogue systems and NLP4Game.
 
-**iFLYTEK AI Research**. *As NLP Research Intern. 2019.10 - 2020.08, 2021.3 - 2021.6*
+**iFLYTEK AI Research**. *As NLP Research Intern. 2019.10 - 2020.08, 2021.03 - 2021.06*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on machine reading comprehension and text summarization.
 
