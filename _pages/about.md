@@ -55,16 +55,16 @@ To promote the communication among the Chinese ML & NLP community, we (along wit
 - [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750), **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu. In Proc. of **CIKM 2021** (short) \| [[Project](https://github.com/krystalan/SportsSum2.0)]  
 - [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf), **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>. In Proc. of **CCKS 2021** (resource track) \| [[Project](https://github.com/krystalan/SGSum)] <font color=red> (best paper award candidate) </font>  
 
-## Visual Dialogue
+## 🏞️ Visual Dialogue
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297), Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou. In Proc. of **EMNLP 2021 Findings** (long) \| [[Code](https://github.com/zd11024/Entity_Questioner)]  
 
-## 🧑‍🎨 Story Generation
+## 🏰 Story Generation
 - [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538), **<u>Jiaan Wang</u>**, Beiqi Zou, Zhixu Li, Jianfeng Qu<sup>*</sup>, Pengpeng Zhao, An Liu and Lei Zhao. In Proc. of **DASFAA 2022** (long) \| [[Code](https://github.com/krystalan/AwesomeSEG)]  
 
 ## 🎼 Music Summarization 
 - [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153), **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Binbin Gu, Tingyi Zhang, Qingsheng Liu and Zhigang Chen. In Proc. of **ICANN 2021** (long)\| [[Code](https://github.com/krystalan/MMCR)]   
 
-## Knowledge Graph
+## 🌐 Knowledge Graph
 - Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding, Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen. In Proc. of **DASFAA 2022** (long). 
 
 # 🎖 Honors and Awards
@@ -78,12 +78,12 @@ To promote the communication among the Chinese ML & NLP community, we (along wit
 - *2019.06 - 2023.06 (expected)*, Master, Soochow Univeristy, Suzhou.
 - *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou.
 
-# Patents
+# 📄 Patents
 - **<u>Jiaan Wang</u>**, Zhixu Li, Zhigang Chen, Ying He and Xin Zheng. [*A sports game summarization extraction method, device, storage medium and equipment. CN111708878B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=6CCA9GGD6EAA9IIH8GBA1ABACDIA9DIG6CAA7ECAEEIA9BGA)    
 - Ying He, Zhixu Li, Zhigang Chen, Zhaoyin Zhang and **<u>Jiaan Wang</u>**. [*Text summarization method, device, electronic device and storage medium. CN111428025B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=9GHG8CGA9EDA3BCA9BIB7GBA9AGC9EGD9CHA9HFH9HCF4ADA)
 - Zhixu Li, Xin Zheng, Hongping Zhi and **<u>Jiaan Wang</u>**. [*Text extraction method, system, electronic equipment and storage device. CN113505218B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD)
 
-# Survey
+# 📒 Survey
 - Sports Game Summarization. [[Report (Chinese)]](https://mp.weixin.qq.com/s/EidRYB_80AhRclz-mryVhQ) / [[GitHub]](https://github.com/krystalan/K-SportsSum).
 - Multi-Hop Reading Comprehension. [[GitHub]](https://github.com/krystalan/Multi-hopRC)
 - Story Ending Generation. [[GitHub]](https://github.com/krystalan/AwesomeSEG)  
