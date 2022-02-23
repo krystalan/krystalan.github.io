@@ -75,7 +75,7 @@ To promote the communication among the Chinese ML & NLP community, we (along wit
 - *2014* Provincial First Prize at Chinese Mathematics Olympiad (Rank: 16<sup>th</sup> in Shaanxi province)
 
 # 📖 Educations
-- *2019.06 - 2023.06 (expected)*, Master, Soochow Univeristy, Suzhou.
+- *2019.06 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou.
 - *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou.
 
 # 📄 Patents
