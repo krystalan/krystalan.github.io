@@ -29,18 +29,18 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 
 # 💻 Internships
 
-**WeChat AI, Tencent Inc**. *As NLP Research Intern. 2021.09 - Present*
+**WeChat AI, Tencent Inc, Beijing**. *As NLP Research Intern. 2021.09 - Present*
 - Advised by [Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization and machine translation.
 
-**KW Lab, Fudan University**. *As NLP Research Intern (part time). 2021.09 - Present*
+**KW Lab, Fudan University, Remote**. *As NLP Research Intern (part time). 2021.09 - Present*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 
-**Fuxi AI Lab, NetEase Inc**. *As NLP Engineering Intern. 2021.06 - 2021.09*
+**Fuxi AI Lab, NetEase Inc, Hangzhou**. *As NLP Engineering Intern. 2021.06 - 2021.09*
 - Mentor: Cong Zhang.
 - Research on dialogue systems and NLP4Game.
 
-**iFLYTEK AI Research**. *As NLP Research Intern. 2019.10 - 2020.08, 2021.03 - 2021.06*
+**iFLYTEK AI Research, Suzhou**. *As NLP Research Intern. 2019.10 - 2020.08, 2021.03 - 2021.06*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on machine reading comprehension and text summarization.
 
