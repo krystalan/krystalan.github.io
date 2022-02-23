@@ -68,11 +68,11 @@ To promote the communication among the Chinese ML & NLP community, we (along wit
 - Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding, Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen. In Proc. of **DASFAA 2022** (long). 
 
 # 🎖 Honors and Awards
-- *2021.10* China National Scholarship (Rank: 1<sup>st</sup>/190+)
-- *2020.10* Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190+)
-- *2019.09* Postgraduate Recommendation Qualification at Soochow Univ. (Rank: 8<sup>th</sup>/200+)
-- *2015* Provincial First Prize at Chinese Mathematics Olympiad (Rank: 42<sup>nd</sup> in Shaanxi province) 
-- *2014* Provincial First Prize at Chinese Mathematics Olympiad (Rank: 16<sup>th</sup> in Shaanxi province)
+- [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190+)
+- [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190+)
+- [*2019.09*] Postgraduate Recommendation Qualification at Soochow Univ. (Rank: 8<sup>th</sup>/200+)
+- [*2015*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 42<sup>nd</sup> in Shaanxi province) 
+- [*2014*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 16<sup>th</sup> in Shaanxi province)
 
 # 📖 Educations
 - *2019.06 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou.
