@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hello! I'm Jiaan Wang (王佳安).    
+Hello! I'm Jiaan Wang (王佳安). [[CV](https://wangjiaan.cn/files/cv_jiaanwang.pdf)]     
 I am a second-year NLP master student at the Soochow University (2020-2023). I am fortunate to be advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/) (now at Fudan University). Currently, I am working closely and advised by [Dr. Fandong Meng](http://fandongmeng.github.io/) from WeChat AI, Tencent. I have previously interned at [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) (2019-2020 and Spring 2021, Research Intern). I also received B.Eng. from Soochow University (2016-2020).
 <!-- <img src='./images/microsoft_logo.svg' style="width: 4em;"> -->
 
