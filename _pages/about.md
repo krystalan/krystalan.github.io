@@ -31,10 +31,11 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 
 **WeChat AI, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - Present*
 - Advised by [Fandong Meng](http://fandongmeng.github.io/).
-- Research on dialogue summarization and machine translation.
+- Research on dialogue summarization, cross-lingual summarization and machine translation.
 
 **KW Lab, Fudan University (Remote)**. *As NLP Research Intern (part time). 2021.09 - Present*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
+- Research on knowledge graph and sports game summarization.
 
 **Fuxi AI Lab, NetEase Inc (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09*
 - Mentor: Cong Zhang.
