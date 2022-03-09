@@ -79,18 +79,7 @@ In Proc. of **ICANN 2021** (long)
 ## 🌐 Knowledge Graph
 - Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding   
 Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
-In Proc. of **DASFAA 2022** (long). 
-
-# 🎖 Honors and Awards
-- [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190)
-- [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190)
-- [*2019.09*] Postgraduate Recommendation Qualification at Soochow Univ. (Rank: 8<sup>th</sup>/200+)
-- [*2015*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 42<sup>nd</sup> in Shaanxi province) 
-- [*2014*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 16<sup>th</sup> in Shaanxi province)
-
-# 📖 Educations
-- *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou.
-- *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou.
+In Proc. of **DASFAA 2022** (long).    
 
 # 📄 Patents
 - **<u>Jiaan Wang</u>**, Zhixu Li, Zhigang Chen, Ying He and Xin Zheng. [*A sports game summarization extraction method, device, storage medium and equipment. CN111708878B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=6CCA9GGD6EAA9IIH8GBA1ABACDIA9DIG6CAA7ECAEEIA9BGA)    
@@ -101,4 +90,19 @@ In Proc. of **DASFAA 2022** (long).
 - Sports Game Summarization. [[Report (Chinese)](https://mp.weixin.qq.com/s/EidRYB_80AhRclz-mryVhQ)] / [[GitHub](https://github.com/krystalan/K-SportsSum)].
 - Multi-Hop Reading Comprehension. [[Slides (Chinese)](https://wangjiaan.cn/files/20201208_mhqa.pdf)] / [[GitHub](https://github.com/krystalan/Multi-hopRC)]
 - Story Ending Generation. [[GitHub](https://github.com/krystalan/AwesomeSEG)]  
+
+
+# 🎖 Honors and Awards
+- [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190)
+- [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190)
+- [*2019.09*] Postgraduate Recommendation Qualification at Soochow Univ. (Rank: 8<sup>th</sup>/200+)
+- [*2015*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 42<sup>nd</sup> in Shaanxi province) 
+- [*2014*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 16<sup>th</sup> in Shaanxi province)
+
+<!-- # 📖 Educations
+- *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou.
+- *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou.
+ -->
+
+
 
