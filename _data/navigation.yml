@@ -21,4 +21,5 @@ main:
   - title: "Educations"
     url: "/#-educations"
 
-
+  - title: "Blog (Chinese)"
+    url: "https://blog.wangjiaan.cn/"
