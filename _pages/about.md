@@ -47,7 +47,7 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 
 # 📝 Publications 
 *: Corresponding Author(s) 
-## 📚 Text Summarization
+### 📚 Text Summarization
 - [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Project](https://github.com/krystalan/ClidSum)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2022** 
@@ -61,7 +61,7 @@ In Proc. of **CIKM 2021** (short)
 **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
 **CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
 
-## 🏞️ Visual Dialogue
+### 🏞️ Visual Dialogue
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
 Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
 In Proc. of **EMNLP 2021 Findings** (long)
@@ -71,12 +71,12 @@ In Proc. of **EMNLP 2021 Findings** (long)
 **<u>Jiaan Wang</u>**, Beiqi Zou, Zhixu Li, Jianfeng Qu<sup>*</sup>, Pengpeng Zhao, An Liu and Lei Zhao   
 In Proc. of **DASFAA 2022** (long)
 
-## 🎼 Music Summarization 
+### 🎼 Music Summarization 
 - [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Code](https://github.com/krystalan/MMCR)]    
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Binbin Gu, Tingyi Zhang, Qingsheng Liu and Zhigang Chen  
 In Proc. of **ICANN 2021** (long)
 
-## 🌐 Knowledge Graph
+### 🌐 Knowledge Graph
 - Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding   
 Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (long).    
