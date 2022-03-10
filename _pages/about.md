@@ -58,8 +58,8 @@ In Proc. of **WSDM 2022** (long)
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
 In Proc. of **CIKM 2021** (short)
 - [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Project](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
-**<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>  
-In Proc. of **CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
+**<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
+**CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
 
 ## 🏞️ Visual Dialogue
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
