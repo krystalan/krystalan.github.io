@@ -66,7 +66,7 @@ In Proc. of **CIKM 2021** (short)
 Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
 In Proc. of **EMNLP 2021 Findings** (long)
 
-## 🏰 Story Generation
+### 🏰 Story Generation
 - [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538) \| [[Code](https://github.com/krystalan/AwesomeSEG)]    
 **<u>Jiaan Wang</u>**, Beiqi Zou, Zhixu Li, Jianfeng Qu<sup>*</sup>, Pengpeng Zhao, An Liu and Lei Zhao   
 In Proc. of **DASFAA 2022** (long)
