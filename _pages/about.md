@@ -48,16 +48,16 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 # 📝 Publications 
 *: Corresponding Author(s) 
 ### 📚 Text Summarization
-- [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Project](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
+- [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2022** 
-- [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Project](https://github.com/krystalan/K-SportsSum)]   
+- [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Tingyi Zhang, Duo Zheng, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2022** (long)
-- [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Project](https://github.com/krystalan/SportsSum2.0)]      
+- [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]      
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
 In Proc. of **CIKM 2021** (short)
-- [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Project](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
+- [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
 **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
 **CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
 
@@ -72,7 +72,7 @@ In Proc. of **EMNLP 2021 Findings** (long)
 In Proc. of **DASFAA 2022** (long)
 
 ### 🎼 Music Summarization 
-- [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Code](https://github.com/krystalan/MMCR)]    
+- [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Data&Code](https://github.com/krystalan/MMCR)]    
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Binbin Gu, Tingyi Zhang, Qingsheng Liu and Zhigang Chen  
 In Proc. of **ICANN 2021** (long)
 
