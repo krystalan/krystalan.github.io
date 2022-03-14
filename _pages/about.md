@@ -48,7 +48,7 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 # 📝 Publications 
 *: Corresponding Author(s) 
 ### 📚 Text Summarization
-- [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Project](https://github.com/krystalan/ClidSum)] \| [[Huggingface Models](https://huggingface.co/Krystalan)]  
+- [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Project](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2022** 
 - [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Project](https://github.com/krystalan/K-SportsSum)]   
