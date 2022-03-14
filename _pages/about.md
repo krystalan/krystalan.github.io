@@ -33,7 +33,7 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 - Advised by [Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
-**KW Lab, Fudan University (Remote)**. *As NLP Research Intern (part time). 2021.09 - Present*
+**Knowledge Works Lab, Fudan University (Remote)**. *As NLP Research Intern (part time). 2021.09 - Present*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on knowledge graph and sports game summarization.
 
