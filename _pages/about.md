@@ -17,6 +17,7 @@ I am a second-year NLP master student at the Soochow University (2020-2023). I a
 My primary research interests lie in Natural Language Processing and Machine Learning. I am particularly interested in Natural Language Generation (such as text summarization and story generation).
 
 # 🔥 News
+- [*2022.03*] Our new preprint, Cooming Soon! 😄
 - [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
 - [*2022.01*] Two papers have been accepted to DASFAA 2022.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
