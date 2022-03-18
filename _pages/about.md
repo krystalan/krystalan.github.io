@@ -47,7 +47,9 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 - Research on machine reading comprehension and text summarization.
 
 # 📝 Publications 
-*: Corresponding Author(s) 
+*: Corresponding Author(s)   
+Please feel free to drop me an email for any suggestions.
+
 ### 📚 Text Summarization
 - [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
