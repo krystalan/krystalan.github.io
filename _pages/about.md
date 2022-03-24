@@ -17,7 +17,7 @@ I am a second-year NLP master student at the Soochow University (2020-2023). I a
 My primary research interests lie in Natural Language Processing and Machine Learning. I am particularly interested in Natural Language Generation (such as text summarization and story generation).
 
 # 🔥 News
-- [*2022.03*] Our new preprint, Cooming Soon! 😄
+- [*2022.03*] Our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515). Check it out!
 - [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
 - [*2022.01*] Two papers have been accepted to DASFAA 2022.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
@@ -50,10 +50,15 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
 
-### 📚 Text Summarization
+### 🌏 Cross-Lingual Summarization
+- [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515)   
+**<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
+**arXiv preprint 2022**    
 - [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2022** 
+
+### 📚 Sports Game Summarization
 - [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Tingyi Zhang, Duo Zheng, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2022** (long)
