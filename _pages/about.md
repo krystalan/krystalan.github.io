@@ -95,6 +95,7 @@ In Proc. of **DASFAA 2022** (long).
 - Zhixu Li, Xin Zheng, Hongping Zhi and **<u>Jiaan Wang</u>**. [*Text extraction method, system, electronic equipment and storage device. CN113505218B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD)
 
 # 📒 Survey
+- Cross-Lingual Summarization. [[Paper](https://arxiv.org/abs/2203.12515)]
 - Sports Game Summarization. [[Report (Chinese)](https://mp.weixin.qq.com/s/EidRYB_80AhRclz-mryVhQ)] / [[GitHub](https://github.com/krystalan/K-SportsSum)].
 - Multi-Hop Reading Comprehension. [[Slides (Chinese)](https://wangjiaan.cn/files/20201208_mhqa.pdf)] / [[GitHub](https://github.com/krystalan/Multi-hopRC)]
 - Story Ending Generation. [[GitHub](https://github.com/krystalan/AwesomeSEG)]  
