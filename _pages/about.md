@@ -94,11 +94,9 @@ In Proc. of **DASFAA 2022** (long).
 - Ying He, Zhixu Li, Zhigang Chen, Zhaoyin Zhang and **<u>Jiaan Wang</u>**. [*Text summarization method, device, electronic device and storage medium. CN111428025B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=9GHG8CGA9EDA3BCA9BIB7GBA9AGC9EGD9CHA9HFH9HCF4ADA)
 - Zhixu Li, Xin Zheng, Hongping Zhi and **<u>Jiaan Wang</u>**. [*Text extraction method, system, electronic equipment and storage device. CN113505218B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD)
 
-# 📒 Survey
-- Cross-Lingual Summarization. [[Paper](https://arxiv.org/abs/2203.12515)]
-- Sports Game Summarization. [[Report (Chinese)](https://mp.weixin.qq.com/s/EidRYB_80AhRclz-mryVhQ)] / [[GitHub](https://github.com/krystalan/K-SportsSum)].
-- Multi-Hop Reading Comprehension. [[Slides (Chinese)](https://wangjiaan.cn/files/20201208_mhqa.pdf)] / [[GitHub](https://github.com/krystalan/Multi-hopRC)]
-- Story Ending Generation. [[GitHub](https://github.com/krystalan/AwesomeSEG)]  
+# 📒 Projects
+- Summarization-Papers (Organized by [Xiachong Feng](http://xcfeng.net/)) [![](https://img.shields.io/github/stars/xcfcode/Summarization-Papers?style=social&label=Code+Stars)](https://github.com/xcfcode/Summarization-Papers)
+- Multi-Hop Reading Comprehension Paper List [![](https://img.shields.io/github/stars/krystalan/Multi-hopRC?style=social&label=Code+Stars)](https://github.com/krystalan/Multi-hopRC)
 
 
 # 🎖 Honors and Awards
