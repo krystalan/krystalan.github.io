@@ -95,8 +95,8 @@ In Proc. of **DASFAA 2022** (long).
 - Zhixu Li, Xin Zheng, Hongping Zhi and **<u>Jiaan Wang</u>**. [*Text extraction method, system, electronic equipment and storage device. CN113505218B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD)
 
 # 📒 Projects
-- Summarization-Papers (Organized by [Xiachong Feng](http://xcfeng.net/)) [![](https://img.shields.io/github/stars/xcfcode/Summarization-Papers?style=social&label=Code+Stars)](https://github.com/xcfcode/Summarization-Papers)
-- Multi-Hop Reading Comprehension Paper List [![](https://img.shields.io/github/stars/krystalan/Multi-hopRC?style=social&label=Code+Stars)](https://github.com/krystalan/Multi-hopRC)
+- Summarization-Papers (Organized by [Xiachong Feng](http://xcfeng.net/)) [![](https://img.shields.io/github/stars/xcfcode/Summarization-Papers?style=social&label=Stars)](https://github.com/xcfcode/Summarization-Papers)
+- Multi-Hop Reading Comprehension Paper List [![](https://img.shields.io/github/stars/krystalan/Multi-hopRC?style=social&label=Stars)](https://github.com/krystalan/Multi-hopRC)
 
 
 # 🎖 Honors and Awards
