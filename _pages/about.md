@@ -38,7 +38,7 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on knowledge graph and sports game summarization.
 
-**Fuxi AI Lab, NetEase Inc (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09*
+**Fuxi AI Lab, NetEase Game (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09*
 - Mentor: Cong Zhang.
 - Research on dialogue systems and NLP4Game.
 
