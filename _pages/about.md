@@ -30,7 +30,7 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 
 # 💻 Internships
 
-**WeChat AI, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - Present*
+**WeChat AI, WXG, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - Present*
 - Advised by [Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
