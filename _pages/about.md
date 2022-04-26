@@ -85,7 +85,7 @@ In Proc. of **DASFAA 2022** (long)
 In Proc. of **ICANN 2021** (long)
 
 ### 🌐 Knowledge Graph
-- Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding   
+- [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
 Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (long).    
 
