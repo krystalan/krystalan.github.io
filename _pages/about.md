@@ -69,15 +69,15 @@ In Proc. of **CIKM 2021** (short)
 **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
 **CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
 
-### 💬 Dialogue System
-- [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
-Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
-In Proc. of **EMNLP 2021 Findings** (long)    
-
 ### 🏰 Story Generation
 - [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538) \| [[Code](https://github.com/krystalan/AwesomeSEG)]    
 **<u>Jiaan Wang</u>**, Beiqi Zou, Zhixu Li, Jianfeng Qu<sup>*</sup>, Pengpeng Zhao, An Liu and Lei Zhao   
 In Proc. of **DASFAA 2022** (long)
+
+### 💬 Dialogue System
+- [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
+Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
+In Proc. of **EMNLP 2021 Findings** (long)    
 
 ### 🎼 Music Summarization 
 - [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Data&Code](https://github.com/krystalan/MMCR)]    
