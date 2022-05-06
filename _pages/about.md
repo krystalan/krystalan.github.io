@@ -61,7 +61,7 @@ Please feel free to drop me an email for any suggestions.
 ### 📚 Sports Game Summarization
 - [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Tingyi Zhang, Duo Zheng, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
-In Proc. of **WSDM 2022** (long) <font color=purple>(CCF-B,THU-A,Core-A<sup>*</sup>)</font> 
+In Proc. of **WSDM 2022** (long) <font color=purple>(CCF-B, THU-A, Core-A<sup>*</sup>)</font> 
 - [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]      
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
 In Proc. of **CIKM 2021** (short)
