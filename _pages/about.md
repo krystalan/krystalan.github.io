@@ -61,10 +61,10 @@ Please feel free to drop me an email for any suggestions.
 ### 📚 Sports Game Summarization
 - [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Tingyi Zhang, Duo Zheng, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
-In Proc. of **WSDM 2022** (long) <font color=purple>(CCF-B, THU-A, Core-A<sup>*</sup>)</font> 
+In Proc. of **WSDM 2022** (long) <font color=purple>(CCF-B, THU-A, Core-A<sup>*</sup>)</font>    
 - [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]      
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
-In Proc. of **CIKM 2021** (short)
+In Proc. of **CIKM 2021** (short) <font color=purple>(CCF-B, THU-B, Core-A)</font>   
 - [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
 **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
 **CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
@@ -72,22 +72,22 @@ In Proc. of **CIKM 2021** (short)
 ### 🏰 Story Generation
 - [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538) \| [[Code](https://github.com/krystalan/AwesomeSEG)]    
 **<u>Jiaan Wang</u>**, Beiqi Zou, Zhixu Li, Jianfeng Qu<sup>*</sup>, Pengpeng Zhao, An Liu and Lei Zhao   
-In Proc. of **DASFAA 2022** (long)
+In Proc. of **DASFAA 2022** (long) <font color=purple>(CCF-B, THU-B, Core-B)</font>   
 
 ### 💬 Dialogue System
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
 Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
-In Proc. of **EMNLP 2021 Findings** (long)    
+In Proc. of **EMNLP 2021 Findings** (long) <font color=purple>(CCF-B, THU-A, Core-A)</font>      
 
 ### 🎼 Music Summarization 
 - [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Data&Code](https://github.com/krystalan/MMCR)]    
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Binbin Gu, Tingyi Zhang, Qingsheng Liu and Zhigang Chen  
-In Proc. of **ICANN 2021** (long)
+In Proc. of **ICANN 2021** (long) <font color=purple>(CCF-C, Core-C)</font>
 
 ### 🌐 Knowledge Graph
 - [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
 Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
-In Proc. of **DASFAA 2022** (long).    
+In Proc. of **DASFAA 2022** (long) <font color=purple>(CCF-B, THU-B, Core-B)</font>    
 
 # 📄 Patents
 - **<u>Jiaan Wang</u>**, Zhixu Li, Zhigang Chen, Ying He and Xin Zheng. [*A sports game summarization extraction method, device, storage medium and equipment. CN111708878B*](https://cprs.patentstar.com.cn/Search/Detail?ANE=6CCA9GGD6EAA9IIH8GBA1ABACDIA9DIG6CAA7ECAEEIA9BGA)    
