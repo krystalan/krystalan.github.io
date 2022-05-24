@@ -90,12 +90,12 @@ Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan
 In Proc. of **DASFAA 2022** (long) <font color=purple>(CCF-B, THU-B, Core-B)</font>    
 
 # 📄 Patents
-- Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《剧情文本生成的方法、装置、终端和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9HEE9IFE9GDC9FDB5AEA9IDC9HHF9CIG7FCA9AFF9EDE9IBD) CN114416921A
-- Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《意图识别的方法、装置及电子设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9FFD9HIG9HCC7CDA9DGB2BBA8HAA6DDA8CEABEGA7FBA9ECG) CN114429142A
-- Linjian Zhang, Beiqi Zou, **<u>Jiaan Wang</u>**, Zerui Cai, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《人机交互方法、装置、电子设备及存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9DIE2ACA7DCA3BAA9HCB4AEA9HDC9HAA6CCA9IFF9FAC9FCG) CN114461775A
-- **<u>Jiaan Wang</u>**, Zhixu Li, Zhigang Chen, Ying He, Xin Zheng. [《一种体育文本摘要提取方法、装置、存储介质及设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=6CCA9GGD6EAA9IIH8GBA1ABACDIA9DIG6CAA7ECAEEIA9BGA) CN111708878B    
-- Ying He, Zhixu Li, Zhigang Chen, Zhaoyin Zhang, **<u>Jiaan Wang</u>**. [《文本摘要方法、装置、电子设备和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9GHG8CGA9EDA3BCA9BIB7GBA9AGC9EGD9CHA9HFH9HCF4ADA) CN111428025B
-- Zhixu Li, Xin Zheng, Hongping Zhi, **<u>Jiaan Wang</u>**. [《文本提取方法、文本提取系统、电子设备和存储装置》](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD) CN113505218B
+- Linjian Zhang, **Jiaan Wang**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《剧情文本生成的方法、装置、终端和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9HEE9IFE9GDC9FDB5AEA9IDC9HHF9CIG7FCA9AFF9EDE9IBD) CN114416921A
+- Linjian Zhang, **Jiaan Wang**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《意图识别的方法、装置及电子设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9FFD9HIG9HCC7CDA9DGB2BBA8HAA6DDA8CEABEGA7FBA9ECG) CN114429142A
+- Linjian Zhang, Beiqi Zou, **Jiaan Wang**, Zerui Cai, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《人机交互方法、装置、电子设备及存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9DIE2ACA7DCA3BAA9HCB4AEA9HDC9HAA6CCA9IFF9FAC9FCG) CN114461775A
+- **Jiaan Wang**, Zhixu Li, Zhigang Chen, Ying He, Xin Zheng. [《一种体育文本摘要提取方法、装置、存储介质及设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=6CCA9GGD6EAA9IIH8GBA1ABACDIA9DIG6CAA7ECAEEIA9BGA) CN111708878B    
+- Ying He, Zhixu Li, Zhigang Chen, Zhaoyin Zhang, **Jiaan Wang**. [《文本摘要方法、装置、电子设备和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9GHG8CGA9EDA3BCA9BIB7GBA9AGC9EGD9CHA9HFH9HCF4ADA) CN111428025B
+- Zhixu Li, Xin Zheng, Hongping Zhi, **Jiaan Wang**. [《文本提取方法、文本提取系统、电子设备和存储装置》](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD) CN113505218B
 
 # 📒 Projects
 - [Summarization-Papers](https://github.com/xcfcode/Summarization-Papers) (Organized by [Xiachong Feng](http://xcfeng.net/)) [![](https://img.shields.io/github/stars/xcfcode/Summarization-Papers?style=social&label=Stars)](https://github.com/xcfcode/Summarization-Papers)
