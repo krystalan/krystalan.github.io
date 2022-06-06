@@ -56,7 +56,7 @@ Please feel free to drop me an email for any suggestions.
 **arXiv preprint 2022**, submitted to TACL    
 - [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
-**arXiv preprint 2022**, submitted to ARR (EMNLP)
+**arXiv preprint 2022**, submitted to EMNLP
 
 ### 📚 Sports Game Summarization
 - [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
