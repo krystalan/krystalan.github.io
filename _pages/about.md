@@ -19,14 +19,14 @@ My primary research interests lie in Natural Language Processing and Machine Lea
 # 🔥 News
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515)
 - [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
-- [*2022.01*] Two papers have been accepted to DASFAA 2022.
+- [*2022.01*] 2 papers are accepted to DASFAA 2022 as long papers.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
-- [*2021.10*] Our paper [*Knowledge Enhanced Sports Game Summarization*](https://arxiv.org/abs/2111.12535) is accepted by WSDM 2022 as a long paper.
-- [*2021.09*] I will start intern at Wechat AI (Tencent Inc) this month.
-- [*2021.08*] One paper has been accepted to EMNLP 2021.
-- [*2021.08*] Our paper [*SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary*](http://arxiv.org/abs/2110.05750) is accepted by CIKM 2021 as a short paper.
-- [*2021.06*] Our paper [*Multi-Modal Chorus Recognition for Improving Song Search*](https://arxiv.org/abs/2106.16153) is accepted by ICANN 2021 as a long paper.
-- [*2021.05*] I will intern at Fuxi AI lab (NetEase Inc) this summer.
+- [*2021.10*] 1 paper is accepted to WSDM 2022 as a long paper.
+- [*2021.09*] I will start intern at [Wechat AI, Tencent](https://ai.weixin.qq.com/) this month in Beijing.
+- [*2021.08*] 1 paper is accepted to EMNLP 2022 as a long paper (findings).
+- [*2021.08*] 1 paper is accepted to CIKM 2021 as a short paper.
+- [*2021.06*] 1 paper is accepted to ICANN 2021 as a long paper.
+- [*2021.05*] I will intern at [Fuxi AI lab, NetEase Game](https://fuxi.163.com/en/) this summer in Hangzhou.
 
 # 💻 Internships
 
