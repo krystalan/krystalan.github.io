@@ -14,7 +14,9 @@ Hello! I'm Jiaan Wang (王佳安). [[Curriculum Vitae](https://wangjiaan.cn/file
 I am a second-year NLP master student at the Soochow University (2020-2023). I am fortunate to be advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/) (now at Fudan University). Currently, I am working closely and advised by [Dr. Fandong Meng](http://fandongmeng.github.io/) from [WeChat AI, Tencent](https://ai.weixin.qq.com/). I have previously interned at [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) (2019-2020 and Spring 2021, Research Intern). I also received B.Eng. from Soochow University (2016-2020).
 <!-- <img src='./images/microsoft_logo.svg' style="width: 4em;"> -->
 
-My primary research interests lie in Natural Language Processing and Machine Learning. I am particularly interested in Natural Language Generation (such as text summarization and story generation).
+My primary research interests lie in Natural Language Processing and Data Mining. I am particularly interested in Natural Language Generation (such as text summarization and story generation).
+
+I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
 
 # 🔥 News
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515)
