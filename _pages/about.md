@@ -32,19 +32,19 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 
 # 💻 Internships
 
-**WeChat AI, WXG, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06*
+**WeChat AI, WXG, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time), 2022.06 - Present (by courtesy)*
 - Advised by [Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
-**Knowledge Works Lab, Fudan University (Remote)**. *As NLP Research Intern (part time). 2021.09 - Present*
+**Knowledge Works Lab, Fudan University (Remote)**. *As NLP Research Intern. 2021.09 - Present (by courtesy)*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on knowledge graph and sports game summarization.
 
-**Fuxi AI Lab, NetEase Game (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09*
+**Fuxi AI Lab, NetEase Game (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09 (full time)*
 - Mentor: Cong Zhang.
 - Research on dialogue systems and NLP4Game.
 
-**iFLYTEK AI Research (Suzhou)**. *As NLP Research Intern. 2019.10 - 2020.08, 2021.03 - 2021.06*
+**iFLYTEK AI Research (Suzhou)**. *As NLP Research Intern. 2019.10 - 2020.08 (full time), 2021.03 - 2021.06 (full time)*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on machine reading comprehension and text summarization.
 
