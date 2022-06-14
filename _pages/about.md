@@ -36,7 +36,7 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - Advised by [Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
-**Knowledge Works Lab, Fudan University (Remote)**. *As NLP Research Intern. 2021.09 - Present (by courtesy)*
+**Knowledge Works Lab, Fudan University (Shanghai)**. *As NLP Research Intern. 2021.09 - Present (by courtesy)*
 - Advised by [Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
 - Research on knowledge graph and sports game summarization.
 
