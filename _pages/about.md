@@ -11,7 +11,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 Hello! I'm Jiaan Wang (王佳安). [[Curriculum Vitae](https://wangjiaan.cn/files/cv_jiaanwang.pdf)] [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)]       
-I am a second-year NLP master student at the Soochow University (2020-2023). I am fortunate to be advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) from [WeChat AI](https://ai.weixin.qq.com/) closely. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) (2019-2020 and Spring 2021, Research Intern). I also received B.Eng. from Soochow University (2016-2020).
+I am a second-year NLP master student at the Soochow University. I am fortunate to be advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) from [WeChat AI](https://ai.weixin.qq.com/) closely. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) (2019-2020 and Spring 2021, Research Intern).
 <!-- <img src='./images/microsoft_logo.svg' style="width: 4em;"> -->
 
 My primary research interests lie in Natural Language Processing and Data Mining. I am particularly interested in Natural Language Generation (such as text summarization and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.
@@ -29,6 +29,10 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - [*2021.08*] 1 paper is accepted to CIKM 2021 as a short paper, about text summarization.
 - [*2021.06*] 1 paper is accepted to ICANN 2021 as a long paper, about music summarization.
 - [*2021.05*] I will intern at [Fuxi AI lab, NetEase Game](https://fuxi.163.com/en/) this summer in Hangzhou.
+
+# 📖 Educations
+- *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou.
+- *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou.
 
 # 💻 Internships
 
@@ -112,10 +116,6 @@ In Proc. of **DASFAA 2022** (long)
 - [*2015*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 42<sup>nd</sup> in Shaanxi province) 
 - [*2014*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 16<sup>th</sup> in Shaanxi province)
 
-<!-- # 📖 Educations
-- *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou.
-- *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou.
- -->
 
 
 
