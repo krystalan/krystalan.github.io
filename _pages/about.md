@@ -31,8 +31,8 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - [*2021.05*] I will intern at [Fuxi AI lab, NetEase Game](https://fuxi.163.com/en/) this summer in Hangzhou.
 
 # 📖 Educations
-- *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou.
-- *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou.
+- *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou, China
+- *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou, China
 
 # 💻 Internships
 
