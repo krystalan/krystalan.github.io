@@ -25,7 +25,7 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
 - [*2021.10*] 1 paper is accepted to WSDM 2022 as a long paper, about text summarization.
 - [*2021.09*] I will start intern at [Wechat AI, Tencent](https://ai.weixin.qq.com/) this month in Beijing.
-- [*2021.08*] 1 paper is accepted to EMNLP 2022 as a long paper (findings), about visual dialogue.
+- [*2021.08*] 1 paper is accepted to EMNLP 2021 as a long paper (findings), about visual dialogue.
 - [*2021.08*] 1 paper is accepted to CIKM 2021 as a short paper, about text summarization.
 - [*2021.06*] 1 paper is accepted to ICANN 2021 as a long paper, about music summarization.
 - [*2021.05*] I will intern at [Fuxi AI lab, NetEase Game](https://fuxi.163.com/en/) this summer in Hangzhou.
