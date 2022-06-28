@@ -25,7 +25,7 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - [*2022.01*] 2 papers are accepted to DASFAA 2022 as long papers, about story generation and knowledge graph embedding.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
 - [*2021.10*] 1 paper is accepted to WSDM 2022 as a long paper, about text summarization.
-- [*2021.09*] I will start intern at [Wechat AI, Tencent](https://ai.weixin.qq.com/) this month in Beijing.
+- [*2021.09*] I will start intern at [Wechat AI, Tencent Inc.](https://ai.weixin.qq.com/) this month in Beijing.
 - [*2021.08*] 1 paper is accepted to EMNLP 2021 as a long paper (findings), about visual dialogue.
 - [*2021.08*] 1 paper is accepted to CIKM 2021 as a short paper, about text summarization.
 - [*2021.06*] 1 paper is accepted to ICANN 2021 as a long paper, about music summarization.
@@ -38,7 +38,7 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 # 💻 Internships
 **Lumi AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - Present (full time)*
 - Mentor: [Dr. Jun Xing](https://junxnui.github.io/).
-- Research on digital human, i.e., Lumi(鹿鸣) | [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] | [[bilibili](https://space.bilibili.com/488836173/)].
+- Research on digital human, i.e., Lumi(鹿鸣) \| [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] \| [[bilibili](https://space.bilibili.com/488836173/)].
 
 **WeChat AI, WXG, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time), 2022.06 - Present (by courtesy)*
 - Advised by [Dr. Fandong Meng](http://fandongmeng.github.io/).
