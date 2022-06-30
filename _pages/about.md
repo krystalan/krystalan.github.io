@@ -102,6 +102,11 @@ In Proc. of **DASFAA 2022** (long)
 # 🗞️ Academic Services
 - PC Member & Reviewer: EMNLP 2022, ICANN 2021
 
+# Student Collaborators
+- PhD: [Yunlong Liang](https://scholar.google.com/citations?user=P5iDDGIAAAAJ&hl=en) (BJTU), [Zipeng Xu](https://zipengxuc.github.io/) (UniTrento), [Haoxiang Shi](https://www.linkedin.com/in/haoxiang-%E3%82%B7-a07805150/) (Waseda), [Binbin Gu](https://tuzijun111.github.io/) (UCI), [Qiang Yang](https://scholar.google.com/citations?user=hDCsypAAAAAJ&hl=en) (KAUST)
+- MS: [Duo Zheng](https://zd11024.github.io/) (BUPT), [Beiqi Zou](https://github.com/BQZic) (Princeton)
+
+
 # 📄 Patents
 - Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《剧情文本生成的方法、装置、终端和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9HEE9IFE9GDC9FDB5AEA9IDC9HHF9CIG7FCA9AFF9EDE9IBD) CN114416921A
 - Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《意图识别的方法、装置及电子设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9FFD9HIG9HCC7CDA9DGB2BBA8HAA6DDA8CEABEGA7FBA9ECG) CN114429142A
