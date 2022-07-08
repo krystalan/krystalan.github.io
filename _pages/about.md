@@ -19,7 +19,8 @@ My primary research interests lie in Natural Language Processing and Data Mining
 I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
 
 # 🔥 News
-<!-- - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai. -->
+- [*2022.07*] 1 paper is accepted to ISWC 2022 as a long paper, about dialogue system.
+- [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515)
 - [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
 - [*2022.01*] 2 papers are accepted to DASFAA 2022 as long papers, about story generation and knowledge graph embedding.
@@ -36,9 +37,9 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou, China
 
 # 💻 Internships
-<!-- **Lumi AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - Present (full time)*
+**Lumi AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - Present (full time)*
 - Mentor: [Dr. Jun Xing](https://junxnui.github.io/).
-- Research on digital human, i.e., Lumi(鹿鸣) \| [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] \| [[bilibili](https://space.bilibili.com/488836173/)]. -->
+- Research on digital human, i.e., Lumi(鹿鸣) \| [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] \| [[bilibili](https://space.bilibili.com/488836173/)].
 
 **WeChat AI, WXG, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time), 2022.06 - Present (by courtesy)*
 - Advised by [Dr. Fandong Meng](http://fandongmeng.github.io/).
@@ -85,6 +86,9 @@ In Proc. of **CIKM 2021** (short)
 In Proc. of **DASFAA 2022** (long) 
 
 ### 💬 Dialogue System
+- RT-KGD: Relation Transition Aware Knowledge-Grounded Dialogue Generation     
+Kexin Wang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu, Ying He, An Liu and Lei Zhao   
+In Proc. of **ISWC 2022** (long)
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
 Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
 In Proc. of **EMNLP 2021 Findings** (long)   
