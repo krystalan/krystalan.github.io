@@ -87,7 +87,7 @@ In Proc. of **DASFAA 2022** (long)
 
 ### 💬 Dialogue System
 - RT-KGD: Relation Transition Aware Knowledge-Grounded Dialogue Generation \| [[Code](https://github.com/tigerwww-git/RT-KGD)]        
-Kexin Wang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu, Ying He, An Liu and Lei Zhao   
+Kexin Wang, Zhixu Li<sup>*</sup>, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Ying He, An Liu and Lei Zhao   
 In Proc. of **ISWC 2022** (long)
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
 Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
