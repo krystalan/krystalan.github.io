@@ -75,7 +75,10 @@ Please feel free to drop me an email for any suggestions.
 In Proc. of **WSDM 2022** (long)   
 - [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]      
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
-In Proc. of **CIKM 2021** (short)
+In Proc. of **CIKM 2021** (short)    
+- [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://wangjiaan.cn/files/goal.pdf) \| [[Data&Code](https://github.com/krystalan/goal)]    
+**<u>Jiaan Wang</u>**<sup>*</sup>, Tingyi Zhang, Haoxiang Shi      
+Technical report, 2022  
 - [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
 **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
 **CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
