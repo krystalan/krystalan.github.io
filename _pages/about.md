@@ -20,17 +20,17 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 
 # 🔥 News
 - [*2022.07*] Our new preprint, [*GOAL: Towards Benchmarking Few-Shot Sports Game Summarization*](https://arxiv.org/abs/2207.08635) is out w/ [data&code](https://github.com/krystalan/goal).
-- [*2022.07*] 1 paper is accepted to ISWC 2022 as a long paper, about dialogue system.
+- [*2022.07*] 1 paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515)
 - [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
-- [*2022.01*] 2 papers are accepted to DASFAA 2022 as long papers, about story generation and knowledge graph embedding.
+- [*2022.01*] 2 papers are accepted to DASFAA 2022, about story generation and knowledge graph embedding.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
-- [*2021.10*] 1 paper is accepted to WSDM 2022 as a long paper, about text summarization.
+- [*2021.10*] 1 paper is accepted to WSDM 2022, about text summarization.
 - [*2021.09*] I will start intern at [Wechat AI, Tencent Inc.](https://ai.weixin.qq.com/) this month in Beijing.
-- [*2021.08*] 1 paper is accepted to EMNLP 2021 as a long paper (findings), about visual dialogue.
-- [*2021.08*] 1 paper is accepted to CIKM 2021 as a short paper, about text summarization.
-- [*2021.06*] 1 paper is accepted to ICANN 2021 as a long paper, about music summarization.
+- [*2021.08*] 1 paper is accepted to EMNLP 2021 (findings), about visual dialogue.
+- [*2021.08*] 1 paper is accepted to CIKM 2021, about text summarization.
+- [*2021.06*] 1 paper is accepted to ICANN 2021, about music summarization.
 - [*2021.05*] I will intern at [Fuxi AI lab, NetEase Game](https://fuxi.163.com/en/) this summer in Hangzhou.
 
 # 📖 Educations
