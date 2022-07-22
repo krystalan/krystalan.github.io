@@ -19,7 +19,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
 
 # 🔥 News
-- [*2022.07*] Our new preprint, [*GOAL: Towards Benchmarking Few-Shot Sports Game Summarization*](https://arxiv.org/abs/2207.08635) is out w/ [data&code](https://github.com/krystalan/goal).
+
 - [*2022.07*] 1 paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515)
