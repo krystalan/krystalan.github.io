@@ -19,6 +19,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
 
 # 🔥 News
+- [*2022.07*] Our new preprint, [*GOAL: Towards Benchmarking Few-Shot Sports Game Summarization*](https://arxiv.org/abs/2207.08635) is out w/ [data&code](https://github.com/krystalan/goal).
 - [*2022.07*] 1 paper is accepted to ISWC 2022 as a long paper, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515)
@@ -78,7 +79,7 @@ In Proc. of **WSDM 2022** (long)
 In Proc. of **CIKM 2021** (short)    
 - [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **<u>Jiaan Wang</u>**<sup>*</sup>, Tingyi Zhang, Haoxiang Shi      
-Technical report, 2022  
+**arXiv preprint 2022**   
 - [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
 **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
 **CCKS 2021** (resource track)  <font color=red> (best paper award candidate) </font>  
