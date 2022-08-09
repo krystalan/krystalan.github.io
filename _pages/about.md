@@ -19,10 +19,10 @@ My primary research interests lie in Natural Language Processing and Data Mining
 I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
 
 # 🔥 News
-
+- [*2022.08*] 1 paper is accepted to TACL 2022, about cross-lingual summarization.
 - [*2022.07*] 1 paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
-- [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515)
+- [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515) (Update 08/2022: The paper is accepted to TACL 2022)
 - [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
 - [*2022.01*] 2 papers are accepted to DASFAA 2022, about story generation and knowledge graph embedding.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
@@ -65,7 +65,7 @@ Please feel free to drop me an email for any suggestions.
 ### 🌏 Cross-Lingual Summarization
 - ![new paper](/images/new.gif) [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515)   
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
-**arXiv preprint 2022**, submitted to TACL    
+In Proc. of **TACL 2022** (survey paper)   
 - ![new paper](/images/new.gif) [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2022**, submitted to EMNLP
