@@ -19,8 +19,8 @@ My primary research interests lie in Natural Language Processing and Data Mining
 I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
 
 # 🔥 News
-- ![new paper](/images/new.gif) [*2022.08*] 1 paper is accepted to TACL 2022, about cross-lingual summarization.
-- ![new paper](/images/new.gif) [*2022.07*] 1 paper is accepted to ISWC 2022, about dialogue system.
+- [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to TACL 2022, about cross-lingual summarization.
+- [*2022.07*] ![new paper](/images/new.gif) 1 paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515) (Update 08/2022: The paper is accepted to TACL 2022)
 - [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
