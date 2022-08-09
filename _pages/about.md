@@ -65,7 +65,7 @@ Please feel free to drop me an email for any suggestions.
 ### 🌏 Cross-Lingual Summarization
 - ![new paper](/images/new.gif) [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515)   
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
-In Proc. of **TACL 2022** (survey paper)   
+To appear in **TACL** (survey paper)   
 - ![new paper](/images/new.gif) [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2022**, submitted to EMNLP
