@@ -19,6 +19,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
 
 # 🔥 News
+- [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to COLING 2022, about parameter efficiency.
 - [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to TACL, about cross-lingual summarization.
 - [*2022.07*] ![new paper](/images/new.gif) 1 paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
@@ -96,6 +97,11 @@ In Proc. of **ISWC 2022** (full paper)
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
 Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u>** and Jie Zhou    
 In Proc. of **EMNLP 2021 Findings** (full paper)   
+
+### ❄️ Parameter Efficiency
+- ![new paper](/images/new.gif) LayerConnect: Hypernetwork-Assisted Inter-Layer Connector to Enhance Parameter Efficiency   
+Haoxiang Shi, Rongsheng Zhang, **<u>Jiaan Wang</u>**, Cen Wang, Guandan Chen, Yinhe Zheng and Tetsuya Sakai    
+In Proc. of **COLING 2022** (short paper)
 
 ### 🎼 Music Summarization 
 - [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Data&Code](https://github.com/krystalan/MMCR)]    
