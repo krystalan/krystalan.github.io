@@ -11,7 +11,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 Hello! I'm Jiaan Wang (王佳安). [[Curriculum Vitae](https://wangjiaan.cn/files/cv_jiaanwang.pdf)] [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)]       
-I am a second-year NLP master student at the Soochow University. I am fortunate to be advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) from [WeChat AI](https://ai.weixin.qq.com/) closely. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
+I am a second-year NLP master student at the Soochow University. I am fortunate to be advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) from [WeChat AI](https://ai.weixin.qq.com/) closely. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
 
 
 My primary research interests lie in Natural Language Processing and Data Mining. I am particularly interested in Natural Language Generation (such as text summarization and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.
@@ -49,7 +49,7 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
 **Knowledge Works Lab, Fudan University (Shanghai)**. *As NLP Research Intern. 2021.09 - Present (by courtesy)*
-- Advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
+- Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
 - Research on knowledge graph and sports game summarization.
 
 **Fuxi AI Lab, NetEase Game (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09 (full time)*
@@ -57,7 +57,7 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 - Research on dialogue systems and NLP4Game.
 
 **iFLYTEK AI Research (Suzhou)**. *As NLP Research Intern. 2019.10 - 2020.08 (full time), 2021.03 - 2021.06 (full time)*
-- Advised by [Prof. Zhixu Li](http://kw.fudan.edu.cn/people/lizhixu/).
+- Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
 - Research on machine reading comprehension and text summarization.
 
 # 📝 Publications 
