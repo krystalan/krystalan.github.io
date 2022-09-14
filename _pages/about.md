@@ -66,7 +66,7 @@ I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on
 Please feel free to drop me an email for any suggestions.
 
 ### 🌏 Cross-Lingual Summarization
-- ![new paper](/images/new.gif) [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515)   
+- ![new paper](/images/new.gif) [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
 To appear in **TACL**   
 - [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
