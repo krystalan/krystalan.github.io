@@ -16,7 +16,7 @@ I am a final-year master student at the Soochow University. I am fortunate to be
 
 My primary research interests lie in Natural Language Processing and Data Mining. I am particularly interested in Natural Language Generation (such as text summarization and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.
 
-I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour).
+<!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
 # 🔥 News
 - [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to COLING 2022, about parameter efficiency.
