@@ -24,8 +24,6 @@ My primary research interests lie in Natural Language Processing and Data Mining
 - [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to TACL, about cross-lingual summarization.
 - [*2022.07*] 1 paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
-- [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515) (Update 08/2022: The paper is accepted to TACL)
-- [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out! (Update 10/2022: The paper is accepted to EMNLP 2022)
 - [*2022.01*] 2 papers are accepted to DASFAA 2022, about story generation and knowledge graph embedding.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
 - [*2021.10*] China National Scholarship.
@@ -34,7 +32,10 @@ My primary research interests lie in Natural Language Processing and Data Mining
 - [*2021.08*] 1 paper is accepted to EMNLP 2021 (findings), about visual dialogue.  
 - [*2021.08*] 1 paper is accepted to CIKM 2021, about text summarization.  
 - [*2021.06*] 1 paper is accepted to ICANN 2021, about music summarization.  
-- [*2021.05*] I will intern at [Fuxi AI lab, NetEase Game](https://fuxi.163.com/en/) this summer in Hangzhou.  
+- [*2021.05*] I will intern at [Fuxi AI lab, NetEase Game](https://fuxi.163.com/en/) this summer in Hangzhou. 
+
+<!-- - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515) (Update 08/2022: The paper is accepted to TACL)
+- [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out! (Update 10/2022: The paper is accepted to EMNLP 2022) -->
 
 
 # 📖 Educations
