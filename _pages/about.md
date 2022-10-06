@@ -19,12 +19,13 @@ My primary research interests lie in Natural Language Processing and Data Mining
 <!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
 # 🔥 News
+- [*2022.10*] ![new paper](/images/new.gif) 2 paper is accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
 - [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to COLING 2022, about parameter efficiency.
 - [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to TACL, about cross-lingual summarization.
-- [*2022.07*] ![new paper](/images/new.gif) 1 paper is accepted to ISWC 2022, about dialogue system.
+- [*2022.07*] 1 paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.06*] I will intern at [Lumi AI, miHoYo Inc.](https://www.mihoyo.com/en/) this summer in Shanghai.
 - [*2022.03*] Check out our new preprint, [*A Survey on Cross-Lingual Summarization*](https://arxiv.org/abs/2203.12515) (Update 08/2022: The paper is accepted to TACL)
-- [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out!
+- [*2022.02*] Our new preprint, [*ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization*](https://arxiv.org/abs/2202.05599) is out (w/ [data&code](https://github.com/krystalan/ClidSum)). Check it out! (Update 10/2022: The paper is accepted to EMNLP 2022)
 - [*2022.01*] 2 papers are accepted to DASFAA 2022, about story generation and knowledge graph embedding.
 - [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
 - [*2021.10*] China National Scholarship.
@@ -69,18 +70,18 @@ Please feel free to drop me an email for any suggestions.
 - ![new paper](/images/new.gif) [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
 To appear in **TACL**   
-- [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
+- ![new paper](/images/new.gif) [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
-**arXiv preprint 2022**, submitted to EMNLP
+To appear in **EMNLP 2022** (full paper) 
 
-### 📚 Sports Game Summarization
+### ⚽ Sports Game Summarization
 - [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Tingyi Zhang, Duo Zheng, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2022** (full paper)   
 - [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]      
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
 In Proc. of **CIKM 2021** (short paper)    
-- ![new paper](/images/new.gif) [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
+- [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **<u>Jiaan Wang</u>**<sup>*</sup>, Tingyi Zhang, Haoxiang Shi      
 **arXiv preprint 2022**   
 - [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
@@ -93,7 +94,7 @@ In Proc. of **CIKM 2021** (short paper)
 In Proc. of **DASFAA 2022** (full paper) 
 
 ### 💬 Dialogue System
-- ![new paper](/images/new.gif) [RT-KGD: Relation Transition Aware Knowledge-Grounded Dialogue Generation](https://arxiv.org/abs/2207.08212) \| [[Code](https://github.com/tigerwww-git/RT-KGD)]        
+- [RT-KGD: Relation Transition Aware Knowledge-Grounded Dialogue Generation](https://arxiv.org/abs/2207.08212) \| [[Code](https://github.com/tigerwww-git/RT-KGD)]        
 Kexin Wang, Zhixu Li<sup>*</sup>, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Ying He, An Liu and Lei Zhao   
 In Proc. of **ISWC 2022** (full paper)
 - [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
@@ -115,13 +116,17 @@ In Proc. of **ICANN 2021** (full paper)
 Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (full paper)
 
+### 🏕️ Reference Expression
+- Towards Unifying Reference Expression Generation and Comprehension    
+Duo Zheng, Tao Kong, Ya Jing, **<u>Jiaan Wang</u>** and Xiaojie Wang<sup>*</sup>    
+To appear in **EMNLP 2022** (full paper)
+
 # 🗞️ Academic Services
 - PC Member & Reviewer: EMNLP 2022, COLING 2022, ICANN 2021
 
 # 🏗️ Student Collaborators
 - PhD: [Yunlong Liang](https://scholar.google.com/citations?user=P5iDDGIAAAAJ&hl=en) (BJTU), [Zipeng Xu](https://zipengxuc.github.io/) (UniTrento), [Haoxiang Shi](https://www.linkedin.com/in/haoxiang-%E3%82%B7-a07805150/) (Waseda), [Binbin Gu](https://tuzijun111.github.io/) (UCI), [Qiang Yang](https://scholar.google.com/citations?user=hDCsypAAAAAJ&hl=en) (KAUST)
 - MS: [Duo Zheng](https://zd11024.github.io/) (BUPT), [Beiqi Zou](https://github.com/BQZic) (Princeton)
-
 
 # 📄 Patents
 - Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《剧情文本生成的方法、装置、终端和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9HEE9IFE9GDC9FDB5AEA9IDC9HHF9CIG7FCA9AFF9EDE9IBD) CN114416921A
