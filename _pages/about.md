@@ -19,7 +19,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 <!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
 # 🔥 News
-- [*2022.10*] ![new paper](/images/new.gif) 2 paper is accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
+- [*2022.10*] ![new paper](/images/new.gif) 2 paper are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
 - [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to COLING 2022, about parameter efficiency.
 - [*2022.08*] ![new paper](/images/new.gif) 1 paper is accepted to TACL, about cross-lingual summarization.
 - [*2022.07*] 1 paper is accepted to ISWC 2022, about dialogue system.
