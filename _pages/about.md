@@ -103,7 +103,7 @@ Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **<u>Jiaan Wang</u
 In Proc. of **EMNLP 2021 Findings** (full paper)   
 
 ### ❄️ Parameter Efficiency
-- ![new paper](/images/new.gif) LayerConnect: Hypernetwork-Assisted Inter-Layer Connector to Enhance Parameter Efficiency   
+- ![new paper](/images/new.gif) [LayerConnect: Hypernetwork-Assisted Inter-Layer Connector to Enhance Parameter Efficiency](https://aclanthology.org/2022.coling-1.276/)   
 Haoxiang Shi, Rongsheng Zhang, **<u>Jiaan Wang</u>**, Cen Wang, Guandan Chen, Yinhe Zheng and Tetsuya Sakai    
 To appear in **COLING 2022** (short paper)
 
