@@ -120,10 +120,12 @@ To appear in **EMNLP 2022** (full paper)
 # 🗞️ Academic Services
 - PC Member & Reviewer: EMNLP 2022, COLING 2022, ICANN 2021
 
-# 🏗️ Student Collaborators
+<!-- # 🏗️ Student Collaborators
 - PhD: [Yunlong Liang](https://scholar.google.com/citations?user=P5iDDGIAAAAJ&hl=en) (BJTU), [Zipeng Xu](https://zipengxuc.github.io/) (UniTrento), [Haoxiang Shi](https://www.linkedin.com/in/haoxiang-%E3%82%B7-a07805150/) (Waseda), [Binbin Gu](https://tuzijun111.github.io/) (UCI), [Qiang Yang](https://scholar.google.com/citations?user=hDCsypAAAAAJ&hl=en) (KAUST)
-- MS: [Duo Zheng](https://zd11024.github.io/) (BUPT), [Beiqi Zou](https://github.com/BQZic) (Princeton)
+- MS: [Duo Zheng](https://zd11024.github.io/) (BUPT), [Beiqi Zou](https://github.com/BQZic) (Princeton) -->
 
+
+<!-- 
 # 📄 Patents
 - Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《剧情文本生成的方法、装置、终端和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9HEE9IFE9GDC9FDB5AEA9IDC9HHF9CIG7FCA9AFF9EDE9IBD) CN114416921A
 - Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《意图识别的方法、装置及电子设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9FFD9HIG9HCC7CDA9DGB2BBA8HAA6DDA8CEABEGA7FBA9ECG) CN114429142A
@@ -131,6 +133,8 @@ To appear in **EMNLP 2022** (full paper)
 - **<u>Jiaan Wang</u>**, Zhixu Li, Zhigang Chen, Ying He, Xin Zheng. [《一种体育文本摘要提取方法、装置、存储介质及设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=6CCA9GGD6EAA9IIH8GBA1ABACDIA9DIG6CAA7ECAEEIA9BGA) CN111708878B    
 - Ying He, Zhixu Li, Zhigang Chen, Zhaoyin Zhang, **<u>Jiaan Wang</u>**. [《文本摘要方法、装置、电子设备和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9GHG8CGA9EDA3BCA9BIB7GBA9AGC9EGD9CHA9HFH9HCF4ADA) CN111428025B
 - Zhixu Li, Xin Zheng, Hongping Zhi, **<u>Jiaan Wang</u>**. [《文本提取方法、文本提取系统、电子设备和存储装置》](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD) CN113505218B
+ -->
+ 
 
 # 📒 Projects
 - [Summarization-Papers](https://github.com/xcfcode/Summarization-Papers) (Organized by [Xiachong Feng](http://xcfeng.net/)) [![](https://img.shields.io/github/stars/xcfcode/Summarization-Papers?style=social&label=Stars)](https://github.com/xcfcode/Summarization-Papers)
