@@ -1,3 +1,12 @@
+---
+permalink: /
+title: ""
+excerpt: ""
+redirect_from: 
+  - /publication/
+  - /publication.html
+---
+
 # 📝 Publications 
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
