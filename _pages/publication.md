@@ -1,15 +1,13 @@
 ---
-permalink: /
-title: ""
-excerpt: ""
-redirect_from: 
-  - /publication/
-  - /publication.html
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
 ---
 
-# 📝 Publications 
+<!-- # 📝 Publications 
 *: Corresponding Author(s)   
-Please feel free to drop me an email for any suggestions.
+Please feel free to drop me an email for any suggestions. -->
 
 ### 🌏 Cross-Lingual Summarization
 - ![new paper](/images/new.gif) [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
