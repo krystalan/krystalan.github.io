@@ -100,7 +100,7 @@ In Proc. of **EMNLP 2021 Findings** (full paper)
 ### ❄️ Parameter Efficiency
 - [LayerConnect: Hypernetwork-Assisted Inter-Layer Connector to Enhance Parameter Efficiency](https://aclanthology.org/2022.coling-1.276/)   
 Haoxiang Shi, Rongsheng Zhang, **<u>Jiaan Wang</u>**, Cen Wang, Guandan Chen, Yinhe Zheng and Tetsuya Sakai    
-To appear in **COLING 2022** (short paper)
+In Proc. of **COLING 2022** (short paper)
 
 ### 🎼 Music Summarization 
 - [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Data&Code](https://github.com/krystalan/MMCR)]    
