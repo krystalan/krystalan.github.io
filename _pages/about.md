@@ -134,10 +134,10 @@ To appear in **EMNLP 2022** (full paper)
 - Ying He, Zhixu Li, Zhigang Chen, Zhaoyin Zhang, **<u>Jiaan Wang</u>**. [《文本摘要方法、装置、电子设备和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9GHG8CGA9EDA3BCA9BIB7GBA9AGC9EGD9CHA9HFH9HCF4ADA) CN111428025B
 - Zhixu Li, Xin Zheng, Hongping Zhi, **<u>Jiaan Wang</u>**. [《文本提取方法、文本提取系统、电子设备和存储装置》](https://cprs.patentstar.com.cn/Search/Detail?ANE=5BCA9IBA8AGA9CIC9FHE9IDD9CHA8EAA9FEC9IEF9DCF9EGD) CN113505218B
  
-
+<!-- 
 # 📒 Projects
 - [Summarization-Papers](https://github.com/xcfcode/Summarization-Papers) (Organized by [Xiachong Feng](http://xcfeng.net/)) [![](https://img.shields.io/github/stars/xcfcode/Summarization-Papers?style=social&label=Stars)](https://github.com/xcfcode/Summarization-Papers)
-- [Multi-Hop Reading Comprehension Paper List](https://github.com/krystalan/Multi-hopRC) [![](https://img.shields.io/github/stars/krystalan/Multi-hopRC?style=social&label=Stars)](https://github.com/krystalan/Multi-hopRC)
+- [Multi-Hop Reading Comprehension Paper List](https://github.com/krystalan/Multi-hopRC) [![](https://img.shields.io/github/stars/krystalan/Multi-hopRC?style=social&label=Stars)](https://github.com/krystalan/Multi-hopRC) -->
 
 
 # 🎖 Honors and Awards
