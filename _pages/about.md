@@ -20,6 +20,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 
 # 🔥 News
 - [*2022.10*] ![new paper](/images/new.gif) Two papers are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
+- [*2022.10*] China National Scholarship.
 - [*2022.08*] One paper is accepted to COLING 2022, about parameter efficiency.
 - [*2022.08*] One paper is accepted to TACL, about cross-lingual summarization.
 - [*2022.07*] One paper is accepted to ISWC 2022, about dialogue system.
@@ -141,6 +142,7 @@ To appear in **EMNLP 2022** (full paper)
 
 
 # 🎖 Honors and Awards
+- [*2022.10*] China National Scholarship
 - [*2021.12*] CCKS Best Paper Finalists
 - [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190)
 - [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190)
