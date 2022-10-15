@@ -25,7 +25,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 - [*2022.08*] One paper is accepted to TACL, about cross-lingual summarization.
 - [*2022.07*] One paper is accepted to ISWC 2022, about dialogue system.
 - [*2022.01*] Two papers are accepted to DASFAA 2022, about story generation and knowledge graph embedding.
-- [*2021.12*] CCKS 2021 Best Paper Candidates 🎉🎉 !
+- [*2021.12*] CCKS 2021 Best Paper Nominee 🎉🎉 !
 - [*2021.10*] China National Scholarship.
 - [*2021.10*] One paper is accepted to WSDM 2022, about text summarization.
 - [*2021.08*] One paper is accepted to EMNLP 2021 (findings), about visual dialogue.  
@@ -83,7 +83,7 @@ In Proc. of **CIKM 2021** (short paper)
 **arXiv preprint 2022**   
 - [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
 **<u>Jiaan Wang</u>**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
-**CCKS 2021** (resource track paper)  <font color=red> (best paper award candidate) </font>  
+**CCKS 2021** (resource track paper)  <font color=red> (Best Paper Nominee) </font>  
 
 ### 🏰 Story Generation
 - [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538) \| [[Code](https://github.com/krystalan/AwesomeSEG)]    
@@ -143,7 +143,7 @@ To appear in **EMNLP 2022** (full paper)
 
 # 🎖 Honors and Awards
 - [*2022.10*] China National Scholarship
-- [*2021.12*] CCKS Best Paper Finalists
+- [*2021.12*] CCKS Best Paper Nominee
 - [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190)
 - [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190)
 - [*2019.09*] Postgraduate Recommendation Qualification at Soochow Univ. (Rank: 8<sup>th</sup>/200+)
