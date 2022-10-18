@@ -19,6 +19,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 <!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
 # 🔥 News
+- [*2022.10*] ![new paper](/images/new.gif) One paper is accepted to WSDM 2023, about cross-lingual summarization.
 - [*2022.10*] ![new paper](/images/new.gif) Two papers are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
 - [*2022.10*] China National Scholarship.
 - [*2022.08*] One paper is accepted to COLING 2022, about parameter efficiency.
@@ -70,6 +71,9 @@ To appear in **TACL**
 - ![new paper](/images/new.gif) [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 To appear in **EMNLP 2022** (full paper) 
+- ![new paper](/images/new.gif) Long-Document Cross-Lingual Summarization    
+Shaohui Zheng, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
+To appear in **WSDM 2023** (full paper)
 
 ### ⚽ Sports Game Summarization
 - [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
