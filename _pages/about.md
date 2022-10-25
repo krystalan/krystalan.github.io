@@ -118,7 +118,7 @@ Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan
 In Proc. of **DASFAA 2022** (full paper)
 
 ### 🏕️ Reference Expression
-- ![new paper](/images/new.gif) Towards Unifying Reference Expression Generation and Comprehension    
+- ![new paper](/images/new.gif) [Towards Unifying Reference Expression Generation and Comprehension](https://arxiv.org/abs/2210.13076)    
 Duo Zheng, Tao Kong, Ya Jing, **<u>Jiaan Wang</u>** and Xiaojie Wang<sup>*</sup>    
 To appear in **EMNLP 2022** (full paper)
 
