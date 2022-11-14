@@ -44,7 +44,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 - Mentors: [Dr. Jun Xing](https://junxnui.github.io/) and [Dr. Yan Wang](https://libertywing.github.io/yanwang.github.io/).
 - Research on digital human, i.e., Lumi(鹿鸣) \| [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] \| [[bilibili](https://space.bilibili.com/488836173/)].
 
-**WeChat AI, WXG, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time), 2022.06 - Present (by courtesy)*
+**Pattern Recognition Center, WeChat AI, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time), 2022.06 - Present (by courtesy)*
 - Advised by [Dr. Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
