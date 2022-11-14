@@ -10,11 +10,14 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hello! I'm Jiaan Wang (王佳安). [[Curriculum Vitae](https://wangjiaan.cn/files/cv_jiaanwang.pdf)] [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)]       
+Hello! I'm Jiaan Wang (王佳安).
+
 I am a final-year master student at Soochow University (苏州大学). I am fortunate to be advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University). I also collaborate with [Dr. Jiarong Xu](https://galina0217.github.io/) (from Fudan University) and [Dr. Fandong Meng](http://fandongmeng.github.io/) (from [WeChat AI](https://ai.weixin.qq.com/)) closely. I am also a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;">. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/en/) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
 
+My primary research interests lie in Natural Language Processing and Data Mining. I am particularly interested in Natural Language Generation (such as text summarization and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.  
 
-My primary research interests lie in Natural Language Processing and Data Mining. I am particularly interested in Natural Language Generation (such as text summarization and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.
+**Email:** jawang1[at]stu.suda.edu.cn / wangjiaan98[at]hotmail.com   
+**Personal:** [[Curriculum Vitae](https://wangjiaan.cn/files/cv_jiaanwang.pdf)] [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)] 
 
 <!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
