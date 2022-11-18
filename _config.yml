@@ -30,7 +30,7 @@ author:
   location         : "Shanghai, China"
   employer         :
   pubmed           : 
-  googlescholar    : 
+  googlescholar    : "https://scholar.google.com/citations?user=5S8h7qAAAAAJ"
   email            : "jawang1@stu.suda.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -48,7 +48,7 @@ author:
   lastfm           :
   linkedin         : "%E4%BD%B3%E5%AE%89-%E7%8E%8B-1662341a4"
   dblp             : 
-  orcid            : 
+  orcid            : "https://orcid.org/0000-0002-2587-7648"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
