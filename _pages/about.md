@@ -74,7 +74,7 @@ To appear in **TACL**
 - ![new paper](/images/new.gif) [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)] \| [[Report](https://mp.weixin.qq.com/s/M8BR3MySZBuu7ixdFi_SRQ)]  
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 To appear in **EMNLP 2022** (full paper) 
-- ![new paper](/images/new.gif) [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
+- ![new paper](/images/new.gif) [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
 To appear in **WSDM 2023** (full paper)
 
