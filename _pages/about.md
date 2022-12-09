@@ -125,7 +125,6 @@ In Proc. of **EMNLP 2021 Findings** (full paper)
 - MS: [Duo Zheng](https://zd11024.github.io/) (BUPT), [Beiqi Zou](https://github.com/BQZic) (Princeton) -->
 
 
-
 # 📄 Patents
 - Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《剧情文本生成的方法、装置、终端和存储介质》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9HEE9IFE9GDC9FDB5AEA9IDC9HHF9CIG7FCA9AFF9EDE9IBD) CN114416921A
 - Linjian Zhang, **<u>Jiaan Wang</u>**, Beiqi Zou, Cong Zhang, Shuopeng Wang, Youwei Song, Changjie Fan, Zhipeng Hu. [《意图识别的方法、装置及电子设备》](https://cprs.patentstar.com.cn/Search/Detail?ANE=9FFD9HIG9HCC7CDA9DGB2BBA8HAA6DDA8CEABEGA7FBA9ECG) CN114429142A
