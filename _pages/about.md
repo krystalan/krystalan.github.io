@@ -99,7 +99,7 @@ In Proc. of **COLING 2022** (short paper)
 Tingyi Zhang, Zhixu Li, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (full paper)
 - [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
-**Jiaan Wang**<sup>*</sup>, Tingyi Zhang, Haoxiang Shi      
+**Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
 **arXiv preprint 2022**   
 
 ### 2021
