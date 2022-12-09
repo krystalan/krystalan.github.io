@@ -67,18 +67,17 @@ My primary research interests lie in Natural Language Processing and Data Mining
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
 
-## Preprint
+### Preprint
 - [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **<u>Jiaan Wang</u>**<sup>*</sup>, Tingyi Zhang, Haoxiang Shi      
 **arXiv preprint 2022**   
 
-
-## 2023
+### 2023
 - [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
 To appear in **WSDM 2023** (full paper)
 
-## 2022
+### 2022
 - [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
 **<u>Jiaan Wang</u>**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
 In Proc. of **TACL 2022**   
@@ -104,7 +103,7 @@ In Proc. of **COLING 2022** (short paper)
 Tingyi Zhang, Zhixu Li, **<u>Jiaan Wang</u>**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (full paper)
 
-## 2021
+### 2021
 - [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]   
 **<u>Jiaan Wang</u>**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
 In Proc. of **CIKM 2021** (short paper)    
