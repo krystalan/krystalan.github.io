@@ -23,7 +23,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 
 # 🔥 News
 - [*2022.10*] ![new paper](/images/new.gif) One paper is accepted to WSDM 2023, about cross-lingual summarization.
-- [*2022.10*] ![new paper](/images/new.gif) Two papers are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
+- [*2022.10*] Two papers are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
 - [*2022.10*] China National Scholarship.
 - [*2022.08*] One paper is accepted to COLING 2022, about parameter efficiency.
 - [*2022.08*] One paper is accepted to TACL, about cross-lingual summarization.
