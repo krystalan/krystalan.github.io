@@ -74,6 +74,9 @@ Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhiga
 To appear in **WSDM 2023** (full paper)
 
 ### 2022
+- ![new paper](/images/new.gif) Understanding Translationese in Cross-Lingual Summarization  
+**Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
+**arXiv preprint 2022**
 - [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
 **Jiaan Wang**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
 In Proc. of **TACL 2022**   
@@ -98,9 +101,6 @@ In Proc. of **COLING 2022** (short paper)
 - [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
 Tingyi Zhang, Zhixu Li, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (full paper)
-- Understanding Translationese in Cross-Lingual Summarization  
-**Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
-**arXiv preprint 2022**
 - [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
 **arXiv preprint 2022**   
