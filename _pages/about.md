@@ -98,6 +98,9 @@ In Proc. of **COLING 2022** (short paper)
 - [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
 Tingyi Zhang, Zhixu Li, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (full paper)
+- Understanding Translationese in Cross-Lingual Summarization  
+**Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
+**arXiv preprint 2022**
 - [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
 **arXiv preprint 2022**   
