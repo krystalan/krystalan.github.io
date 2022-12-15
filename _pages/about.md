@@ -74,7 +74,7 @@ Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhiga
 To appear in **WSDM 2023** (full paper)
 
 ### 2022
-- ![new paper](/images/new.gif) Understanding Translationese in Cross-Lingual Summarization  
+- ![new paper](/images/new.gif) [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
 **Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
 **arXiv preprint 2022**
 - [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
