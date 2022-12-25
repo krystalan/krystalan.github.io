@@ -147,7 +147,7 @@ In Proc. of **EMNLP 2021 Findings** (full paper)
 
 # 🎖 Honors and Awards
 - [*2022.12*] Suzhou Industrial Park Scholarship (Rank: 1<sup>st</sup>/400+)
-- [*2022.10*] China National Scholarship
+- [*2022.10*] China National Scholarship (Rank: 5<sup>th</sup>/400+)
 - [*2021.12*] CCKS Best Paper Nominee
 - [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190+)
 - [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190+)
