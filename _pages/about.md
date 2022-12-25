@@ -146,10 +146,11 @@ In Proc. of **EMNLP 2021 Findings** (full paper)
 
 
 # 🎖 Honors and Awards
+- [*2022.12*] Suzhou Industrial Park Scholarship (Rank: 1<sup>st</sup>/400+)
 - [*2022.10*] China National Scholarship
 - [*2021.12*] CCKS Best Paper Nominee
-- [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190)
-- [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190)
+- [*2021.10*] China National Scholarship (Rank: 1<sup>st</sup>/190+)
+- [*2020.10*] Grand Prize Scholarship at Soochow Univ. (Rank: 1<sup>st</sup>/190+)
 - [*2019.09*] Postgraduate Recommendation Qualification at Soochow Univ. (Rank: 8<sup>th</sup>/200+)
 - [*2015*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 42<sup>nd</sup> in Shaanxi province) 
 - [*2014*] Provincial First Prize at Chinese Mathematics Olympiad (Rank: 16<sup>th</sup> in Shaanxi province)
