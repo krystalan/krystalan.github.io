@@ -22,20 +22,21 @@ My primary research interests lie in Natural Language Processing and Data Mining
 <!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
 # 🔥 News
+- ![new paper](/images/new.gif) [*2022.12*] Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
 - [*2022.10*] One paper is accepted to WSDM 2023, about cross-lingual summarization.
 - [*2022.10*] Two papers are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
 - [*2022.10*] China National Scholarship.
 - [*2022.08*] One paper is accepted to COLING 2022, about parameter efficiency.
 - [*2022.08*] One paper is accepted to TACL, about cross-lingual summarization.
 - [*2022.07*] One paper is accepted to ISWC 2022, about dialogue system.
-- [*2022.01*] Two papers are accepted to DASFAA 2022, about story generation and knowledge graph embedding.
+<!-- - [*2022.01*] Two papers are accepted to DASFAA 2022, about story generation and knowledge graph embedding.
 - [*2021.12*] CCKS 2021 Best Paper Nominee 🎉🎉 !
 - [*2021.10*] China National Scholarship.
 - [*2021.10*] One paper is accepted to WSDM 2022, about text summarization.
 - [*2021.08*] One paper is accepted to EMNLP 2021 (findings), about visual dialogue.  
 - [*2021.08*] One paper is accepted to CIKM 2021, about text summarization.  
 - [*2021.06*] One paper is accepted to ICANN 2021, about music summarization.  
-
+ -->
 
 
 # 📖 Educations
