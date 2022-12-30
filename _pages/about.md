@@ -22,7 +22,7 @@ My primary research interests lie in Natural Language Processing and Data Mining
 <!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
 # 🔥 News
-- ![new paper](/images/new.gif) [*2022.12*] Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
+- [*2022.12*] ![new paper](/images/new.gif) Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
 - [*2022.10*] One paper is accepted to WSDM 2023, about cross-lingual summarization.
 - [*2022.10*] Two papers are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
 - [*2022.10*] China National Scholarship.
