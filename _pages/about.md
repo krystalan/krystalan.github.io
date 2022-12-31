@@ -17,7 +17,7 @@ I am a final-year master student at Soochow University (苏州大学). I am fort
 My primary research interests lie in Natural Language Processing and Data Mining. I am particularly interested in Natural Language Generation (such as text summarization and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.  
 
 **Email:** jawang1[at]stu.suda.edu.cn / jawang.nlp[at]gmail.com    
-**Personal:** [[Curriculum Vitae](https://wangjiaan.cn/files/cv_jiaanwang.pdf)] [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)] 
+**Personal:** [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)] 
 
 <!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
