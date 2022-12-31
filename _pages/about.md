@@ -118,7 +118,7 @@ In Proc. of **EMNLP 2021 Findings** (full paper)
 
 
 # 🗞️ Academic Services
-- PC Member & Reviewer: ACL Rolling Review, EMNLP 2022, COLING 2022, ICANN 2021
+- PC Member & Reviewer: ACL Rolling Review, ACL 2023, EMNLP 2022, COLING 2022, ICANN 2021
 
 <!-- # 🏗️ Student Collaborators
 - PhD: [Yunlong Liang](https://scholar.google.com/citations?user=P5iDDGIAAAAJ&hl=en) (BJTU), [Zipeng Xu](https://zipengxuc.github.io/) (UniTrento), [Haoxiang Shi](https://www.linkedin.com/in/haoxiang-%E3%82%B7-a07805150/) (Waseda), [Binbin Gu](https://tuzijun111.github.io/) (UCI), [Qiang Yang](https://scholar.google.com/citations?user=hDCsypAAAAAJ&hl=en) (KAUST)
