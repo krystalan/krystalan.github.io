@@ -63,42 +63,42 @@ Please feel free to drop me an email for any suggestions.
 
 
 ### 2023
-- [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
+1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
 To appear in **WSDM 2023** (full paper)
 
 ### 2022
-- ![new paper](/images/new.gif) [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
+1. ![new paper](/images/new.gif) [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
 **Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
 **arXiv preprint 2022**  
-- ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  
+1. ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  
 Yunlong Liang, Fandong Meng, Jinan Xu, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
 **arXiv preprint 2022** 
-- [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
+1. [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
 **Jiaan Wang**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
 In Proc. of **TACL 2022**   
-- [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)] \| [[Report](https://mp.weixin.qq.com/s/M8BR3MySZBuu7ixdFi_SRQ)]  
+1. [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)] \| [[Report](https://mp.weixin.qq.com/s/M8BR3MySZBuu7ixdFi_SRQ)]  
 **Jiaan Wang**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 In Proc. of **EMNLP 2022** (full paper) 
-- [Towards Unifying Reference Expression Generation and Comprehension](https://arxiv.org/abs/2210.13076) \| [[Code](https://github.com/zd11024/UniRef)] \| [[Report](https://mp.weixin.qq.com/s/jwiDN9N_sgs32Wjt2-a-kg)]    
+1. [Towards Unifying Reference Expression Generation and Comprehension](https://arxiv.org/abs/2210.13076) \| [[Code](https://github.com/zd11024/UniRef)] \| [[Report](https://mp.weixin.qq.com/s/jwiDN9N_sgs32Wjt2-a-kg)]    
 Duo Zheng, Tao Kong, Ya Jing, **Jiaan Wang** and Xiaojie Wang<sup>*</sup>    
 In Proc. of **EMNLP 2022** (full paper)
-- [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
+1. [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
 **Jiaan Wang**, Zhixu Li<sup>*</sup>, Tingyi Zhang, Duo Zheng, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2022** (full paper)   
-- [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538) \| [[Code](https://github.com/krystalan/AwesomeSEG)]    
+1. [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538) \| [[Code](https://github.com/krystalan/AwesomeSEG)]    
 **Jiaan Wang**, Beiqi Zou, Zhixu Li, Jianfeng Qu<sup>*</sup>, Pengpeng Zhao, An Liu and Lei Zhao   
 In Proc. of **DASFAA 2022** (full paper) 
-- [RT-KGD: Relation Transition Aware Knowledge-Grounded Dialogue Generation](https://arxiv.org/abs/2207.08212) \| [[Code](https://github.com/tigerwww-git/RT-KGD)]   
+1. [RT-KGD: Relation Transition Aware Knowledge-Grounded Dialogue Generation](https://arxiv.org/abs/2207.08212) \| [[Code](https://github.com/tigerwww-git/RT-KGD)]   
 Kexin Wang, Zhixu Li<sup>*</sup>, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Ying He, An Liu and Lei Zhao   
 In Proc. of **ISWC 2022** (full paper)
-- [LayerConnect: Hypernetwork-Assisted Inter-Layer Connector to Enhance Parameter Efficiency](https://aclanthology.org/2022.coling-1.276/)   
+1. [LayerConnect: Hypernetwork-Assisted Inter-Layer Connector to Enhance Parameter Efficiency](https://aclanthology.org/2022.coling-1.276/)   
 Haoxiang Shi, Rongsheng Zhang, **Jiaan Wang**, Cen Wang, Guandan Chen, Yinhe Zheng and Tetsuya Sakai    
 In Proc. of **COLING 2022** (short paper)
-- [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
+1. [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
 Tingyi Zhang, Zhixu Li, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (full paper)
-- [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
+1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
 **arXiv preprint 2022**   
 
@@ -106,13 +106,13 @@ In Proc. of **DASFAA 2022** (full paper)
 1. [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]   
 **Jiaan Wang**, Zhixu Li<sup>*</sup>, Qiang Yang, Jianfeng Qu, Zhigang Chen, Qingsheng Liu and Guoping Hu   
 In Proc. of **CIKM 2021** (short paper)    
-2. [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Data&Code](https://github.com/krystalan/MMCR)]    
+1. [Multi-Modal Chorus Recognition for Improving Song Search](https://arxiv.org/abs/2106.16153) \| [[Data&Code](https://github.com/krystalan/MMCR)]    
 **Jiaan Wang**, Zhixu Li<sup>*</sup>, Binbin Gu, Tingyi Zhang, Qingsheng Liu and Zhigang Chen  
 In Proc. of **ICANN 2021** (full paper)
-3. [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
+1. [《SGSum: 一个面向体育赛事摘要的人工标注数据集》](https://wangjiaan.cn/files/SGSum.pdf) \| [[Data](https://github.com/krystalan/SGSum)] \| [[Report1](https://mp.weixin.qq.com/s/WENz9fX5HN4agBCMbYFSCQ)] \| [[Report2](https://mp.weixin.qq.com/s/-qgu12c1MpGPH6iT-JW1Cg)]  
 **Jiaan Wang**, Tingyi Zhang, Jianfeng Qu, Qingsheng Liu, Zhigang Chen, Zhixu Li<sup>*</sup>   
 **CCKS 2021** (resource track paper)  <font color=red> (Best Paper Nominee) </font>  
-4. [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
+1. [Enhancing Visual Dialog Questioner with Entity-based Strategy Learning and Augmented Guesser](https://arxiv.org/abs/2109.02297) \| [[Code](https://github.com/zd11024/Entity_Questioner)]    
 Duo Zheng, Zipeng Xu, Fandong Meng, Xiaojie Wang<sup>*</sup>, **Jiaan Wang** and Jie Zhou    
 In Proc. of **EMNLP 2021 Findings** (full paper)   
 
