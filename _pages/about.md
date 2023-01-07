@@ -12,14 +12,13 @@ redirect_from:
 
 Hello! I'm Jiaan Wang (王佳安).
 
-I am a final-year master student at Soochow University (苏州大学). I am fortunate to be advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University). I also collaborate with [Dr. Jiarong Xu](https://galina0217.github.io/) (from Fudan University) and [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI) closely. I am also a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;">. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/laboratory) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
+I am a final-year master student at Soochow University (苏州大学). I am fortunate to be advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI), [Dr. Jiarong Xu](https://galina0217.github.io/) (from Fudan University) and [Dr. Jianfeng Qu](http://web.suda.edu.cn/jjf2/) (from Soochow University) closely. Currently, I am also a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;">. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/laboratory) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
 
 My primary research interests lie in Natural Language Processing, Data Mining and Knowledge Graphs. I am particularly interested in Natural Language Generation tasks (such as abstractive summarization, dialogue generation and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.  
 
 **Email:** jawang1[at]stu.suda.edu.cn / jawang.nlp[at]gmail.com    
 **Personal:** [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)] 
 
-<!-- I'm hosting weekly office hours on Zoom for those who want my advice/thoughts on NLP/DM research or any other topics of interest, feel free to schedule via [Calendly](https://calendly.com/jiaan-wang/office-hour). -->
 
 # 🔥 News
 - [*2022.12*] ![new paper](/images/new.gif) Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
@@ -30,14 +29,12 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 - [*2022.08*] One paper is accepted to TACL, about cross-lingual summarization.
 - [*2022.07*] One paper is accepted to ISWC 2022, about dialogue system.
 
-
-
 # 📖 Educations
 - *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou, China
 - *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou, China
 
 # 💻 Internships
-**Lumi AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - Present (full time)*
+**Anti-Entropy (逆熵) AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - Present (full time)*
 - Mentors: [Dr. Jun Xing](https://junxnui.github.io/) and [Dr. Yan Wang](https://libertywing.github.io/yanwang.github.io/).
 - Research on digital human, i.e., Lumi(鹿鸣) \| [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] \| [[bilibili](https://space.bilibili.com/488836173/)].
 
@@ -49,13 +46,15 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 - Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
 - Research on knowledge graph and sports game summarization.
 
-**Fuxi AI Lab, NetEase Game (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09 (full time)*
+**Fuxi (伏羲) AI Lab, NetEase Game (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09 (full time)*
 - Mentor: Cong Zhang.
 - Research on dialogue systems and NLP4Game.
 
 **iFLYTEK AI Research (Suzhou)**. *As NLP Research Intern. 2019.10 - 2020.08 (full time), 2021.03 - 2021.06 (full time)*
 - Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
 - Research on machine reading comprehension and text summarization.
+
+
 
 # 📝 Publications 
 *: Corresponding Author(s)   
