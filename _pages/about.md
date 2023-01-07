@@ -16,7 +16,7 @@ I am a final-year master student at Soochow University (苏州大学). I am fort
 
 Currently, I am also a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;">. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/laboratory) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
 
-My primary research interests lie in Natural Language Processing, Data Mining and Knowledge Graphs. I am particularly interested in Natural Language Generation tasks (such as abstractive summarization, dialogue generation and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.  
+My primary research interests lie in Natural Language Processing, Data Mining and Knowledge Graphs. I am particularly interested in various Natural Language Generation tasks (such as abstractive summarization, dialogue generation and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.  
 
 **Email:** jawang1[at]stu.suda.edu.cn / jawang.nlp[at]gmail.com    
 **Personal:** [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)] 
