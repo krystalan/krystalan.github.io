@@ -44,7 +44,7 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 - Advised by [Dr. Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
-**KW-DEMI Lab, Fudan University (Shanghai)**. *As NLP Research Intern. 2021.09 - Present (by courtesy)*
+**KW-DEMI Lab, Fudan University (Shanghai)**. *As Student Researcher. 2021.09 - Present (by courtesy)*
 - Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
 - Research on knowledge graph and sports game summarization.
 
