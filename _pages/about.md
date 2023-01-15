@@ -66,7 +66,10 @@ Please feel free to drop me an email for any suggestions.
 ### 2023
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
-To appear in **WSDM 2023** (full paper)
+To appear in **WSDM 2023** (full paper)  
+2. ![new paper](/images/new.gif) A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering  
+Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
+To appear in **DASFAA 2023** (full paper)
 
 ### 2022
 1. ![new paper](/images/new.gif) [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
