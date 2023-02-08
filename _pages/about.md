@@ -62,23 +62,30 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 # 📝 Publications 
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
-
+### Preprint
+1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
+**Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
+**arXiv preprint 2022**  
+1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  
+Yunlong Liang, Fandong Meng, Jinan Xu, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
+**arXiv preprint 2022** 
+1. [Ethically Responsible Graph Information Sharing for Business Purposes: A Privacy-preserving Graph Pre-training Model](https://www.researchgate.net/publication/366028783_Ethically_Responsible_Graph_Information_Sharing_for_Business_Purposes_A_Privacy-preserving_Graph_Pre-training_Model)   
+**ResearchGate preprint 2022**   
+Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu
+1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
+**Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
+**arXiv preprint 2022**   
 
 ### 2023
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
 To appear in **WSDM 2023** (full paper)  
-2. ![new paper](/images/new.gif) A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering  
+1. A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering  
 Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
 To appear in **DASFAA 2023** (full paper)
 
+
 ### 2022
-1. ![new paper](/images/new.gif) [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
-**Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
-**arXiv preprint 2022**  
-1. ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  
-Yunlong Liang, Fandong Meng, Jinan Xu, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
-**arXiv preprint 2022** 
 1. [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
 **Jiaan Wang**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
 In Proc. of **TACL 2022**   
@@ -103,9 +110,7 @@ In Proc. of **COLING 2022** (short paper)
 1. [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
 Tingyi Zhang, Zhixu Li, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
 In Proc. of **DASFAA 2022** (full paper)
-1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
-**Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
-**arXiv preprint 2022**   
+
 
 ### 2021
 1. [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]   
