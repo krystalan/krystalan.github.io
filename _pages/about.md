@@ -128,7 +128,8 @@ In Proc. of **EMNLP 2021 Findings** (full paper)
 
 
 # 🗞️ Academic Services
-- PC Member & Reviewer: ACL Rolling Review (2022-2023), ACL 2023, KDD 2023, EMNLP 2022, COLING 2022, ICANN 2021
+- PC Member: ACL Rolling Review (2022-2023), ACL 2023, KDD 2023, EMNLP 2022, COLING 2022, ICANN 2021
+- Journal Reviewer: Journal of Artificial Intelligence Research (JAIR)
 
 <!-- # 🏗️ Student Collaborators
 - PhD: [Yunlong Liang](https://scholar.google.com/citations?user=P5iDDGIAAAAJ&hl=en) (BJTU), [Zipeng Xu](https://zipengxuc.github.io/) (UniTrento), [Haoxiang Shi](https://www.linkedin.com/in/haoxiang-%E3%82%B7-a07805150/) (Waseda), [Binbin Gu](https://tuzijun111.github.io/) (UCI), [Qiang Yang](https://scholar.google.com/citations?user=hDCsypAAAAAJ&hl=en) (KAUST)
