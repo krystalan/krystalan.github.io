@@ -12,7 +12,7 @@ redirect_from:
 
 Hello! I'm Jiaan Wang (王佳安).
 
-I am a final-year master student at Soochow University (苏州大学). I am fortunate to be advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI), [Dr. Jiarong Xu](https://galina0217.github.io/) (from Fudan University) and [Dr. Jianfeng Qu](http://web.suda.edu.cn/jjf2/) (from Soochow University) closely.  
+I am a final-year master student at Soochow University (苏州大学). I am fortunate to be advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI) and [Dr. Jianfeng Qu](http://web.suda.edu.cn/jjf2/) (from Soochow University) closely.  
 
 Currently, I am also a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;">. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/laboratory) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
 
@@ -62,19 +62,16 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 # 📝 Publications 
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
-### Preprint & Technical Report
+### Preprint & Technical Report   
 1. [Cross-Lingual Summarization via ChatGPT](https://www.researchgate.net/publication/368841821_Cross-Lingual_Summarization_via_ChatGPT)  
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Zhixu Li, Jianfeng Qu and Jie Zhou   
-**Technical Report 2023**   
+**Technical Report 2023**    
 1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
 **Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
-**arXiv preprint 2022**  
+**arXiv preprint 2022**   
 1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  
 Yunlong Liang, Fandong Meng, Jinan Xu, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
-**arXiv preprint 2022** 
-1. [Ethically Responsible Graph Information Sharing for Business Purposes: A Privacy-preserving Graph Pre-training Model](https://www.researchgate.net/publication/366028783_Ethically_Responsible_Graph_Information_Sharing_for_Business_Purposes_A_Privacy-preserving_Graph_Pre-training_Model)   
-**ResearchGate preprint 2022**   
-Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu
+**arXiv preprint 2022**   
 1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
 **arXiv preprint 2022**   
