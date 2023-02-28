@@ -23,8 +23,8 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 
 
 # 🔥 News
-- [*2023.01*] ![new paper](/images/new.gif) One paper is accepted to DASFAA 2023, about table-and-text question answering.
-- [*2022.12*] ![new paper](/images/new.gif) Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
+- [*2023.01*] One paper is accepted to DASFAA 2023, about table-and-text question answering.
+- [*2022.12*] Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
 - [*2022.10*] One paper is accepted to WSDM 2023, about cross-lingual summarization.
 - [*2022.10*] Two papers are accepted to EMNLP 2022 (main conference), about cross-lingual summarization and reference expression.
 - [*2022.10*] China National Scholarship.
