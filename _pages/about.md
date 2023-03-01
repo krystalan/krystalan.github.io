@@ -63,7 +63,7 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
 ### Preprint & Technical Report   
-1. [Cross-Lingual Summarization via ChatGPT](https://www.researchgate.net/publication/368841821_Cross-Lingual_Summarization_via_ChatGPT)  
+1. [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)  
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **Technical Report 2023**    
 1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
