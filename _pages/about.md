@@ -79,7 +79,7 @@ Yunlong Liang, Fandong Meng, Jinan Xu, **Jiaan Wang**, Yufeng Chen and Jie Zhou
 ### 2023
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
-To appear in **WSDM 2023** (full paper)  
+In Proc. of **WSDM 2023** (full paper)  
 1. A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering  
 Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
 To appear in **DASFAA 2023** (full paper)
