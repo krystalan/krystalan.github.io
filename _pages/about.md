@@ -22,7 +22,8 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 **Personal:** [[Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en)] [[Semantic Scholar](https://www.semanticscholar.org/author/2118328782)] 
 
 
-# 🔥 News
+# 🔥 News  
+- [*2023.03*] Check out our new reports, [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) and [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229).
 - [*2023.01*] One paper is accepted to DASFAA 2023, about table-and-text question answering.
 - [*2022.12*] Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
 - [*2022.10*] One paper is accepted to WSDM 2023, about cross-lingual summarization.
@@ -63,10 +64,10 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
 ### Preprint & Technical Report   
-1. [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
+1. ![new paper](/images/new.gif) [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
 **arXiv preprint 2023 (technical report)**
-1. [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)  
+1. ![new paper](/images/new.gif) [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)  
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2023 (technical report)**    
 1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
