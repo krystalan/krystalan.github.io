@@ -66,10 +66,10 @@ Please feel free to drop me an email for any suggestions.
 ### Preprint & Technical Report   
 1. ![new paper](/images/new.gif) [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
-**arXiv preprint 2023 (technical report)**
+**arXiv preprint 2023** (technical report)
 1. ![new paper](/images/new.gif) [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)  
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Zhixu Li, Jianfeng Qu and Jie Zhou   
-**arXiv preprint 2023 (technical report)**    
+**arXiv preprint 2023**  (technical report)    
 1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
 **Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
 **arXiv preprint 2022**   
