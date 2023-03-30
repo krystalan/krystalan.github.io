@@ -70,6 +70,9 @@ Please feel free to drop me an email for any suggestions.
 1. ![new paper](/images/new.gif) [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)  
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **arXiv preprint 2023**  (technical report)    
+1. ![new paper](/images/new.gif) [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
+Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen, Yang Yang    
+**arXiv preprint 2023**  
 1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
 **Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
 **arXiv preprint 2022**   
