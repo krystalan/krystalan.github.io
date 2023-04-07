@@ -23,7 +23,7 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 
 
 # 🔥 News  
-- [*2023.04*] Check out our new report, [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)
+- [*2023.04*] Check out our new report, [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)
 - [*2023.03*] Check out our new report, [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048).
 - [*2023.01*] One paper is accepted to DASFAA 2023, about table-and-text question answering.
 - [*2022.12*] Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
