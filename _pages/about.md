@@ -23,7 +23,8 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 
 
 # 🔥 News  
-- [*2023.03*] Check out our new reports, [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) and [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229).
+- [*2023.04*] Check out our new report, [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)
+- [*2023.03*] Check out our new report, [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048).
 - [*2023.01*] One paper is accepted to DASFAA 2023, about table-and-text question answering.
 - [*2022.12*] Our new preprints, [SOV-MAS](https://arxiv.org/abs/2212.07672) for multilingual multimodal summarization and [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220) are out!
 - [*2022.10*] One paper is accepted to WSDM 2023, about cross-lingual summarization.
@@ -64,12 +65,12 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
 ### Preprint & Technical Report   
+1. ![new paper](/images/new.gif) [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)  
+**Jiaan Wang**, Yunlong Liang, Fandong Meng, Beiqi Zou, Zhixu Li, Jianfeng Qu and Jie Zhou   
+**arXiv preprint 2023**  (technical report)     
 1. ![new paper](/images/new.gif) [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
 **arXiv preprint 2023** (technical report)
-1. ![new paper](/images/new.gif) [Cross-Lingual Summarization via ChatGPT](https://arxiv.org/abs/2302.14229)  
-**Jiaan Wang**, Yunlong Liang, Fandong Meng, Zhixu Li, Jianfeng Qu and Jie Zhou   
-**arXiv preprint 2023**  (technical report)    
 1. ![new paper](/images/new.gif) [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458v1)   
 Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen, Yang Yang    
 **arXiv preprint 2023**  
