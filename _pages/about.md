@@ -64,27 +64,27 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 # 📝 Publications 
 *: Corresponding Author(s)   
 Please feel free to drop me an email for any suggestions.
-### Preprint & Technical Report   
-1. ![new paper](/images/new.gif) [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)  
-**Jiaan Wang**, Yunlong Liang, Fandong Meng, Beiqi Zou, Zhixu Li, Jianfeng Qu and Jie Zhou   
-**arXiv preprint 2023**  (technical report)     
-1. ![new paper](/images/new.gif) [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
-**Jiaan Wang**, Yunlong Liang, Fandong Meng, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
-**arXiv preprint 2023** (technical report)
-1. ![new paper](/images/new.gif) [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458v1)   
-Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen, Yang Yang    
-**arXiv preprint 2023**  
+### Preprint   
 1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
 **Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
 **arXiv preprint 2022**   
 1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
 Yunlong Liang, Fandong Meng, Jinan Xu, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
-**arXiv preprint 2022**   
+**arXiv preprint 2022**  
+1. [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458v1)   
+Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen, Yang Yang    
+**arXiv preprint 2023**  
 1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
 **arXiv preprint 2022**   
 
 ### 2023
+1. ![new paper](/images/new.gif) [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)  
+**Jiaan Wang**, Yunlong Liang, Fandong Meng, Beiqi Zou, Zhixu Li, Jianfeng Qu and Jie Zhou   
+**arXiv preprint 2023**  (technical report)     
+1. ![new paper](/images/new.gif) [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
+**Jiaan Wang**, Yunlong Liang, Fandong Meng, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
+**arXiv preprint 2023** (technical report)   
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2023** (full paper)  
