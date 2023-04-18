@@ -91,9 +91,9 @@ Jiarong Xu, Zenan Zhou, **Jiaan Wang**, Tian Lu
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2023** (full paper)  
-1. A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering  
+1. [A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering](https://link.springer.com/chapter/10.1007/978-3-031-30675-4_26)  
 Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
-To appear in **DASFAA 2023** (full paper)
+In Proc. of **DASFAA 2023** (full paper)
 
 
 ### 2022
