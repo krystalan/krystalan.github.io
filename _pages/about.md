@@ -85,7 +85,7 @@ Jiarong Xu, Zenan Zhou, **Jiaan Wang**, Tian Lu
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Beiqi Zou, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **Technical Report**    
 1. ![new paper](/images/new.gif) [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
-**Jiaan Wang**, Yunlong Liang, Fandong Meng, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
+**Jiaan Wang**, Yunlong Liang, Fandong Meng, Zengkui Sun, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
 **Technical Report**    
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
