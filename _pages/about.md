@@ -79,7 +79,7 @@ Jiarong Xu, Zenan Zhou, **Jiaan Wang**, Tian Lu
 **Under Review**
 
 ### 2023
-1. ![new paper](/images/new.gif) Towards Unifying Multi-Lingual and Cross-Lingual Summarization   
+1. ![new paper](/images/new.gif) Towards Unifying Multi-Lingual and Cross-Lingual Summarization  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li, Jianfeng Qu and Jie Zhou   
 To appear in **ACL 2023** (main conference, full paper)     
 1. ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
@@ -103,7 +103,7 @@ In Proc. of **DASFAA 2023** (full paper)
 1. [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
 **Jiaan Wang**, Fandong Meng<sup>*</sup>, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu and Jie Zhou   
 In Proc. of **TACL 2022**   
-1. [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Models](https://huggingface.co/Krystalan)] \| [[Report](https://mp.weixin.qq.com/s/M8BR3MySZBuu7ixdFi_SRQ)]  
+1. [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Model](https://huggingface.co/Krystalan/mdialbart_zh)] \| [[Report](https://mp.weixin.qq.com/s/M8BR3MySZBuu7ixdFi_SRQ)]  
 **Jiaan Wang**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 In Proc. of **EMNLP 2022** (main conference, full paper) 
 1. [Towards Unifying Reference Expression Generation and Comprehension](https://arxiv.org/abs/2210.13076) \| [[Code](https://github.com/zd11024/UniRef)] \| [[Report](https://mp.weixin.qq.com/s/jwiDN9N_sgs32Wjt2-a-kg)]    
