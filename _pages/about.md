@@ -80,22 +80,22 @@ Jiarong Xu, Zenan Zhou, **Jiaan Wang**, Tian Lu
 
 ### 2023
 1. ![new paper](/images/new.gif) Towards Unifying Multi-Lingual and Cross-Lingual Summarization  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
-**Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li, Jianfeng Qu and Jie Zhou   
+**Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu<sup>*</sup> and Jie Zhou   
 To appear in **ACL 2023** (main conference, full paper)     
 1. ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
-Yunlong Liang, Fandong Meng, Jinan Xu, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
+Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
 To appear in **ACL 2023** (main conference, full paper)     
 1. ![new paper](/images/new.gif) [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)  
-**Jiaan Wang**, Yunlong Liang, Fandong Meng, Beiqi Zou, Zhixu Li, Jianfeng Qu and Jie Zhou   
+**Jiaan Wang**<sup>*</sup>, Yunlong Liang, Fandong Meng, Beiqi Zou, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **Technical Report**    
 1. ![new paper](/images/new.gif) [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
-**Jiaan Wang**, Yunlong Liang, Fandong Meng, Zengkui Sun, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
+**Jiaan Wang**<sup>*</sup>, Yunlong Liang, Fandong Meng, Zengkui Sun, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
 **Technical Report**    
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
-Shaohui Zheng, Zhixu Li, **Jiaan Wang**, Jianfeng Qu, An Liu, Lei Zhao and Zhigang Chen  
+Shaohui Zheng, Zhixu Li<sup>*</sup>, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2023** (full paper)  
 1. [A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering](https://link.springer.com/chapter/10.1007/978-3-031-30675-4_26)  
-Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
+Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu<sup>*</sup>, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
 In Proc. of **DASFAA 2023** (full paper)
 
 
