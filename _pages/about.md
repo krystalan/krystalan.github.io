@@ -71,6 +71,9 @@ Please feel free to drop me an email for any suggestions.
 1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
 **Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
 **arXiv preprint 2022**   
+1. [Unified Model Learning for Various Neural Machine Translation](https://arxiv.org/abs/2305.02777)   
+Yunlong Liang, Fandong Meng<sup>*</sup>, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
+**arXiv preprint 2023**  
 1. [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458v1)   
 Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen, Yang Yang    
 **arXiv preprint 2023**  
