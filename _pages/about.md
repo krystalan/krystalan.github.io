@@ -82,7 +82,7 @@ Jiarong Xu, Zenan Zhou, **Jiaan Wang**, Tian Lu
 **Under Review**
 
 ### 2023
-1. ![new paper](/images/new.gif) Towards Unifying Multi-Lingual and Cross-Lingual Summarization  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
+1. ![new paper](/images/new.gif) [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu<sup>*</sup> and Jie Zhou   
 To appear in **ACL 2023** (main conference, full paper)     
 1. ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
