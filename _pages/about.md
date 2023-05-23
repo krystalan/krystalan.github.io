@@ -84,14 +84,17 @@ In Proc. of **DASFAA 2023** (full paper)
 1. [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
 **Jiaan Wang**<sup>*</sup>, Yunlong Liang, Fandong Meng, Zengkui Sun, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
 **Technical Report**    
+1. [D2TV: Dual Knowledge Distillation and Target-oriented Vision Modeling for Many-to-Many Multimodal Summarization](https://arxiv.org/abs/2305.12767)   
+Yunlong Liang, Fandong Meng, **Jiaan Wang**, Jinan Xu<sup>*</sup>, Yufeng Chen and Jie Zhou   
+**arXiv preprint 2023**  
 1. [Unified Model Learning for Various Neural Machine Translation](https://arxiv.org/abs/2305.02777)   
 Yunlong Liang, Fandong Meng<sup>*</sup>, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
 **arXiv preprint 2023**  
 1. [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458v1)   
-Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen, Yang Yang    
+Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
 **arXiv preprint 2023**  
 1. Toward Secure Graph Data Collaboration in a Data-Sharing-Free Manner: A Novel Privacy-Preserving Graph Pre-training Model    
-Jiarong Xu, Zenan Zhou, **Jiaan Wang**, Tian Lu  
+Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu  
 **Under Review**
 
 ### 2022
