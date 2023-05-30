@@ -93,9 +93,9 @@ Yunlong Liang, Fandong Meng<sup>*</sup>, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Y
 1. [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
 Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
 **arXiv preprint 2023**  
-1. Toward Secure Graph Data Collaboration in a Data-Sharing-Free Manner: A Novel Privacy-Preserving Graph Pre-training Model    
+1. [Toward Secure Graph Data Collaboration in a Data-Sharing-Free Manner: A Novel Privacy-Preserving Graph Pre-training Model](https://ssrn.com/abstract=4413129)    
 Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu  
-**Under Review**
+**SSRN preprint 2023**
 
 ### 2022
 1. [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
