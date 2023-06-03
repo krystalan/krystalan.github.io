@@ -74,7 +74,7 @@ To appear in **ACL 2023** (main conference, full paper)
 Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
 To appear in **ACL 2023** (main conference, full paper)    
 1. ![new paper](/images/new.gif) When to Pre-Train Graph Neural Networks?  
-Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
+Yuxuan Cao, Jiarong Xu<sup>*</sup>, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
 To appear in **KDD 2023** (research track, full paper)  
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li<sup>*</sup>, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
