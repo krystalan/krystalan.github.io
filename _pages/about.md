@@ -22,6 +22,7 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 **Personal:** [![](https://img.shields.io/badge/dynamic/json?label=citations&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fauthor%2F2118328782%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/author/2118328782) [![](https://img.shields.io/badge/Google%20Scholar-4385FE.svg?&color=d6d6d6&style=flat-square&logo=google-scholar)](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en) 
 
 # 🔥 News  
+- [*2023.05*] ![new paper](/images/new.gif) One paper is accepted to KDD 2023, about graph pre-training.
 - [*2023.05*] ![new paper](/images/new.gif) Two papers are accepted to ACL 2023 (main conference), about cross-lingual summarization and multi-modal summarization.
 - [*2023.04*] Check out our new report, [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)
 - [*2023.03*] Check out our new report, [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048).
@@ -71,7 +72,10 @@ Please feel free to drop me an email for any suggestions.
 To appear in **ACL 2023** (main conference, full paper)     
 1. ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
 Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
-To appear in **ACL 2023** (main conference, full paper)     
+To appear in **ACL 2023** (main conference, full paper)    
+1. ![new paper](/images/new.gif) When to Pre-Train Graph Neural Networks?  
+Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
+To appear in **KDD 2023** (research track, full paper)  
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
 Shaohui Zheng, Zhixu Li<sup>*</sup>, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2023** (full paper)  
@@ -89,9 +93,6 @@ Yunlong Liang, Fandong Meng, **Jiaan Wang**, Jinan Xu<sup>*</sup>, Yufeng Chen a
 **arXiv preprint 2023**  
 1. [Unified Model Learning for Various Neural Machine Translation](https://arxiv.org/abs/2305.02777)   
 Yunlong Liang, Fandong Meng<sup>*</sup>, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
-**arXiv preprint 2023**  
-1. [When to Pre-Train Graph Neural Networks? An Answer from Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
-Yuxuan Cao, Jiarong Xu, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
 **arXiv preprint 2023**  
 1. [Toward Secure Graph Data Collaboration in a Data-Sharing-Free Manner: A Novel Privacy-Preserving Graph Pre-training Model](https://ssrn.com/abstract=4413129)    
 Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu  
