@@ -40,15 +40,15 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 - *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou, China
 
 # 💻 Internships
-**Anti-Entropy (逆熵) AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - Present (full time)*
+**Anti-Entropy (逆熵) AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - 2023.06 (full time)*
 - Mentors: [Dr. Jun Xing](https://junxnui.github.io/) and [Dr. Yan Wang](https://libertywing.github.io/yanwang.github.io/).
 - Research on digital human, i.e., Lumi(鹿鸣) \| [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] \| [[bilibili](https://space.bilibili.com/488836173/)].
 
-**Pattern Recognition Center, WeChat AI, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time)*
+**Pattern Recognition Center, WeChat AI, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time), 2022.06 - 2023.05 (by courtesy)*
 - Advised by [Dr. Fandong Meng](http://fandongmeng.github.io/).
 - Research on dialogue summarization, cross-lingual summarization and machine translation.
 
-**KW-DEMI Lab, Fudan University (Shanghai)**. *As Student Researcher. 2021.09 - Present (by courtesy)*
+**KW-DEMI Lab, Fudan University (Shanghai)**. *As Student Researcher. 2021.09 - 2023.06 (by courtesy)*
 - Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
 - Research on knowledge graph and sports game summarization.
 
