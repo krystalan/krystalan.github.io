@@ -18,7 +18,7 @@ Currently, I am also a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo
 
 My primary research interests lie in Natural Language Processing, Data Mining and Knowledge Graphs. I am particularly interested in various Natural Language Generation tasks (such as abstractive summarization, dialogue generation and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.  
 
-**Email:** jawang1[at]stu.suda.edu.cn / jawang.nlp[at]gmail.com    
+**Email:** jawang.nlp[at]gmail.com    
 **Personal:** [![](https://img.shields.io/badge/dynamic/json?label=citations&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fauthor%2F2118328782%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/author/2118328782) [![](https://img.shields.io/badge/Google%20Scholar-4385FE.svg?&color=d6d6d6&style=flat-square&logo=google-scholar)](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en) 
 
 # 🔥 News  
