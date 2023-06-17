@@ -12,9 +12,9 @@ redirect_from:
 
 Hello! I'm Jiaan Wang (王佳安).
 
-I am a final-year master student at Soochow University (苏州大学). I am fortunate to be advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University). I also collaborate with [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI) and [Dr. Jianfeng Qu](http://web.suda.edu.cn/jjf2/) (from Soochow University) closely.  
+I am a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;">. Previously, I obtained my Master and Bachelor degrees in Computer Science at Soochow University under the supervison of [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University) in 2020 and 2023 respectively. I also worked closely with [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI), [Dr. Jianfeng Qu](http://web.suda.edu.cn/jjf2/) (from Soochow University) and [Dr. Jiarong Xu](https://galina0217.github.io/) (from Fudan University).
 
-Currently, I am also a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;">. I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/laboratory) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
+I have previously interned at [WeChat AI](https://ai.weixin.qq.com/) <img src='./images/tencent_logo.svg' style="width: 4em;"> (2021-2022, Research Intern), [NetEase Fuxi AI Lab](https://fuxi.163.com/laboratory) <img src='./images/netease_logo.svg' style="width: 2.5em;"> (Summer 2021, Engineering Intern) and [iFLYTEK AI Research](https://www.iflytek.com/en/) <img src='./images/iflytek_logo.svg' style="width: 4em;"> (2019-2020 and Spring 2021, Research Intern).
 
 My primary research interests lie in Natural Language Processing, Data Mining and Knowledge Graphs. I am particularly interested in various Natural Language Generation tasks (such as abstractive summarization, dialogue generation and story generation). As a young researcher, your interest and kind citation will definitely mean a lot for me and my collaborators.  
 
@@ -22,8 +22,8 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 **Personal:** [![](https://img.shields.io/badge/dynamic/json?label=citations&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fauthor%2F2118328782%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/author/2118328782) [![](https://img.shields.io/badge/Google%20Scholar-4385FE.svg?&color=d6d6d6&style=flat-square&logo=google-scholar)](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en) 
 
 # 🔥 News  
-- [*2023.05*] ![new paper](/images/new.gif) One paper is accepted to KDD 2023, about graph pre-training.
-- [*2023.05*] ![new paper](/images/new.gif) Two papers are accepted to ACL 2023 (main conference), about cross-lingual summarization and multi-modal summarization.
+- [*2023.05*] One paper is accepted to KDD 2023, about graph pre-training.
+- [*2023.05*] Two papers are accepted to ACL 2023 (main conference), about cross-lingual summarization and multi-modal summarization.
 - [*2023.04*] Check out our new report, [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)
 - [*2023.03*] Check out our new report, [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048).
 - [*2023.01*] One paper is accepted to DASFAA 2023, about table-and-text question answering.
@@ -38,6 +38,9 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 # 📖 Educations
 - *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou, China
 - *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou, China
+
+# 👨‍💼 Work Experience
+- 2023.06 - Present: Researcher, miHoYo Inc.
 
 # 💻 Internships
 **Anti-Entropy (逆熵) AI Group, miHoYo Inc (Shanghai)**. *As NLP R&D Intern. 2022.06 - 2023.06 (full time)*
@@ -67,13 +70,13 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 Please feel free to drop me an email for any suggestions.
 
 ### 2023
-1. ![new paper](/images/new.gif) [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
+1. [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu<sup>*</sup> and Jie Zhou   
 To appear in **ACL 2023** (main conference, full paper)     
-1. ![new paper](/images/new.gif) [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
+1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
 Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
 To appear in **ACL 2023** (main conference, full paper)    
-1. ![new paper](/images/new.gif) [When to Pre-Train Graph Neural Networks? From Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
+1. [When to Pre-Train Graph Neural Networks? From Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
 Yuxuan Cao, Jiarong Xu<sup>*</sup>, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
 To appear in **KDD 2023** (research track, full paper)  
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
