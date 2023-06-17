@@ -34,7 +34,7 @@ My primary research interests lie in Natural Language Processing, Data Mining an
 - [*2022.07*] One paper is accepted to ISWC 2022, about dialogue system.
 
 # 📖 Educations
-- *2020.09 - 2023.06 (Expected)*, Master, Soochow Univeristy, Suzhou, China
+- *2020.09 - 2023.06*, Master, Soochow Univeristy, Suzhou, China
 - *2016.09 - 2020.06*, Undergraduate, Soochow Univeristy, Suzhou, China
 
 # 👨‍💼 Work Experience
