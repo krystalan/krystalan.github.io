@@ -79,9 +79,6 @@ In Proc. of **ACL 2023** (main conference, full paper)
 1. [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
 **Jiaan Wang**<sup>*</sup>, Yunlong Liang, Fandong Meng, Zengkui Sun, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
 **Technical Report**   
-1. [Snowman: A Million-scale Chinese Commonsense Knowledge Graph Distilled from Foundation Model](https://arxiv.org/abs/2306.10241)   
-**Jiaan Wang**, Jianfeng Qu, Yunlong Liang, Zhixu Li, An Liu, Guanfeng Liu, Xin Zheng  
-**arXiv preprint 2023**  
 1. [A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering](https://link.springer.com/chapter/10.1007/978-3-031-30675-4_26)  
 Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu<sup>*</sup>, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
 In Proc. of **DASFAA 2023** (full paper)   
