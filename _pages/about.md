@@ -72,34 +72,38 @@ Please feel free to drop me an email for any suggestions.
 ### 2023
 1. [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu<sup>*</sup> and Jie Zhou   
-In Proc. of **ACL 2023** (main conference, full paper)     
-1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
-Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
-In Proc. of **ACL 2023** (main conference, full paper)    
-1. [When to Pre-Train Graph Neural Networks? From Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
-Yuxuan Cao, Jiarong Xu<sup>*</sup>, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
-To appear in **KDD 2023** (research track, full paper)  
-1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
-Shaohui Zheng, Zhixu Li<sup>*</sup>, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
-In Proc. of **WSDM 2023** (full paper)  
-1. [A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering](https://link.springer.com/chapter/10.1007/978-3-031-30675-4_26)  
-Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu<sup>*</sup>, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
-In Proc. of **DASFAA 2023** (full paper)   
+In Proc. of **ACL 2023** (main conference, full paper)
 1. [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)  
 **Jiaan Wang**<sup>*</sup>, Yunlong Liang, Fandong Meng, Beiqi Zou, Zhixu Li, Jianfeng Qu and Jie Zhou   
 **Technical Report**    
 1. [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
 **Jiaan Wang**<sup>*</sup>, Yunlong Liang, Fandong Meng, Zengkui Sun, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
-**Technical Report**    
+**Technical Report**   
+1. [Snowman: A Million-scale Chinese Commonsense Knowledge Graph Distilled from Foundation Model](https://arxiv.org/abs/2306.10241)   
+**Jiaan Wang**, Jianfeng Qu, Yunlong Liang, Zhixu Li, An Liu, Guanfeng Liu, Xin Zheng  
+**arXiv preprint 2023**  
+1. [A Joint Link-Retrieve Framework for Open Table-and-Text Question Answering](https://link.springer.com/chapter/10.1007/978-3-031-30675-4_26)  
+Jian Zou, **Jiaan Wang**, Ying He, Jianfeng Qu<sup>*</sup>, Zhixu Li, Pengpeng Zhao, An Liu and Lei Zhao  
+In Proc. of **DASFAA 2023** (full paper)   
+1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
+Shaohui Zheng, Zhixu Li<sup>*</sup>, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
+In Proc. of **WSDM 2023** (full paper)
+1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
+Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
+In Proc. of **ACL 2023** (main conference, full paper)    
+1. [When to Pre-Train Graph Neural Networks? From Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
+Yuxuan Cao, Jiarong Xu<sup>*</sup>, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
+To appear in **KDD 2023** (research track, full paper)    
 1. [D2TV: Dual Knowledge Distillation and Target-oriented Vision Modeling for Many-to-Many Multimodal Summarization](https://arxiv.org/abs/2305.12767)   
 Yunlong Liang, Fandong Meng, **Jiaan Wang**, Jinan Xu<sup>*</sup>, Yufeng Chen and Jie Zhou   
-**arXiv preprint 2023**  
+**arXiv preprint 2023**
+1. [Toward Secure Graph Data Collaboration in a Data-Sharing-Free Manner: A Novel Privacy-Preserving Graph Pre-training Model](https://ssrn.com/abstract=4413129)    
+Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu  
+**SSRN preprint 2023**   
 1. [Unified Model Learning for Various Neural Machine Translation](https://arxiv.org/abs/2305.02777)   
 Yunlong Liang, Fandong Meng<sup>*</sup>, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
 **arXiv preprint 2023**  
-1. [Toward Secure Graph Data Collaboration in a Data-Sharing-Free Manner: A Novel Privacy-Preserving Graph Pre-training Model](https://ssrn.com/abstract=4413129)    
-Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu  
-**SSRN preprint 2023**
+
 
 ### 2022
 1. [A Survey on Cross-Lingual Summarization](https://arxiv.org/abs/2203.12515) \| [[Report](https://mp.weixin.qq.com/s/OL6-Yp4NgnTsvXMCHOJMog)]    
@@ -108,15 +112,18 @@ In Proc. of **TACL 2022**
 1. [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Model](https://huggingface.co/Krystalan/mdialbart_zh)] \| [[Report](https://mp.weixin.qq.com/s/M8BR3MySZBuu7ixdFi_SRQ)]  
 **Jiaan Wang**, Fandong Meng<sup>*</sup>, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
 In Proc. of **EMNLP 2022** (main conference, full paper) 
-1. [Towards Unifying Reference Expression Generation and Comprehension](https://arxiv.org/abs/2210.13076) \| [[Code](https://github.com/zd11024/UniRef)] \| [[Report](https://mp.weixin.qq.com/s/jwiDN9N_sgs32Wjt2-a-kg)]    
-Duo Zheng, Tao Kong, Ya Jing, **Jiaan Wang** and Xiaojie Wang<sup>*</sup>    
-In Proc. of **EMNLP 2022** (main conference, full paper)
 1. [Knowledge Enhanced Sports Game Summarization](https://arxiv.org/abs/2111.12535) \| [[Data&Code](https://github.com/krystalan/K-SportsSum)]   
 **Jiaan Wang**, Zhixu Li<sup>*</sup>, Tingyi Zhang, Duo Zheng, Jianfeng Qu<sup>*</sup>, An Liu, Lei Zhao and Zhigang Chen  
 In Proc. of **WSDM 2022** (full paper)   
 1. [Incorporating Commonsense Knowledge into Story Ending Generation via Heterogeneous Graph Networks](https://arxiv.org/abs/2201.12538) \| [[Code](https://github.com/krystalan/AwesomeSEG)]    
 **Jiaan Wang**, Beiqi Zou, Zhixu Li, Jianfeng Qu<sup>*</sup>, Pengpeng Zhao, An Liu and Lei Zhao   
-In Proc. of **DASFAA 2022** (full paper) 
+In Proc. of **DASFAA 2022** (full paper)
+1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
+**Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
+**arXiv preprint 2022**   
+1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
+**Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
+**arXiv preprint 2022**   
 1. [RT-KGD: Relation Transition Aware Knowledge-Grounded Dialogue Generation](https://arxiv.org/abs/2207.08212) \| [[Code](https://github.com/tigerwww-git/RT-KGD)]   
 Kexin Wang, Zhixu Li<sup>*</sup>, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Ying He, An Liu and Lei Zhao   
 In Proc. of **ISWC 2022** (full paper)
@@ -125,13 +132,11 @@ Haoxiang Shi, Rongsheng Zhang, **Jiaan Wang**, Cen Wang, Guandan Chen, Yinhe Zhe
 In Proc. of **COLING 2022** (short paper)
 1. [Aligning Internal Regularity and External Influence of Multi-Granularity for Temporal Knowledge Graph Embedding](https://link.springer.com/chapter/10.1007/978-3-031-00129-1_10)   
 Tingyi Zhang, Zhixu Li, **Jiaan Wang**, Jianfeng Qu<sup>*</sup>, Lin Yuan, An Liu, Lei Zhao and Zhigang Chen   
-In Proc. of **DASFAA 2022** (full paper)   
-1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
-**Jiaan Wang**, Fandong Meng, Tingyi Zhang, Yunlong Liang, Jiarong Xu, Zhixu Li and Jie Zhou  
-**arXiv preprint 2022**   
-1. [GOAL: Towards Benchmarking Few-Shot Sports Game Summarization](https://arxiv.org/abs/2207.08635) \| [[Data&Code](https://github.com/krystalan/goal)]    
-**Jiaan Wang**<sup>*</sup>, Tingyi Zhang and Haoxiang Shi      
-**arXiv preprint 2022**   
+In Proc. of **DASFAA 2022** (full paper)
+1. [Towards Unifying Reference Expression Generation and Comprehension](https://arxiv.org/abs/2210.13076) \| [[Code](https://github.com/zd11024/UniRef)] \| [[Report](https://mp.weixin.qq.com/s/jwiDN9N_sgs32Wjt2-a-kg)]    
+Duo Zheng, Tao Kong, Ya Jing, **Jiaan Wang** and Xiaojie Wang<sup>*</sup>    
+In Proc. of **EMNLP 2022** (main conference, full paper)
+
 
 ### 2021
 1. [SportsSum2.0: Generating High-Quality Sports News from Live Text Commentary](http://arxiv.org/abs/2110.05750) \| [[Data](https://github.com/krystalan/SportsSum2.0)]   
