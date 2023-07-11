@@ -72,10 +72,10 @@ Please feel free to drop me an email for any suggestions.
 ### 2023
 1. [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu<sup>*</sup> and Jie Zhou   
-To appear in **ACL 2023** (main conference, full paper)     
+In Proc. of **ACL 2023** (main conference, full paper)     
 1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
 Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
-To appear in **ACL 2023** (main conference, full paper)    
+In Proc. of **ACL 2023** (main conference, full paper)    
 1. [When to Pre-Train Graph Neural Networks? From Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
 Yuxuan Cao, Jiarong Xu<sup>*</sup>, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
 To appear in **KDD 2023** (research track, full paper)  
