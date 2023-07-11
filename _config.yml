@@ -10,7 +10,7 @@ locale                   : "zh-CN"
 title                    : "Jiaan Wang (王佳安)"
 title_separator          : "-"
 name                     : "Jiaan Wang (王佳安)"
-description              : "Master's student at Soochow University."
+description              : "NLP Researcher."
 repository               : "krystalan/krystalan.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -26,7 +26,7 @@ baidu_site_verification  :
 author:
   name             : "Jiaan Wang"
   avatar           : "images/me.jpeg"
-  bio              : "Soochow University"
+  bio              : "miHoYo Inc."
   location         : "Shanghai, China"
   employer         :
   pubmed           : 
