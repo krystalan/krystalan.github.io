@@ -70,7 +70,7 @@ My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyove
 Please feel free to drop me an email for any suggestions.
 
 ### 2023
-1. [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)]   
+1. [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)] \| [[Report](https://mp.weixin.qq.com/s/JHyXyWrKfj5YrtSZKpfwog)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li<sup>*</sup>, Jianfeng Qu<sup>*</sup> and Jie Zhou   
 In Proc. of **ACL 2023** (main conference, full paper)
 1. [Zero-Shot Cross-Lingual Summarization via Large Language Models](https://arxiv.org/abs/2302.14229)  
@@ -82,7 +82,7 @@ In Proc. of **ACL 2023** (main conference, full paper)
 1. [Summary-Oriented Vision Modeling for Multimodal Abstractive Summarization](https://arxiv.org/abs/2212.07672)  \| [[Data&Code](https://github.com/XL2248/SOV-MAS)]   
 Yunlong Liang, Fandong Meng, Jinan Xu<sup>*</sup>, **Jiaan Wang**, Yufeng Chen and Jie Zhou   
 In Proc. of **ACL 2023** (main conference, full paper)    
-1. [When to Pre-Train Graph Neural Networks? From Data Generation Perspective!](https://arxiv.org/abs/2303.16458)   
+1. [When to Pre-Train Graph Neural Networks? From Data Generation Perspective!](https://arxiv.org/abs/2303.16458)  \| [[Data&Code](https://github.com/zjunet/W2PGNN)]   
 Yuxuan Cao, Jiarong Xu<sup>*</sup>, Carl Yang, **Jiaan Wang**, Yunchao Zhang, Chunping Wang, Lei Chen and Yang Yang    
 To appear in **KDD 2023** (research track, full paper)
 1. [Long-Document Cross-Lingual Summarization](https://arxiv.org/abs/2212.00586) \| [[Data](https://github.com/LearnItBoy/Perseus)] \| [[Report](https://mp.weixin.qq.com/s/klalyNLgNRx6-cvxtTJ3OA)]    
