@@ -66,7 +66,7 @@ In Proc. of **EMNLP 2022** (main conference, full paper)
 
 
 # 🗞️ Academic Services
-- PC Member: ACL Rolling Review (2022-2023), ACL 2023, KDD 2023, EMNLP (2022-2023), COLING 2022, CoNLL 2023, ICANN (2021, 2023), ICIRA 2023
+- PC Member: ACL Rolling Review (2022-2023), ACL 2023, KDD 2023, EMNLP (2022-2023), COLING (2022, 2024), CoNLL 2023, ICANN (2021, 2023), SDM 2024, ICIRA 2023
 - Journal Reviewer: Journal of Artificial Intelligence Research (JAIR)
 
 
