@@ -53,7 +53,10 @@ Please refer to [Google Scholar](https://scholar.google.com/citations?user=5S8h7
 
 1. [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)] \| [[Report](https://mp.weixin.qq.com/s/JHyXyWrKfj5YrtSZKpfwog)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li, Jianfeng Qu and Jie Zhou   
-In Proc. of **ACL 2023** (main conference, full paper)   
+In Proc. of **ACL 2023** (main conference, full paper)
+1. [Understanding Translationese in Cross-Lingual Summarization](https://arxiv.org/abs/2212.07220)  
+**Jiaan Wang**, Fandong Meng, Yunlong Liang, Tingyi Zhang, Jiarong Xu, Zhixu Li and Jie Zhou  
+In Proc. of **EMNLP 2023** (findings, full paper)
 1. [Is ChatGPT a Good NLG Evaluator? A Preliminary Study](https://arxiv.org/abs/2303.04048) \| [[Data&Code](https://github.com/krystalan/chatgpt_as_nlg_evaluator)]     
 **Jiaan Wang**, Yunlong Liang, Fandong Meng, Zengkui Sun, Haoxiang Shi, Zhixu Li, Jinan Xu, Jianfeng Qu and Jie Zhou  
 In Proc. of **NewSumm@EMNLP 2023** (workshop paper)
