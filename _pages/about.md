@@ -17,7 +17,6 @@ My primary research interests lie in Natural Language Processing and Information
 My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyoverse.com/) is 100953266.
 
 **Email:** jawang.nlp[at]gmail.com / jiaan.wang[at]mihoyo.com    
-**Personal:** [![](https://img.shields.io/badge/dynamic/json?label=citations&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fauthor%2F2118328782%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/author/2118328782) [![](https://img.shields.io/badge/Google%20Scholar-4385FE.svg?&color=d6d6d6&style=flat-square&logo=google-scholar)](https://scholar.google.com/citations?user=5S8h7qAAAAAJ&hl=en) 
 
 # 📖 Educations
 - *2020.09 - 2023.06*, M.Phil student, Soochow Univeristy, Suzhou, China
