@@ -14,7 +14,7 @@ Hello! I'm Jiaan Wang (王佳安). I am currently a NLP researcher at [miHoYo (�
 
 My primary research interests lie in Natural Language Processing and Information Systems. I am particularly interested in various Natural Language Generation tasks (such as abstractive summarization, dialogue generation and story generation).
 
-My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyoverse.com/) is 100953266.
+My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyoverse.com/) is 100953266.  
 
 **Email:** jawang.nlp[at]gmail.com / jiaan.wang[at]mihoyo.com    
 
