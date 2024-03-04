@@ -64,11 +64,14 @@ In Proc. of **NewSumm@EMNLP 2023** (workshop paper)
 In Proc. of **TACL 2022**   
 1. [ClidSum: A Benchmark Dataset for Cross-Lingual Dialogue Summarization](https://arxiv.org/abs/2202.05599) \| [[Data&Code](https://github.com/krystalan/ClidSum)] \| [[Model](https://huggingface.co/Krystalan/mdialbart_zh)] \| [[Report](https://mp.weixin.qq.com/s/M8BR3MySZBuu7ixdFi_SRQ)]  
 **Jiaan Wang**, Fandong Meng, Ziyao Lu, Duo Zheng, Zhixu Li, Jianfeng Qu and Jie Zhou   
-In Proc. of **EMNLP 2022** (main conference, full paper) 
+In Proc. of **EMNLP 2022** (main conference, full paper)  
+1. [Improving the Robustness of Knowledge-Grounded Dialogue via Contrastive Learning](https://arxiv.org/abs/2401.04361)  
+**Jiaan Wang**, Jianfeng Qu, Kexin Wang, Zhixu Li, Wen Hua, Ximing Li and An Liu  
+In Proc. of **AAAI 2024** (full paper)  
 
 
 # 🗞️ Academic Services
-- PC Member: ACL Rolling Review (2022-2023), ACL 2023, KDD 2023, EMNLP (2022-2023), COLING (2022, 2024), CoNLL 2023, ICANN (2021, 2023), SDM 2024, ICIRA 2023
+- PC Member: ACL Rolling Review (2022-2024), ACL (2023-2024), KDD 2023, EMNLP (2022-2023), EACL 2024, COLING (2022, 2024), CoNLL 2023, ICANN (2021, 2023), SDM 2024, ICIRA 2023
 - Journal Reviewer: Journal of Artificial Intelligence Research (JAIR)
 
 
