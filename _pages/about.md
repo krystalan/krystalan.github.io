@@ -49,7 +49,18 @@ My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyove
 
 # 📝 Selected Publications 
 Please refer to [Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ) for the full list.
-
+1. [Cross-Lingual Knowledge Editing in Large Language Models](https://arxiv.org/abs/2309.08952) \| [[Data&Code](https://github.com/krystalan/Bi-ZsRE)]  
+**Jiaan Wang**, Yunlong Liang, Zengkui Sun, Yuxuan Cao, Jiarong Xu and Fandong Meng   
+To appear in **ACL 2024** (main conference, full paper)  
+1. Continual Learning with Semi-supervised Contrastive Distillation for Incremental Neural Machine Translation  
+Yunlong Liang, Fandong Meng, **Jiaan Wang**, Jinan Xu, Yufeng Chen, Jie Zhou    
+To appear in **ACL 2024** (main conference, full paper)
+1. MusTQ: A Temporal Knowledge Graph Question Answering Dataset for Multi-Step Temporal Reasoning   
+Tingyi Zhang, **Jiaan Wang**, Zhixu Li, Jianfeng Qu, An Liu, Zhigang Chen, Hongping Zhi   
+To appear in **ACL 2024** (findings, full paper)
+1. [Outdated Issue Aware Decoding for Factual Knowledge Editing](https://arxiv.org/abs/2406.02882)   
+Zengkui Sun, Yijin Liu, **Jiaan Wang**, Fandong Meng, Jinan Xu, Yufeng Chen, Jie Zhou  
+To appear in **ACL 2024** (findings, full paper)     
 1. [Towards Unifying Multi-Lingual and Cross-Lingual Summarization](http://arxiv.org/abs/2305.09220)  \| [[Model](https://huggingface.co/Krystalan/PISCES)] \| [[Report](https://mp.weixin.qq.com/s/JHyXyWrKfj5YrtSZKpfwog)]   
 **Jiaan Wang**, Fandong Meng, Duo Zheng, Yunlong Liang, Zhixu Li, Jianfeng Qu and Jie Zhou   
 In Proc. of **ACL 2023** (main conference, full paper)
