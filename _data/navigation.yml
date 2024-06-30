@@ -12,8 +12,8 @@ main:
   - title: "Work Experience"
     url: "/#-work-experience"
 
-  - title: "Internships"
-    url: "/#-internships"
+  # - title: "Internships"
+  #   url: "/#-internships"
 
   - title: "Selected Publications"
     url: "/#-selected-publications"
