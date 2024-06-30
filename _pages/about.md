@@ -25,27 +25,6 @@ My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyove
 # 👨‍💼 Work Experience
 - 2023.06 - Present: Researcher, miHoYo Inc (Shanghai).
 
-# 💻 Internships
-**Anti-Entropy (逆熵) AI Group, miHoYo Inc (Shanghai)**. *As NLP Research Intern. 2022.06 - 2023.06 (full time)*
-- Advised by [Dr. Jun Xing](https://junxnui.github.io/) and [Dr. Yan Wang](https://libertywing.github.io/yanwang.github.io/).
-- Research on digital human, i.e., Lumi(鹿鸣) \| [[Youtube](https://www.youtube.com/c/LumiN0vaDesktop)] \| [[Bilibili](https://space.bilibili.com/488836173/)].
-
-**Pattern Recognition Center, WeChat AI, Tencent Inc (Beijing)**. *As NLP Research Intern. 2021.09 - 2022.06 (full time), 2022.06 - 2023.05 (by courtesy)*
-- Advised by [Dr. Fandong Meng](http://fandongmeng.github.io/).
-- Research on dialogue summarization, cross-lingual summarization and machine translation.
-
-**KW-DEMI Lab, Fudan University (Shanghai)**. *As Student Researcher. 2021.09 - 2023.06 (by courtesy)*
-- Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
-- Research on knowledge graph and sports game summarization.
-
-**Fuxi (伏羲) AI Lab, NetEase Game (Hangzhou)**. *As NLP Engineering Intern. 2021.06 - 2021.09 (full time)*
-- Mentor: Cong Zhang.
-- Research on dialogue systems and NLP4Game.
-
-**iFLYTEK AI Research (Suzhou)**. *As NLP Research Intern. 2019.10 - 2020.08 (full time), 2021.03 - 2021.06 (full time)*
-- Advised by [Prof. Zhixu Li](https://sites.google.com/site/zhixuli).
-- Research on machine reading comprehension and text summarization.
-
 
 # 📝 Selected Publications 
 Please refer to [Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ) for the full list.
