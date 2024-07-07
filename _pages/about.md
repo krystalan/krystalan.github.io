@@ -10,9 +10,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hello! I'm Jiaan Wang (王佳安). I am currently a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;"> in Shanghai. Previously, I obtained my Master and Bachelor degrees in [Computer Science](http://scst.suda.edu.cn/) at [Soochow University](http://eng.suda.edu.cn/) under the supervision of [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University) in 2020 and 2023 respectively. I also collaborated closely with [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI), [Dr. Jiarong Xu](https://galina0217.github.io/) (from Fudan University) and [Yunlong Liang](https://xl2248.github.io/) (from Beijing Jiaotong University).
+Hello! I'm Jiaan Wang (王佳安). I am currently a NLP researcher at [miHoYo (米哈游)](https://www.mihoyo.com/en/) <img src='./images/mihoyo_logo.svg' style="width: 3em;"> in Shanghai. Previously, I obtained my Master and Bachelor degrees in [Computer Science](http://scst.suda.edu.cn/) at [Soochow University](http://eng.suda.edu.cn/) under the supervision of [Prof. Zhixu Li](https://sites.google.com/site/zhixuli) (now at Fudan University) in 2020 and 2023 respectively. I also collaborated closely with [Dr. Fandong Meng](http://fandongmeng.github.io/) (from WeChat AI) and [Dr. Jiarong Xu](https://galina0217.github.io/) (from Fudan University).
 
-My primary research interests lie in Natural Language Processing and Information Systems. I am particularly interested in various Natural Language Generation tasks (such as abstractive summarization, dialogue generation and story generation).
+My primary research interests lie in Natural Language Processing & Large Language Models (Computer Science) and Information Systems (Management Science).
 
 My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyoverse.com/) is 100953266.  
 
