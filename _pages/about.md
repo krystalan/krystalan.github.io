@@ -16,7 +16,7 @@ My primary research interests lie in Natural Language Processing & Large Languag
 
 My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyoverse.com/) is 100953266.  
 
-**Email:** jawang.nlp[at]gmail.com / jiaan.wang[at]mihoyo.com    
+**Email:** jawang.nlp[at]gmail.com / jiaanwang.is[at]gmail.com   
 
 # 📖 Educations
 - *2020.09 - 2023.06*, M.Phil student, Soochow Univeristy, Suzhou, China
@@ -27,7 +27,10 @@ My UID in [*Honkai: Star Rail* (《崩坏：星穹铁道》)](https://hsr.hoyove
 
 
 # 📝 Selected Publications 
-Please refer to [Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ) for the full list.
+Please refer to [Google Scholar](https://scholar.google.com/citations?user=5S8h7qAAAAAJ) for the full list.   
+
+**Natural Language Processing & Large Language Models (Computer Science):**   
+
 1. [Cross-Lingual Knowledge Editing in Large Language Models](https://arxiv.org/abs/2309.08952) \| [[Data&Code](https://github.com/krystalan/Bi-ZsRE)]  
 **Jiaan Wang**, Yunlong Liang, Zengkui Sun, Yuxuan Cao, Jiarong Xu and Fandong Meng   
 To appear in **ACL 2024** (main conference, full paper)  
@@ -59,6 +62,14 @@ In Proc. of **EMNLP 2022** (main conference, full paper)
 **Jiaan Wang**, Jianfeng Qu, Kexin Wang, Zhixu Li, Wen Hua, Ximing Li and An Liu  
 In Proc. of **AAAI 2024** (full paper)  
 
+**Information Systems (Management Science):**  
+
+1. [A User Purchase Motivation-Aware Recommender System](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4765844)   
+Jiarong Xu, **Jiaan Wang** and Tian Lu   
+under major revision   
+1. [Toward Graph Data Collaboration in a Data-Sharing-Free Manner: A Novel Privacy-Preserving Graph Pre-training Model](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4413129)   
+Jiarong Xu, Zenan Zhou, **Jiaan Wang** and Tian Lu    
+under 2nd round revision   
 
 # 🗞️ Academic Services
 - PC Member: ACL Rolling Review (2022-2024), ACL (2023-2024), KDD 2023, EMNLP (2022-2023), EACL 2024, COLING (2022, 2024), CoNLL 2023, ICANN (2021, 2023), SDM 2024, ICIRA 2023
